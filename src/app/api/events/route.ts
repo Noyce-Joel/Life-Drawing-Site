@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
-import { NextRequest, NextResponse } from "next/server";
 
 type ResponseData = {
   message: string;
@@ -9,8 +8,8 @@ type ResponseData = {
 const key = process.env.EVENTBRITE_API_KEY;
 
 export async function GET(
-  req: NextRequest,
-  res: NextResponse<ResponseData>
+  req: NextApiRequest,
+  res: NextApiResponse<ResponseData>
 ) {
   const organisation_id =  2017829680413;
   const eventsUrl = `https://www.eventbriteapi.com/v3/organizations/${organisation_id}/events/`;
@@ -19,18 +18,17 @@ export async function GET(
     Authorization: `Bearer ${key}`,
     "Content-Type": "application/json",
   };
-const options = {
+  const options = {
     method: "GET",
     headers: headerParameters,
-};
-
-const response = await axios.get(eventsUrl, options)
+  };
+  
+    const response = await axios.get(eventsUrl, options)
     .then((response) => {
-        res.json(); // Remove the argument from the res.json() function call
+      res.status(200).json(response.data);
     })
     .catch((error) => {
-        console.error(error);
-        throw error;
+      res.status(500).json({ message: error.message });
     });
     
 }
