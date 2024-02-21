@@ -23,7 +23,7 @@ export const Buy = ({ eventId }: { eventId: number }) => {
       return () => {
         document.body.removeChild(script);
       };
-    }, []);
+    }, [eventId]);
     return (
       <button
         id="button_id"

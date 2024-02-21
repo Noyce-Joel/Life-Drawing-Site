@@ -22,6 +22,16 @@ const nextConfig = {
           },
         ];
       },
+      images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'img.evbuc.com',
+            port: '',
+            
+          },
+        ],
+      },
 };
 
 export default nextConfig;

@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import { Buy } from "./Buy";
+import Image from "next/image";
 
 export default function Event({
   id,
@@ -24,10 +25,12 @@ export default function Event({
       key={id}
       className="bg-white shadow-lg rounded-lg overflow-hidden mx-auto max-w-2xl w-full my-4"
     >
-      <img
-        className="w-full h-48 object-cover object-center"
+      <Image
+        className=" object-cover object-center"
         src={logo}
         alt={name}
+        width={500}
+        height={500}
       />
       <div className="p-6">
         oioi
