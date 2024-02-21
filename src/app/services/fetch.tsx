@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const getAllEvents = () => {
+export default function getAllEvents() {
     const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL || 'http://localhost:3001';
   return axios.get(`${baseUrl}/api/events`)
     .then(response => response.data)
@@ -10,4 +10,3 @@ const getAllEvents = () => {
     });
 }
 
-export default { getAllEvents }

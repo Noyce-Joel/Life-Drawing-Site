@@ -1,59 +1,58 @@
-'use client'
+"use client";
 
 import React, { createContext, useEffect, useState } from "react";
-import service from "../services/fetch";
+import getAllEvents from "../services/fetch";
 
 export const StateContext = createContext<{
-    events: Event[];
-    setEvents: React.Dispatch<React.SetStateAction<Event[]>>;
+  events: Event[];
+  setEvents: React.Dispatch<React.SetStateAction<Event[]>>;
 }>({
-    events: [],
-    setEvents: () => null,
+  events: [],
+  setEvents: () => null,
 });
 
 export interface Event {
-    id: number;
-    name: {
-        text: string;
+  id: number;
+  name: {
+    text: string;
+  };
+  start: {
+    local: string;
+  };
+  end: {
+    local: string;
+  };
+  description: {
+    text: string;
+  };
+  location: string;
+  logo: {
+    original: {
+      url: string;
     };
-    start: {
-        local: string;
-    };
-    end: {
-        local: string;
-    };
-    description: {
-        text: string;
-    };
-    location: string;
-    logo: {
-        original: {
-            url: string;
-        };
-    }
-    capacity: number;
-    url: string
-
+  };
+  capacity: number;
+  url: string;
 }
 
 export interface StateContextType {
-    events: Event[];
-    setEvents: React.Dispatch<React.SetStateAction<Event[]>>;
-
+  events: Event[];
+  setEvents: React.Dispatch<React.SetStateAction<Event[]>>;
 }
 
 export const StateProvider = ({ children }: { children: React.ReactNode }) => {
-    const [events, setEvents] = useState<Event[]>([]);
-    useEffect(() => {
-        service
-        .getAllEvents()
-        .then((data) => {setEvents(data.events); })
-        .catch((err) => console.error(err));
-    }, []);
+  const [events, setEvents] = useState<Event[]>([]);
+  useEffect(() => {
+    getAllEvents()
+      .then((data) => {
+        setEvents(data.events);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
-    
-    return (
-        <StateContext.Provider value={{ events, setEvents }}>{children}</StateContext.Provider>
-    );
-    }
-
+  return (
+    <StateContext.Provider value={{ events, setEvents }}>
+      {children}
+    </StateContext.Provider>
+  );
+};
