@@ -26,10 +26,11 @@ const options = {
 
 const response = await axios.get(eventsUrl, options)
     .then((response) => {
-        res.status(200).json(response.data);
+        res.json(); // Remove the argument from the res.json() function call
     })
     .catch((error) => {
-        res.status(500).json({ message: error.message });
+        console.error(error);
+        throw error;
     });
     
 }
