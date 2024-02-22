@@ -15,4 +15,3 @@ export default function getAllEvents() {
     })
 }
 
-// Path: src/app/components/events/Buy.tsx
