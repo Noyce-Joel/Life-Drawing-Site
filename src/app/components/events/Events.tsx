@@ -8,15 +8,19 @@ declare global {
   }
 }
 
+const cols = (cols: number) => {
+  return 
+}
+
 export default function Events() {
   const { events } = useContext<StateContextType>(StateContext);
   console.log(events);
   return (
     <div className="h-screen w-screen flex relative">
-    <div className="absolute z-0 right-0 left-0 mx-auto">
+    {/* <div className="absolute z-0 right-0 left-0 mx-auto">
     <Map />
-    </div>
-    <div className="flex grid-cols-2 justify-between h-screen w-screen items-center px-12">
+    </div> */}
+    <div className="grid grid-cols-3 justify-between items-start h-screen w-screen px-12">
       
       {events.map((event, index) => {
         const id = event.id;
@@ -28,7 +32,7 @@ export default function Events() {
         const capacity = event.capacity;
         return (
           <>
-          <div key={id + index} className="flex z-10 mb-20 w-[500px]"> 
+          <div key={id + index} className=" flex z-10 mb-20 w-[400px] h-[590px]"> 
             <Event
               id={id}
               name={name}

@@ -24,10 +24,10 @@ export default function Event({
   return (
     <div
       
-      className="bg-white w-full shadow-lg rounded-[100px] hover:rounded-[20px] hover:scale-105 transition-all duration-500 ease-in-out overflow-hidden mx-auto my-4 hover:cursor-pointer"
+      className={`bg-white absolute w-[500px] items-start fixedw-full shadow-lg rounded-[100px] rounded-bl-[20px] justify-start origin-top hover:rounded-[20px] hover:h-[700px] h-[490px] hover:-translate-y-[70px] transition-all duration-700 ease-in-out overflow-hidden mx-auto my-4 hover:cursor-pointer`}
     >
       <Image
-        className=" object-cover object-center"
+        className=" object-cover object-top h-[400px] width-[400px]"
         src={logo}
         alt={name}
         width={500}
