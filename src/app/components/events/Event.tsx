@@ -22,8 +22,8 @@ export default function Event({
 }) {
   return (
     <div
-      key={id}
-      className="bg-white shadow-lg rounded-lg overflow-hidden mx-auto max-w-2xl w-full my-4"
+      
+      className="bg-white shadow-lg rounded-[100px] hover:rounded-[20px] hover:scale-105 hovtransition-all duration-500 ease-in-out overflow-hidden mx-auto max-w-2xl w-3/5 my-4 hover:cursor-pointer"
     >
       <Image
         className=" object-cover object-center"
@@ -32,9 +32,9 @@ export default function Event({
         width={500}
         height={500}
       />
-      <div className="p-6">
+      <div className="relative p-6">
         oioi
-        <h2 className="text-xl font-semibold text-gray-800">{name}</h2>
+        <h2 className="text-xl font-semibold text-gray-800 border-b pb-2">{name}</h2>
         <p className="text-sm text-gray-600 mt-2">
           <span className="font-bold">Start:</span> {start}
         </p>
@@ -45,7 +45,9 @@ export default function Event({
         <p className="text-sm text-gray-600 mt-4">
           <span className="font-bold">Capacity:</span> {capacity}
         </p>
+        <div  className='mt-2 flex px-12 justify-end w-full'>
         <Buy eventId={id} />
+        </div>
       </div>
     </div>
   );

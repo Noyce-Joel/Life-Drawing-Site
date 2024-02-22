@@ -3,12 +3,12 @@ const nextConfig = {
     async headers() {
         return [
           {
-            // Apply these headers to all routes in your application.
+            
             source: '/(.*)',
             headers: [
               {
                 key: 'Access-Control-Allow-Origin',
-                value: '*', // replace this with your origin
+                value: '*',
               },
               {
                 key: 'Access-Control-Allow-Methods',
