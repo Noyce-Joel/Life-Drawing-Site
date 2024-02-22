@@ -3,6 +3,7 @@
 import axios from "axios";
 
 export default function getAllEvents() {
+  const hey = 'hello world'
   const baseUrl =
     "https://life-drawing.vercel.app" || process.env.NEXT_PUBLIC_VERCEL_URL;
   return axios
@@ -11,5 +12,7 @@ export default function getAllEvents() {
     .catch((error) => {
       console.error(error);
       throw error;
-    });
+    })
 }
+
+// Path: src/app/components/events/Buy.tsx
