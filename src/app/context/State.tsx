@@ -46,7 +46,7 @@ export const StateProvider = ({ children }: { children: React.ReactNode }) => {
     getAllEvents()
       .then((data) => {
         setEvents(data.events);
-       
+        console.log(events)
       })
       .catch((err) => console.error(err));
   }, []);

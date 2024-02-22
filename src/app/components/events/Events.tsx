@@ -28,7 +28,7 @@ export default function Events() {
         const capacity = event.capacity;
         return (
           <>
-          <div key={id + index} className="flex z-10 mb-20"> 
+          <div key={id + index} className="flex z-10 mb-20 w-[500px]"> 
             <Event
               id={id}
               name={name}
