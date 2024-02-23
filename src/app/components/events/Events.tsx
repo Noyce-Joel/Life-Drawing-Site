@@ -60,7 +60,7 @@ export default function Events() {
 
   console.log(events);
   return (
-    <div className="h-screen relative top-[150px] ">
+    <div className="h-screen relative top-[350px] ">
       <div className="p-24 absolute transition-all duration-500 ease-in-out flex justify-center m-24 ">
         <Modal />
       </div>

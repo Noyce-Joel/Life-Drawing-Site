@@ -7,7 +7,7 @@ export default function Loading() {
   const scroll = useTransform(scrollYProgress, [0, 100], [0, 250]);
 
   return (
-    <motion.div initial={{opacity: 0}} animate={{opacity: 1}}  className="absolute -bottom-[370px] -right-20 z-50 rounded-full lg:h-[700px] lg:w-[700px]">
+    <motion.div initial={{opacity: 0}} animate={{opacity: 1}}  className="absolute -bottom-[60vh] -right-20 z-50 rounded-full lg:h-[700px] lg:w-[700px]">
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"

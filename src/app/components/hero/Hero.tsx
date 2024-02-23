@@ -6,9 +6,10 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <>
-    
-        <Loading />
-      <div className=" flex mt-20 relative h-[500px] md:h-[70vh] m-0 p-0 gap-12 w-full justify-evenly md:px-24 px-0">
+
+        
+      <div className=" flex mt-20 relative h-screen md:h-screen m-0 p-0 gap-12 w-full justify-evenly md:px-24 px-0">
+      <Loading />
         <motion.div className="absolute -left-[100%] md:relative md:-left-0 md:flex justify-center items-center h-auto">
           <Image
             src="/HERO.jpg"
