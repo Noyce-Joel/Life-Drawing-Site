@@ -13,7 +13,7 @@ export async function GET(
   res: NextResponse<ResponseData>
 ) {
   const organisation_id =  2017829680413;
-  const eventsUrl = `https://www.eventbriteapi.com/v3/organizations/${organisation_id}/events/?expand=venue`;
+  const eventsUrl = `https://www.eventbriteapi.com/v3/organizations/${organisation_id}/events/?expand=venue `;
 
   const headerParameters = {
     Authorization: `Bearer ${key}`,

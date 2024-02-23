@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Buy } from "./Buy";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Event({
   id,
@@ -11,6 +12,7 @@ export default function Event({
   description,
   capacity,
   logo,
+  eventClick
 }: {
   id: number;
   name: string;
@@ -19,11 +21,14 @@ export default function Event({
   description: string;
   capacity: number;
   logo: string;
+  eventClick: (id: number) => void;
 }) {
   const [open, setOpen] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   return (
-    <div
-      className={`bg-white rounded-[100px] w-[90vw] md:w-auto origin-top md:hover:rounded-[20px]  md:hover:-translate-y-[40px] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+    <motion.div 
+      onClick={() =>  eventClick(id)}
+      className={`bg-white rounded-[90px] w-[90vw] md:w-auto origin-top md:hover:rounded-[20px]  md:hover:-translate-y-[40px] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">
         <Image
@@ -34,7 +39,7 @@ export default function Event({
           height={400}
         />
       </div>
-      <div className="relative p-12 ">
+      <div className="relative p-12 pt-6 ">
         oioi
         <h2 className="text-xl font-semibold text-gray-800 border-b pb-2">
           {name}
@@ -54,6 +59,6 @@ export default function Event({
           <Buy eventId={id} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

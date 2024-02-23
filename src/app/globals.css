@@ -5,4 +5,9 @@
 body {
   background-color: rgba(120, 141, 96, 0.737);
   overflow-x: hidden;
+  
+}
+
+.font {
+color: #801a1a
 }

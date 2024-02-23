@@ -1,16 +1,7 @@
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
-
-const DropDown = () => {
-  return (
-    <div className="flex md:hidden flex-col gap-4">
-      <li className="text-lg md:text-xl">About</li>
-      <li className="text-lg md:text-xl">Contact</li>
-    </div>
-  );  
-  
-}
 
 const pages = [
   { name: "Events", href: "/" },
@@ -18,42 +9,101 @@ const pages = [
   { name: "Contact", href: "/contact" },
 ];
 
-
 export default function Nav() {
+  const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const DropDown = () => {
+    return (
+      <div key="drop-menu" className="flex md:hidden flex-col gap-4">
+        <button onClick={() => setMobileMenu(!mobileMenu)}>Close</button>
 
+        {pages.map((page, index) => (
+          <div
+            key={index}
+            className="hover:scale-105 duration-200 hover:cursor-pointer text-2xl"
+          >
+            {page.name}
+          </div>
+        ))}
+      </div>
+    );
+  };
   return (
     <>
-    <DropDown />
-    <nav className="flex flex-col md:flex-row mx-auto items-center mb-56 w-full justify-center md:justify-between">
-      <div className="flex items-center justify-center">
-        <Image
-          src="/DOGLIFEDRAW1.png"
-          className=""
-          height={200}
-          width={200}
-          alt="logo"
-        />
-        <div>
-          <ul className="md:flex hidden gap-14">
-            {pages.map((page, index) => (
-              <li key={index} className="hover:scale-110 transition-all duration-500 hover:text-red-900 ease-in-out hover:cursor-pointer ">{page.name}</li>
-            )
-            )}
-          </ul>
-        </div>
-      </div>
+      <button onClick={() => setMobileMenu(!mobileMenu)} className="md:hidden">
+        Open
+      </button>
+      <AnimatePresence>
+        {mobileMenu && (
+          <motion.div
+            initial={{ x: -700, y: -700 }}
+            animate={{
+              x: 0,
+              y: 0,
+              transition: {
+                duration: 1,
+                type: "spring",
+                friction: 10,
+                damping: 20,
+              },
+            }}
+            exit={{
+              x: -500,
+              
+              
+              transition: {
+                duration: 5,
+                type: "spring",
+                friction: 400,
+                damping: 20,
+              },
+            }}
+            className="fixed flex p-[40px] z-20 bg-gray-500 w-full mx-auto left-0 right-0 top-0 bottom-0"
+          >
+            <DropDown />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <div className="flex gap-4 px-12">
-        <SocialIcon
-          style={{ width: "30px", height: "30px" }}
-          url="https://www.instagram.com/dog.lifedrawing/"
-        />
-        <SocialIcon
-          style={{ width: "30px", height: "30px" }}
-          url="https://www.facebook.com/dogdrawing/?locale=en_GB"
-        />
-      </div>
-    </nav>
+      <nav className="flex flex-col md:flex-row mx-auto items-center mb-12 px-4 py-4 w-full justify-center md:justify-between">
+        <div className="flex items-center justify-center gap-2 w-full">
+          <Image
+            src="/Logo.png"
+            className=""
+            height={150}
+            width={150}
+            alt="logo"
+          />
+          <div className="w-full">
+            <ul className="md:flex hidden gap-4 px-2 border-[#0000005f] w-full">
+              {pages.map((page, index) => (
+                
+                
+                <li
+                  key={index}
+                  className="hover:scale-105  duration-200 hover:cursor-pointer text-lg pr-2"
+                >
+                  {page.name}
+                </li>
+                
+                
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex gap-4 px-12">
+          <SocialIcon
+            style={{ width: "30px", height: "30px" }}
+            url="https://www.instagram.com/dog.lifedrawing/"
+            className="hover:scale-110 duration-200"
+          />
+          <SocialIcon
+            style={{ width: "30px", height: "30px" }}
+            url="https://www.facebook.com/dogdrawing/?locale=en_GB"
+            className="hover:scale-110 duration-200"
+          />
+        </div>
+      </nav>
     </>
   );
 }

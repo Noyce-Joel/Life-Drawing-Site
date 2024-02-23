@@ -5,7 +5,7 @@ import axios from "axios";
 export default function getAllEvents() {
   const hey = 'hello world'
   const baseUrl =
-    "https://life-drawing.vercel.app" || process.env.NEXT_PUBLIC_VERCEL_URL;
+    "http://localhost:3000" || process.env.NEXT_PUBLIC_VERCEL_URL;
   return axios
     .get(`${baseUrl}/api/events`)
     .then((response) => response.data)
