@@ -13,9 +13,9 @@ export const Buy = ({ eventId }: { eventId: number }) => {
           widgetType: "checkout",
           eventId: eventId,
           modal: true,
-          modalTriggerElementId: "button_id",
+          modalTriggerElementId: `button_id_${eventId}`,
           onOrderComplete: () => {
-            console.log("Order complete!");
+            window.location.reload();
           },
         });
       };
@@ -26,10 +26,10 @@ export const Buy = ({ eventId }: { eventId: number }) => {
     }, [eventId]);
     return (
       <button
-        id="button_id"
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 rounded-2xl"
+        id={`button_id_${eventId}`}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
-        BOOK
+        Buy Tickets
       </button>
     );
   };

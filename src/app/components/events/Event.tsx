@@ -28,7 +28,7 @@ export default function Event({
   return (
     <motion.div 
       onClick={() =>  eventClick(id)}
-      className={`bg-white rounded-[90px] w-[90vw] md:w-auto origin-top md:hover:rounded-[20px]  md:hover:-translate-y-[40px] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+      className={`bg-gray-900 text-white rounded-[70px] w-[90vw] md:w-auto origin-top md:hover:rounded-[20px]  md:hover:-translate-y-[40px] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">
         <Image
@@ -39,21 +39,21 @@ export default function Event({
           height={400}
         />
       </div>
-      <div className="relative p-12 pt-6 ">
-        oioi
-        <h2 className="text-xl font-semibold text-gray-800 border-b pb-2">
+      <div className="relative p-12 pt-6 text-white">
+
+        <h2 className="text-xl font-semibold border-b pb-2">
           {name}
         </h2>
-        <p className="text-sm text-gray-600 mt-2">
+        <p className="text-sm mt-2">
           <span className="font-bold">Start:</span> {start}
         </p>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm ">
           <span className="font-bold">End:</span> {end}
         </p>
         
        
         <div className="mt-2 flex  justify-between w-full">
-        <p className="text-sm text-gray-600 mt-4">
+        <p className="text-sm mt-4">
           <span className="font-bold">Capacity:</span> {capacity}
         </p>
           <Buy eventId={id} />

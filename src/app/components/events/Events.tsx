@@ -60,17 +60,17 @@ export default function Events() {
 
   console.log(events);
   return (
-    <div className="h-screen relative top-[350px] ">
+    <div className="h-screen relative top-[150px] ">
       <div className="p-24 absolute transition-all duration-500 ease-in-out flex justify-center m-24 ">
         <Modal />
       </div>
       <div className="px-[70px]">
-        <div className="relative flex flex-col justify-start items-start font-bold text-[60px] w-full  text-white">
+        <div className="flex flex-col justify-start items-cente font-bold text-[60px] w-full text-white">
           Events
-          <motion.div initial={{scale:0}} whileInView={{scale: 1, transition: {type: "spring", mass: 1, damping: 40}}} transition={{duration: 1.4, }} className="w-full origin-left absolute left-0 bottom-0 border-b"></motion.div>
+          <motion.div initial={{scale:0}} whileInView={{scale: 1, transition: {duration: 0.9, type: "tween", mass: 1, ease: "anticipate"}}}  className="w-full origin-right border-b border-[1.9px]"></motion.div>
         </div>
       </div>
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto flex relative gap-24 justify-between md:items-end py-24 w-screen px-12">
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto flex relative gap-24 justify-between md:items-end py-44 w-screen px-12">
         {events.map((event, index) => {
           const id = event.id;
           const name = event.name.text;
@@ -81,7 +81,7 @@ export default function Events() {
           const capacity = event.capacity;
           return (
             <>
-              <div key={index} className="z-10 ">
+              <div key={id + index} className="z-10 ">
                 <Event
                   eventClick={handleEventClick}
                   id={id}

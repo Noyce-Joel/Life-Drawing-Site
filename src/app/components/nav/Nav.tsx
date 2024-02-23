@@ -64,7 +64,7 @@ export default function Nav() {
         )}
       </AnimatePresence>
 
-      <nav className="flex flex-col md:flex-row mx-auto items-center mb-12 px-4 py-4 w-full justify-center md:justify-between">
+      <nav className="flex flex-col md:flex-row mx-auto items-center px-4 mb-12 py-4 w-full justify-center md:justify-between">
         <div className="flex items-center justify-center gap-2 w-full">
           <Image
             src="/Logo.png"
@@ -74,35 +74,37 @@ export default function Nav() {
             alt="logo"
           />
           <div className="w-full">
-            <ul className="md:flex hidden gap-4 px-2 border-[#0000005f] w-full">
+            <ul className="md:flex items-center text-white hidden gap-10 px-2 border-[#0000005f] w-full">
               {pages.map((page, index) => (
-                
+                <>
                 
                 <li
                   key={index}
-                  className="hover:scale-105  duration-200 hover:cursor-pointer text-lg pr-2"
+                  className="hover:scale-105 flex  duration-200 hover:cursor-pointer text-lg pr-2"
                 >
                   {page.name}
                 </li>
                 
-                
+                </>
               ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="flex gap-4 px-12">
-          <SocialIcon
-            style={{ width: "30px", height: "30px" }}
+              <div className="flex gap-2">
+              <SocialIcon
+            style={{ width: "20px", height: "20px" }}
             url="https://www.instagram.com/dog.lifedrawing/"
             className="hover:scale-110 duration-200"
           />
           <SocialIcon
-            style={{ width: "30px", height: "30px" }}
+            style={{ width: "20px", height: "20px" }}
             url="https://www.facebook.com/dogdrawing/?locale=en_GB"
             className="hover:scale-110 duration-200"
           />
+              </div>
+            </ul>
+            
+          </div>
         </div>
+
+        
       </nav>
     </>
   );
