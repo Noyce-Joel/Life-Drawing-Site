@@ -81,7 +81,7 @@ export default function Events() {
           const capacity = event.capacity;
           return (
             <>
-              <div key={id + index} className="z-10 ">
+              <div key={index} className="z-10 ">
                 <Event
                   eventClick={handleEventClick}
                   id={id}
