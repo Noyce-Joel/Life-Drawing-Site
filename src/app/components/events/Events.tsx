@@ -61,7 +61,7 @@ export default function Events() {
   console.log(events);
   return (
     <>
-    <article className="flex flex-col justify-center items-center h-auto font-extrabold text-[40px] ">
+    <article className="flex flex-col pt-7 justify-center items-center h-auto font-extrabold text-[40px] ">
       <div className="flex w-4/5 flex-col font-bold text-[60px] text-white">
         
         EVENTS

@@ -7,9 +7,9 @@ import Title from "./Title";
 export default function Hero() {
   return (
     <>
-      <Loading />
+      
       <Title />
-      <div className="text-left items-center justify-center flex flex-col  gap-4 tracking-wider text-pretty font-bold ">
+      <div className="text-left items-center justify-center flex flex-col pt-4 gap-7 tracking-wider text-pretty font-bold ">
         {/* <figure className="">
           <Image
             src="/HERO.jpg"

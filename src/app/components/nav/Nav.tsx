@@ -8,37 +8,40 @@ const pages = [
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
+const DropDown = ({handleClick}:{handleClick: () => void}) => {
+  return (
+    <div key="drop-menu" className="flex md:hidden flex-col gap-4">
+      <button onClick={() => handleClick()}>Close</button>
+
+      {pages.map((page, index) => (
+        <div
+          key={index}
+          className="hover:scale-105 duration-200 hover:cursor-pointer text-2xl"
+        >
+          {page.name}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default function Nav() {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
-  const DropDown = () => {
-    return (
-      <div key="drop-menu" className="flex md:hidden flex-col gap-4">
-        <button onClick={() => setMobileMenu(!mobileMenu)}>Close</button>
-
-        {pages.map((page, index) => (
-          <div
-            key={index}
-            className="hover:scale-105 duration-200 hover:cursor-pointer text-2xl"
-          >
-            {page.name}
-          </div>
-        ))}
-      </div>
-    );
-  };
+  const handleClick = () => {
+    setMobileMenu(!mobileMenu);
+  }
   return (
     <>
-      <button onClick={() => setMobileMenu(!mobileMenu)} className="md:hidden">
+      <button onClick={() => handleClick()} className="md:hidden">
         Open
       </button>
       <AnimatePresence>
         {mobileMenu && (
           <motion.div
-            initial={{ x: -700, y: -700 }}
+            initial={{ scale: 0, x: 400}}
             animate={{
+              scale: 1,
               x: 0,
-              y: 0,
               transition: {
                 duration: 1,
                 type: "spring",
@@ -47,8 +50,8 @@ export default function Nav() {
               },
             }}
             exit={{
-              x: -500,
-              
+              scale: 0,
+              x: -400,
               
               transition: {
                 duration: 5,
@@ -57,9 +60,9 @@ export default function Nav() {
                 damping: 20,
               },
             }}
-            className="absolute flex p-[40px] z-20 bg-gray-500 w-full mx-auto left-0 right-0 top-0 bottom-0"
+            className="absolute rounded-2xl flex p-[40px] z-20 bg-gray-500 w-4/5 h-4/5 left-10 top-10"
           >
-            <DropDown />
+            <DropDown handleClick={handleClick}/>
           </motion.div>
         )}
       </AnimatePresence>

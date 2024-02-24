@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import Loading from "../loading/Loading";
 
 export default function About() {
   return (
-    <article className="flex flex-col justify-center items-center h-auto font-extrabold text-[40px] ">
+    <article className="flex flex-col pt-7  overflow-hidden justify-center items-center h-auto font-extrabold text-[40px] ">
       <div className="flex w-4/5 flex-col font-bold text-[60px] mb-6 text-white">
         {/* <figure className="flex pb-12">
           <Image
@@ -22,6 +23,7 @@ export default function About() {
             scale: 1,
             transition: {
               duration: 1.4,
+              delay: 0.4,
               type: "tween",
 
               ease: "anticipate",
@@ -30,8 +32,8 @@ export default function About() {
           className="w-full -z-40 origin-right border-b border-[1.9px]"
         ></motion.div>
       </div>
-      <div className="flex w-4/5">
-        <div className=" justify-center items-center flex flex-col">
+      <div className="flex w-4/5 pt-4 ">
+        <div className=" justify-center items-center gap-4 flex flex-col">
           <div className="flex">
             <p className="text-justify text-[22px] ">
               Our dog life drawing sessions blend the joy of artistic expression
@@ -41,7 +43,10 @@ export default function About() {
             </p>
           </div>
           <span className="h-2"> </span>
-          <div className="flex justify-end items-end ">
+          <div className="flex justify-end  relative items-end ">
+            <div className="absolute flex md:hidden -left-24">
+            <Loading />
+            </div>
             <p className="text-justify text-white flex justify-end items-end w-3/4 text-[25px]">
               You&#39;ll be guided by talented instructors who are not only
               passionate about art but also share a deep love for dogs.
