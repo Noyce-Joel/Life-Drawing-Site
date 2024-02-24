@@ -60,38 +60,38 @@ export default function Nav() {
                 damping: 20,
               },
             }}
-            className="absolute rounded-2xl flex p-[40px] z-20 bg-gray-500 w-4/5 h-4/5 left-10 top-10"
+            className="absolute rounded-2xl flex p-[40px] z-40 bg-gray-500 w-4/5 h-4/5 left-10 top-10"
           >
             <DropDown handleClick={handleClick}/>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <nav className="flex flex-col md:flex-row mx-auto items-center px-4 mb-12 py-4 w-screen md:justify-between">
+      <nav className="flex flex-col z-40 md:flex-row mx-auto items-center px-4 mb-12 py-4 w-screen md:justify-between">
         <div className="flex">
           <Image
             src="/Logo.png"
             className=""
-            height={350}
-            width={350}
+            height={150}
+            width={150}
             alt="logo"
           />
           </div>
           <div className="w-full">
-            <ul className="md:flex items-center justify-end text-white hidden gap-10 px-2 border-[#0000005f] w-full">
+            <ul className="z-40 md:flex items-center justify-end text-white hidden gap-10 px-2 border-[#0000005f] w-full">
               {pages.map((page, index) => (
                 
                 
                 <li
                   key={index}
-                  className="hover:scale-105 flex  duration-200 hover:cursor-pointer text-md pr-2"
+                  className="hover:scale-105 flex z-40 duration-200 hover:cursor-pointer text-md pr-2"
                 >
                   {page.name.toUpperCase()}
                 </li>
                 
                 
               ))}
-              <div className="flex gap-2">
+              <div className="flex z-40 gap-2">
               <SocialIcon
             style={{ width: "20px", height: "20px" }}
             url="https://www.instagram.com/dog.lifedrawing/"

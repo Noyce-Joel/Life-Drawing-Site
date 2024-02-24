@@ -61,8 +61,8 @@ export default function Events() {
   console.log(events);
   return (
     <>
-    <article className="flex flex-col pt-7 justify-center items-center h-auto font-extrabold text-[40px] ">
-      <div className="flex w-4/5 flex-col font-bold text-[60px] text-white">
+    <article className="flex flex-col pt-24 justify-center items-center h-auto font-extrabold text-[40px] ">
+      <div className="flex w-4/5 flex-col font-bold text-[50px] text-white">
         
         EVENTS
         <motion.div
@@ -81,7 +81,7 @@ export default function Events() {
       </div>
       </article>
       
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto flex relative gap-24 justify-between md:items-end py-44 w-screen px-12">
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto flex relative gap-24 justify-between md:items-end py-24 w-screen px-12">
         {events.map((event, index) => {
           const id = event.id;
           const name = event.name.text;
