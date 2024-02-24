@@ -27,6 +27,7 @@ export default function Event({
   const [loading, setLoading] = useState<boolean>(true);
   return (
     <motion.div 
+    key={id}
       onClick={() =>  eventClick(id)}
       className={`bg-gray-900 text-white rounded-[70px] w-[90vw] md:w-auto origin-top md:hover:rounded-[20px]  md:hover:-translate-y-[40px] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >

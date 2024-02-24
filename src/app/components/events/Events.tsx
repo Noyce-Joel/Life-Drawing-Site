@@ -60,16 +60,27 @@ export default function Events() {
 
   console.log(events);
   return (
-    <div className="h-screen relative top-[150px] ">
-      <div className="p-24 absolute transition-all duration-500 ease-in-out flex justify-center m-24 ">
-        <Modal />
+    <>
+    <article className="flex flex-col justify-center items-center h-auto font-extrabold text-[40px] ">
+      <div className="flex w-4/5 flex-col font-bold text-[60px] text-white">
+        
+        EVENTS
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{
+            scale: 1,
+            transition: {
+              duration: 1.4,
+              type: "tween",
+
+              ease: "anticipate",
+            },
+          }}
+          className="w-full -z-40 origin-right border-b border-[1.9px]"
+        ></motion.div>
       </div>
-      <div className="px-[70px]">
-        <div className="flex flex-col justify-start items-cente font-bold text-[60px] w-full text-white">
-          Events
-          <motion.div initial={{scale:0}} whileInView={{scale: 1, transition: {duration: 0.9, type: "tween", mass: 1, ease: "anticipate"}}}  className="w-full origin-right border-b border-[1.9px]"></motion.div>
-        </div>
-      </div>
+      </article>
+      
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto flex relative gap-24 justify-between md:items-end py-44 w-screen px-12">
         {events.map((event, index) => {
           const id = event.id;
@@ -80,23 +91,21 @@ export default function Events() {
           const logo = event.logo.original.url;
           const capacity = event.capacity;
           return (
-            <>
-              <div key={id + index} className="z-10 ">
-                <Event
-                  eventClick={handleEventClick}
-                  id={id}
-                  name={name}
-                  start={start}
-                  end={end}
-                  description={description}
-                  capacity={capacity}
-                  logo={logo}
-                />
-              </div>
-            </>
+            <div key={index} className="z-10 ">
+              <Event
+                eventClick={handleEventClick}
+                id={id}
+                name={name}
+                start={start}
+                end={end}
+                description={description}
+                capacity={capacity}
+                logo={logo}
+              />
+            </div>
           );
         })}
       </div>
-    </div>
+    </>
   );
 }

@@ -57,35 +57,36 @@ export default function Nav() {
                 damping: 20,
               },
             }}
-            className="fixed flex p-[40px] z-20 bg-gray-500 w-full mx-auto left-0 right-0 top-0 bottom-0"
+            className="absolute flex p-[40px] z-20 bg-gray-500 w-full mx-auto left-0 right-0 top-0 bottom-0"
           >
             <DropDown />
           </motion.div>
         )}
       </AnimatePresence>
 
-      <nav className="flex flex-col md:flex-row mx-auto items-center px-4 mb-12 py-4 w-full justify-center md:justify-between">
-        <div className="flex items-center justify-center gap-2 w-full">
+      <nav className="flex flex-col md:flex-row mx-auto items-center px-4 mb-12 py-4 w-screen md:justify-between">
+        <div className="flex">
           <Image
             src="/Logo.png"
             className=""
-            height={150}
-            width={150}
+            height={350}
+            width={350}
             alt="logo"
           />
+          </div>
           <div className="w-full">
-            <ul className="md:flex items-center text-white hidden gap-10 px-2 border-[#0000005f] w-full">
+            <ul className="md:flex items-center justify-end text-white hidden gap-10 px-2 border-[#0000005f] w-full">
               {pages.map((page, index) => (
-                <>
+                
                 
                 <li
                   key={index}
-                  className="hover:scale-105 flex  duration-200 hover:cursor-pointer text-lg pr-2"
+                  className="hover:scale-105 flex  duration-200 hover:cursor-pointer text-md pr-2"
                 >
-                  {page.name}
+                  {page.name.toUpperCase()}
                 </li>
                 
-                </>
+                
               ))}
               <div className="flex gap-2">
               <SocialIcon
@@ -102,7 +103,7 @@ export default function Nav() {
             </ul>
             
           </div>
-        </div>
+        
 
         
       </nav>
