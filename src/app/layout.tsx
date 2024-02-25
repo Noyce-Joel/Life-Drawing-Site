@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,10 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <>
+    
     <html lang="en">
+      
       <body className={inter.className}>
         <StateProvider>{children}</StateProvider>
       </body>
     </html>
+    </>
   );
 }

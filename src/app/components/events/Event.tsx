@@ -29,7 +29,7 @@ export default function Event({
     <motion.div 
     key={id}
       onClick={() =>  eventClick(id)}
-      className={`bg-gray-900 text-white rounded-[70px] w-[90vw] md:w-auto origin-top md:hover:rounded-[20px]  md:hover:-translate-y-[20px] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+      className={`bg-gray-900 text-white rounded-[10px] w-[90vw] md:w-auto origin-top md:hover:rounded-[50px]  md:hover:-translate-y-[20px] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">
         <Image

@@ -4,10 +4,10 @@ import React from "react";
 export default function Loading() {
   const { scrollYProgress } = useScroll();
 
-  const scroll = useTransform(scrollYProgress, [0, 420], [0, 770]);
+  const scroll = useTransform(scrollYProgress, [0, 420], [0, 470]);
 
   return (
-    <motion.div initial={{opacity: 0}} animate={{opacity: 0.7}}  className="absolute -left-96 -bottom-56 bg-gray-500/40 -z-30 overflow-hidden rounded-full h-[700px] w-[700px]">
+    <motion.div initial={{opacity: 0}} animate={{opacity: 0.7}}  className=" bg-gray-900 -z-40 overflow-hidden rounded-[20px] h-[650px] w-[650px]">
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"

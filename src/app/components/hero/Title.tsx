@@ -23,13 +23,13 @@ export default function Title() {
       variants={container}
       initial="initial"
       animate="animate"
-      className="md:text-[100px] md:pl-54 z-10 flex overflow-hidden font-extrabold relative justify-center items-center text-[55px] flex-col text-white "
+      className="md:text-[150px] md:pl-54 z-10 flex overflow-hidden font-extrabold relative justify-center items-center text-[75px] flex-col text-white "
     >
         <figure className="absolute w-3/4 justify-end items-end rounded-full overflow-visible flex -z-20">
         <Image
           src="/HERO.jpg"
-          height={800}
-          width={800}
+          height={1000}
+          width={1000}
           alt="hero-image"
           className="rounded-[20px] object-fit object-cover w-full  hidden md:flex right-56 mx-auto bottom-0 left-0 top-0"
         />
@@ -37,7 +37,7 @@ export default function Title() {
       {title.map((word, idx) => (
         <motion.h1
           key={idx}
-          className="space-y-0 h-full flex w-4/5 overflow-y-hidden z-20 justify-start items-start"
+          className="space-y-0 md:h-44 flex w-4/5 overflow-y-hidden z-20 justify-start items-start"
         >
           <motion.span variants={item} key="anim" className="block ">
             {word}

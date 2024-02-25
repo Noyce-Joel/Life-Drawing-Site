@@ -9,9 +9,9 @@ export default function Hero() {
     <>
       
       <Title />
-      <div className="text-left relative z-10 items-center justify-center flex flex-col pt-12 gap-7 tracking-wider text-pretty font-bold ">
-        <div className="flex items-end justify-end w-4/5">
-          <h2 className="text-[30px] md:text-[40px] pt-6 text-justify text-white">
+      <div className="text-left relative z-10 items-center justify-center flex flex-col gap-7 tracking-wider text-pretty font-bold ">
+        <div className="flex items-end justify-end w-4/5 lg:-mt-20">
+          <h2 className="text-[40px] md:w-[295px] w-1/2 md:text-[50px]  text-justify text-white">
             WHERE ART MEETS CANINE CHARM
           </h2>
         </div>

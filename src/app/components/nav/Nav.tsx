@@ -67,7 +67,7 @@ export default function Nav() {
         )}
       </AnimatePresence>
 
-      <nav className="flex flex-col z-40 md:flex-row mx-auto items-center px-4 mb-12 py-4 w-screen md:justify-between">
+      <nav className="flex flex-col z-40 md:flex-row mx-auto items-center px-4 mb-12 py-4 ">
         <div className="flex">
           <Image
             src="/Logo.png"
@@ -77,8 +77,8 @@ export default function Nav() {
             alt="logo"
           />
           </div>
-          <div className="w-full">
-            <ul className="z-40 md:flex items-center justify-end text-white hidden gap-10 px-2 border-[#0000005f] w-full">
+          <div className="fixed left-56 z-40">
+            <ul className="z-40 md:flex bg-gray-800/25 backdrop-blur-md rounded-md items-center justify-center text-white hidden gap-10 px-4 py-1 border-[#0000005f] ">
               {pages.map((page, index) => (
                 
                 
@@ -93,12 +93,12 @@ export default function Nav() {
               ))}
               <div className="flex z-40 gap-2">
               <SocialIcon
-            style={{ width: "20px", height: "20px" }}
+            style={{ width: "27px", height: "27px" }}
             url="https://www.instagram.com/dog.lifedrawing/"
             className="hover:scale-110 duration-200"
           />
           <SocialIcon
-            style={{ width: "20px", height: "20px" }}
+            style={{ width: "27px", height: "27px" }}
             url="https://www.facebook.com/dogdrawing/?locale=en_GB"
             className="hover:scale-110 duration-200"
           />
