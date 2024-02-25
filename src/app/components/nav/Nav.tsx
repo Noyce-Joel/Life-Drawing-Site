@@ -5,7 +5,7 @@ import { SocialIcon } from "react-social-icons";
 
 const pages = [
   { name: "Events", href: "/" },
-  { name: "About", href: "/about" },
+  
   { name: "Contact", href: "/contact" },
 ];
 const DropDown = ({handleClick}:{handleClick: () => void}) => {

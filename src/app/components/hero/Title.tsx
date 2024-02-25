@@ -14,8 +14,8 @@ export default function Title() {
   };
 
   const item = {
-    initial: { y: 250, rotate: 45, delay: 0.5 },
-    animate: { y: 0, rotate: 0, transition: { duration: 0.7 } },
+    initial: { y: 450, x: 150, rotate: 25, delay: 0.5 },
+    animate: { y: 0, x: 0, rotate: 0, transition: { duration: 0.7 } },
   };
   return (
     <>

@@ -61,9 +61,8 @@ export default function Events() {
   console.log(events);
   return (
     <>
-    <article className="flex flex-col pt-48 justify-end items-end h-auto font-extrabold text-[90px] ">
-      <div className="flex w-4/5 flex-col font-bold text-[90px] text-white">
-        
+      <article className="flex flex-col pt-48 justify-end items-end h-auto font-extrabold text-[90px] ">
+      <div className="flex w-1/2 md:w-4/5 relative flex-col font-bold text-[50px] md:text-[90px] mb-6 text-white">
         EVENTS
         <motion.div
           initial={{ scale: 0 }}
@@ -71,6 +70,7 @@ export default function Events() {
             scale: 1,
             transition: {
               duration: 1.4,
+
               type: "tween",
 
               ease: "anticipate",
@@ -79,9 +79,19 @@ export default function Events() {
           className="w-full -z-40 origin-right -mt-5 border-b border-[1.9px]"
         ></motion.div>
       </div>
+       
+          <div className="flex justify-center relative w-4/5 items-center md:justify-start md:items-start pt-6 md:pt-16">
+            <p className="text-justify text-white flex  w-4/5 text-[27px] md:text-[55px]">
+              Ready to embark on a journey of artistic discovery, BOOK HERE and
+              join Dog Life Drawing, where every stroke of your pencil is a
+              celebration of the beautiful bond between humans and their furry
+              friends. 
+            </p>
+          </div>
+        
       </article>
-      
-      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto flex relative gap-12 lg:gap-24 justify-between md:items-end py-24 w-screen px-12">
+
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 overflow-x-auto flex relative gap-12 lg:gap-24 justify-between md:items-end py-24 px-12">
         {events.map((event, index) => {
           const id = event.id;
           const name = event.name.text;
@@ -105,7 +115,16 @@ export default function Events() {
             </div>
           );
         })}
+        
       </div>
+      <div>
+          <div className="flex w-full justify-center relative md:pb-24  items-center pt-6 md:pt-16">
+            <p className="text-justify text-white flex  w-4/5 md:w-1/2 text-[40px] md:text-[55px] pr-4">
+               Let&#39;s sketch, share, and wag our way to a gallery of
+              heartwarming masterpieces!
+            </p>
+          </div>
+        </div>
     </>
   );
 }

@@ -5,8 +5,11 @@ import Events from "./components/events/Events";
 import Nav from "./components/nav/Nav";
 import Hero from "./components/hero/Hero";
 import { motion } from "framer-motion";
-import About from "./components/about/About";
+import Sessions from "./components/about/Sessions";
+import Models from "./components/about/Models";
+import Why from "./components/about/Why";
 import Title from "./components/hero/Title";
+import Footer from "./components/footer/Footer";
 
 
 export default function Home() {
@@ -23,8 +26,11 @@ export default function Home() {
       <Nav />
       
       <Hero />
-      <About />
+      <Sessions />
+      <Why />
+      <Models />
       <Events />
+      <Footer />
     </motion.div>
   );
 }
