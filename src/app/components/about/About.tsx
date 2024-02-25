@@ -28,7 +28,7 @@ export default function About() {
               ease: "anticipate",
             },
           }}
-          className="w-full -z-40 origin-right -mt-4 border-b border-[1.9px]"
+          className="w-full -z-40 origin-right -mt-5 border-b border-[1.9px]"
         ></motion.div>
       </div>
       <div className="flex relative md:w-4/5 pt-4 ">
@@ -48,9 +48,9 @@ export default function About() {
           </div>
           <span className="h-2"> </span>
          
-          <div className="flex items-end h-full relative justify-center md:justify-end overflow-hidden md:w-4/5 md:pt-16">
+          <div className="flex items-end h-full relative justify-center md:justify-end overflow-hidden md:w-4/5 md:pt-12">
             
-            <p className="text-justify text-[32px] md:text-[40px] w-3/4">
+            <p className="text-justify text-[32px] md:text-[40px] w-3/5 lg:w-3/4">
               Our dog life drawing sessions blend the joy of artistic expression
               with the undeniable charm of our favourite furry friends. Whether
               you&#39;re an experienced artist or a complete novice, our

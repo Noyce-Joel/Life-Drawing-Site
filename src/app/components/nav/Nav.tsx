@@ -72,12 +72,12 @@ export default function Nav() {
           <Image
             src="/Logo.png"
             className=""
-            height={150}
-            width={150}
+            height={250}
+            width={250}
             alt="logo"
           />
           </div>
-          <div className="fixed left-56 z-40">
+          <div className="fixed left-72 z-40">
             <ul className="z-40 md:flex bg-gray-800/25 backdrop-blur-md rounded-md items-center justify-center text-white hidden gap-10 px-4 py-1 border-[#0000005f] ">
               {pages.map((page, index) => (
                 

@@ -76,7 +76,7 @@ export default function Events() {
               ease: "anticipate",
             },
           }}
-          className="w-full -z-40 origin-right border-b border-[1.9px]"
+          className="w-full -z-40 origin-right -mt-5 border-b border-[1.9px]"
         ></motion.div>
       </div>
       </article>

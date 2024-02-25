@@ -14,7 +14,7 @@ export default function Title() {
   };
 
   const item = {
-    initial: { y: 250, rotate: 20, delay: 0.5 },
+    initial: { y: 250, rotate: 45, delay: 0.5 },
     animate: { y: 0, rotate: 0, transition: { duration: 0.7 } },
   };
   return (
@@ -25,7 +25,7 @@ export default function Title() {
       animate="animate"
       className="md:text-[150px] md:pl-54 z-10 flex overflow-hidden font-extrabold relative justify-center items-center text-[75px] flex-col text-white "
     >
-        <figure className="absolute w-3/4 justify-end items-end rounded-full overflow-visible flex -z-20">
+        <figure className="absolute w-3/4 justify-end items-end rounded-full  flex -z-20">
         <Image
           src="/HERO.jpg"
           height={1000}
