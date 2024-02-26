@@ -9,6 +9,7 @@ import Sessions from "./components/about/Sessions";
 import Models from "./components/about/Models";
 import Why from "./components/about/Why";
 import Footer from "./components/footer/Footer";
+import EventsList from "./components/events/EventsList";
 
 
 export default function Home() {
@@ -17,14 +18,18 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1}}
     >
+      <Image src='/dog3.png' height={350} width={350} alt="brush-strokes" className="hidden md:flex -z-50 absolute stroke-white fill-white z md:right-0 md:top-80 lg:right-36 lg:top-[40.5vh] "/>
+      
+      
       <Nav />
       <Hero />
       <Sessions />
       <Why />
       <Models />
       <Events />
+      
       <Footer />
     </motion.div>
   );

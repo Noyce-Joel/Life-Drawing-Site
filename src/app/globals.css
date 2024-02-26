@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(113, 113, 113);
+  background-color: #8b6441;
   overflow-x: hidden;
   letter-spacing: 1.5px;
 }
@@ -24,4 +24,11 @@ color: #801a1a
 }
 .bounce {
   animation: bounce 2.5s normal both infinite;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1605px) {
+  .width-dogs{
+   color: white
+  }
 }

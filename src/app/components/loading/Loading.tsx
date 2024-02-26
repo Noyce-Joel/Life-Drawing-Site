@@ -10,7 +10,7 @@ import React, { useEffect, useRef } from "react";
 export default function Loading() {
   const controls = useAnimation();
   const ref = useRef(null);
-  const inView = useInView(ref, {amount: "all",  margin: '0px 50% 0px 50%',});
+  const inView = useInView(ref, {amount: "all",  margin: '220px 90% 220px 90%',});
 
   const scroll = inView ? 1 : 0;
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Loading() {
         pathLength: 1,
         transition: {
           delay: 0.2,
-          duration: 2.5, // Adjust the duration of the animation
+          duration: 5, // Adjust the duration of the animation
         },
       });
     }
@@ -31,15 +31,15 @@ export default function Loading() {
       ref={ref}
       
       
-      className=" -mb-52 -mt-32 lg:flex hidden -z-40 overflow-hidden rounded-full "
+      className=" -mb-80 -mt-32 lg:flex hidden -z-40 overflow-hidden rounded-full "
     >
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1792.000000 1780.000000"
         preserveAspectRatio="xMidYMid meet"
-          height={700}
-          width={700}
+          height={1000}
+          width={1000}
       >
         <g transform="translate(0.000000,1780.000000) scale(0.100000,-0.100000)">
           <motion.path

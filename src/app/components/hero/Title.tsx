@@ -19,13 +19,23 @@ export default function Title() {
   };
   return (
     <>
+     <div className="absolute top-0 right-0 ">
+          <Image
+            src="/Logo.png"
+            className=""
+            height={205}
+            width={205}
+            alt="logo"
+          />
+          </div>
       <motion.section
         variants={container}
         initial="initial"
         animate="animate"
-        className="md:text-[100px] lg:text-[150px] md:pl-54 z-10 h-full flex overflow-hidden font-extrabold relative justify-center items-end text-[75px] flex-col text-white "
+        className="md:text-[100px] lg:text-[150px] lg:pt-12 md:pl-54 z-10 h-full flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[55px]  flex-col text-white "
       >
         
+          
         <motion.figure
           initial={{ scale: 0.9, opacity: 0, y: 1500 }}
           animate={{
@@ -34,14 +44,14 @@ export default function Title() {
             y: 0,
             transition: { type: "spring", duration: "2", mass: '1', damping: 34 },
           }}
-          className="absolute w-3/4 justify-end items-end rounded-full  flex -z-20"
+          className="hidden absolute lg:-left-72 md:-left-44 w-3/4 justify-start items-start rounded-full -z-20"
         >
           <Image
             src="/HERO.jpg"
             height={1000}
             width={1000}
             alt="hero-image"
-            className=" object-fit  object-cover w-full  hidden md:flex right-56 mx-auto bottom-0 left-0 top-0"
+            className="absolute  object-cover w-full  hidden md:flex  right-0 left-0 -bottom-96"
           />
         </motion.figure>
         {title.map((word, idx) => (
@@ -68,6 +78,7 @@ export default function Title() {
         }}
         className="origin-right flex -z-20 border-b border-2 w-full"
       ></motion.div>
+      
     </>
   );
 }

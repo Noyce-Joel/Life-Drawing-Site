@@ -12,7 +12,7 @@ export default function Event({
   description,
   capacity,
   logo,
-  eventClick
+  eventClick,
 }: {
   id: number;
   name: string;
@@ -26,10 +26,10 @@ export default function Event({
   const [open, setOpen] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   return (
-    <motion.div 
-    key={id}
-      onClick={() =>  eventClick(id)}
-      className={`bg-gray-900 text-white rounded-[10px] w-[90vw] md:w-auto origin-top md:hover:rounded-[40px] hover:scale-[102%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+    <motion.div
+      key={id}
+      onClick={() => eventClick(id)}
+      className={`bg-gray-900 text-white rounded-[10px] w-[90vw] md:w-96 origin-top md:hover:rounded-[60px] hover:scale-[107%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">
         <Image
@@ -41,22 +41,18 @@ export default function Event({
         />
       </div>
       <div className="relative p-12 pt-6 text-white">
-
-        <h2 className="text-xl font-semibold border-b pb-2">
-          {name}
-        </h2>
+        <h2 className="text-xl font-semibold border-b pb-2">{name}</h2>
         <p className="text-sm mt-2">
           <span className="font-bold">Start:</span> {start}
         </p>
         <p className="text-sm ">
           <span className="font-bold">End:</span> {end}
         </p>
-        
-       
+
         <div className="mt-2 flex  justify-between w-full">
-        <p className="text-sm mt-4">
-          <span className="font-bold">Capacity:</span> {capacity}
-        </p>
+          <p className="text-sm mt-4">
+            <span className="font-bold">Capacity:</span> {capacity}
+          </p>
           <Buy eventId={id} />
         </div>
       </div>
