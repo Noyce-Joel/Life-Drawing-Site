@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Bebas_Neue } from "next/font/google";
+import { Fraunces } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
 import Head from "next/head";
 
-const inter = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const inter = Fraunces({ subsets: ["latin"], weight: ["400", "500", "600", "700" ] });
 
 export const metadata: Metadata = {
   title: "Create Next App",

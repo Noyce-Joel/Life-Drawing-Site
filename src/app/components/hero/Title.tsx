@@ -19,34 +19,43 @@ export default function Title() {
   };
   return (
     <>
-    <motion.section
-      variants={container}
-      initial="initial"
-      animate="animate"
-      className="md:text-[150px] md:pl-54 z-10 flex overflow-hidden font-extrabold relative justify-center items-center text-[75px] flex-col text-white "
-    >
-        <figure className="absolute w-3/4 justify-end items-end rounded-full  flex -z-20">
-        <Image
-          src="/HERO.jpg"
-          height={1000}
-          width={1000}
-          alt="hero-image"
-          className="rounded-[20px] object-fit object-cover w-full  hidden md:flex right-56 mx-auto bottom-0 left-0 top-0"
-        />
-      </figure>
-      {title.map((word, idx) => (
-        <motion.h1
-          key={idx}
-          className="space-y-0 md:h-44 flex w-4/5 overflow-y-hidden z-20 justify-start items-start"
+      <motion.section
+        variants={container}
+        initial="initial"
+        animate="animate"
+        className="md:text-[100px] lg:text-[150px] md:pl-54 z-10 h-full flex overflow-hidden font-extrabold relative justify-center items-end text-[75px] flex-col text-white "
+      >
+        
+        <motion.figure
+          initial={{ scale: 0.9, opacity: 0, y: 1500 }}
+          animate={{
+            scale: 1,
+            opacity: 1,
+            y: 0,
+            transition: { type: "spring", duration: "2", mass: '1', damping: 34 },
+          }}
+          className="absolute w-3/4 justify-end items-end rounded-full  flex -z-20"
         >
-          <motion.span variants={item} key="anim" className="block ">
-            {word}
-          </motion.span>
-        </motion.h1>
-      ))}
-      
-    </motion.section>
-    <motion.div
+          <Image
+            src="/HERO.jpg"
+            height={1000}
+            width={1000}
+            alt="hero-image"
+            className=" object-fit  object-cover w-full  hidden md:flex right-56 mx-auto bottom-0 left-0 top-0"
+          />
+        </motion.figure>
+        {title.map((word, idx) => (
+          <motion.h1
+            key={idx}
+            className="space-y-0 md:h-[169px] flex w-4/5 overflow-y-hidden z-20 justify-start items-start"
+          >
+            <motion.span variants={item} key="anim" className="block ">
+              {word}
+            </motion.span>
+          </motion.h1>
+        ))}
+      </motion.section>
+      <motion.div
         initial={{ scale: 0 }}
         whileInView={{
           scale: 1,

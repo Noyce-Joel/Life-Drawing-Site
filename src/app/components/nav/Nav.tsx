@@ -2,9 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
+import { CalendarIcon, PhoneArrowDownLeftIcon } from "@heroicons/react/24/outline";
 
 const pages = [
-  { name: "Events", href: "/" },
+  { name: "Events", href: "/", icon: CalendarIcon },
   
   { name: "Contact", href: "/contact" },
 ];
@@ -19,6 +20,7 @@ const DropDown = ({handleClick}:{handleClick: () => void}) => {
           className="hover:scale-105 duration-200 hover:cursor-pointer text-2xl"
         >
           {page.name}
+          {page.icon === CalendarIcon ? <CalendarIcon className="w-6 h-6" /> : <PhoneArrowDownLeftIcon className="w-6 h-6" />}
         </div>
       ))}
     </div>
@@ -68,16 +70,8 @@ export default function Nav() {
       </AnimatePresence>
 
       <nav className="flex flex-col z-40 md:flex-row mx-auto items-center px-4 mb-12 py-4 ">
-        <div className="flex">
-          <Image
-            src="/Logo.png"
-            className=""
-            height={250}
-            width={250}
-            alt="logo"
-          />
-          </div>
-          <div className="fixed left-72 z-40">
+        
+          <div className=" z-40">
             <ul className="z-40 md:flex bg-gray-800/25 backdrop-blur-md rounded-md items-center justify-center text-white hidden gap-10 px-4 py-1 border-[#0000005f] ">
               {pages.map((page, index) => (
                 

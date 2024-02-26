@@ -5,8 +5,8 @@ import Loading from "../loading/Loading";
 
 export default function Models() {
   return (
-    <article className="flex flex-col pt-56 relative justify-end items-end h-auto font-extrabold text-[40px] ">
-      <div className="flex w-1/2 md:w-4/5 relative flex-col font-bold text-[50px] md:text-[90px] mb-6 text-white">
+    <article className="flex flex-col pt-40 relative justify-end items-end h-auto font-extrabold text-[40px] ">
+      <div className="flex w-1/2 md:w-4/5 pt-2 relative flex-col font-bold text-[40px] md:text-[70px] mb-6 text-white">
         MODELS
         <motion.div
           initial={{ scale: 0 }}
@@ -26,13 +26,13 @@ export default function Models() {
       <div className="flex relative md:w-4/5 pt-4 ">
         <div className=" md:justify-start md:items-start justify-center items-center gap-4 flex flex-col">
           <div className="flex items-start justify-start w-4/5">
-            <p className="text-[27px] md:text-[40px] text-justify md:pt-12 ">
-              What sets us apart? Well, our models have a wagging tail, wet
+            <p className="text-[27px] md:text-[37px] text-justify md:pt-12 ">
+              What sets us apart? Well, our models have wagging tails, wet
               noses, and a penchant for striking the most adorable poses.
             </p>
           </div>
           <div className="flex w-full justify-center items-center md:justify-start relative md:tems-start pt-6 md:pt-16">
-            <p className="text-justify text-white flex md:-ml-20 w-3/4 text-[32px] md:text-[55px] pr-4">
+            <p className="text-justify text-white flex md:-ml-20 w-3/4 text-[32px] md:text-[45px] pr-4">
               Forget traditional still life – our furry friends bring a dynamic
               and lively element to your sketches, making each session a
               delightful and unforgettable experience.
@@ -48,11 +48,10 @@ export default function Models() {
           <span className="h-2"> </span>
 
           <div className="flex items-end h-full relative justify-center md:justify-start overflow-hidden md:w-4/5 md:pt-12">
-            <p className="text-justify text-[27px] md:text-[40px] md:w-3/5 w-4/5 lg:w-4/6">
-              Our dog life drawing sessions blend the joy of artistic expression
-              with the undeniable charm of our favourite furry friends. Whether
-              you&#39;re an experienced artist or a complete novice, our
-              sessions cater to all skill levels.
+            <p className="text-justify text-[27px] md:text-[37px] md:w-full w-4/5 lg:w-4/6">
+              From the arc of a tail to the tilt of an ear, each moment presents
+              an opportunity to explore. With a diverse array of dog breeds to
+              inspire your creations
             </p>
           </div>
         </div>
