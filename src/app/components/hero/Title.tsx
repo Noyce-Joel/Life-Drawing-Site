@@ -7,19 +7,21 @@ export default function Title() {
   const container = {
     animate: {
       transition: {
-        staggerChildren: 0.1,
-        delay: 0.5,
+        staggerChildren: 0.2,
+        delay: 0.8,
       },
     },
   };
 
+  
+
   const item = {
-    initial: { y: 450, x: 150, rotate: 25, delay: 0.5 },
+    initial: { y: 450, x: 150, rotate: 25},
     animate: { y: 0, x: 0, rotate: 0, transition: { duration: 0.7 } },
   };
   return (
     <>
-     <div className="absolute top-0 right-0 ">
+     <div className="absolute top-4 md:right-4 lg:right-0  mx-auto">
           <Image
             src="/Logo.png"
             className=""
@@ -32,7 +34,7 @@ export default function Title() {
         variants={container}
         initial="initial"
         animate="animate"
-        className="md:text-[100px] lg:text-[150px] lg:pt-12 md:pl-54 z-10 h-full flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[55px]  flex-col text-white "
+        className="md:text-[100px] lg:text-[150px] pt-40 z-10  flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[55px]  flex-col text-white "
       >
         
           
@@ -44,20 +46,21 @@ export default function Title() {
             y: 0,
             transition: { type: "spring", duration: "2", mass: '1', damping: 34 },
           }}
-          className="hidden absolute lg:-left-72 md:-left-44 w-3/4 justify-start items-start rounded-full -z-20"
+          className="flex absolute w-3/4 h-3/4 rounded-full -z-20"
         >
           <Image
             src="/HERO.jpg"
             height={1000}
             width={1000}
             alt="hero-image"
-            className="absolute  object-cover w-full  hidden md:flex  right-0 left-0 -bottom-96"
+            className=" object-cover w-4/6  hidden md:flex rounded-bl-[100px] rounded-tr-[100px] rounded-[20px]"
           />
         </motion.figure>
+        <Image src='/dog3.png' height={150} width={150} alt="brush-strokes" className="hidden md:flex invert pl-12 z-50 absolute -bottom-[14px] right-16  "/>
         {title.map((word, idx) => (
           <motion.h1
             key={idx}
-            className="space-y-0 md:h-[169px] flex w-4/5 overflow-y-hidden z-20 justify-start items-start"
+            className="space-y-0 lg:h-[169px] flex w-4/5 overflow-y-hidden z-20 justify-start items-start "
           >
             <motion.span variants={item} key="anim" className="block ">
               {word}
@@ -76,7 +79,7 @@ export default function Title() {
             ease: "anticipate",
           },
         }}
-        className="origin-right flex -z-20 border-b border-2 w-full"
+        className="origin-right flex -z-20 border-b border-1"
       ></motion.div>
       
     </>

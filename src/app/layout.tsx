@@ -3,6 +3,7 @@ import { Fraunces } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 const inter = Fraunces({ subsets: ["latin"], weight: ["400", "500", "600", "700" ] });
 

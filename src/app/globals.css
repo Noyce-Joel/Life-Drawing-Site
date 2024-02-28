@@ -4,9 +4,12 @@
 
 body {
   background-color: #8b6441;
-  overflow-x: hidden;
+  
   letter-spacing: 1.5px;
+  scroll-behavior: smooth;
 }
+
+
 
 .font {
 color: #801a1a
@@ -27,8 +30,86 @@ color: #801a1a
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1605px) {
-  .width-dogs{
-   color: white
+
+
+@media screen and (min-width: 0px) and (max-width: 750px) {
+  
+  .sm-heading {
+    font-size: 32px
+  }
+
+  .sm-text {
+    font-size: 27px
+  }
+
+  .sm-white-text {
+    font-size: 27px
+  }
+  
+}
+
+@media screen and (min-width: 750px) and (max-width: 1540px) {
+  
+  
+  .md-text {
+    font-size: 32px
+  }
+
+  .md-white-text {
+    font-size: 40px
+  }
+  
+}
+
+@media screen and (min-width: 1540px) and (max-width: 2000px) {
+  
+  
+  
+
+  .lg-white-text {
+    font-size: 45px
+  }
+
+  .lg-text {
+    font-size: 35px
+  }
+  
+}
+
+@media screen and (min-width: 768px) and (max-width: 1250px) {
+  .md-text-2 {
+    font-size: 25px
+  }  
+
+  
+
+  .session-text-hide {
+    display: none;
+  }
+
+  .session-text-show {
+    display: flex;
+    color: white
+  }
+
+  
+  
+}
+
+@media screen and (min-width: 768px ) and (max-width: 1110px) {
+  .session-text-hide-two {
+    display: none;
+  }
+
+  .session-text-show-two {
+    display: flex;
+    padding-bottom: 6rem
+  }
+
+  .border-top {
+    border-top: 1px solid rgb(17, 24, 39);
+    color: white;
   }
 }
+
+

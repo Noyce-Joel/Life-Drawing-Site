@@ -77,13 +77,13 @@ export default function Nav() {
         )}
       </AnimatePresence>
 
-      <nav className="flex flex-col z-40 md:flex-row mx-auto items-center px-4 mb-12 py-4 ">
-        <div className=" z-40">
-          <ul className="z-40 md:flex  backdrop-blur-md rounded-md items-center justify-center text-white hidden gap-10 px-4 py-1 border-[#0000005f] ">
+      <nav className="flex-col md:flex-row mx-auto items-center px-4 z-40 py-4 pb-10">
+        <div className="z-40">
+          <ul className=" md:flex  backdrop-blur-md rounded-md items-center justify-center text-white hidden gap-10 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
               <li
                 key={index}
-                className="hover:scale-105 flex z-40 duration-200 hover:cursor-pointer text-md pr-2"
+                className="hover:scale-105 flex z-40 duration-200 hover:cursor-pointer text-[22px] "
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>

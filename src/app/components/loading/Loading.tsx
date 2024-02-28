@@ -31,7 +31,7 @@ export default function Loading() {
       ref={ref}
       
       
-      className=" -mb-80 -mt-32 lg:flex hidden -z-40 overflow-hidden rounded-full "
+      className=" -mb-80 -mt-56 bg-[#6d4a2b] lg:flex hidden -z-40 overflow-hidden rounded-full "
     >
       <svg
         version="1.0"
