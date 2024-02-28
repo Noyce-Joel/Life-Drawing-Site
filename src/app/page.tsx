@@ -9,7 +9,7 @@ import Sessions from "./components/about/Sessions";
 import Models from "./components/about/Models";
 import Why from "./components/about/Why";
 import Footer from "./components/footer/Footer";
-import EventsList from "./components/events/EventsList";
+
 
 
 export default function Home() {

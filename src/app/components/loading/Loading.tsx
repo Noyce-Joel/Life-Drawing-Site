@@ -7,10 +7,9 @@ import {
 } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-export default function Loading() {
+export default function Loading({inView}:{inView: boolean}) {
   const controls = useAnimation();
-  const ref = useRef(null);
-  const inView = useInView(ref, {amount: "all",  margin: '220px 90% 220px 90%',});
+  
 
   const scroll = inView ? 1 : 0;
   useEffect(() => {
@@ -19,7 +18,7 @@ export default function Loading() {
         pathLength: 1,
         transition: {
           delay: 0.2,
-          duration: 5, // Adjust the duration of the animation
+          duration: 5,
         },
       });
     }
@@ -28,10 +27,10 @@ export default function Loading() {
   return (
     
     <motion.div
-      ref={ref}
       
       
-      className=" -mb-80 -mt-56 bg-[#6d4a2b] lg:flex hidden -z-40 overflow-hidden rounded-full "
+      
+      className=" absolute -top-72 "
     >
       <svg
         version="1.0"

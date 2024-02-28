@@ -3,8 +3,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import {
+  Bars3Icon,
   CalendarIcon,
   PhoneArrowDownLeftIcon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -15,13 +17,13 @@ const pages = [
 ];
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div key="drop-menu" className="flex md:hidden flex-col gap-4">
-      <button onClick={() => handleClick()}>Close</button>
+    <div key="drop-menu" className="flex md:hidden relative flex-col items-center gap-4 w-full h-full text-white">
+      <button onClick={() => handleClick()}><XMarkIcon className="absolute top-0 right-0 h-10 w-10"/></button>
 
       {pages.map((page, index) => (
         <div
           key={index}
-          className="hover:scale-105 duration-200 hover:cursor-pointer text-2xl"
+          className="hover:scale-105 pt-12 flex items-center gap-4 duration-200 hover:cursor-pointer text-[37px]"
         >
           {page.name}
           {page.icon === CalendarIcon ? (
@@ -42,8 +44,8 @@ export default function Nav() {
   };
   return (
     <>
-      <button onClick={() => handleClick()} className="md:hidden">
-        Open
+      <button onClick={() => handleClick()} className="md:hidden absolute z-40 top-0 right-0 p-12">
+        <Bars3Icon  className="w-10 h-10 " />
       </button>
       <AnimatePresence>
         {mobileMenu && (
@@ -70,7 +72,7 @@ export default function Nav() {
                 damping: 20,
               },
             }}
-            className="absolute rounded-2xl flex p-[40px] z-40 bg-gray-500 w-4/5 h-4/5 left-10 top-10"
+            className="fixed rounded-2xl  p-[40px] z-40 bg-gray-900 w-4/5 h-5/6 left-10 top-10"
           >
             <DropDown handleClick={handleClick} />
           </motion.div>

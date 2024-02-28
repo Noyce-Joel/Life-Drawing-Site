@@ -1,48 +1,63 @@
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 import React from "react";
-import Loading from "../loading/Loading";
 import Line from "../line/Line";
 
 export default function Models() {
   return (
-    <article className="flex flex-col pt-24 md:pt-32 relative border-b border-gray-900 pb-24 mb:pb-0 lg:pb-40 justify-end items-end  font-extrabold text-[40px] ">
+    <article className="flex text-justify flex-col pt-32 border-b border-gray-900 pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
+      
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
-        MODELS
+        Models
         <Line title={false}/>
       </div>
-      <div className="flex relative md:w-4/5">
-        <div className=" md:justify-start md:items-start justify-center items-center flex flex-col gap-6 lg:gap-0">
-          <div className="flex items-start justify-start w-4/5">
-            <p className="sm-text md-text lg-text text-justify md:pt-12 ">
-              What sets us apart? Well, our models have wagging tails, wet
+      
+      <div className="flex flex-col justify-center items-center relative">
+        <p className=" text-black text-justify md:w-3/5 w-4/5 pt-12 lg-text md-text sm-text">
+        What sets us apart? Well, our models have wagging tails, wet
               noses, and a penchant for striking the most adorable poses.
-            </p>
-          </div>
-          <div className="flex w-full justify-center items-center md:justify-start relative md:tems-start pt-6 md:pt-12">
-            <p className="text-justify text-white flex md:-ml-20 w-3/4 sm-text md-text lg-text z-10 ">
-              Forget traditional still life – our furry friends bring a dynamic
+        </p>
+
+        <div className="flex w-5/6 justify-start items-start pt-12">
+          
+          <div className="flex flex-col gap-12 justify-center items-center md:items-end">
+            <p className=" text-white flex items-end md:-mr-56 lg:-mr-36 md:w-auto lg-white-text md-white-text sm-white-text">
+            Forget traditional still life – our furry friends bring a dynamic
               and lively element to your sketches, making each session a
               delightful and unforgettable experience.
             </p>
-            <Image
-              src="/Dog-model2.jpg"
-              height={500}
-              width={500}
-              alt="hero-image"
-              className="rounded-[10px] md:flex hidden absolute -z-0 md:right-24 top-10"
-            />
-          </div>
-          <span className="h-2"> </span>
-
-          <div className="flex items-end relative justify-center md:justify-start overflow-hidden md:w-4/5 md:pt-12">
-            <p className="text-justify width-dogs sm-text md-text lg-text md:w-full w-4/5 lg:w-4/6">
+            <p className="md:pr-12 lg:w-4/5 lg-text md-text sm-text ">
+              <span className="session-text-hide-two">
               From the arc of a tail to the tilt of an ear, each moment presents
-              an opportunity to explore. With a diverse array of dog breeds to
+              an opportunity to explore. 
+              </span>{" "}
+              <span className="session-text-hide">
+                {" "}
+                With a diverse array of dog breeds to
               inspire your creations
+              </span>
             </p>
           </div>
+          <Image
+            src="/Dog-model2.jpg"
+            height={500}
+            width={500}
+            alt="hero-image"
+            className="rounded-[10px] lg:-mt-12 -z-10 md:flex hidden"
+          />
         </div>
+        <p className="text-justify session-text-show-two hidden w-3/5 sm-text md-text lg-text pt-12  ">
+          {" "}
+          From the arc of a tail to the tilt of an ear, each moment presents
+              an opportunity to explore.
+        </p>
+
+        <p className="w-full text-justify  justify-center border-top border-gray-900 hidden session-text-show  sm-text md-white-text lg-text pt-24   ">
+          <span className=" flex w-3/5">
+          With a diverse array of dog breeds to
+              inspire your creations
+          </span>
+        </p>
       </div>
     </article>
   );

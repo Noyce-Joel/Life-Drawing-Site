@@ -1,19 +1,19 @@
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 import React from "react";
 import Line from "../line/Line";
 
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-32 border-b border-gray-900 pb-24 md:pb-32 md:pt-32 relative justify-end items-end h-auto font-extrabold text-[40px] ">
+    <article className="flex text-justify flex-col pt-32 border-b border-gray-900 pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
       
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
         SESSIONS
         <Line title={false}/>
       </div>
       
-      <div className="flex flex-col justify-center items-center relative md:w-full">
-        <p className=" text-black text-justify md:w-3/5 w-4/5 md:pt-12 lg-text md-text sm-text">
+      <div className="flex flex-col justify-center items-center relative">
+        <p className=" text-black text-justify md:w-3/5 w-4/5 pt-12 lg-text md-text sm-text">
           Unleash your creativity and embark on a paw-some artistic adventure
           with our unique Dog Drawing sessions.
         </p>
@@ -24,14 +24,14 @@ export default function Sessions() {
             height={500}
             width={500}
             alt="hero-image"
-            className="rounded-[10px]  md:flex hidden -z-40"
+            className="rounded-[10px] md:flex hidden"
           />
-          <div className="flex flex-col relative justify-center items-center md:justify-start md:items-start pt-6 md:pt-12">
-            <p className="text-justify text-white flex md:-ml-56 lg:-ml-36 w-3/4 md:w-auto lg-white-text md-white-text sm-white-text">
+          <div className="flex flex-col gap-12 justify-center items-center md:items-start md:pt-12">
+            <p className=" text-white flex md:-ml-56 lg:-ml-36 md:w-auto lg-white-text md-white-text sm-white-text">
               You&#39;ll be guided by talented instructors who are not only
               passionate about art but also share a deep love for dogs.
             </p>
-            <p className=" text-justify md:pl-12 md-width lg-width pt-12  lg-text md-text sm-text ">
+            <p className="md:pl-12 lg:w-4/5 lg-text md-text sm-text ">
               <span className="session-text-hide-two">
                 Our dog life drawing sessions blend the joy of artistic
                 expression with the undeniable charm of our favourite furry

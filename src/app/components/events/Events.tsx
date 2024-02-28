@@ -3,11 +3,7 @@
 import { useContext, useEffect, useState } from "react";
 import { StateContext, StateContextType } from "../../context/State";
 import { Dialog } from "@headlessui/react";
-
-import Map from "./Map";
 import Event from "./Event";
-import Loading from "../loading/Loading";
-import { motion } from "framer-motion";
 import Line from "../line/Line";
 
 declare global {
@@ -15,7 +11,6 @@ declare global {
     EBWidgets: any;
   }
 }
-
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
@@ -71,20 +66,19 @@ export default function Events() {
   return (
     <>
       <article className="flex flex-col pt-24 md:pt-32 justify-center items-center h-auto font-extrabold text-[90px] ">
-        <div className="flex  relative flex-col font-bold text-[30px] md:text-[70px]  text-white">
+        <div className="flex w-full pl-12 lg:pl-72 relative flex-col font-bold text-[30px] md:text-[75px]  text-white">
           EVENTS
-          <Line title={false}/>
+          <Line title={false} />
         </div>
 
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="flex w-3/4 md:w-3/5 relative flex-col font-semibold text-[30px] md:text-[50px] text-white md:pt-12 hover:cursor-pointer hover:scale-[104%] pb-2 hover:text-gray-900 transition-all duration-200"
+          className="flex w-3/4 md:w-3/5 relative flex-col font-semibold text-[30px] md:text-[50px] text-white md:pt-12 hover:cursor-pointer hover:scale-[104%] hover:text-gray-900 transition-all duration-200"
         >
           SHEFFIELD
-           
         </div>
         <div className="w-full flex relative ">
-        <Line title={false}/>
+          <Line title={false} />
         </div>
       </article>
 

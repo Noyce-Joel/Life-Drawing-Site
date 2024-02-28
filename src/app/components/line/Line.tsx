@@ -17,7 +17,7 @@ export default function Line({title}: {title: boolean}) {
         ease: "anticipate",
       },
     }}
-    className={`w-full absolute  right-0 origin-right md:-mt-10 border-b  ${title ? 'border-[2px] bottom-0' : 'border-[1.2px] bottom-0 md:bottom-4'}`}
+    className={`w-full  origin-right border-b  ${title ? 'border-[2px] bottom-0' : 'border-[1.2px] bottom-0 md:bottom-0'}`}
   ></motion.div>
 </>
   )

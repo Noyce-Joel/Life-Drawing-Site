@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 import React from "react";
-import Loading from "../loading/Loading";
+
 import Ball from "../loading/Ball";
 import Line from "../line/Line";
 
@@ -14,7 +14,7 @@ export default function Sessions() {
       </div>
       <div className="flex relative md:w-4/5 pt-12 ">
         <div className=" md:justify-start md:items-start justify-center items-center flex flex-col ">
-          <div className="flex flex-col items-start justify-start w-4/5">
+          <div className="flex flex-col items-start justify-start w-4/5 pb-24 ">
           <b className=" text-justify text-white w-4/5 md:w-full lg:w-4/5 font-semibold sm-heading text-[50px]">
               CREATIVITY UNLEASHED
             </b>
@@ -24,18 +24,18 @@ export default function Sessions() {
             </p>
             
           </div>
-          <div className="flex flex-col w-4/5 justify-start items-start md:justify-start relative md:items-start pt-6 md:pt-12  md:-ml-24 ">
+          <div className="flex flex-col w-4/5 justify-start items-start md:justify-start relative md:items-start pt-6 md:pt-4 lg:pt-12 md:-ml-24 ">
             <Image
               src="/Dog-model.jpg"
               height={700}
               width={700}
               alt="hero-image"
-              className="rounded-[10px] md:flex hidden absolute -z-40 md:-right-44 lg:-right-72 lg:-bottom-52 3xl:-right-0"
+              className="rounded-[10px] md:flex hidden absolute -z-40 md:-right-44 lg:-right-60 lg:-bottom-56 "
             />
             {/* <b className="text-justify text-white  md:w-3/5 text-[32px] md:text-[55px]">
               FUN FOR ALL AGES
             </b> */}
-            <p className="sm-text md-text lg-text text-white text-justify pt-6 md:w-full lg:w-4/5 w-full">
+            <p className="sm-text md-text lg-text text-white text-justify md:w-full lg:w-4/5 w-full">
               Whether you&#39;re a seasoned artist or just picking up a pencil
               for the first time, our sessions are designed to be inclusive and
               enjoyable for everyone.
