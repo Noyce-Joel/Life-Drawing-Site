@@ -8,7 +8,7 @@ export default function Sessions() {
       
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
         SESSIONS
-        {/* <motion.div
+        <motion.div
           initial={{ scale: 0 }}
           whileInView={{
             scale: 1,
@@ -21,7 +21,7 @@ export default function Sessions() {
             },
           }}
           className=" -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
-        ></motion.div> */}
+        ></motion.div>
       </div>
 
       <div className="flex flex-col justify-center items-center relative md:w-full">

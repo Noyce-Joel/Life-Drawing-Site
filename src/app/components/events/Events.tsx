@@ -72,7 +72,7 @@ export default function Events() {
       <article className="flex flex-col pt-24 md:pt-32 justify-end items-end h-auto font-extrabold text-[90px] ">
         <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px]  text-white">
           EVENTS
-          {/* <motion.div
+          <motion.div
             initial={{ scale: 0 }}
             whileInView={{
               scale: 1,
@@ -85,17 +85,10 @@ export default function Events() {
               },
             }}
             className=" -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
-          ></motion.div> */}
+          ></motion.div>
         </div>
 
-        <div className="flex justify-center relative md:w-4/5 items-center md:justify-center md:items-center pt-6 pb-12 md:pb-0 md:pt-16">
-          <p className="text-justify  flex  w-4/5 sm-text md-text lg-text">
-            Ready to embark on a journey of artistic discovery, BOOK HERE and
-            join Dog Life Drawing, where every stroke of your pencil is a
-            celebration of the beautiful bond between humans and their furry
-            friends.
-          </p>
-        </div>
+        
         <div
           
           className="flex w-3/4 md:w-3/5 relative flex-col font-semibold text-[30px] md:text-[50px] text-white md:pt-12 "
@@ -103,7 +96,7 @@ export default function Events() {
           <div onClick={() => setIsOpen(!isOpen)} className=" hover:cursor-pointer hover:scale-[104%] pb-2 hover:text-gray-900 transition-all duration-200 ">
           SHEFFIELD
           </div>
-          {/* <motion.div
+          <motion.div
             initial={{ scale: 0 }}
             whileInView={{
               scale: 1,
@@ -116,11 +109,11 @@ export default function Events() {
               },
             }}
             className="-z-40  origin-right md:-mt-5 border-b border-[1.2px]"
-          ></motion.div> */}
+          ></motion.div>
         </div>
       </article>
 
-      <section
+      {/* <section
         className={classNames(
           isOpen ? "h-[41rem] w-full" : "h-[2rem] md:w-[40rem] lg:w-[60rem]  flex ",
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-900 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
@@ -151,7 +144,7 @@ export default function Events() {
             );
           })}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
