@@ -23,7 +23,7 @@ const nextConfig = {
         ];
       },
       images: {
-        domains: ['localhost', 'life.drawing.vercel.app'],
+        domains: ['localhost'],
         
         remotePatterns: [
           {

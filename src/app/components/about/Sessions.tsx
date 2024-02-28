@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import Line from "../line/Line";
 
 export default function Sessions() {
   return (
@@ -8,20 +9,7 @@ export default function Sessions() {
       
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
         SESSIONS
-        <motion.div
-          initial={{ scale: 0.1 }}
-          whileInView={{
-            scale: 1,
-            transition: {
-              duration: 1.4,
-              delay: 0.4,
-              type: "tween",
-
-              ease: "anticipate",
-            },
-          }}
-          className="w-full absolute bottom-4 origin-right md:-mt-10 border-b border-[1.2px]"
-        ></motion.div>
+        <Line title={false}/>
       </div>
       
       <div className="flex flex-col justify-center items-center relative md:w-full">

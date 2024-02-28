@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import Line from "../line/Line";
 
 export default function Title() {
   const title = ["DOG", "LIFE", "DRAWING"];
@@ -67,20 +68,9 @@ export default function Title() {
             </motion.span>
           </motion.h1>
         ))}
+        <Line title={true} />
       </motion.section>
-      <motion.div
-        initial={{ scale: 0 }}
-        whileInView={{
-          scale: 1,
-          transition: {
-            duration: 1.4,
-
-            type: "tween",
-            ease: "anticipate",
-          },
-        }}
-        className="origin-right flex -z-20 border-b border-1"
-      ></motion.div>
+      
       
     </>
   );

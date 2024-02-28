@@ -3,26 +3,14 @@ import Image from "next/image";
 import React from "react";
 import Loading from "../loading/Loading";
 import Ball from "../loading/Ball";
+import Line from "../line/Line";
 
 export default function Sessions() {
   return (
     <article className="flex flex-col pt-24 md:pt-32 relative border-b border-gray-900 pb-24 md:pb-32 justify-end items-end h-auto font-extrabold text-[40px] ">
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
         WHY US?
-        <motion.div
-          initial={{ scale: 0 }}
-          whileInView={{
-            scale: 1,
-            transition: {
-              duration: 1.4,
-
-              type: "tween",
-
-              ease: "anticipate",
-            },
-          }}
-          className="absolute w-full bottom-4 -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
-        ></motion.div>
+         <Line title={false} />
       </div>
       <div className="flex relative md:w-4/5 pt-12 ">
         <div className=" md:justify-start md:items-start justify-center items-center flex flex-col ">

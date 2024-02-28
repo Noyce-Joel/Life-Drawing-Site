@@ -8,6 +8,7 @@ import Map from "./Map";
 import Event from "./Event";
 import Loading from "../loading/Loading";
 import { motion } from "framer-motion";
+import Line from "../line/Line";
 
 declare global {
   interface Window {
@@ -69,53 +70,29 @@ export default function Events() {
   console.log(events);
   return (
     <>
-      <article className="flex flex-col pt-24 md:pt-32 justify-end items-end h-auto font-extrabold text-[90px] ">
-        <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px]  text-white">
+      <article className="flex flex-col pt-24 md:pt-32 justify-center items-center h-auto font-extrabold text-[90px] ">
+        <div className="flex  relative flex-col font-bold text-[30px] md:text-[70px]  text-white">
           EVENTS
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{
-              scale: 1,
-              transition: {
-                duration: 1.4,
-
-                type: "tween",
-
-                ease: "anticipate",
-              },
-            }}
-            className="absolute w-full bottom-4 -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
-          ></motion.div>
+          <Line title={false}/>
         </div>
 
-        
         <div
-          
-          className="flex w-3/4 md:w-3/5 relative flex-col font-semibold text-[30px] md:text-[50px] text-white md:pt-12 "
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex w-3/4 md:w-3/5 relative flex-col font-semibold text-[30px] md:text-[50px] text-white md:pt-12 hover:cursor-pointer hover:scale-[104%] pb-2 hover:text-gray-900 transition-all duration-200"
         >
-          <div onClick={() => setIsOpen(!isOpen)} className=" hover:cursor-pointer hover:scale-[104%] pb-2 hover:text-gray-900 transition-all duration-200 ">
           SHEFFIELD
-          </div>
-          <motion.div
-            initial={{ scale: 0 }}
-            whileInView={{
-              scale: 1,
-              transition: {
-                duration: 1.4,
-
-                type: "tween",
-
-                ease: "anticipate",
-              },
-            }}
-            className="-z-40 absolute w-full bottom-4 origin-right md:-mt-5 border-b border-[1.2px]"
-          ></motion.div>
+           
+        </div>
+        <div className="w-full flex relative ">
+        <Line title={false}/>
         </div>
       </article>
 
       <section
         className={classNames(
-          isOpen ? "h-[41rem] w-full" : "h-[2rem] md:w-[40rem] lg:w-[60rem]  flex ",
+          isOpen
+            ? "h-[41rem] w-full"
+            : "h-[2rem] md:w-[20rem] lg:w-[60rem] flex ",
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-900 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >
