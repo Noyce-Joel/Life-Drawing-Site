@@ -72,7 +72,7 @@ export default function Events() {
       <article className="flex flex-col pt-24 md:pt-32 justify-end items-end h-auto font-extrabold text-[90px] ">
         <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px]  text-white">
           EVENTS
-          {/* <motion.div
+          <motion.div
             initial={{ scale: 0 }}
             whileInView={{
               scale: 1,
@@ -84,8 +84,8 @@ export default function Events() {
                 ease: "anticipate",
               },
             }}
-            className=" -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
-          ></motion.div> */}
+            className="absolute w-full bottom-4 -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
+          ></motion.div>
         </div>
 
         
@@ -96,7 +96,7 @@ export default function Events() {
           <div onClick={() => setIsOpen(!isOpen)} className=" hover:cursor-pointer hover:scale-[104%] pb-2 hover:text-gray-900 transition-all duration-200 ">
           SHEFFIELD
           </div>
-          {/* <motion.div
+          <motion.div
             initial={{ scale: 0 }}
             whileInView={{
               scale: 1,
@@ -108,12 +108,12 @@ export default function Events() {
                 ease: "anticipate",
               },
             }}
-            className="-z-40  origin-right md:-mt-5 border-b border-[1.2px]"
-          ></motion.div> */}
+            className="-z-40 absolute w-full bottom-4 origin-right md:-mt-5 border-b border-[1.2px]"
+          ></motion.div>
         </div>
       </article>
 
-      {/* <section
+      <section
         className={classNames(
           isOpen ? "h-[41rem] w-full" : "h-[2rem] md:w-[40rem] lg:w-[60rem]  flex ",
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-900 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
@@ -144,7 +144,7 @@ export default function Events() {
             );
           })}
         </div>
-      </section> */}
+      </section>
     </>
   );
 }

@@ -8,7 +8,7 @@ export default function Models() {
     <article className="flex flex-col pt-24 md:pt-32 relative border-b border-gray-900 pb-24 mb:pb-0 lg:pb-40 justify-end items-end  font-extrabold text-[40px] ">
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
         MODELS
-        {/* <motion.div
+        <motion.div
           initial={{ scale: 0 }}
           whileInView={{
             scale: 1,
@@ -20,8 +20,8 @@ export default function Models() {
               ease: "anticipate",
             },
           }}
-          className=" -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
-        ></motion.div> */}
+          className=" -z-40 absolute w-full bottom-4 origin-right md:-mt-5 border-b border-[1.2px]"
+        ></motion.div>
       </div>
       <div className="flex relative md:w-4/5">
         <div className=" md:justify-start md:items-start justify-center items-center flex flex-col gap-6 lg:gap-0">

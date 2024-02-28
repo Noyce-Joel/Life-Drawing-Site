@@ -8,8 +8,8 @@ export default function Sessions() {
       
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
         SESSIONS
-        {/* <motion.div
-          initial={{ scale: 0 }}
+        <motion.div
+          initial={{ scale: 0.1 }}
           whileInView={{
             scale: 1,
             transition: {
@@ -20,10 +20,10 @@ export default function Sessions() {
               ease: "anticipate",
             },
           }}
-          className=" -z-40 origin-right md:-mt-5 border-b border-[1.2px]"
-        ></motion.div> */}
+          className="w-full absolute bottom-4 origin-right md:-mt-10 border-b border-[1.2px]"
+        ></motion.div>
       </div>
-
+      
       <div className="flex flex-col justify-center items-center relative md:w-full">
         <p className=" text-black text-justify md:w-3/5 w-4/5 md:pt-12 lg-text md-text sm-text">
           Unleash your creativity and embark on a paw-some artistic adventure
