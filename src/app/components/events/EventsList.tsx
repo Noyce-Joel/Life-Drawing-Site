@@ -43,6 +43,7 @@ export default function EventsList({city}: {city: string}) {
             const description = event.description.text;
             const logo = event.logo.original.url;
             const capacity = event.capacity;
+            let hello;
             return (
               <div key={index} className="z-10 ">
                 <Event

@@ -42,6 +42,7 @@ export interface StateContextType {
 
 export const StateProvider = ({ children }: { children: React.ReactNode }) => {
   const [events, setEvents] = useState<Event[]>([]);
+
   useEffect(() => {
     getAllEvents()
       .then((data) => {
