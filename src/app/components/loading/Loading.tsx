@@ -18,7 +18,7 @@ export default function Loading({inView}:{inView: boolean}) {
         pathLength: 1,
         transition: {
           delay: 0.2,
-          duration: 5,
+          duration: 4,
         },
       });
     }

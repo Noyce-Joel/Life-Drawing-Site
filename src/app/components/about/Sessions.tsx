@@ -7,7 +7,7 @@ export default function Sessions() {
   return (
     <article className="flex text-justify flex-col pt-32 border-b border-gray-900 pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
       
-      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[30px] md:text-[70px] mb-6 text-white">
+      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[45px] md:text-[70px] mb-6 text-white">
         SESSIONS
         <Line title={false}/>
       </div>
@@ -18,7 +18,7 @@ export default function Sessions() {
           with our unique Dog Drawing sessions.
         </p>
 
-        <div className="flex w-5/6 justify-start items-start pt-12">
+        <div className="flex w-5/6 justify-start items-start pt-12 lg:mr-7">
           <Image
             src="/dog.jpg"
             height={500}
@@ -31,7 +31,7 @@ export default function Sessions() {
               You&#39;ll be guided by talented instructors who are not only
               passionate about art but also share a deep love for dogs.
             </p>
-            <p className="md:pl-12 lg:w-4/5 lg-text md-text sm-text ">
+            <p className="md:pl-12 lg:w-4/5 lg-text md-text sm-text">
               <span className="session-text-hide-two">
                 Our dog life drawing sessions blend the joy of artistic
                 expression with the undeniable charm of our favourite furry
