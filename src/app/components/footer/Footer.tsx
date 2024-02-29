@@ -23,7 +23,7 @@ export default function Footer() {
         <Loading inView={inView}/>
         
       </div>
-      <footer className="relative flex  md:px-24 py-7 text-white justify-between bg-gray-900 h-[400px] mt-auto overflow-y-hidden ">
+      <footer className="relative flex  md:px-24 py-7 px-12 text-white justify-between bg-gray-900 h-[400px] mt-auto overflow-y-hidden ">
         <div className=" flex flex-col gap-7 ">
           <b className="md:text-[27px]">Connect</b>
           <b>
