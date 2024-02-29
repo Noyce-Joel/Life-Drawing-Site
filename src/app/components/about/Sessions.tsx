@@ -20,7 +20,7 @@ export default function Sessions() {
 
         <div className="flex w-5/6 justify-start items-start pt-12 lg:mr-7">
           <Image
-            src="/dog.jpg"
+            src="/Dog.jpg"
             height={500}
             width={500}
             alt="hero-image"
