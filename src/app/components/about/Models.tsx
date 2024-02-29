@@ -27,9 +27,9 @@ export default function Models() {
               <span className="session-text-hide-two">
                 From the arc of a tail to the tilt of an ear, each moment
                 presents an opportunity to explore.
-              </span>{" "}
+              </span>
               <span className="session-text-hide">
-                {" "}
+                
                 We have a diverse array of dog breeds to inspire your creations
               </span>
             </p>
