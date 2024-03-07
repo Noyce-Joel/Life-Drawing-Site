@@ -42,11 +42,14 @@ export async function sendMail({
       to,
       subject,
       html: body,
-    });
-    if (send) {
-      resolve(send);
-    } else {
-      reject(send);
+    }, (err, info) => {
+        if (err) {
+            reject(err);
+          } else {
+            resolve(info);
+          }
     }
+    );
+   
   });
 }
