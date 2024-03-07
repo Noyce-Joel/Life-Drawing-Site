@@ -1,7 +1,7 @@
 "use client";
 
 import { sendMail } from "../../services/mail";
-import { AnimatePresence, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
