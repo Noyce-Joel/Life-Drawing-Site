@@ -2,7 +2,7 @@
 
 import nodemailer from "nodemailer";
 
-export async function sendMail({
+export default async function sendMail({
   to,
   name,
   subject,
