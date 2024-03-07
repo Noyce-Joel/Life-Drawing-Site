@@ -18,11 +18,7 @@ export default function Footer() {
         </div>
         
       </div>
-      <div ref={ref} className=" w-full h-[500px] relative rounded-[20px] overflow-hidden justify-center pb-24 lg:flex hidden ">
-        
-        <Loading inView={inView}/>
-        
-      </div>
+      
       <footer className="relative flex  md:px-24 py-7 px-12 text-white justify-between bg-gray-900 h-[410px] mt-auto overflow-y-hidden ">
         <div className=" flex flex-col gap-7 ">
           <b className="md:text-[27px]">Connect</b>

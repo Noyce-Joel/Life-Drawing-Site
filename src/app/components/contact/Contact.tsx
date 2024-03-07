@@ -1,15 +1,18 @@
 "use client";
 
+import { sendMail } from "@/app/services/mail";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 
+
 function MyForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    subject: "",
+    body: "",
   });
 
   const handleChange = (e: any) => {
@@ -18,12 +21,6 @@ function MyForm() {
       ...prevState,
       [name]: value,
     }));
-  };
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    // Here you can handle form submission, for example, send data to backend
-    console.log(formData);
   };
 
   const container = {
@@ -37,6 +34,18 @@ function MyForm() {
     initial: { y: 200, rotate: 25 },
     animate: { y: 0, rotate: 0, transition: { duration: 0.7 } },
   };
+
+  const handleSend = async () => {
+
+    await sendMail({
+      to: "noyce.joel@gmail.com",
+      email: formData.email,
+      name: formData.email,
+      subject: formData.subject,
+      body: formData.body
+    });
+  };
+  
 
   return (
     <motion.div className="flex gap-12 flex-col lg:flex-row w-screen h-full lg:h-screen justify-center items-center bg-gray-900">
@@ -57,7 +66,6 @@ function MyForm() {
             <h1 className="text-white  w-full flex-nowrap whitespace-nowrap lg:text-[60px]">
               Get in touch
             </h1>
-            
           </div>
 
           <div className=" contact-text text-[27px] flex items-start flex-col w-full text-justify">
@@ -88,18 +96,19 @@ function MyForm() {
           </div>
         </motion.div>
       </motion.section>
+      
       <section className="lg:w-1/2 w-full h-full relative bg-gray-900 lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
-        <form
-          onSubmit={handleSubmit}
-          className="w-full h-full flex flex-col justify-center items-start pb-12 lg:pl-12"
-        >
+        <form 
+        onSubmit={() => handleSend()}
+        className="w-full h-full flex flex-col justify-center items-start pb-12 lg:pl-12">
+          
           <div className="mb-4 w-full relative">
             <div className="h-9 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7 }}
-                htmlFor="name"
+                htmlFor="form-name"
                 className="block text-white font-bold mb-2 text-[27px] md:text-[27px] "
               >
                 Name
@@ -107,7 +116,7 @@ function MyForm() {
             </div>
             <input
               type="text"
-              id="name"
+              id="form-name"
               name="name"
               value={formData.name}
               onChange={handleChange}
@@ -135,7 +144,7 @@ function MyForm() {
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
-                htmlFor="email"
+                htmlFor="form-email"
                 className="block text-white font-bold mb-2 text-[27px] md:text-[27px]"
               >
                 Email
@@ -143,7 +152,7 @@ function MyForm() {
             </div>
             <input
               type="email"
-              id="email"
+              id="form-email"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -165,6 +174,33 @@ function MyForm() {
               className="w-full -z-40 origin-right  border-b border-[1.2px]"
             ></motion.div>
           </div>
+          <div className="mb-4 w-full relative ">
+            <div className="h-9 overflow-hidden">
+              <motion.label
+                initial={{ y: 200, rotate: 25 }}
+                animate={{ y: 0, rotate: 0 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                htmlFor="form-email"
+                className="block text-white font-bold mb-2 text-[27px] md:text-[27px]"
+              >
+                Subject
+              </motion.label>
+            </div>
+            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, delay: 1}} className="text-white pt-10 pb-7 flex gap-7">
+            <label className="flex gap-2">
+              Collaborations
+              <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Collaborations' />
+            </label>
+            <label className="flex gap-2">
+              Modelling
+              <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Modelling' />
+            </label>
+            <label className="flex gap-2">
+              General enquiry
+              <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='General enquiry' />
+            </label>
+            </motion.div>
+          </div>
 
           <div className="mb-4 w-full">
             <div className="h-9 overflow-hidden">
@@ -172,16 +208,16 @@ function MyForm() {
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
-                htmlFor="message"
+                htmlFor="form-message"
                 className="block text-white font-bold mb-2 text-[27px] md:text-[27px]"
               >
                 Message
               </motion.label>
             </div>
             <textarea
-              id="message"
-              name="message"
-              value={formData.message}
+              id="form-body"
+              name="body"
+              value={formData.body}
               onChange={handleChange}
               required
               className="w-full px-3 py-2 text-white md:text-[27px] focus:outline-none focus:border-yellow-500 focus:text-yellow-500 bg-transparent"

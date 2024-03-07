@@ -85,21 +85,25 @@ export default function Nav() {
             {pages.map((page, index) => (
               <li
                 key={index}
-                className="hover:scale-105 flex z-40 duration-200 hover:cursor-pointer text-[22px] "
+                className="hover:scale-105 hover:text-gray-900 flex z-40 duration-200 hover:cursor-pointer text-[22px] "
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>
             ))}
             <div className="flex z-40 gap-2">
               <SocialIcon
-                style={{ width: "27px", height: "27px" }}
+                style={{ width: "40px", height: "40px"}}
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
+                bgColor="transparent"
+                fgColor="white"
               />
               <SocialIcon
-                style={{ width: "27px", height: "27px" }}
+                style={{ width: "40px", height: "40px"}}
                 url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                 className="hover:scale-110 duration-200"
+                bgColor="transparent"
+                fgColor="white"
               />
             </div>
           </ul>
