@@ -79,14 +79,38 @@ export default function Title() {
       <div className="justify-center items-center overflow-hidden relative object-cover flex flex-col w-full h-full top-0 left-0">
         
 
-            <Loading inView={true} />
+      <div className="flex w-full h-full justify-end items-end">
+      <div className=" w-full h-full -mb-56 -mt-60 md:-mb-16 md:-mt-36 flex justify-center items-center">
+        <Loading inView={true} />
+        </div>
+            {/* <motion.figure
+          initial={{ scale: 0.9, opacity: 0, y: 1500 }}
+          animate={{
+            scale: 1,
+            opacity: 1,
+            y: 0,
+            transition: { type: "spring", duration: "2", mass: '1', damping: 34 },
+          }}
+          className=" lg:flex hidden w-full h-full items-center justify-center rounded-full -z-20"
+        >
+         
+          <Image
+            src="/HERO.jpg"
+            height={1000}
+            width={1000}
+            alt="hero-image"
+            className=" object-cover w-full  hidden md:flex rounded-bl-[100px] rounded-tr-[100px] rounded-[20px]"
+          />
+        </motion.figure> */}
+        
+        </div>
             <Line title={true} />
              <Image
           src="/dog3.png"
           height={150}
           width={150}
           alt="brush-strokes"
-          className="hidden md:flex invert pl-12 z-50 absolute -bottom-3  right-16  "
+          className="flex invert pl-12 z-20 absolute -bottom-3  right-16  "
         />
 
         </div>

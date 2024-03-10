@@ -9,34 +9,40 @@ import Sessions from "./components/about/Sessions";
 import Models from "./components/about/Models";
 import Why from "./components/about/Why";
 import Footer from "./components/footer/Footer";
-
-
+import Gallery from "./components/gallery/Gallery";
+import { useEffect, useState } from "react";
+import fetchImages from "./services/fetchImages";
+import cloudinary from "cloudinary";
 
 export default function Home() {
+  const [results, setResults] = useState<any>({ resources: [] });
+
+  useEffect(() => {
+    const fetch = async () => {
+      const res = await fetchImages();
+      setResults(res);
+    };
+    fetch();
+  }, []);
+
   return (
-    <AnimatePresence mode='wait' >
-    <motion.div
-    
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 2}}
-      className="relative h-screen w-screen "
-    >
-      
-      
-      
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 2 }}
+        className="relative h-screen w-screen "
+      >
         <Nav />
-      
-      
-      <Hero />
-      <Sessions />
-      <Why />
-      <Models />
-      <Events />
-      
-      <Footer />
-    </motion.div>
+        <Hero />
+        <Sessions />
+        <Why />
+        <Models />
+        <Events />
+        <Gallery results={results} />
+        <Footer />
+      </motion.div>
     </AnimatePresence>
   );
 }

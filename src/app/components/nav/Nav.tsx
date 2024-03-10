@@ -9,70 +9,129 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import Line from "../line/Line";
 
 const pages = [
   { name: "Events", href: "/events", icon: CalendarIcon },
 
   { name: "Contact", href: "/contact" },
+  
+  { name: "Wowzers", href: "/contact" },
+  
 ];
+
+const container = {
+  whileInView: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: 1,
+    },
+  },
+  exit: {
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+    },
+  },
+};
+
+const item = {
+  initial: { x: -325, skewY: -20 },
+  whileInView: {
+    x: 0,
+    skewY: 0,
+    transition: { duration: 1, ease: "easeInOut" },
+  },
+  exit: {
+    x: -325,
+    skewY: -20,
+    opacity: 0,
+    transition: { duration: 0.7, ease: "easeInOut" },
+  },
+};
+
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div key="drop-menu" className="flex md:hidden relative flex-col items-center gap-4 w-full h-full text-white">
-      <button onClick={() => handleClick()}><XMarkIcon className="absolute top-0 right-0 h-10 w-10"/></button>
+    <div className="flex md:hidden relative flex-col items-start gap-12 w-full h-full">
+      <button onClick={() => handleClick()}>
+        <XMarkIcon className="absolute top-0 right-0 h-10 w-10" />
+      </button>
+      <motion.div
+        variants={container}
+        initial="initial"
+        whileInView="whileInView"
+        exit="exit"
+        className=" "
+      >
+        {pages.map((page, index) => (
+          <div key={index} className=" -m-4 w-screen flex flex-col overflow-y-hidden">
+            <motion.div variants={item} className="text-[48px] -mb-2 w-full">
+              {page.name}
+            </motion.div>
 
-      {pages.map((page, index) => (
-        <div
-          key={index}
-          className="hover:scale-105 pt-12 flex items-center gap-4 duration-200 hover:cursor-pointer text-[37px]"
-        >
-          {page.name}
-          {page.icon === CalendarIcon ? (
-            <CalendarIcon className="w-6 h-6" />
-          ) : (
-            <PhoneArrowDownLeftIcon className="w-6 h-6" />
-          )}
-        </div>
-      ))}
+            <motion.div
+              initial={{ scale: 0.1 }}
+              whileInView={{
+                scale: 1,
+                transition: {
+                  duration: 1.4,
+                  delay: 0.2,
+                  type: "tween",
+
+                  ease: "anticipate",
+                },
+              }}
+              exit={{opacity: 0, transition: {duration: 0.45, }}}
+              className={`w-full flex origin-right border-b border-[0.2px] mb-4 border-black
+                `}
+            ></motion.div>
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 };
 
 export default function Nav() {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
+  const [hover, setHover] = useState<boolean>(false);
+  const [hoverTwo, setHoverTwo] = useState<boolean>(false);
   const handleClick = () => {
     setMobileMenu(!mobileMenu);
   };
   return (
     <>
-      <button onClick={() => handleClick()} className="md:hidden absolute z-40 top-0 right-0 p-12">
-        <Bars3Icon  className="w-10 h-10 " />
+      <button
+        onClick={() => handleClick()}
+        className="md:hidden absolute z-40 top-0 right-0 p-12"
+      >
+        <Bars3Icon className="w-10 h-10 " />
       </button>
       <AnimatePresence>
         {mobileMenu && (
           <motion.div
-            initial={{ scale: 0, x: 400 }}
+            initial={{ y: -window.innerHeight }}
             animate={{
-              scale: 1,
-              x: 0,
+              y: 0,
               transition: {
-                duration: 1,
+                duration: 0.5,
                 type: "spring",
-                friction: 10,
-                damping: 20,
+                friction: 90,
+                damping: 25,
               },
             }}
             exit={{
-              scale: 0,
-              x: -400,
+              y: -window.innerHeight - 40,
 
               transition: {
-                duration: 5,
+                delay: 0.35,
+                duration: 1,
                 type: "spring",
-                friction: 400,
+                friction: 90,
                 damping: 20,
               },
             }}
-            className="fixed rounded-2xl  p-[40px] z-40 bg-gray-900 w-4/5 h-5/6 left-10 top-10"
+            className="fixed p-[40px] z-50 bg-white w-full h-full"
           >
             <DropDown handleClick={handleClick} />
           </motion.div>
@@ -81,29 +140,33 @@ export default function Nav() {
 
       <nav className="flex-col md:flex-row mx-auto items-center px-4 z-40 py-4 pb-10">
         <div className="z-40">
-          <ul className=" md:flex  backdrop-blur-md rounded-md items-center justify-center text-white hidden gap-10 px-4 py-1 border-[#0000005f] ">
+          <ul className=" flex  backdrop-blur-md rounded-md md:items-center md:justify-center gap-10 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
               <li
                 key={index}
-                className="hover:scale-105 hover:text-gray-900 flex z-40 duration-200 hover:cursor-pointer text-[22px] "
+                className="md:flex hidden hover:scale-105 hover:text-white z-40 duration-200 hover:cursor-pointer text-[22px] "
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>
             ))}
-            <div className="flex z-40 gap-2">
+            <div className="flex z-40 gap-2 pt-7 md:pt-0">
               <SocialIcon
-                style={{ width: "40px", height: "40px"}}
+                style={{ width: "40px", height: "40px" }}
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor="white"
+                fgColor={hover ? "white" : "black"}
+                onMouseOver={() => setHover(true)}
+                onMouseOut={() => setHover(false)}
               />
               <SocialIcon
-                style={{ width: "40px", height: "40px"}}
+                style={{ width: "40px", height: "40px" }}
                 url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor="white"
+                fgColor={hoverTwo ? "white" : "black"}
+                onMouseOver={() => setHoverTwo(true)}
+                onMouseOut={() => setHoverTwo(false)}
               />
             </div>
           </ul>
@@ -112,3 +175,9 @@ export default function Nav() {
     </>
   );
 }
+
+// {page.icon === CalendarIcon ? (
+//   <CalendarIcon className="w-6 h-6" />
+// ) : (
+//   <PhoneArrowDownLeftIcon className="w-6 h-6" />
+// )}

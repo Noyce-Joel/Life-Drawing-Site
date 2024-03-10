@@ -8,5 +8,15 @@ const config: Config = {
   ],
   
   plugins: [],
+  theme: {
+    screens: {
+      'sm': '640px',
+      'md': '900px', // Change this to your desired width
+      'lg': '1000px',
+      'xl': '1440px',
+      '2xl': '1536px',
+    },
+    extend: {},
+  },
 };
 export default config;

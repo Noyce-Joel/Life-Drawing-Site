@@ -4,20 +4,11 @@ import Loading from "../loading/Loading";
 import { useInView } from "framer-motion";
 
 export default function Footer() {
-  const ref = useRef(null);
-  const inView = useInView(ref, {amount: "all",  margin: '220px 90% 220px 90%',});
+ 
   return (
-    <>
+    <div className="flex relative flex-col">
       
-      <div className="w-full overflow-hidden">
-        <div className="flex flex-col justify-center border-t border-gray-900 relative md:pb-20  items-center md:pt-24 mt-32">
-          <p className="text-justify text-white flex w-4/5 md:w-1/2 sm-text md-text lg-text py-12">
-            Let&#39;s sketch, share, and wag our way to a gallery of
-            heartwarming masterpieces!
-          </p>
-        </div>
-        
-      </div>
+      
       
       <footer className="relative flex  md:px-24 py-7 px-12 text-white justify-between bg-gray-900 h-[410px] mt-auto overflow-y-hidden ">
         <div className=" flex flex-col gap-7 ">
@@ -43,6 +34,6 @@ export default function Footer() {
           All rights reserved Woof Co
         </b>
       </footer>
-    </>
+    </div>
   );
 }
