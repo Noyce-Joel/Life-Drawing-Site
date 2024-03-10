@@ -52,7 +52,7 @@ const item = {
 
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="flex md:hidden relative flex-col items-start gap-12 w-full h-full">
+    <div className="flex md:hidden relative flex-col items-start gap-12 w-full h-full p-4">
       <button onClick={() => handleClick()}>
         <XMarkIcon className="absolute top-0 right-0 h-10 w-10" />
       </button>
@@ -64,7 +64,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
         className=" "
       >
         {pages.map((page, index) => (
-          <div key={index} className=" -m-4 w-screen flex flex-col overflow-y-hidden">
+          <div key={index} className=" -m-4 w-screen mr-24 flex flex-col overflow-y-hidden">
             <motion.div variants={item} className="text-[48px] -mb-2 w-full">
               {page.name}
             </motion.div>
@@ -82,7 +82,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
                 },
               }}
               exit={{opacity: 0, transition: {duration: 0.45, }}}
-              className={`w-full flex origin-right border-b border-[0.2px] mb-4 border-black
+              className={`w-[85vw] flex origin-right border-b border-[0.2px] mb-4 border-black
                 `}
             ></motion.div>
           </div>
