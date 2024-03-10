@@ -59,15 +59,11 @@ export default function Events() {
   return (
     <>
       <div className="flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-24 font-bold text-[45px] md:text-[75px]  text-white">
-        EVENTS
+       
         <Line title={false} />
       </div>
-      <div className="flex flex-col justify-center relative md:pb-20  items-center md:pt-24 ">
-        <p className=" flex-col font-bold session-text-show-two w-4/5 md:w-3/5 sm-text md-text lg-text pt-12  ">
-          Ready to embark on a journey of artistic discovery, check out our EVENTS BELOW by clicking on the city of your choice.
-          
-        </p>
-      </div>
+      
+      
       <EventsList city="SHEFFIELD" />
       <EventsList city="NOTTINGHAM" />
       <div className="flex flex-col justify-center relative md:pb-20  items-center md:pt-24">

@@ -14,8 +14,8 @@ export default function Line({title}: {title: boolean}) {
       
     }}
     transition= {{
-      duration: 1.4,
-      delay: 0.4,
+      duration: 0.8,
+      delay: 0.15,
       type: "tween",
       repeat: 0,
       ease: "anticipate",

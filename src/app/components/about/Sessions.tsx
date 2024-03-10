@@ -2,10 +2,11 @@
 import Image from "next/image";
 import React from "react";
 import Line from "../line/Line";
+import { CldImage } from "next-cloudinary";
 
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-12 border-b border-gray-900 pb-12 md:pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
+    <article className="flex flex-col pt-12 border-b  border-gray-900 pb-12 md:pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
       
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[45px] md:text-[59px] mb-6 text-white">
         SESSIONS
@@ -28,6 +29,13 @@ export default function Sessions() {
           />
          
           <div className="flex flex-col gap-12 justify-center items-center md:items-start md:pt-12">
+          <Image
+            src="/Dog.jpg"
+            height={500}
+            width={500}
+            alt="hero-image"
+            className="rounded-[10px] md:flex hidden"
+          />
             <p className=" text-white flex md:-ml-56 lg:-ml-36 md:w-auto lg-white-text md-white-text sm-white-text">
               You&#39;ll be guided by talented instructors who are not only
               passionate about art but also share a deep love for dogs.

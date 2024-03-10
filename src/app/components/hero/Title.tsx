@@ -80,7 +80,7 @@ export default function Title() {
         
 
       <div className="flex w-full h-full justify-end items-end">
-      <div className=" w-full h-full -mb-56 -mt-60 md:-mb-16 md:-mt-36 flex justify-center items-center">
+      <div className=" w-full h-full -mb-32 -mt-60 md:-mb-16 md:-mt-36 flex justify-center items-center">
         <Loading inView={true} />
         </div>
             {/* <motion.figure
@@ -110,7 +110,7 @@ export default function Title() {
           height={150}
           width={150}
           alt="brush-strokes"
-          className="flex invert pl-12 z-20 absolute -bottom-3  right-16  "
+          className="flex invert pl-12 z-20 absolute -bottom-3 md:right-16 right-5  "
         />
 
         </div>
