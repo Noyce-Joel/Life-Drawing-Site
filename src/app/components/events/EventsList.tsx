@@ -2,6 +2,7 @@ import { StateContext, StateContextType } from '@/app/context/State';
 import React, { useContext, useState } from 'react'
 import Line from '../line/Line';
 import Event from './Event';
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
@@ -34,7 +35,7 @@ export default function EventsList({city}: {city: string}) {
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-900 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >
-        <div className="absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 justify-between md:items-end p-24">
+        <div className="absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 justify-between md:items-end py-24 px-10">
           {events.map((event, index) => {
             const id = event.id;
             const name = event.name.text;
@@ -59,6 +60,13 @@ export default function EventsList({city}: {city: string}) {
               </div>
             );
           })}
+        </div>
+        <div className={classNames(
+          isOpen
+            ? ' opacity-100' : 'opacity-0', `flex md:hidden absolute bottom-4 gap-12 mx-auto w-full justify-center items-center transition-all delay-100 duration-700`)}>
+         
+           <ArrowLeftIcon className='h-6 w-6' />
+           <ArrowRightIcon className='h-6 w-6' />
         </div>
       </section>
    </>
