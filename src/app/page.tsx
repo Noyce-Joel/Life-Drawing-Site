@@ -39,7 +39,7 @@ export default function Home() {
         <Sessions />
         <Why />
         <Models />
-        <Events />
+        <Events comp={true}/>
         <Gallery results={results} />
         <Footer />
       </motion.div>

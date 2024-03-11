@@ -74,16 +74,9 @@ export default function page() {
 
         <Line title={true} />
       </motion.section>
-      <div className="text-left pt-7 md:pt-24 relative h-full z-10 items-center justify-center flex flex-col gap-7 tracking-wider text-pretty font-bold ">
-        <div className="flex h-full items-center justify-end w-4/5 ">
-       
-          <h2 className="text-[25px]  md:text-[40px]  text-left ">
-         Click on a city where we hold events
-          </h2>
-        </div>
-      </div>
+      
       <div className="pb-44">
-        <Events />
+        <Events comp={false}/>
       </div>
       <Footer />
     </>
