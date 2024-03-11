@@ -29,13 +29,6 @@ export default function Sessions() {
           />
          
           <div className="flex flex-col gap-12 justify-center items-center md:items-start md:pt-12">
-          <Image
-            src="/Dog.jpg"
-            height={500}
-            width={500}
-            alt="hero-image"
-            className="rounded-[10px] md:flex hidden"
-          />
             <p className=" text-white flex md:-ml-56 lg:-ml-36 md:w-auto lg-white-text md-white-text sm-white-text">
               You&#39;ll be guided by talented instructors who are not only
               passionate about art but also share a deep love for dogs.

@@ -15,9 +15,8 @@ const pages = [
   { name: "Events", href: "/events", icon: CalendarIcon },
 
   { name: "Contact", href: "/contact" },
-  
+
   { name: "Wowzers", href: "/contact" },
-  
 ];
 
 const container = {
@@ -36,55 +35,40 @@ const container = {
 };
 
 const item = {
-  initial: { x: -325, skewY: -20 },
+  initial: { x: -325},
   whileInView: {
-    x: 0,
-    skewY: 0,
+    x: 50,
+
     transition: { duration: 1, ease: "easeInOut" },
   },
   exit: {
     x: -325,
-    skewY: -20,
-    opacity: 0,
+
     transition: { duration: 0.7, ease: "easeInOut" },
   },
 };
 
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="flex md:hidden relative flex-col items-start gap-12 w-full h-full p-4">
-      <button onClick={() => handleClick()}>
-        <XMarkIcon className="absolute top-0 right-0 h-10 w-10" />
+    <div className="flex md:hidden relative flex-col gap-12 w-full h-full p-4">
+      <button onClick={() => handleClick()} className="absolute top-0 right-0 p-12" >
+        <XMarkIcon className=" h-10 w-10" />
       </button>
       <motion.div
         variants={container}
         initial="initial"
         whileInView="whileInView"
         exit="exit"
-        className=" "
+        className="flex flex-col gap-12 pt-40 "
       >
         {pages.map((page, index) => (
-          <div key={index} className=" -m-4 w-screen mr-24 flex flex-col overflow-y-hidden">
-            <motion.div variants={item} className="text-[48px] -mb-2 w-full">
+          <div
+            key={index}
+            className=" -m-4 w-screen flex flex-col overflow-hidden"
+          >
+            <motion.div variants={item} className="text-[48px] -mb-2 ">
               {page.name}
             </motion.div>
-
-            <motion.div
-              initial={{ scale: 0.1 }}
-              whileInView={{
-                scale: 1,
-                transition: {
-                  duration: 1.4,
-                  delay: 0.2,
-                  type: "tween",
-
-                  ease: "anticipate",
-                },
-              }}
-              exit={{opacity: 0, transition: {duration: 0.45, }}}
-              className={`w-[85vw] flex origin-right border-b border-[0.2px] mb-4 border-black
-                `}
-            ></motion.div>
           </div>
         ))}
       </motion.div>
@@ -124,14 +108,14 @@ export default function Nav() {
               y: -window.innerHeight - 40,
 
               transition: {
-                delay: 0.35,
+                delay: 0.5,
                 duration: 1,
                 type: "spring",
                 friction: 90,
                 damping: 20,
               },
             }}
-            className="fixed p-[40px] z-50 bg-white w-full h-full"
+            className="fixed  z-50 bg-white w-full h-full"
           >
             <DropDown handleClick={handleClick} />
           </motion.div>

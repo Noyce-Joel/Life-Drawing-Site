@@ -43,7 +43,7 @@ export default function Gallery({results}: {results: any}) {
       </div>
       
       <div className="flex justify-center gap-2 md:gap-7 mt-44 px-2 md:px-7">
-        {[columns(0), columns(1)].map((col, idx) => (
+        {[columns(0), columns(1), columns(2)].map((col, idx) => (
           <motion.div
             variants={container}
             whileInView="whileInView"
