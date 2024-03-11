@@ -12,11 +12,12 @@ import Link from "next/link";
 import Line from "../line/Line";
 
 const pages = [
+  { name: "Home", href: "/" },
   { name: "Events", href: "/events", icon: CalendarIcon },
 
   { name: "Contact", href: "/contact" },
 
-  { name: "Wowzers", href: "/contact" },
+  
 ];
 
 const container = {
