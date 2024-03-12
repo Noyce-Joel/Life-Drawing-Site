@@ -39,7 +39,7 @@ export default function Gallery({results}: {results: any}) {
     <>
      <div className="flex w-full pl-12 lg:pl-72 relative flex-col pt-24 font-bold text-[30px] md:text-[75px]  border-t border-gray-900 mt-44 text-white">
         Gallery
-        <Line title={false} />
+        <Line color='white' title={false} />
       </div>
       
       <div className="flex justify-center gap-2 md:gap-7 mt-44 px-2 md:px-7">
