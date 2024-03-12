@@ -5,10 +5,14 @@ import nodemailer from "nodemailer";
 export async function sendMail({
   to,
   subject,
+  email,
+  name,
   body,
 }: {
   to: string;
   subject: string;
+  email: string,
+  name: string,
   body: string;
 }) {
   const { SMTP_EMAIL, SMTP_PASSWORD } = process.env;
