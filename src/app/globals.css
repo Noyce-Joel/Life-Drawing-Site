@@ -9,79 +9,44 @@ body {
   scroll-behavior: smooth;
 }
 
-
-
-.font {
-color: #801a1a
-}
-
-@keyframes bounce {
-  0%, 100% {
-      transform: translateY(-25%);
-      animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-  50% {
-      transform: none;
-      animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-.bounce {
-  animation: bounce 2.5s normal both infinite;
-}
-
-
-
-
 @media screen and (min-width: 0px) and (max-width: 750px) {
-  
   .sm-heading {
-    font-size: 25px
+    font-size: 25px;
   }
 
   .sm-text {
-    font-size: 20px
+    font-size: 20px;
   }
 
   .sm-white-text {
-    font-size: 22.5px
+    font-size: 22.5px;
   }
-  
 }
 
 @media screen and (min-width: 750px) and (max-width: 1540px) {
-  
-  
   .md-text {
-    font-size: 32px
+    font-size: 32px;
   }
 
   .md-white-text {
-    font-size: 38px
+    font-size: 38px;
   }
-  
 }
 
 @media screen and (min-width: 1540px) and (max-width: 2000px) {
-  
-  
-  
-
   .lg-white-text {
-    font-size: 40px
+    font-size: 40px;
   }
 
   .lg-text {
-    font-size: 35px
+    font-size: 35px;
   }
-  
 }
 
 @media screen and (min-width: 768px) and (max-width: 1250px) {
   .md-text-2 {
-    font-size: 25px
-  }  
-
-  
+    font-size: 25px;
+  }
 
   .session-text-hide {
     display: none;
@@ -89,21 +54,18 @@ color: #801a1a
 
   .session-text-show {
     display: flex;
-    color: white
+    color: white;
   }
-
-  
-  
 }
 
-@media screen and (min-width: 768px ) and (max-width: 1110px) {
+@media screen and (min-width: 768px) and (max-width: 1110px) {
   .session-text-hide-two {
     display: none;
   }
 
   .session-text-show-two {
     display: flex;
-    padding-bottom: 6rem
+    padding-bottom: 6rem;
   }
 
   .border-top {
@@ -111,5 +73,3 @@ color: #801a1a
     color: white;
   }
 }
-
-

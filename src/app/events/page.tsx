@@ -72,11 +72,11 @@ export default function page() {
           </motion.h1>
         ))}
 
-        <Line title={true} />
+        <Line color='white' title={true} />
       </motion.section>
-      
+
       <div className="pb-44">
-        <Events comp={false}/>
+        <Events comp={false} />
       </div>
       <Footer />
     </>

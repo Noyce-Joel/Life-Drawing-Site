@@ -6,6 +6,7 @@ import Loading from "../loading/Loading";
 
 export default function Title() {
   const title = ["DOG", "LIFE", "DRAWING"];
+  
   const container = {
     animate: {
       transition: {
@@ -21,99 +22,21 @@ export default function Title() {
   };
   return (
     <>
-      {/* <div className="absolute top-4 md:right-4 lg:right-0  mx-auto">
-        <Image
-          src="/Logo.png"
-          className=""
-          height={205}
-          width={205}
-          alt="logo"
-        />
-      </div>
-      <motion.section
-        variants={container}
-        initial="initial"
-        animate="animate"
-        className="md:text-[100px] lg:text-[150px] pt-40 z-10  flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[55px]  flex-col text-white "
-      >
-                  
-        <motion.figure
-          initial={{ scale: 0.9, opacity: 0, y: 1500 }}
-          animate={{
-            scale: 1,
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", duration: "2", mass: '1', damping: 34 },
-          }}
-          className="flex absolute w-3/4 h-3/4 rounded-full -z-20"
-        >
-          <Image
-            src="/HERO.jpg"
-            height={1000}
-            width={1000}
-            alt="hero-image"
-            className=" object-cover w-4/6  hidden md:flex rounded-bl-[100px] rounded-tr-[100px] rounded-[20px]"
-          />
-        </motion.figure>
-        <Image
-          src="/dog3.png"
-          height={150}
-          width={150}
-          alt="brush-strokes"
-          className="hidden md:flex invert pl-12 z-50 absolute -bottom-[14px] right-16  "
-        />
-        {title.map((word, idx) => (
-          <motion.h1
-            key={idx}
-            className="space-y-0 lg:h-[169px] flex w-4/5 overflow-y-hidden z-20 justify-start items-start "
-          >
-            <motion.span variants={item} key="anim" className="block ">
-              {word}
-            </motion.span>
-          </motion.h1>
-        ))}
-        
-
-        <Line title={true} />
-      </motion.section> */}
       <div className="justify-center items-center overflow-hidden relative object-cover flex flex-col w-full h-full top-0 left-0">
-        
-
-      <div className="flex w-full h-full justify-end items-end">
-      <div className=" w-full h-full -mb-32 -mt-60 md:-mb-16 md:-mt-36 flex justify-center items-center">
-        <Loading inView={true} />
+        <div className="flex w-full h-full justify-end items-end">
+          <div className=" w-full h-full -mb-32 -mt-60 md:-mb-16 md:-mt-36 flex justify-center items-center">
+            <Loading inView={true} />
+          </div>
         </div>
-            {/* <motion.figure
-          initial={{ scale: 0.9, opacity: 0, y: 1500 }}
-          animate={{
-            scale: 1,
-            opacity: 1,
-            y: 0,
-            transition: { type: "spring", duration: "2", mass: '1', damping: 34 },
-          }}
-          className=" lg:flex hidden w-full h-full items-center justify-center rounded-full -z-20"
-        >
-         
-          <Image
-            src="/HERO.jpg"
-            height={1000}
-            width={1000}
-            alt="hero-image"
-            className=" object-cover w-full  hidden md:flex rounded-bl-[100px] rounded-tr-[100px] rounded-[20px]"
-          />
-        </motion.figure> */}
-        
-        </div>
-            <Line title={true} />
-             <Image
+        <Line color='white' title={true} />
+        <Image
           src="/dog3.png"
           height={150}
           width={150}
           alt="brush-strokes"
           className="flex invert pl-12 z-20 absolute -bottom-3 md:right-16 right-5  "
         />
-
-        </div>
+      </div>
     </>
   );
 }

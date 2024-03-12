@@ -1,14 +1,12 @@
-
 import type { Metadata } from "next";
 import { Fraunces } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
-import Head from "next/head";
-import { motion } from "framer-motion";
-import Footer from "./components/footer/Footer";
-import Nav from "./components/nav/Nav";
 
-const inter = Fraunces({ subsets: ["latin"], weight: ["400", "500", "600", "700" ] });
+const inter = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,21 +18,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <>
-    
-    <html lang="en">
-      
-      <body className={inter.className}>
-        <StateProvider>
-
-          {children}
-          
-          </StateProvider>
-       
-      </body>
-    </html>
+      <html lang="en">
+        <body className={inter.className}>
+          <StateProvider>{children}</StateProvider>
+        </body>
+      </html>
     </>
   );
 }

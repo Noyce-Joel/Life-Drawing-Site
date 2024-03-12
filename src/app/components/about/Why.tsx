@@ -4,13 +4,14 @@ import React from "react";
 
 
 import Line from "../line/Line";
+import { copy } from "../../../../public/copy/copy";
 
 export default function Sessions() {
   return (
     <article className="flex flex-col pt-12 md:pt-32 relative border-b border-gray-900 pb-24 md:pb-32 justify-end items-end h-auto font-extrabold text-[40px] ">
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[45px] md:text-[59px] mb-6 text-white">
         WHY US?
-         <Line title={false} />
+         <Line color='white' title={false} />
       </div>
       <div className="flex relative md:w-4/5 pt-12 ">
         <div className=" md:justify-start md:items-start justify-center items-center flex flex-col ">
@@ -19,8 +20,7 @@ export default function Sessions() {
               CREATIVITY UNLEASHED
             </b>
             <p className="sm-text md-text lg-text w-full lg:pt-5">
-              Break free from conventional art and let your creativity run wild
-              as you sketch the canine form in all its charming glory.
+              {copy.why_creativity_unleashed}
             </p>
             
           </div>
@@ -36,9 +36,7 @@ export default function Sessions() {
               FUN FOR ALL AGES
             </b> */}
             <p className="sm-white-text md-white-text lg-white-text text-white md:w-full lg:w-4/5 w-full">
-              Whether you&#39;re a seasoned artist or just picking up a pencil
-              for the first time, our sessions are designed to be inclusive and
-              enjoyable for everyone.
+              {copy.why_white_text}
             </p>
           </div>
           
@@ -48,8 +46,7 @@ export default function Sessions() {
               STRESS-FREE ENVIRONMENT
             </b>
             <p className=" sm-text md-text lg-text w-full lg:pt-5 lg:pb-0 pb-12">
-              Our furry models create a relaxed and friendly atmosphere, making
-              the drawing process not only artistic but also therapeutic.
+              {copy.why_stress_free}
             </p>
           </div>
 
@@ -58,9 +55,7 @@ export default function Sessions() {
               UNIQUE BONDING EXPERIENCE
             </b>
             <p className=" sm-text md-text lg-text md:w-9/12 w-full lg:pt-5">
-              Share the joy of art with fellow dog enthusiasts, creating a sense
-              of community and camaraderie around the love for our canine
-              companions.
+              {copy.why_bonding}
             </p>
           </div>
         </div>

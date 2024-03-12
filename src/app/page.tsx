@@ -1,6 +1,4 @@
 "use client";
-
-import Image from "next/image";
 import Events from "./components/events/Events";
 import Nav from "./components/nav/Nav";
 import Hero from "./components/hero/Hero";
@@ -12,7 +10,6 @@ import Footer from "./components/footer/Footer";
 import Gallery from "./components/gallery/Gallery";
 import { useEffect, useState } from "react";
 import fetchImages from "./services/fetchImages";
-import cloudinary from "cloudinary";
 
 export default function Home() {
   const [results, setResults] = useState<any>({ resources: [] });
@@ -32,7 +29,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 2 }}
-        className="relative h-screen w-screen "
+        className="relative h-screen w-screen"
       >
         <Nav />
         <Hero />

@@ -23,7 +23,7 @@ export default function EventsList({city}: {city: string}) {
          {city}
         </div>
         <div className="w-full flex relative ">
-          <Line title={false} />
+          <div className='w-full border-t border-gray-900'/>
         </div>
       </article>
 

@@ -16,8 +16,6 @@ const pages = [
   { name: "Events", href: "/events", icon: CalendarIcon },
 
   { name: "Contact", href: "/contact" },
-
-  
 ];
 
 const container = {
@@ -30,13 +28,13 @@ const container = {
   exit: {
     transition: {
       staggerChildren: 0.05,
-      staggerDirection: -1,
+      staggerDirection: 1,
     },
   },
 };
 
 const item = {
-  initial: { x: -325},
+  initial: { x: -325 },
   whileInView: {
     x: 50,
 
@@ -49,10 +47,27 @@ const item = {
   },
 };
 
+const address = {
+  initial: { x: -325 },
+  whileInView: {
+    x: 42,
+
+    transition: { duration: 1.5, ease: "easeInOut" },
+  },
+  exit: {
+    x: -325,
+
+    transition: { duration: 1.2, ease: "easeInOut" },
+  },
+};
+
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="flex md:hidden relative flex-col gap-12 w-full h-full p-4">
-      <button onClick={() => handleClick()} className="absolute top-0 right-0 p-12" >
+    <div className="flex md:hidden relative flex-col gap-12 w-full p-4">
+      <button
+        onClick={() => handleClick()}
+        className="absolute top-0 right-0 p-12"
+      >
         <XMarkIcon className=" h-10 w-10" />
       </button>
       <motion.div
@@ -67,11 +82,27 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
             key={index}
             className=" -m-4 w-screen flex flex-col overflow-hidden"
           >
-            <motion.div variants={item} className="text-[48px] -mb-2 ">
+            <motion.div
+              variants={item}
+              className="text-[42px] font-bold -mb-2 "
+            >
               {page.name}
             </motion.div>
           </div>
         ))}
+      </motion.div>
+      <motion.div
+        variants={container}
+        initial="initial"
+        whileInView="whileInView"
+        exit="exit"
+        className="flex flex-col pt-14"
+      >
+        <motion.b variants={address}>Bloc Studios</motion.b>
+        <motion.span variants={address}>Hicks Street,</motion.span>
+        <motion.span variants={address}>Neepsend,</motion.span>
+        <motion.span variants={address}>Sheffield</motion.span>
+        <motion.span variants={address}>S3 8BL</motion.span>
       </motion.div>
     </div>
   );
@@ -116,9 +147,59 @@ export default function Nav() {
                 damping: 20,
               },
             }}
-            className="fixed  z-50 bg-white w-full h-full"
+            className="fixed z-50 bg-white w-full h-full"
           >
             <DropDown handleClick={handleClick} />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 0.5, delay: 1.9 },
+              }}
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              className="flex absolute -bottom-4 right-2"
+            >
+              <Image
+                src="/DOGLIFEDRAW2.png"
+                alt="logo"
+                height={200}
+                width={200}
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 0.5, delay: 1.9 },
+              }}
+              exit={{
+                opacity: 0,
+                transition: {
+                  duration: 0.5,
+                },
+              }}
+              className="flex z-40 gap-2 absolute bottom-14 left-12"
+            >
+              <SocialIcon
+                style={{ width: "50px", height: "50px" }}
+                url="https://www.instagram.com/dog.lifedrawing/"
+                className="hover:scale-110 duration-200"
+                bgColor="transparent"
+                fgColor={"black"}
+              />
+              <SocialIcon
+                style={{ width: "50px", height: "50px" }}
+                url="https://www.facebook.com/dogdrawing/?locale=en_GB"
+                className="hover:scale-110 duration-200"
+                bgColor="transparent"
+                fgColor={"black"}
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -160,9 +241,3 @@ export default function Nav() {
     </>
   );
 }
-
-// {page.icon === CalendarIcon ? (
-//   <CalendarIcon className="w-6 h-6" />
-// ) : (
-//   <PhoneArrowDownLeftIcon className="w-6 h-6" />
-// )}
