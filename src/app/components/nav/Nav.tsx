@@ -5,16 +5,14 @@ import { SocialIcon } from "react-social-icons";
 import {
   Bars3Icon,
   CalendarIcon,
-  PhoneArrowDownLeftIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Line from "../line/Line";
+
 
 const pages = [
   { name: "Home", href: "/" },
   { name: "Events", href: "/events", icon: CalendarIcon },
-
   { name: "Contact", href: "/contact" },
 ];
 
@@ -37,12 +35,10 @@ const item = {
   initial: { x: -325 },
   whileInView: {
     x: 50,
-
     transition: { duration: 1, ease: "easeInOut" },
   },
   exit: {
     x: -325,
-
     transition: { duration: 0.7, ease: "easeInOut" },
   },
 };
@@ -51,19 +47,17 @@ const address = {
   initial: { x: -325 },
   whileInView: {
     x: 42,
-
     transition: { duration: 1.5, ease: "easeInOut" },
   },
   exit: {
     x: -325,
-
     transition: { duration: 1.2, ease: "easeInOut" },
   },
 };
 
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="flex md:hidden relative flex-col gap-12 w-full p-4">
+    <div className="flex md:hidden relative flex-col gap-12 w-full h-full p-4">
       <button
         onClick={() => handleClick()}
         className="absolute top-0 right-0 p-12"
@@ -147,7 +141,7 @@ export default function Nav() {
                 damping: 20,
               },
             }}
-            className="fixed z-50 bg-white w-full h-full"
+            className="fixed z-50 bg-white w-full h-screen"
           >
             <DropDown handleClick={handleClick} />
             <motion.div
@@ -162,42 +156,30 @@ export default function Nav() {
                   duration: 0.5,
                 },
               }}
-              className="flex absolute -bottom-4 right-2"
+              className="flex absolute justify-between w-full items-center -bottom-4 right-2"
             >
+              <div className="pl-14 pt-5">
+                <SocialIcon
+                  style={{ width: "50px", height: "50px" }}
+                  url="https://www.instagram.com/dog.lifedrawing/"
+                  className="hover:scale-110 duration-200"
+                  bgColor="transparent"
+                  fgColor={"black"}
+                />
+                <SocialIcon
+                  style={{ width: "50px", height: "50px" }}
+                  url="https://www.facebook.com/dogdrawing/?locale=en_GB"
+                  className="hover:scale-110 duration-200"
+                  bgColor="transparent"
+                  fgColor={"black"}
+                />
+              </div>
+
               <Image
                 src="/DOGLIFEDRAW2.png"
                 alt="logo"
                 height={200}
                 width={200}
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: { duration: 0.5, delay: 1.9 },
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.5,
-                },
-              }}
-              className="flex z-40 gap-2 absolute bottom-14 left-12"
-            >
-              <SocialIcon
-                style={{ width: "50px", height: "50px" }}
-                url="https://www.instagram.com/dog.lifedrawing/"
-                className="hover:scale-110 duration-200"
-                bgColor="transparent"
-                fgColor={"black"}
-              />
-              <SocialIcon
-                style={{ width: "50px", height: "50px" }}
-                url="https://www.facebook.com/dogdrawing/?locale=en_GB"
-                className="hover:scale-110 duration-200"
-                bgColor="transparent"
-                fgColor={"black"}
               />
             </motion.div>
           </motion.div>
