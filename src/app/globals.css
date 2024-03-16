@@ -18,6 +18,10 @@ body {
     font-size: 20px;
   }
 
+  .sm-contact-text {
+    font-size: 20px;
+  }
+
   .sm-white-text {
     font-size: 22.5px;
   }
@@ -28,6 +32,10 @@ body {
     font-size: 32px;
   }
 
+  .md-contact-text {
+    font-size: 22px;
+  }
+
   .md-white-text {
     font-size: 38px;
   }
@@ -36,6 +44,10 @@ body {
 @media screen and (min-width: 1540px) and (max-width: 2000px) {
   .lg-white-text {
     font-size: 40px;
+  }
+
+  .lg-contact-text {
+    font-size: 25px;
   }
 
   .lg-text {

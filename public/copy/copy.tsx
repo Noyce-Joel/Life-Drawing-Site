@@ -16,5 +16,5 @@ export const copy = {
     why_bonding: 'Share the joy of art with fellow dog enthusiasts, creating a sense of community and camaraderie around the love for our canine companions.',
 
     events_join: 'Join Dog Life Drawing, where every stroke of your pencil is a celebration of the beautiful bond between humans and their furry friends. ',
-    events_cities: 'Click on a city where we hold events'
+    events_cities: 'Click on a city to see where we\'re holding events'
 }

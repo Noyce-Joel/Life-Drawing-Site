@@ -31,7 +31,7 @@ export default function Loading({ inView }: { inView: boolean }) {
         xmlns="http://www.w3.org/2000/svg"
         width="905"
         height="905"
-        strokeWidth="12px"
+        strokeWidth="20px"
         viewBox="0 0 300.000000 219.000000"
         preserveAspectRatio="xMidYMid meet"
       >
@@ -41,7 +41,7 @@ export default function Loading({ inView }: { inView: boolean }) {
         <g
           transform="translate(0.000000,219.000000) scale(0.100000,-0.100000)"
           fill="#FFFFFF"
-          stroke="black"
+          
         >
           <motion.path
           
@@ -87,8 +87,7 @@ c17 -11 44 -42 59 -70 41 -76 103 -98 180 -66 31 13 38 12 84 -10 51 -24 89
           />
           <motion.path
           fill='white'
-          stroke='black'
-         
+
             d="M1496 1873 c-4 -4 -36 -6 -72 -5 -69 4 -157 -17 -212 -48 -32 -19
 -32 -19 -79 5 -31 17 -61 25 -92 24 -58 -1 -70 -6 -116 -47 -24 -22 -43 -32
 -56 -29 -34 9 -22 -34 37 -133 30 -52 69 -127 86 -167 32 -79 56 -103 101
@@ -118,7 +117,7 @@ c31 3 69 12 85 21 43 23 53 20 70 -19z m774 -60 c0 -15 -6 -25 -14 -25 -22 0
 124 134 29 135 29 135 9z"
           />
           <motion.path
-            initial={{ pathLength: 0, fill: "none", stroke: "black" }}
+            initial={{ pathLength: 0, fill: "none", stroke: "white" }}
             animate={controls}
             d="M727 668 c-8 -13 -18 -37 -22 -55 -9 -43 -22 -51 -85 -55 -78 -4 -80
 -28 -3 -28 l60 0 -5 -55 c-5 -61 7 -85 43 -85 12 0 30 9 40 20 23 26 35 26 28
@@ -132,7 +131,7 @@ c31 3 69 12 85 21 43 23 53 20 70 -19z m774 -60 c0 -15 -6 -25 -14 -25 -22 0
 26z m120 -432 c-14 -56 -37 -74 -37 -29 0 29 40 106 46 88 2 -5 -2 -32 -9 -59z"
           />
           <motion.path
-            initial={{ pathLength: 0, fill: "none", stroke: "black" }}
+            initial={{ pathLength: 0, fill: "none", stroke: "white" }}
             animate={controls}
             d="M2188 675 c-3 -4 -4 -30 -1 -59 4 -34 1 -56 -6 -60 -6 -4 -11 -1 -11
 8 0 18 -30 36 -59 36 -29 0 -58 -43 -66 -97 l-7 -48 -21 45 c-25 52 -50 60
@@ -159,13 +158,13 @@ c14 -33 14 -38 0 -60 -9 -13 -24 -23 -33 -21 -24 4 -29 80 -7 102 22 22 23 21
 40 -21z"
           />
           <motion.path
-            initial={{ pathLength: 0, fill: "none", stroke: "black" }}
+            initial={{ pathLength: 0, fill: "none", stroke: "white" }}
             animate={controls}
             d="M834 636 c3 -14 2 -28 -4 -31 -12 -7 -13 -45 -2 -45 14 0 42 35 42
 52 0 28 -12 48 -27 48 -11 0 -13 -7 -9 -24z"
           />
           <motion.path
-            initial={{ pathLength: 0, fill: "none", stroke: "black" }}
+            initial={{ pathLength: 0, fill: "none", stroke: "white" }}
             animate={controls}
             d="M1819 573 c-1 -5 0 -16 1 -26 1 -10 -4 -25 -11 -33 -9 -11 -9 -18 -1
 -26 24 -24 60 38 42 73 -11 19 -29 26 -31 12z"

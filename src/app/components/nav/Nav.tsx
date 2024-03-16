@@ -80,7 +80,9 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
               variants={item}
               className="text-[42px] font-bold -mb-2 "
             >
+              <Link href={page.href}>
               {page.name}
+              </Link>
             </motion.div>
           </div>
         ))}
@@ -111,12 +113,12 @@ export default function Nav() {
   };
   return (
     <>
-      <button
-        onClick={() => handleClick()}
-        className="md:hidden absolute z-40 top-0 right-0 p-12"
+      <div
+        
+        className="md:hidden fixed z-40 top-0 right-0 p-12 "
       >
-        <Bars3Icon className="w-10 h-10 " />
-      </button>
+        <Bars3Icon className="w-10 h-10 backdrop-blur-sm rounded-full hover:cursor-pointer" onClick={() => handleClick()}/>
+      </div>
       <AnimatePresence>
         {mobileMenu && (
           <motion.div
@@ -188,7 +190,7 @@ export default function Nav() {
 
       <nav className="flex-col md:flex-row mx-auto items-center px-4 z-40 py-4 pb-10">
         <div className="z-40">
-          <ul className=" flex  backdrop-blur-md rounded-md md:items-center md:justify-center gap-10 px-4 py-1 border-[#0000005f] ">
+          <ul className=" flex   rounded-md md:items-start md:justify-start gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
               <li
                 key={index}

@@ -53,45 +53,46 @@ function MyForm() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", mass: 2, friction: 80, damping: 20 }}
-        className="pt-6 px-12 lg:w-1/2 relative w-full h-full flex flex-col overflow-hidden origin-top-left items-center bg-[#8b6441] lg:rounded-br-[250px]"
+        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex  overflow-hidden origin-top-left bg-[#8b6441] lg:justify-start justify-center lg:rounded-br-[250px]"
       >
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="w-full justify-center items-center flex flex-col "
+          className="flex flex-col "
         >
           {/* <Image src="/belly.jpg" alt="Contact" width={500} height={500} className="w-full absolute"/> */}
-          <div className="flex lg:justify-start flex-col lg:items-start justify-center items-center w-full">
-            <h1 className="text-white  w-full flex-nowrap whitespace-nowrap lg:text-[60px]">
+          <div className="flex  flex-col md:justify-start md:items-start justify-center items-center pb-12">
+            <h1 className="text-white  flex-nowrap whitespace-nowrap md:text-[50px] text-[40px]">
               Get in touch
             </h1>
           </div>
 
-          <div className=" contact-text text-[27px] flex items-start flex-col w-full text-justify">
+          <div className=" contact-text sm-contact-text md-contact-text lg-contact-text gap-4  flex items-start flex-col w-full ">
             For collaborations please include:
-            <ul className="text-white  w-full ">
+            <ul className="text-white ">
               <li>Preferred date/time,</li>
               <li>Number of people</li>
               <li>City and venue</li>
             </ul>
           </div>
 
-          <div className="contact-text text-[27px] flex items-start flex-col w-full ">
+          <div className="contact-text sm-contact-text md-contact-text lg-contact-text gap-4 pt-4 flex items-start flex-col ">
             Our dogs are:
-            <ul className="text-white w-full text-justify">
+            <ul className="text-white w-full">
               <li>Happy around people and dogs</li>
               <li>Relaxed in busy environments</li>
               <li>Happy to chill in a pub setting</li>
             </ul>
           </div>
-          <div className="absolute bottom-0 lg:left-0 md:right-0 ">
+          <div className="absolute bottom-10 lg:left-0 right-0 md:flex hidden">
             <Image
               src="/Logo.png"
-              className=""
+              className="invert"
               height={205}
               width={205}
               alt="logo"
+
             />
           </div>
         </motion.div>
@@ -100,7 +101,7 @@ function MyForm() {
       <section className="lg:w-1/2 w-full h-full relative bg-gray-900 lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
         <form 
         onSubmit={() => handleSend()}
-        className="w-full h-full flex flex-col justify-center items-start pb-12 lg:pl-12">
+        className="w-full h-full flex flex-col justify-center items-start pb-12 md:pr-12 ">
           
           <div className="mb-4 w-full relative">
             <div className="h-9 overflow-hidden">
@@ -109,7 +110,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7 }}
                 htmlFor="form-name"
-                className="block text-white font-bold mb-2 text-[27px] md:text-[27px] "
+                className="block text-white font-bold mb-2 text-[22px] md:text-[22px] "
               >
                 Name
               </motion.label>
@@ -145,7 +146,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 htmlFor="form-email"
-                className="block text-white font-bold mb-2 text-[27px] md:text-[27px]"
+                className="block text-white font-bold mb-2 text-[22px] md:text-[22px]"
               >
                 Email
               </motion.label>
@@ -181,23 +182,26 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 htmlFor="form-email"
-                className="block text-white font-bold mb-2 text-[27px] md:text-[27px]"
+                className="block text-white font-bold mb-2 text-[22px] md:text-[22px]"
               >
                 Subject
               </motion.label>
             </div>
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, delay: 1}} className="text-white pt-10 pb-7 flex gap-7">
+            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, delay: 1}} className="text-white pt-10 pb-7 flex md:flex-row flex-col gap-4">
             <label className="flex gap-2">
+            <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Collaborations' />
               Collaborations
-              <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Collaborations' />
+              
             </label>
             <label className="flex gap-2">
+            <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Modelling' />
               Modelling
-              <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Modelling' />
+              
             </label>
             <label className="flex gap-2">
-              General enquiry
-              <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='General enquiry' />
+            <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='General enquiry' />
+              Other
+             
             </label>
             </motion.div>
           </div>
@@ -209,7 +213,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 htmlFor="form-message"
-                className="block text-white font-bold mb-2 text-[27px] md:text-[27px]"
+                className="block text-white font-bold mb-2 text-[22px] md:text-[22px]"
               >
                 Message
               </motion.label>
@@ -247,7 +251,7 @@ function MyForm() {
             Submit
           </motion.button>
         </form>
-        <div className="flex absolute justify-end items-end w-full bottom-0 right-0 lg:p-6 pt-12 z-40 gap-2">
+        <div className="flex absolute justify-end items-end w-full bottom-5 right-5 lg:p-6 pt-12 z-40 gap-4">
           <SocialIcon
             style={{ width: "50px", height: "50px" }}
             url="https://www.instagram.com/dog.lifedrawing/"

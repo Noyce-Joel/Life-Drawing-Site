@@ -24,7 +24,7 @@ export default function Title() {
     <>
       <div className="justify-center items-center overflow-hidden relative object-cover flex flex-col w-full h-full top-0 left-0">
         <div className="flex w-full h-full justify-end items-end">
-          <div className=" w-full h-full -mb-32 -mt-60 md:-mb-16 md:-mt-36 flex justify-center items-center">
+          <div className=" w-full h-full -mb-32 -mt-52 md:-mb-16 lg:-mt-36 flex justify-center items-center">
             <Loading inView={true} />
           </div>
         </div>
@@ -34,7 +34,7 @@ export default function Title() {
           height={150}
           width={150}
           alt="brush-strokes"
-          className="flex invert pl-12 z-20 absolute -bottom-3 md:right-16 right-5  "
+          className="pl-12 -z-20 invert absolute -bottom-3 md:right-16 right-5  "
         />
       </div>
     </>

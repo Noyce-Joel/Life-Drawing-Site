@@ -17,7 +17,7 @@ export default function Sessions() {
         <div className=" md:justify-start md:items-start justify-center items-center flex flex-col ">
           <div className="flex flex-col items-start justify-start w-4/5 pb-12 lg:pb-24 ">
           <b className="  text-white w-4/5 md:w-full lg:w-4/5 font-semibold sm-heading text-[45px]">
-              CREATIVITY UNLEASHED
+              Creativity Unleashed
             </b>
             <p className="sm-text md-text lg-text w-full lg:pt-5">
               {copy.why_creativity_unleashed}
@@ -25,17 +25,15 @@ export default function Sessions() {
             
           </div>
           <div className="flex flex-col w-4/5 justify-start items-start md:justify-start relative md:items-start md:pt-4  md:-ml-24 pb-12 lg:pb-0 ">
+            {/* <div className="flex w-1/2 h-[500px] absolute -right-44  bg-gray-900/40 rounded-[20px] -z-40" /> */}
             <Image
-              src="/Dog-model.jpg"
-              height={700}
-              width={700}
+              src="/sketch2.png"
+              height={570}
+              width={570}
               alt="hero-image"
-              className="rounded-[10px] md:flex hidden absolute -top-7 -z-40 md:-right-44 lg:-right-60 lg:-bottom-56 "
+              className="rounded-[10px]  md:flex hidden absolute -top-32 -z-40 md:-right-44 lg:-bottom-60 "
             />
-            {/* <b className="text-justify text-white  md:w-3/5 text-[32px] md:text-[55px]">
-              FUN FOR ALL AGES
-            </b> */}
-            <p className="sm-white-text md-white-text lg-white-text text-white md:w-full lg:w-4/5 w-full">
+            <p className="sm-white-text md-white-text lg-white-text text-white md:w-full lg:w-3/4 w-full">
               {copy.why_white_text}
             </p>
           </div>
@@ -43,18 +41,25 @@ export default function Sessions() {
           <div className="flex flex-col items-start   h-full relative justify-start md:w-4/5 w-4/5 lg:pt-32 ">
             
             <b className=" text-white w-4/5 md:w-full font-semibold lg:w-3/5 sm-heading text-[45px] ">
-              STRESS-FREE ENVIRONMENT
+              Stress-free Environment
             </b>
             <p className=" sm-text md-text lg-text w-full lg:pt-5 lg:pb-0 pb-12">
               {copy.why_stress_free}
             </p>
+            
           </div>
-
-          <div className="flex flex-col w-4/5 md:w-11/12 justify-start items-start md:justify-end relative md:items-center pt-6 md:pt-24">
+          {/* <Image
+              src="/sketch.png"
+              height={290}
+              width={290}
+              alt="hero-image"
+              className="rounded-[10px] invert md:flex hidden absolute -bottom-0 -z-40 md:-left-44 lg:-left-24 lg:-bottom-20  "
+            /> */}
+          <div className="flex flex-col w-4/5 justify-start items-start pt-6 md:pt-24">
             <b className="  text-white  md:w-9/12 sm-heading text-[45px] font-semibold ">
-              UNIQUE BONDING EXPERIENCE
+              Unique Bonding Experience
             </b>
-            <p className=" sm-text md-text lg-text md:w-9/12 w-full lg:pt-5">
+            <p className=" sm-text md-text lg-text w-full lg:pt-5">
               {copy.why_bonding}
             </p>
           </div>
