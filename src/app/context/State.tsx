@@ -42,16 +42,17 @@ export interface StateContextType {
 
 export const StateProvider = ({ children }: { children: React.ReactNode }) => {
   const [events, setEvents] = useState<Event[]>([]);
-  
+
   useEffect(() => {
     getAllEvents()
       .then((data) => {
-        setEvents(data.events);
-        console.log(events)
+        const events = data.events.filter((event: Event) =>
+          event.name.text.toLowerCase().includes("dog")
+        );
+        setEvents(events);
       })
       .catch((err) => console.error(err));
   }, []);
-  
 
   return (
     <StateContext.Provider value={{ events, setEvents }}>

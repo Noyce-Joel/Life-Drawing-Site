@@ -23,13 +23,13 @@ export default function page() {
     animate: { y: 0, x: 0, rotate: 0, transition: { duration: 0.7 } },
   };
   return (
-    <>
+    <div className=" h-screen relative overflow-y-auto">
       <Nav />
       <motion.section
         variants={container}
         initial="initial"
         animate="animate"
-        className="md:text-[100px] lg:text-[90px] pt-40 z-10  flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[55px]  flex-col text-white "
+        className="  pt-40 z-10  flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[9vmin]  flex-col text-white "
       >
         <motion.figure
           initial={{ scale: 0.9, opacity: 0, y: 1500 }}
@@ -64,7 +64,7 @@ export default function page() {
         {title.map((word, idx) => (
           <motion.h1
             key={idx}
-            className="space-y-0 lg:h-[105px] flex w-4/5 overflow-y-hidden z-20 justify-start items-start "
+            className="space-y-0 lg:h-[105px] flex w-4/5 overflow-hidden z-20 justify-start items-start "
           >
             <motion.span variants={item} key="anim" className="block ">
               {word}
@@ -79,6 +79,6 @@ export default function page() {
         <Events comp={false} />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }

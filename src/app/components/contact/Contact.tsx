@@ -1,18 +1,21 @@
 "use client";
 
 import { sendMail } from "../../services/mail";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
-
+import Notification from "./Notification";
 
 function MyForm() {
+  const [sent, setSent] = useState<boolean>(false);
+  const [emailStatus, setEmailStatus] = useState<string>("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     body: "",
+    attachment: undefined,
   });
 
   const handleChange = (e: any) => {
@@ -23,6 +26,13 @@ function MyForm() {
     }));
   };
 
+  const handleFileUpload = (e: any) => {
+    const { files } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      attachment: files[0],
+    }));
+  };
   const container = {
     whileInView: {
       transition: {
@@ -35,20 +45,35 @@ function MyForm() {
     animate: { y: 0, rotate: 0, transition: { duration: 0.7 } },
   };
 
-  const handleSend = async () => {
+  const handleSend = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-    await sendMail({
-      to: "noyce.joel@gmail.com",
-      email: formData.email,
-      name: formData.email,
-      subject: formData.subject,
-      body: formData.body
-    });
+    try {
+      await sendMail({
+        to: "noyce.joel@gmail.com",
+        email: formData.email,
+        name: formData.email,
+        subject: formData.subject,
+        body: formData.body,
+        attachment: formData.attachment,
+      });
+      setEmailStatus("successful");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        body: "",
+        attachment: undefined,
+      });
+    } catch (error) {
+      setEmailStatus("unsuccessful");
+    }
+    setSent(true);
   };
-  
 
   return (
-    <motion.div className="flex gap-12 flex-col lg:flex-row w-screen h-full lg:h-screen justify-center items-center bg-gray-900">
+    <motion.div className="flex gap-12 flex-col lg:flex-row w-full  lg:h-screen justify-center items-center bg-gray-900">
+      {sent ? <Notification status={emailStatus} /> : null}
       <motion.section
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -59,9 +84,8 @@ function MyForm() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1 }}
-          className="flex flex-col "
+          className="flex flex-col"
         >
-          {/* <Image src="/belly.jpg" alt="Contact" width={500} height={500} className="w-full absolute"/> */}
           <div className="flex  flex-col md:justify-start md:items-start justify-center items-center pb-12">
             <h1 className="text-white  flex-nowrap whitespace-nowrap md:text-[50px] text-[40px]">
               Get in touch
@@ -85,25 +109,24 @@ function MyForm() {
               <li>Happy to chill in a pub setting</li>
             </ul>
           </div>
-          <div className="absolute bottom-10 lg:left-0 right-0 md:flex hidden">
+          <div className="absolute bottom-5 lg:left-0 right-0 md:flex hidden">
             <Image
               src="/Logo.png"
               className="invert"
               height={205}
               width={205}
               alt="logo"
-
             />
           </div>
         </motion.div>
       </motion.section>
-      
+
       <section className="lg:w-1/2 w-full h-full relative bg-gray-900 lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
-        <form 
-        onSubmit={() => handleSend()}
-        className="w-full h-full flex flex-col justify-center items-start pb-12 md:pr-12 ">
-          
-          <div className="mb-4 w-full relative">
+        <form
+          onSubmit={(e) => handleSend(e)}
+          className="w-full h-full flex flex-col justify-center items-start pb-12 md:pr-12 "
+        >
+          <div className="mb-4 w-full group relative">
             <div className="h-9 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
@@ -187,22 +210,48 @@ function MyForm() {
                 Subject
               </motion.label>
             </div>
-            <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, delay: 1}} className="text-white pt-10 pb-7 flex md:flex-row flex-col gap-4">
-            <label className="flex gap-2">
-            <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Collaborations' />
-              Collaborations
-              
-            </label>
-            <label className="flex gap-2">
-            <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='Modelling' />
-              Modelling
-              
-            </label>
-            <label className="flex gap-2">
-            <input onChange={(e) => setFormData({...formData, subject: e.currentTarget.value})} type="checkbox" name='subject' value='General enquiry' />
-              Other
-             
-            </label>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1 }}
+              className="text-white pt-10 pb-7 flex md:flex-row flex-col gap-4"
+            >
+              <label className="flex gap-2">
+                <input
+                  onChange={(e) =>
+                    setFormData({ ...formData, subject: e.currentTarget.value })
+                  }
+                  type="checkbox"
+                  name="subject"
+                  value="Collaborations"
+                  checked={formData.subject === "Collaborations"}
+                />
+                Collaborations
+              </label>
+              <label className="flex gap-2">
+                <input
+                  onChange={(e) =>
+                    setFormData({ ...formData, subject: e.currentTarget.value })
+                  }
+                  type="checkbox"
+                  name="subject"
+                  value="Modelling"
+                  checked={formData.subject === "Modelling"}
+                />
+                Modelling
+              </label>
+              <label className="flex gap-2">
+                <input
+                  onChange={(e) =>
+                    setFormData({ ...formData, subject: e.currentTarget.value })
+                  }
+                  type="checkbox"
+                  name="subject"
+                  value="General enquiry"
+                  checked={formData.subject === "General enquiry"}
+                />
+                Other
+              </label>
             </motion.div>
           </div>
 
@@ -241,6 +290,14 @@ function MyForm() {
               className="w-full -z-40 origin-right border-b border-[1.2px]"
             ></motion.div>
           </div>
+          {/* <motion.div className="z-20 flex flex-col cursor-pointer ">
+            <label>Attach a file</label>
+            <input
+              type="file"
+              className="hover:cursor-pointer flex"
+              onChange={handleFileUpload}
+            />
+          </motion.div> */}
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

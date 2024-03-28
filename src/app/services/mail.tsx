@@ -1,6 +1,7 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { Readable } from "stream";
 
 export async function sendMail({
   to,
@@ -8,12 +9,14 @@ export async function sendMail({
   email,
   name,
   body,
+  attachment,
 }: {
   to: string;
   subject: string;
-  email: string,
-  name: string,
+  email: string;
+  name: string;
   body: string;
+  attachment?: File;
 }) {
   const { SMTP_EMAIL, SMTP_PASSWORD } = process.env;
   const transporter = nodemailer.createTransport({
@@ -25,9 +28,7 @@ export async function sendMail({
   });
   try {
     const test = await transporter.verify();
-    console.log(test);
   } catch (err) {
-    console.log(err);
     return;
   }
 
@@ -37,9 +38,7 @@ export async function sendMail({
       to,
       subject,
       html: body,
+      attachments: [],
     });
-    console.log(send);
-  } catch (err) {
-    console.log(err);
-  }
+  } catch (err) {}
 }

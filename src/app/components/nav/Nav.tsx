@@ -69,7 +69,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
         initial="initial"
         whileInView="whileInView"
         exit="exit"
-        className="flex flex-col gap-12 pt-40 "
+        className="flex flex-col gap-12 pt-24 "
       >
         {pages.map((page, index) => (
           <div
@@ -78,7 +78,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
           >
             <motion.div
               variants={item}
-              className="text-[42px] font-bold -mb-2 "
+              className="text-[5vh] font-bold -mb-2 "
             >
               <Link href={page.href}>
               {page.name}
@@ -92,7 +92,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
         initial="initial"
         whileInView="whileInView"
         exit="exit"
-        className="flex flex-col pt-14"
+        className="flex flex-col pt-14 text-[2vh]"
       >
         <motion.b variants={address}>Bloc Studios</motion.b>
         <motion.span variants={address}>Hicks Street,</motion.span>
@@ -188,7 +188,7 @@ export default function Nav() {
         )}
       </AnimatePresence>
 
-      <nav className="flex-col md:flex-row mx-auto items-center px-4 z-40 py-4 pb-10">
+      <nav className="flex-col md:flex-row mx-auto items-center px-4 z-40 py-4">
         <div className="z-40">
           <ul className=" flex   rounded-md md:items-start md:justify-start gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (

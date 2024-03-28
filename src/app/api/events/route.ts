@@ -6,14 +6,12 @@ type ResponseData = {
   message: string;
 };
 
-const key = process.env.EVENTBRITE_API_KEY;
+const key = process.env.EVENTBRITE_PRIVATE_TOKEN;
 
-export async function GET(
-  req: NextRequest,
-  res: NextResponse<ResponseData>
-) {
-  const organisation_id =  2017829680413;
-  const eventsUrl = `https://www.eventbriteapi.com/v3/organizations/${organisation_id}/events/?expand=venue`;
+export async function GET(req: NextRequest, res: NextResponse<ResponseData>) {
+  const organisation_id = 152657899054;
+
+  const eventsUrl = `https://www.eventbriteapi.com/v3/organizations/${organisation_id}/events/?expand=venue&continuation=eyJwYWdlIjogNn0`;
 
   const headerParameters = {
     Authorization: `Bearer ${key}`,
@@ -23,12 +21,11 @@ export async function GET(
     method: "GET",
     headers: headerParameters,
   };
-  
+
   try {
     const response = await axios.get(eventsUrl, options);
     return NextResponse.json(response.data);
   } catch (error: any) {
-    return NextResponse.json({ message: error.message })
+    return NextResponse.json({ message: error.message });
   }
-    
 }

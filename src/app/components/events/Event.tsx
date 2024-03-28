@@ -12,7 +12,6 @@ export default function Event({
   description,
   capacity,
   logo,
-  eventClick,
 }: {
   id: number;
   name: string;
@@ -21,14 +20,10 @@ export default function Event({
   description: string;
   capacity: number;
   logo: string;
-  eventClick: (id: number) => void;
 }) {
-  const [open, setOpen] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true);
   return (
     <motion.div
       key={id}
-      onClick={() => eventClick(id)}
       className={`bg-gray-900 text-white rounded-[10px] w-[80vw] md:w-96 origin-top md:hover:rounded-[60px] hover:scale-[107%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">

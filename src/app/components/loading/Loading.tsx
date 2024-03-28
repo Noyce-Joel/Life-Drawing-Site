@@ -1,10 +1,7 @@
 import {
-  cubicBezier,
+
   motion,
   useAnimation,
-  useInView,
-  useScroll,
-  useTransform,
 } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
@@ -29,8 +26,8 @@ export default function Loading({ inView }: { inView: boolean }) {
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
-        width="905"
-        height="905"
+        width="920"
+        height="920"
         strokeWidth="20px"
         viewBox="0 0 300.000000 219.000000"
         preserveAspectRatio="xMidYMid meet"

@@ -10,7 +10,9 @@ export default function page() {
     <div className="absolute z-20">
     <Nav />
     </div>
+    <div className="relative w-full h-screen overflow-y-auto">
       <Contact  />
+      </div>
     </>
   );
 }

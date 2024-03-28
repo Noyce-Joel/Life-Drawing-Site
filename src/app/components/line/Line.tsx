@@ -14,7 +14,7 @@ export default function Line({title, color}: {title: boolean, color: string}) {
       
     }}
     transition= {{
-      duration: 0.8,
+      duration: 1.8,
       delay: 0.15,
       type: "tween",
       repeat: 0,

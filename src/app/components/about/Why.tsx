@@ -8,8 +8,8 @@ import { copy } from "../../../../public/copy/copy";
 
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-12 md:pt-32 relative border-b border-gray-900 pb-24 md:pb-32 justify-end items-end h-auto font-extrabold text-[40px] ">
-      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[45px] md:text-[59px] mb-6 text-white">
+    <article className="flex flex-col pt-12 md:pt-32 relative border-b border-gray-900  -z-10 pb-24 md:pb-32 justify-end items-end h-auto font-extrabold text-[40px] ">
+      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[11vw] md:text-[59px] mb-6 text-white">
         WHY US?
          <Line color='white' title={false} />
       </div>
@@ -55,7 +55,7 @@ export default function Sessions() {
               alt="hero-image"
               className="rounded-[10px] invert md:flex hidden absolute -bottom-0 -z-40 md:-left-44 lg:-left-24 lg:-bottom-20  "
             /> */}
-          <div className="flex flex-col w-4/5 justify-start items-start pt-6 md:pt-24">
+          <div className="flex flex-col w-4/5 justify-start items-start md:pt-24">
             <b className="  text-white  md:w-9/12 sm-heading text-[45px] font-semibold ">
               Unique Bonding Experience
             </b>

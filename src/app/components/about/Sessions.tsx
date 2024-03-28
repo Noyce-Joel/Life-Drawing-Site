@@ -7,7 +7,7 @@ import { copy } from "../../../../public/copy/copy";
 export default function Sessions() {
   return (
     <article className="flex flex-col pt-12 border-b  border-gray-900 pb-12 md:pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
-      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[45px] md:text-[59px] mb-6 text-white">
+      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[11vw] md:text-[59px] mb-6 text-white">
         SESSIONS
         <Line color='white' title={false} />
       </div>
@@ -17,13 +17,13 @@ export default function Sessions() {
           {copy.sessions_unleash}
         </p>
 
-        <div className="flex w-5/6 justify-start items-start pt-12 lg:mr-7">
+        <div className="flex flex-col md:flex-row w-5/6 justify-start items-center md:items-start pt-12 lg:mr-7">
           <Image
             src="/Dog.jpg"
             height={500}
             width={500}
             alt="hero-image"
-            className="rounded-[10px] md:flex hidden"
+            className="rounded-[10px]  pb-12 md:pb-0 flex"
           />
 
           <div className="flex flex-col gap-12 justify-center items-center md:items-start md:pt-12">
