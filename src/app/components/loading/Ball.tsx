@@ -7,11 +7,11 @@ export default function Ball() {
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="100"
-      height="100"
+      width="150"
+      height="150"
       viewBox="0 0 900.000000 920.000000"
       preserveAspectRatio="xMidYMid meet"
-      strokeWidth={140}
+      strokeWidth={180}
     >
       <g
         transform="translate(0.000000,920.000000) scale(0.100000,-0.100000)"
@@ -20,7 +20,7 @@ export default function Ball() {
       >
         <motion.path
         initial={{pathLength: 0 }}
-        whileInView={{pathLength: 1, transition: { duration: 10}}}
+        whileInView={{pathLength: 1, transition: { duration: 4, delay: 1.4}}}
           d="M7335 9181 c-16 -5 -65 -23 -108 -41 -71 -30 -94 -47 -250 -194 -253
 -238 -1349 -1328 -3893 -3871 l-2272 -2270 -310 -940 c-511 -1547 -510 -1542
 -492 -1586 15 -35 62 -76 96 -85 15 -4 58 3 102 16 134 39 781 250 1607 524

@@ -40,8 +40,8 @@ export default function Title() {
               <div className="absolute md:flex hidden -rotate-45 -right-[4vw] -top-12 ">
                 <Paw duration={3} delay={1.1} size="170pt" />
               </div>
-              <div className="absolute md:flex hidden -rotate-45 top-32 justify-center left-44 w-full mx-auto">
-                <Bone delay={1.4} size="120pt" />
+              <div className="absolute md:flex hidden -rotate-45 top-44 justify-center left-72 w-full mx-auto">
+                <Bone delay={1.4} size="100pt" />
               </div>
               <div className="absolute md:flex hidden rotate-12 md:-bottom-1 bottom-12 left-0">
                 <Bone delay={1.7} size="170pt" />
@@ -49,7 +49,7 @@ export default function Title() {
               <div className="absolute -rotate-45 md:flex hidden md:top-24 top-32 left-12">
                 <Paw duration={3} delay={2} size="90pt" />
               </div>
-            <div className="absolute -rotate-90 md:flex hidden bottom-56 w-full justify-center">
+            <div className="absolute -rotate-90 md:flex hidden bottom-72 w-full justify-center">
               <Ball />
             </div>
               
