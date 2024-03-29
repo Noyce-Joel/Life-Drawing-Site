@@ -4,13 +4,9 @@ import Loading from "../loading/Loading";
 import { useInView } from "framer-motion";
 
 export default function Footer() {
- 
   return (
-    <div className="flex relative flex-col">
-      
-      
-      
-      <footer className="relative flex  md:px-24 py-7 px-12 text-white justify-between bg-gray-900 h-[410px] mt-auto overflow-y-hidden ">
+    <div className="flex relative flex-col -z-40">
+      <footer className="relative flex  md:px-24 py-7 px-12justify-between bg-gray-700 h-[410px] mt-auto overflow-y-hidden ">
         <div className=" flex flex-col gap-7 ">
           <b className="md:text-[27px]">Connect</b>
           <b>

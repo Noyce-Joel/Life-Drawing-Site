@@ -36,7 +36,7 @@ export default function Events({ comp }: { comp: boolean }) {
       <div
         className={classNames(
           comp ? "flex" : "hidden",
-          `flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-24 font-bold text-[45px] md:text-[75px]  text-white`
+          `flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-24 font-bold text-[45px] md:text-[75px`
         )}
       >
         Events
@@ -44,7 +44,7 @@ export default function Events({ comp }: { comp: boolean }) {
       </div>
       <div className="text-left pt-7 md:pt-24 relative z-10 items-center justify-center flex flex-col gap-7 tracking-wider text-pretty font-bold ">
         <div className="flex items-start justify-start w-4/5 md:w-3/5 ">
-          <h2 className="sm-text md-text pt-6 lg-text text-black text-left ">
+          <h2 className="sm-text md-text pt-6 lg-text text-left ">
             {copy.events_cities}
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function Events({ comp }: { comp: boolean }) {
           height={190}
           width={190}
           alt="hero-image"
-          className="rounded-[10px] md:flex hidden pt-12 "
+          className="rounded-[10px] invert md:flex hidden pt-12 "
         />
       </div>
     </>

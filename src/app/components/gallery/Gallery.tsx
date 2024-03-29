@@ -32,7 +32,7 @@ export default function Gallery({ results }: { results: any }) {
   };
   return (
     <>
-      <div className="flex w-full pl-12 lg:pl-72 relative flex-col pt-24 font-bold text-[30px] md:text-[75px]  border-t border-gray-900 mt-44 text-white">
+      <div className="flex w-full pl-12 lg:pl-72 relative flex-col pt-24 font-bold text-[30px] md:text-[75px]  border-t border-gray-500 mt-44">
         Gallery
         <Line color="white" title={false} />
       </div>
@@ -75,8 +75,8 @@ export default function Gallery({ results }: { results: any }) {
         
       </div>
      
-        <div className="flex flex-col justify-center border-t bg-[#8b6441] border-gray-900 relative md:pb-20  items-center md:pt-24 mt-12">
-          <p className="text-center text-white flex w-4/5 md:w-1/2 sm-text md-text lg-text py-12">
+        <div className="flex flex-col justify-center border-t border-gray-500 relative md:pb-20  items-center md:pt-24 mt-12">
+          <p className="text-centerflex w-4/5 md:w-1/2 sm-text md-text lg-text py-12">
             Let&#39;s sketch, share, and wag our way to a gallery of
             heartwarming masterpieces!
           </p>

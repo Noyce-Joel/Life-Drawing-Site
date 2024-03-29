@@ -57,7 +57,7 @@ const address = {
 
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="flex md:hidden relative flex-col gap-12 w-full h-full p-4">
+    <div className="flex md:hidden relative text-gray-900 flex-col gap-12 w-full h-full p-4">
       <button
         onClick={() => handleClick()}
         className="absolute top-0 right-0 p-12"
@@ -188,7 +188,7 @@ export default function Nav() {
         )}
       </AnimatePresence>
 
-      <nav className="flex-col md:flex-row mx-auto items-center px-4 z-40 py-4">
+      <nav className="flex-col md:flex-row px-4 z-40 py-4 absolute">
         <div className="z-40">
           <ul className=" flex   rounded-md md:items-start md:justify-start gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
@@ -205,7 +205,7 @@ export default function Nav() {
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hover ? "white" : "black"}
+                fgColor={hover ? "white" : "white"}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
               />
@@ -214,7 +214,7 @@ export default function Nav() {
                 url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hoverTwo ? "white" : "black"}
+                fgColor={hoverTwo ? "white" : "white"}
                 onMouseOver={() => setHoverTwo(true)}
                 onMouseOut={() => setHoverTwo(false)}
               />

@@ -78,7 +78,7 @@ function MyForm() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", mass: 2, friction: 80, damping: 20 }}
-        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex  overflow-hidden origin-top-left bg-[#8b6441] lg:justify-start justify-center lg:rounded-br-[250px]"
+        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex  overflow-hidden origin-top-left bg-gray-700 lg:justify-start justify-center lg:rounded-br-[250px]"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -87,14 +87,14 @@ function MyForm() {
           className="flex flex-col"
         >
           <div className="flex  flex-col md:justify-start md:items-start justify-center items-center pb-12">
-            <h1 className="text-white  flex-nowrap whitespace-nowrap md:text-[50px] text-[40px]">
+            <h1 className="  flex-nowrap whitespace-nowrap md:text-[50px] text-[40px]">
               Get in touch
             </h1>
           </div>
 
           <div className=" contact-text sm-contact-text md-contact-text lg-contact-text gap-4  flex items-start flex-col w-full ">
             For collaborations please include:
-            <ul className="text-white ">
+            <ul className=" ">
               <li>Preferred date/time,</li>
               <li>Number of people</li>
               <li>City and venue</li>
@@ -103,7 +103,7 @@ function MyForm() {
 
           <div className="contact-text sm-contact-text md-contact-text lg-contact-text gap-4 pt-4 flex items-start flex-col ">
             Our dogs are:
-            <ul className="text-white w-full">
+            <ul className=" w-full">
               <li>Happy around people and dogs</li>
               <li>Relaxed in busy environments</li>
               <li>Happy to chill in a pub setting</li>
@@ -133,7 +133,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7 }}
                 htmlFor="form-name"
-                className="block text-white font-bold mb-2 text-[22px] md:text-[22px] "
+                className="block  font-bold mb-2 text-[22px] md:text-[22px] "
               >
                 Name
               </motion.label>

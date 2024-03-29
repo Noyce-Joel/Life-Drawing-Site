@@ -36,7 +36,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 2 }}
-          className="relative h-screen w-screen overflow-x-hidden"
+          className="relative h-screen w-full overflow-y-scroll overflow-x-hidden"
         >
           <Nav />
           <Hero />

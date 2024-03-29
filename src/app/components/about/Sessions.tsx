@@ -6,14 +6,14 @@ import { copy } from "../../../../public/copy/copy";
 
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-12 border-b  border-gray-900 pb-12 md:pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
-      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[11vw] md:text-[59px] mb-6 text-white">
+    <article className="flex flex-col pt-12 border-b  border-gray-500 pb-12 md:pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
+      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[11vw] md:text-[59px] mb-6 ">
         SESSIONS
         <Line color='white' title={false} />
       </div>
 
       <div className="flex flex-col justify-center items-center relative">
-        <p className=" text-black md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text">
+        <p className=" md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text">
           {copy.sessions_unleash}
         </p>
 
@@ -27,10 +27,10 @@ export default function Sessions() {
           />
 
           <div className="flex flex-col gap-12 justify-center items-center md:items-start md:pt-12">
-            <p className=" text-white flex md:-ml-56 lg:-ml-36 md:w-auto lg-white-text md-white-text sm-white-text">
+            <p className="  flex md:-ml-56 lg:-ml-36 md:w-auto lg-white-text md-white-text sm-white-text">
               {copy.sessions_white_text}
             </p>
-            <p className="md:pl-12 w-full lg:w-4/5 lg-text md-text sm-text">
+            <p className="md:pl-12 w-full lg:w-4/5 lg-text md-text sm-text md:pt-12">
               <span className="session-text-hide-two ">
                 {copy.sessions_our_dogs}
               </span>{" "}
@@ -43,7 +43,7 @@ export default function Sessions() {
           {copy.sessions_our_dogs}
         </p>
 
-        <p className="w-full justify-center border-top border-gray-900 hidden session-text-show  sm-text md-white-text lg-text md:pt-24 pt-12  ">
+        <p className="w-full justify-center border-top border-gray-500 hidden session-text-show  sm-text md-white-text lg-text md:pt-24 pt-12  ">
           <span className=" flex w-3/5">{copy.sessions_level}</span>
         </p>
       </div>

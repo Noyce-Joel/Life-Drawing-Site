@@ -24,7 +24,7 @@ export default function Event({
   return (
     <motion.div
       key={id}
-      className={`bg-gray-900 text-white rounded-[10px] w-[80vw] md:w-96 origin-top md:hover:rounded-[60px] hover:scale-[107%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+      className={` bg-gray-700 rounded-[10px] w-[80vw] md:w-96 origin-top md:hover:rounded-[60px] hover:scale-[107%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">
         <Image
@@ -35,7 +35,7 @@ export default function Event({
           height={400}
         />
       </div>
-      <div className="relative p-12 pt-6 text-white">
+      <div className="relative p-12 pt-6">
         <h2 className="text-xl font-semibold border-b pb-2">{name}</h2>
         <p className="text-sm mt-2">
           <span className="font-bold">Start:</span> {start}

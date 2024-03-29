@@ -14,13 +14,13 @@ export default function Line({title, color}: {title: boolean, color: string}) {
       
     }}
     transition= {{
-      duration: 1.8,
-      delay: 0.15,
+      duration: 2.7,
+
       type: "tween",
       repeat: 0,
       ease: "anticipate",
     }}
-    className={`w-full  origin-right border-b border-${color}-900  ${title ? 'border-[2px] bottom-0' : 'border-[1.2px] bottom-0 md:bottom-0'}`}
+    className={`w-full  origin-right border-b border-${color}-500  ${title ? 'border-[2px] bottom-0' : 'border-[1.2px] bottom-0 md:bottom-0'}`}
   ></motion.div>
 </>
   )

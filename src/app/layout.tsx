@@ -9,7 +9,7 @@ const inter = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Dog, Life, Drawing, Art, Life Drawing, Sheffield, York, Nottingham, Leeds - Dog Life Drawing",
+  title: "Dog Life Drawing",
   description:
     "Our dog life drawing sessions blend the joy of artistic expression with the undeniable charm of our favourite furry friends. Whether you're an experienced artist or a complete novice, our sessions cater to all skill levels. You'll be guided by talented instructors who are not only passionate about art but also share a deep love for dogs.",
   keywords:

@@ -29,7 +29,7 @@ export default function page() {
         variants={container}
         initial="initial"
         animate="animate"
-        className="  pt-40 z-10  flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[9vmin]  flex-col text-white "
+        className="  pt-40 z-10  flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[9vmin]  flex-col "
       >
         <motion.figure
           initial={{ scale: 0.9, opacity: 0, y: 1500 }}

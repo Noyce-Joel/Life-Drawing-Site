@@ -3,10 +3,13 @@
 @tailwind utilities;
 
 body {
-  background-color: #8b6441;
+  background-color: #222831;
   overflow: hidden;
   letter-spacing: 1.5px;
   scroll-behavior: smooth;
+  color: white;
+  border: 1.5vmin double;
+
 }
 
 @media screen and (min-width: 0px) and (max-width: 750px) {
@@ -24,6 +27,7 @@ body {
 
   .sm-white-text {
     font-size: 22.5px;
+    color: rgb(156, 154, 154)
   }
 }
 
@@ -38,12 +42,14 @@ body {
 
   .md-white-text {
     font-size: 38px;
+    color: rgb(156, 154, 154)
   }
 }
 
 @media screen and (min-width: 1540px) and (max-width: 2000px) {
   .lg-white-text {
     font-size: 40px;
+
   }
 
   .lg-contact-text {
@@ -51,7 +57,7 @@ body {
   }
 
   .lg-text {
-    font-size: 35px;
+    font-size: 32px;
   }
 }
 
