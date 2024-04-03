@@ -14,8 +14,8 @@ export default function Loading({ inView }: { inView: boolean }) {
       controls.start({
         pathLength: 1,
         transition: {
-          type: "spring",
-          stiffness: 4
+          type: "tweenn",
+          duration: 5
         },
       });
     }
@@ -28,7 +28,7 @@ export default function Loading({ inView }: { inView: boolean }) {
         xmlns="http://www.w3.org/2000/svg"
         width="920"
         height="920"
-        strokeWidth="20px"
+        strokeWidth="15px"
         viewBox="0 0 300.000000 219.000000"
         preserveAspectRatio="xMidYMid meet"
       >

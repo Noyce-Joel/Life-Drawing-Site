@@ -79,7 +79,7 @@ function MyForm() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", mass: 2, friction: 80, damping: 20 }}
-        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex text-gray-900  overflow-hidden origin-top-left bg-[#e9c46a]  lg:justify-start justify-center lg:rounded-br-[250px]"
+        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex text-gray-900  overflow-hidden origin-top-left bg-[#f4b923]  lg:justify-start justify-center lg:rounded-br-[250px]"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -87,8 +87,9 @@ function MyForm() {
           transition={{ duration: 0.5, delay: 1 }}
           className="flex flex-col"
         >
-          <div className="flex  flex-col w-full  pb-12">
-            <TitleText col='flex' title={['Get ', 'in', ' touch']} />
+          <div className="flex  flex-col w-full text-[4vw] pb-12">
+            {/* <TitleText col='flex' title={['Get ', 'in', ' touch']} /> */}
+            Get in touch
           </div>
 
           <div className=" contact-text sm-contact-text md-contact-text lg-contact-text gap-4  flex items-start flex-col w-full ">

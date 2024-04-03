@@ -39,13 +39,7 @@ fill="none" stroke="#FFFFFF">
           viewport={{once: true}} d="M681 2362 c-14 -26 -31 -129 -31 -187 0 -28 -7 -77 -15 -108 -8 -32
 -14 -81 -14 -110 l2 -52 8 65 c4 36 13 81 19 100 6 19 15 88 19 153 6 91 12
 122 26 137 10 11 13 20 7 20 -6 0 -16 -8 -21 -18z"/>
- <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}} d="M712 2320 c0 -14 2 -19 5 -12 2 6 2 18 0 25 -3 6 -5 1 -5 -13z"/>
+ 
  <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
@@ -159,31 +153,11 @@ c41 -29 44 -36 21 -60 -20 -19 -38 -15 -42 11 -2 10 -16 31 -30 47 -24 25 -24
             transition: { duration: duration / 2, delay: delay, type: "spring" },
           }}
           viewport={{once: true}} d="M2316 1624 c-19 -19 -21 -37 -3 -31 6 2 23 -4 36 -14 33 -26 36 -24
-37 21 1 37 0 40 -27 40 -15 0 -35 -7 -43 -16z m48 -19 c-7 -17 -20 -20 -28 -6
+37 21 1 37 0 40 -27 40 -15z m48 -19 c-7 -17 -20 -20 -28 -6
 -7 10 3 21 20 21 8 0 11 -6 8 -15z"/>
- <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}} d="M2551 1421 c-7 -5 -12 -14 -10 -20 2 -6 10 -2 17 9 14 22 13 23 -7
-11z"/>
- <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}} d="M1600 1157 c0 -19 -5 -48 -11 -66 -14 -40 -3 -54 12 -15 17 45 23
-101 10 108 -7 5 -11 -4 -11 -27z"/>
- <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}} d="M1370 678 c0 -11 42 -10 60 2 10 6 3 8 -23 7 -20 -1 -37 -5 -37 -9z"/>
+ 
+
+ 
 </g>
 </svg>
   );

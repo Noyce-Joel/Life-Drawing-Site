@@ -12,12 +12,12 @@ export default function Sessions() {
         SESSIONS
         <Line duration={1} color='white' title={false} />
       </div>
-      <div className="absolute md:flex hidden justify-start left-0 w-2/12 bg-[#092a0f] -top-[7.5rem]">
+      <div className="absolute md:flex hidden justify-start left-0 w-2/12 bg-[#092a0f] -top-[9.5rem]">
               <Dogs duration={7} delay={0.5} size="290pt" />
               </div>
 
       <div className="flex flex-col justify-center items-center relative white">
-        <p className=" md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text white">
+        <p className=" md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text">
           {copy.sessions_unleash}
         </p>
 
@@ -31,10 +31,10 @@ export default function Sessions() {
           />
 
           <div className="flex flex-col gap-12 justify-center items-center md:items-start md:pt-12">
-            <p className="  flex md:-ml-56 lg:-ml-36 md:w-auto lg-white-text md-white-text sm-white-text">
+            <p className="  flex  md:w-auto md:pl-12 lg-white-text md-white-text sm-white-text">
               {copy.sessions_white_text}
             </p>
-            <p className="md:pl-12 w-full lg:w-4/5 lg-text md-text sm-text md:pt-12">
+            <p className="md:pl-12 w-full lg:w-4/5 lg-text md-text sm-text md:pt-12 md:pb-32">
               <span className="session-text-hide-two ">
                 {copy.sessions_our_dogs}
               </span>{" "}
@@ -50,7 +50,7 @@ export default function Sessions() {
           {copy.sessions_our_dogs}
         </p>
 
-        <p className="w-full justify-center border-top border-gray-500 hidden session-text-show  sm-text md-white-text lg-text md:pt-24 pt-12  ">
+        <p className="w-full justify-center border-t border-gray-500 hidden session-text-show  sm-text md-white-text lg-text md:pt-24 pt-12  ">
           <span className=" flex w-3/5">{copy.sessions_level}</span>
         </p>
       </div>

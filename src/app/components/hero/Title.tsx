@@ -1,14 +1,8 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
 import React from "react";
 import Line from "../line/Line";
 import Loading from "../loading/Loading";
 import Paw from "../loading/Paw";
-import Bone from "../loading/Bone";
 import TitleText from "../TitleText";
-import Dogs from "../loading/Dogs";
-
-import Ball from "../loading/Ball";
 
 export default function Title() {
   const title = ["DOG", "LIFE", "DRAWING"];
@@ -28,31 +22,21 @@ export default function Title() {
           <div className=" w-full relative h-full -mb-32 -mt-32 md:-mt-24 md:-mb-16 flex justify-center items-center">
             <div className="w-full flex relative ">
               <Loading inView={true} />
-              <div className="text-[5vw] md:flex hidden items-center w-1/2">
-                <TitleText title={["WHERE ART MEETS", "CANINE CHARM"]} col='flex-col' />
+              <div
+                className="text-[5vw] md:flex hidden items-center w-1/2 text-[#f4b923] mix-blend-mode: screen;"
+              >
+                <TitleText
+                  title={["WHERE ART MEETS", "CANINE CHARM"]}
+                  col="flex-col"
+                />
               </div>
-              <div className="absolute md:flex hidden -rotate-[15deg] right-[28vw] top-32 ">
-                <Paw duration={2} delay={3.4} size="140pt" />
+              <div className="absolute md:flex hidden -rotate-[15deg] right-[10rem] bottom-48 ">
+                <Paw duration={0.2} delay={1.2} size="140pt" />
               </div>
-              <div className="absolute md:flex hidden -rotate-[105deg] justify-center left-[2.5vw] w-full top-40 ">
-                <Ball duration={2.4} delay={2.7} size="200pt" />
-              </div>
-              {/* <div className="absolute md:flex hidden -rotate-45 -right-[4vw] -top-12 ">
-                <Paw duration={4.5} delay={1.4} size="170pt" />
-              </div> */}
-              <div className="absolute md:flex hidden -rotate-45 top-40 justify-center left-[32vw] w-full mx-auto">
-                <Bone duration={2.2} delay={4.1} size="140pt" />
-              </div>
-              {/* <div className="absolute md:flex hidden rotate-12 md:-bottom-1 bottom-12 right-0">
-                <Bone duration={4.5} delay={1.7} size="170pt" />
-              </div> */}
-             
-
             </div>
           </div>
         </div>
         <Line duration={2.7} color="white" title={true} />
-
       </div>
     </>
   );

@@ -16,159 +16,153 @@ export default function Loading({
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
-      viewBox="0 0 300.000000 49.000000"
+      viewBox="0 0 300.000000 36.000000"
       preserveAspectRatio="xMidYMid meet"
-      strokeWidth={8}
+      strokeWidth={7}
     >
       <metadata>
         Created by potrace 1.10, written by Peter Selinger 2001-2011
       </metadata>
       <g
-        transform="translate(0.000000,49.000000) scale(0.2,0.2)"
-        fill="none"
+        transform="translate(0.000000,36.000000) scale(0.100000,-0.100000)"
+        fill='none'
         stroke="#FFFFFF"
       >
-         <motion.path
+        <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
+            transition: { delay: delay, type: "tween", duration: duration },
           }}
-          viewport={{once: true}}
-          d="M200 311 c-52 -10 -129 -67 -146 -107 -8 -19 -17 -54 -21 -79 -5 -37
-   -3 -46 12 -51 20 -8 38 16 42 56 1 14 5 35 8 48 3 12 1 22 -4 22 -5 0 -12 -19
-   -16 -42 -9 -61 -15 -79 -24 -73 -8 4 2 86 14 117 4 10 30 35 58 55 48 35 57
-   38 115 37 44 -1 66 -5 75 -17 6 -8 20 -17 31 -19 30 -5 57 -66 54 -123 -2 -27
-   -7 -49 -13 -49 -5 1 -19 27 -30 58 -25 71 -39 74 -18 4 18 -62 29 -78 54 -78
-   21 0 35 39 25 66 -5 14 -1 15 21 10 66 -15 181 -27 216 -23 l38 5 -20 -30
-   c-18 -29 -18 -33 -2 -64 19 -39 35 -45 21 -8 -6 15 -6 23 -1 19 15 -9 24 16
-   11 28 -10 9 -11 9 -6 0 4 -8 1 -13 -8 -13 -9 0 -16 3 -16 8 0 14 51 82 61 82
-   6 0 8 9 4 20 -4 14 1 27 19 44 14 13 26 27 26 32 0 15 83 54 116 54 35 0 89
-   -33 112 -68 15 -23 14 -23 -11 -17 -17 5 -27 3 -27 -4 0 -6 8 -11 19 -11 53 0
-   42 -59 -18 -89 -22 -12 -42 -25 -46 -31 -3 -5 -13 -10 -21 -10 -13 0 -15 13
-   -12 75 2 47 -1 74 -7 72 -12 -5 -8 -148 5 -160 12 -14 120 53 141 87 10 17 19
-   24 19 16 0 -23 43 -123 62 -144 18 -20 14 -22 87 41 67 58 90 132 55 181 -17
-   25 -64 30 -64 7 0 -8 5 -15 10 -15 18 0 11 -57 -11 -84 -20 -26 -68 -56 -88
-   -56 -6 0 -30 42 -54 93 -39 81 -49 95 -86 115 -55 28 -72 28 -138 -4 -57 -28
-   -80 -54 -107 -118 l-16 -39 -108 6 c-128 8 -182 21 -182 45 0 25 -38 82 -54
-   82 -8 0 -21 6 -28 13 -7 8 -25 17 -40 20 -14 4 -32 9 -40 11 -7 2 -29 1 -48
-   -3z m1038 -73 c19 -19 14 -89 -8 -125 -11 -18 -38 -46 -61 -63 -39 -28 -43
-   -29 -55 -12 -20 25 -17 30 19 45 40 17 97 80 97 108 0 11 -5 29 -10 40 -12 21
-   -1 26 18 7z"
+          viewport={{ once: true }}
+          d="M400 300 c-58 -10 -124 -62 -138 -108 -17 -55 -16 -102 2 -102 8 0
+18 5 22 11 14 23 23 -8 13 -45 -7 -24 -7 -42 -1 -48 6 -6 11 10 15 42 3 28 13
+60 22 72 19 28 19 38 0 38 -9 0 -15 -10 -15 -26 0 -16 -4 -23 -11 -18 -6 3 -9
+24 -7 45 5 54 -9 49 -18 -6 -3 -25 -10 -48 -15 -51 -12 -7 -11 18 2 72 9 36
+20 51 58 77 38 26 55 32 98 31 34 0 58 -6 71 -17 10 -9 24 -17 31 -17 17 0 41
+-63 41 -110 0 -67 -31 -45 -45 33 -4 20 -11 37 -16 37 -11 0 -3 -39 17 -88 16
+-40 51 -44 60 -8 3 14 3 30 -1 35 -8 14 1 14 45 1 19 -6 70 -11 113 -12 42 -1
+77 -4 77 -7 0 -2 -7 -13 -16 -22 -15 -17 -15 -21 0 -54 11 -21 26 -37 42 -41
+42 -11 124 -10 124 1 0 6 14 16 30 22 17 6 30 16 30 21 0 6 -20 0 -46 -14 -54
+-29 -55 -29 -48 -6 5 16 5 16 -9 -1 -17 -21 -66 -22 -93 -3 -15 12 -17 17 -6
+27 18 19 15 28 -7 24 -19 -3 -19 -2 1 32 12 19 27 37 33 40 7 2 11 13 8 23 -3
+12 3 23 16 32 12 7 21 18 21 24 0 7 17 22 37 34 59 35 133 16 164 -41 7 -14 5
+-16 -14 -13 l-22 5 23 -12 c39 -21 26 -58 -32 -91 -27 -16 -50 -28 -51 -26 -9
+11 -10 109 -1 118 7 7 4 10 -8 10 -17 0 -18 -6 -13 -65 4 -36 9 -70 12 -75 8
+-13 94 35 122 69 22 25 23 25 23 4 0 -12 4 -24 9 -28 5 -3 12 -18 16 -34 3
+-15 22 -43 43 -62 20 -19 28 -24 18 -12 -17 21 -17 22 13 37 73 38 114 143 72
+185 -11 11 -28 21 -36 21 -17 0 -20 -25 -5 -35 20 -12 9 -48 -24 -81 -52 -52
+-69 -46 -106 35 -37 80 -59 104 -113 121 -33 10 -42 9 -80 -10 -57 -30 -72
+-45 -96 -96 -21 -43 -22 -44 -71 -44 -86 0 -200 21 -200 37 0 29 -31 73 -63
+86 -67 29 -83 33 -117 27z m908 -108 c4 -48 -19 -87 -69 -123 -24 -17 -33 -18
+-44 -9 -22 19 -18 28 18 44 48 20 80 63 75 104 -3 20 0 31 6 29 6 -2 12 -22
+14 -45z"
         />
          <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
+            transition: { delay: delay, type: "tween", duration: duration },
           }}
-          viewport={{once: true}}
-          d="M1972 303 c-5 -10 -12 -47 -16 -83 -4 -36 -11 -90 -15 -120 l-7 -55
-   -8 40 c-11 62 -23 84 -57 104 -40 25 -104 34 -131 20 -12 -6 -59 -14 -105 -17
-   -103 -6 -110 -14 -82 -97 10 -32 19 -64 19 -70 0 -7 11 -15 25 -17 14 -3 25
-   -1 25 4 0 13 83 118 92 118 5 0 8 4 8 10 0 20 -30 -4 -74 -61 -25 -32 -49 -59
-   -54 -59 -8 0 -34 92 -36 130 -1 25 0 25 83 27 52 1 87 6 91 14 6 8 25 9 66 4
-   75 -9 114 -44 114 -102 0 -38 19 -93 31 -93 4 0 9 35 13 78 18 216 36 289 36
-   145 0 -92 26 -156 76 -185 42 -24 172 -39 310 -34 111 3 124 6 175 34 60 34
-   143 54 180 45 13 -3 41 -20 62 -36 29 -22 35 -32 25 -38 -8 -6 -1 -9 21 -9
-   l34 0 -39 35 c-89 78 -165 83 -283 18 -62 -33 -70 -35 -180 -38 -158 -4 -286
-   18 -322 56 -34 37 -51 97 -48 177 3 67 -10 91 -29 55z"
+          viewport={{ once: true }}
+          d="M1943 298 c-6 -7 -13 -40 -17 -73 -3 -33 -10 -80 -14 -105 l-8 -45
+-6 45 c-5 32 -15 51 -34 66 -31 25 -107 38 -135 23 -11 -5 -48 -11 -84 -12
+-36 -2 -70 -8 -77 -15 -14 -14 18 -141 38 -149 7 -2 10 -12 7 -20 -4 -11 -2
+-14 5 -9 7 4 12 16 12 26 0 10 5 22 10 25 6 3 10 -5 10 -19 0 -14 5 -28 10
+-31 13 -8 13 6 0 39 -8 21 -5 31 18 58 15 18 31 36 37 40 5 4 7 10 3 13 -3 3
+-27 -19 -54 -49 -26 -31 -50 -56 -53 -56 -11 0 -42 113 -34 121 4 4 41 9 80
+11 40 2 73 7 73 12 0 13 99 -1 125 -18 25 -17 40 -64 30 -96 -3 -11 -2 -20 3
+-20 5 0 15 -14 22 -30 7 -17 17 -30 22 -30 5 0 4 10 -3 21 -10 20 -10 41 10
+209 l6 55 6 -66 c7 -73 32 -134 63 -154 30 -20 134 -34 262 -36 106 -1 113 0
+165 30 34 19 76 33 111 37 53 6 61 4 93 -21 20 -15 39 -25 41 -22 3 3 -12 18
+-32 33 -53 41 -116 38 -210 -8 l-69 -35 -135 2 c-151 3 -213 17 -242 55 -21
+29 -42 141 -34 183 6 28 -5 36 -21 15z"
         />
          <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
+            transition: { delay: delay, type: "tween", duration: duration },
           }}
-          viewport={{once: true}}
-          d="M782 162 c-10 -7 -9 -15 4 -38 12 -23 15 -24 11 -6 -3 12 -1 22 5 22
-   5 0 6 5 2 12 -4 7 -3 8 5 4 6 -4 9 -12 6 -17 -4 -5 1 -9 10 -9 13 0 14 4 5 20
-   -11 21 -27 25 -48 12z"
+          viewport={{ once: true }}
+          d="M904 166 c-3 -8 0 -23 6 -33 11 -17 11 -17 6 0 -5 15 -2 17 14 12 22
+-7 26 5 8 23 -16 16 -27 15 -34 -2z"
+        />
+         <motion.path
+          initial={{ pathLength: 0, stroke: "white" }}
+          whileInView={{
+            pathLength: 1,
+            transition: { delay: delay, type: "tween", duration: duration },
+          }}
+          viewport={{ once: true }}
+          d="M435 138 c17 -18 31 -35 33 -37 1 -3 1 11 -1 30 -4 29 -8 34 -33 37
+l-29 4 30 -34z"
+        />
+         <motion.path
+          initial={{ pathLength: 0, stroke: "white" }}
+          whileInView={{
+            pathLength: 1,
+            transition: { delay: delay, type: "tween", duration: duration },
+          }}
+          viewport={{ once: true }}
+          d="M511 99 c0 -9 -7 -22 -15 -28 -15 -13 -27 -71 -14 -71 4 0 8 10 8 22
+0 12 7 29 16 39 9 10 14 26 11 36 -4 14 -5 15 -6 2z"
+        />
+         <motion.path
+          initial={{ pathLength: 0, stroke: "white" }}
+          whileInView={{
+            pathLength: 1,
+            transition: { delay: delay, type: "tween", duration: duration },
+          }}
+          viewport={{ once: true }}
+          d="M1825 69 c1 -9 -11 -26 -27 -39 -16 -12 -26 -25 -23 -28 3 -3 19 7
+35 23 33 31 54 27 25 -5 -10 -11 -14 -20 -9 -20 13 0 36 39 29 50 -3 4 1 11 7
+14 7 4 3 4 -9 2 -12 -2 -24 1 -26 8 -2 6 -3 4 -2 -5z"
+        />
+         <motion.path
+          initial={{ pathLength: 0, stroke: "white" }}
+          whileInView={{
+            pathLength: 1,
+            transition: { delay: delay, type: "tween", duration: duration },
+          }}
+          viewport={{ once: true }} d="M1767 74 c-13 -13 -7 -21 13 -20 11 0 20 6 21 11 0 12 -24 18 -34 9z" />
+         <motion.path
+          initial={{ pathLength: 0, stroke: "white" }}
+          whileInView={{
+            pathLength: 1,
+            transition: { delay: delay, type: "tween", duration: duration },
+          }}
+          viewport={{ once: true }}
+          d="M1369 61 c-37 -8 -114 -50 -105 -58 2 -3 24 7 49 21 24 14 57 26 74
+26 37 0 100 -25 106 -42 2 -7 8 -10 12 -6 11 10 -16 34 -60 52 -20 9 -38 15
+-39 15 0 -1 -17 -4 -37 -8z"
         />
         <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
+            transition: { delay: delay, type: "tween", duration: duration },
           }}
-          viewport={{once: true}}
-          d="M220 157 c0 -2 16 -21 35 -43 19 -21 35 -34 35 -27 0 6 -5 15 -10 18
-   -6 3 -7 17 -4 31 6 22 3 24 -25 24 -17 0 -31 -1 -31 -3z"
+          viewport={{ once: true }}
+          d="M2525 59 c-21 -5 -43 -15 -47 -22 -11 -17 -10 -37 2 -37 6 0 10 9 10
+19 0 15 10 20 50 26 28 4 47 11 44 16 -6 10 -5 10 -59 -2z"
         />
          <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
+            transition: { delay: delay, type: "tween", duration: duration },
           }}
-          viewport={{once: true}}
-          d="M117 143 c-4 -3 -7 -15 -7 -25 0 -10 -4 -18 -9 -18 -5 0 -8 -10 -8
-   -22 1 -13 -2 -35 -6 -50 -4 -16 -3 -28 2 -28 5 0 12 19 16 43 4 23 13 49 20
-   57 20 24 26 50 11 50 -7 0 -16 -3 -19 -7z"
-        />
+          viewport={{ once: true }} d="M348 48 c-8 -21 2 -38 22 -38 20 0 44 33 33 44 -11 11 -51 6 -55 -6z" />
          <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
+            transition: { delay: delay, type: "tween", duration: duration },
           }}
-          viewport={{once: true}}
-          d="M326 65 c-4 -14 -11 -25 -16 -25 -6 0 -10 -10 -9 -22 0 -15 3 -18 6
-   -8 4 8 12 21 20 28 7 7 13 22 13 33 0 26 -7 24 -14 -6z"
-        />
-         <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}}
-          d="M1771 46 c-9 -11 -7 -15 11 -19 25 -7 44 5 34 22 -10 15 -31 14 -45
-   -3z"
-        />
-        <path
-          d="M915 40 c-3 -6 -21 -17 -38 -24 -26 -12 -28 -15 -11 -15 24 -1 73 33
-   63 44 -4 3 -10 1 -14 -5z"
-        />
-         <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}}
-          d="M1841 29 c-35 -29 -20 -33 19 -4 19 14 27 25 19 25 -8 -1 -25 -10
-   -38 -21z"
-        />
-         <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}}
-          d="M152 28 c-15 -15 -15 -28 -1 -28 5 0 8 4 5 9 -3 5 3 11 14 14 21 5
-   37 -8 20 -16 -6 -3 -5 -4 2 -3 7 1 14 10 16 19 4 20 -37 24 -56 5z"
-        />
-        <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}}
-          d="M1265 19 c-34 -22 -23 -25 26 -6 41 15 62 15 112 -2 50 -17 60 -7 12
-   13 -50 21 -113 19 -150 -5z"
-        />
-        <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration, delay: delay, type: "spring" },
-          }}
-          viewport={{once: true}}
-          d="M2655 35 c-5 -2 -22 -6 -37 -9 -16 -4 -28 -10 -28 -15 0 -5 24 -4 53
-   3 29 7 58 11 65 8 7 -2 12 1 12 7 0 10 -42 14 -65 6z"
+          viewport={{ once: true }}
+          d="M2680 40 c-12 -8 -11 -10 8 -10 13 0 22 -6 22 -15 0 -8 4 -15 10 -15
+11 0 -3 43 -16 47 -5 1 -16 -2 -24 -7z"
         />
       </g>
     </svg>

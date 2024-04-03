@@ -72,7 +72,7 @@ export default function page() {
           </motion.h1>
         ))}
 
-        <Line color='white' title={true} />
+        <Line duration={2} color='white' title={true} />
       </motion.section>
 
       <div className="pb-44">

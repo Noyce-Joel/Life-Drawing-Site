@@ -29,7 +29,7 @@ body {
 
   .sm-white-text {
     font-size: 22.5px;
-    color: #e9c46a
+    color: #f4b923
   }
 }
 
@@ -44,7 +44,7 @@ body {
 
   .md-white-text {
     font-size: 38px;
-    color: #e9c46a
+    color: #f4b923
   }
 }
 
@@ -52,7 +52,7 @@ body {
   .lg-white-text {
     font-size: 47px;
     color: #f4b923;
-    mix-blend-mode: screen;
+   
   }
 
   .lg-contact-text {

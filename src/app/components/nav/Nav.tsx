@@ -194,7 +194,7 @@ export default function Nav() {
             {pages.map((page, index) => (
               <li
                 key={index}
-                className="md:flex hidden items-center justify-center hover:scale-105 hover:text-[#e9c46a] z-40 duration-200 hover:cursor-pointer text-[22px] "
+                className="md:flex hidden items-center justify-center hover:scale-105 hover:text-[#f4b923] z-40 duration-200 hover:cursor-pointer text-[22px] "
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>
@@ -205,7 +205,7 @@ export default function Nav() {
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hover ? "#e9c46a" : "white"}
+                fgColor={hover ? "#f4b923" : "white"}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
               />
@@ -214,7 +214,7 @@ export default function Nav() {
                 url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hoverTwo ? "#e9c46a" : "white"}
+                fgColor={hoverTwo ? "#f4b923" : "white"}
                 onMouseOver={() => setHoverTwo(true)}
                 onMouseOut={() => setHoverTwo(false)}
               />

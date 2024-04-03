@@ -6,7 +6,7 @@ import { copy } from "../../../../public/copy/copy";
 
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-12 md:pt-32 relative border-b border-gray-500  pb-24 md:pb-32 justify-end items-end h-auto font-extrabold text-[40px] ">
+    <article className="flex flex-col pt-12 md:pt-32 relative border-b border-gray-500  pb-24 md:pb-44 justify-end items-end h-auto font-extrabold text-[40px] ">
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[8vw] md:text-[59px] mb-6 text-[#f4b923] ">
         WHY US?
         <Line duration={1} color="white" title={false} />
