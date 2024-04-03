@@ -143,7 +143,7 @@ export default function Nav() {
                 damping: 20,
               },
             }}
-            className="fixed z-50 bg-white w-full h-screen"
+            className="fixed z-50 bg-white w-screen h-screen"
           >
             <DropDown handleClick={handleClick} />
             <motion.div
@@ -190,11 +190,11 @@ export default function Nav() {
 
       <nav className="flex-col md:flex-row px-4 z-40 py-4 absolute">
         <div className="z-40">
-          <ul className=" flex   rounded-md md:items-start md:justify-start gap-7 px-4 py-1 border-[#0000005f] ">
+          <ul className=" flex   rounded-md md:items-center md:justify-start gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
               <li
                 key={index}
-                className="md:flex hidden hover:scale-105 hover:text-white z-40 duration-200 hover:cursor-pointer text-[22px] "
+                className="md:flex hidden items-center justify-center hover:scale-105 hover:text-[#e9c46a] z-40 duration-200 hover:cursor-pointer text-[22px] "
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>
@@ -205,7 +205,7 @@ export default function Nav() {
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hover ? "white" : "white"}
+                fgColor={hover ? "#e9c46a" : "white"}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
               />
@@ -214,7 +214,7 @@ export default function Nav() {
                 url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hoverTwo ? "white" : "white"}
+                fgColor={hoverTwo ? "#e9c46a" : "white"}
                 onMouseOver={() => setHoverTwo(true)}
                 onMouseOut={() => setHoverTwo(false)}
               />

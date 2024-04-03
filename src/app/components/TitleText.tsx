@@ -1,15 +1,14 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function TitleText() {
-  const title = ["WHERE ART MEETS", "CANINE CHARM"];
+export default function TitleText({title, col}:{title:string[], col: string}) {
+const column = col;
   const container = {
     animate: {
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 1.7,
+        delayChildren: 3,
       },
     },
   };
@@ -23,12 +22,12 @@ export default function TitleText() {
       variants={container}
       initial="initial"
       animate="animate"
-      className=" z-10  flex flex-col pr-24 font-semibold overflow-hidden text-[3.5vw] "
+      className={` z-10   ${col} pr-24 font-semibold overflow-hidden text-[4vw]`}
     >
       {title.map((word, idx) => (
         <motion.h1
           key={idx}
-          className="flex w-full overflow-hidden z-20 "
+          className='flex  gap-12 w-full overflow-hidden z-20'
         >
           <motion.span variants={item} key="anim" className="block ">
             {word}

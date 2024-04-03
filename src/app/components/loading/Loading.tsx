@@ -14,8 +14,8 @@ export default function Loading({ inView }: { inView: boolean }) {
       controls.start({
         pathLength: 1,
         transition: {
-          type: "easeInOut",
-          duration: 4.5
+          type: "spring",
+          stiffness: 4
         },
       });
     }

@@ -6,7 +6,7 @@ export const copy = {
 
     models_usp: 'What sets us apart? Well, our models have wagging tails, wet noses, and a penchant for striking the most adorable poses.',
     models_white_text: ' Forget traditional still life – our furry friends bring a dynamic and lively element to your sketches, making each session a delightful and unforgettable experience.',
-    models_split_text: 'From the arc of a tail to the tilt of an ear, each moment presents an opportunity to explore.',
+    models_split_text: 'From the arc of a tail to the tilt of an ear, each moment presents an opportunity to explore. ',
     models_split_text_two: 'We have a diverse array of dog breeds to inspire your creations',
     models_sm_screen: ' From the arc of a tail to the tilt of an ear, each moment presents an opportunity to explore. We have a diverse array of dog breeds to inspire your creations.',
 

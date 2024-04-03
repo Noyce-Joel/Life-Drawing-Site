@@ -32,9 +32,9 @@ export default function Gallery({ results }: { results: any }) {
   };
   return (
     <>
-      <div className="flex w-full pl-12 lg:pl-72 relative flex-col pt-24 font-bold text-[30px] md:text-[75px]  border-t border-gray-500 mt-44">
+      <div className="flex w-full pl-12 lg:pl-72 relative flex-col pt-24 font-bold text-[8vw] md:text-[75px]  border-t bg-[#092a0f] border-gray-500 mt-44 text-[#e9c46a]">
         Gallery
-        <Line color="white" title={false} />
+        <Line duration={1} color="white" title={false} />
       </div>
 
       <div className="flex h-fit w-full justify-center gap-2 md:gap-7 mt-12 px-2 md:px-7 overflow-y-scroll -z-40">

@@ -6,6 +6,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { SocialIcon } from "react-social-icons";
 import Notification from "./Notification";
+import TitleText from "../TitleText";
 
 function MyForm() {
   const [sent, setSent] = useState<boolean>(false);
@@ -72,13 +73,13 @@ function MyForm() {
   };
 
   return (
-    <motion.div className="flex gap-12 flex-col lg:flex-row w-full  lg:h-screen justify-center items-center bg-gray-900">
+    <motion.div className="flex gap-12 flex-col lg:flex-row w-full  lg:h-screen justify-center items-center bg-[#092a0f] ">
       {sent ? <Notification status={emailStatus} /> : null}
       <motion.section
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", mass: 2, friction: 80, damping: 20 }}
-        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex  overflow-hidden origin-top-left bg-gray-700 lg:justify-start justify-center lg:rounded-br-[250px]"
+        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex text-gray-900  overflow-hidden origin-top-left bg-[#e9c46a]  lg:justify-start justify-center lg:rounded-br-[250px]"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -86,10 +87,8 @@ function MyForm() {
           transition={{ duration: 0.5, delay: 1 }}
           className="flex flex-col"
         >
-          <div className="flex  flex-col md:justify-start md:items-start justify-center items-center pb-12">
-            <h1 className="  flex-nowrap whitespace-nowrap md:text-[50px] text-[40px]">
-              Get in touch
-            </h1>
+          <div className="flex  flex-col md:justify-start md:items-start w-full justify-center items-center pb-12">
+            <TitleText title={['Get ', 'in', ' touch']} />
           </div>
 
           <div className=" contact-text sm-contact-text md-contact-text lg-contact-text gap-4  flex items-start flex-col w-full ">
@@ -112,7 +111,7 @@ function MyForm() {
           <div className="absolute bottom-5 lg:left-0 right-0 md:flex hidden">
             <Image
               src="/Logo.png"
-              className="invert"
+              className=""
               height={205}
               width={205}
               alt="logo"
@@ -121,7 +120,7 @@ function MyForm() {
         </motion.div>
       </motion.section>
 
-      <section className="lg:w-1/2 w-full h-full relative bg-gray-900 lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
+      <section className="lg:w-1/2 w-full h-full relative bg-[#092a0f] lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
         <form
           onSubmit={(e) => handleSend(e)}
           className="w-full h-full flex flex-col justify-center items-start pb-12 md:pr-12 "

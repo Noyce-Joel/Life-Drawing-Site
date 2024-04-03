@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-export default function Ball() {
+export default function Ball({duration, delay, size}: {delay: number, size: string, duration: number}) {
   return (
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="150"
-      height="150"
+      width="147"
+      height="147"
       viewBox="0 0 900.000000 920.000000"
       preserveAspectRatio="xMidYMid meet"
       strokeWidth={180}
@@ -20,7 +20,7 @@ export default function Ball() {
       >
         <motion.path
         initial={{pathLength: 0 }}
-        whileInView={{pathLength: 1, transition: { duration: 4, delay: 1.4}}}
+        whileInView={{pathLength: 1, transition: { duration: duration, delay: delay, type: 'spring', stiffness: 10}}}
           d="M7335 9181 c-16 -5 -65 -23 -108 -41 -71 -30 -94 -47 -250 -194 -253
 -238 -1349 -1328 -3893 -3871 l-2272 -2270 -310 -940 c-511 -1547 -510 -1542
 -492 -1586 15 -35 62 -76 96 -85 15 -4 58 3 102 16 134 39 781 250 1607 524

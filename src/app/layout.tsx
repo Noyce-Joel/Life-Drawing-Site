@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Indie_Flower } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
 
-const inter = Fraunces({
+const inter = Indie_Flower({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {

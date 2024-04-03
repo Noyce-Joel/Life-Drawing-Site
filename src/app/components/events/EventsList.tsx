@@ -20,7 +20,7 @@ export default function EventsList({
       <article className="flex flex-col pt-12 justify-center items-center h-auto font-extrabold text-[90px] ">
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="flex w-3/4 md:w-3/5 relative flex-col font-semibold text-[5vmin] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
+          className="flex w-3/4 md:w-3/5 hover:text-[#e9c46a] relative flex-col font-semibold text-[5vmin] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
         >
           {city}
         </div>

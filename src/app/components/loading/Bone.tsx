@@ -1,7 +1,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 
-export default function Bone({ delay, size }: { delay: number; size: string }) {
+export default function Bone({ duration, delay, size }: {duration: number; delay: number; size: string }) {
   return (
     <>
       <svg
@@ -11,18 +11,18 @@ export default function Bone({ delay, size }: { delay: number; size: string }) {
         height={size}
         viewBox="0 0 777.000000 457.000000"
         preserveAspectRatio="xMidYMid meet"
-        strokeWidth={200}
+        strokeWidth={150}
       >
         <g
           transform="translate(0.000000,457.000000) scale(0.100000,-0.100000)"
           fill='none'
-          stroke="#FFFFFF"
+          stroke="yellow"
         >
           <motion.path
             initial={{ pathLength: 0, stroke: "white" }}
             whileInView={{
               pathLength: 1,
-              transition: { duration: 5, delay: delay, type: 'spring' },
+              transition: { duration: duration, delay: delay, type: 'spring', stiffness: 16.5 },
             }}
             d="M945 4009 c-348 -25 -663 -257 -797 -586 -48 -120 -69 -222 -69 -347
 -1 -166 40 -261 216 -502 56 -77 110 -154 119 -172 35 -67 24 -90 -130 -297

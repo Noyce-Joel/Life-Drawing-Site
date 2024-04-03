@@ -12,7 +12,7 @@ const config: Config = {
     screens: {
       'sm': '640px',
       'md': '900px', // Change this to your desired width
-      'lg': '1000px',
+      'lg': '1200px',
       'xl': '1440px',
       '2xl': '1536px',
     },
