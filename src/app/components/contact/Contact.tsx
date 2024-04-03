@@ -87,8 +87,8 @@ function MyForm() {
           transition={{ duration: 0.5, delay: 1 }}
           className="flex flex-col"
         >
-          <div className="flex  flex-col md:justify-start md:items-start w-full justify-center items-center pb-12">
-            <TitleText title={['Get ', 'in', ' touch']} />
+          <div className="flex  flex-col w-full  pb-12">
+            <TitleText col='flex' title={['Get ', 'in', ' touch']} />
           </div>
 
           <div className=" contact-text sm-contact-text md-contact-text lg-contact-text gap-4  flex items-start flex-col w-full ">

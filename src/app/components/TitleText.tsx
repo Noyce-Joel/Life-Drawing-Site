@@ -8,7 +8,7 @@ const column = col;
     animate: {
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 3,
+        delayChildren: 0.8,
       },
     },
   };

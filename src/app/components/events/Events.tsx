@@ -62,9 +62,9 @@ export default function Events({ comp }: { comp: boolean }) {
         <p className=" flex-col font-bold session-text-show-two w-4/5 md:w-3/5 sm-text md-text lg-text pt-12 pb-64 ">
           {copy.events_join}
         </p>
-        <div className=" md:flex relative hidden justify-center left-0 w-screen items-center  h-full-z-20 rotate-180 -bottom-16 ">
+        <div className=" md:flex relative hidden justify-center left-0 w-screen items-center  h-full-z-20 rotate-180 -bottom-20 ">
               
-              <div className="absolute -z-10"><Dog4 duration={7} delay={0.5} size="490pt" /></div>
+              <div className="absolute -z-10"><Dog4 duration={7} delay={0.5} size="500pt" /></div>
               </div>
       </div>
     </>

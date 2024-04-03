@@ -32,16 +32,16 @@ export default function Title() {
                 <TitleText title={["WHERE ART MEETS", "CANINE CHARM"]} col='flex-col' />
               </div>
               <div className="absolute md:flex hidden -rotate-[15deg] right-[28vw] top-32 ">
-                <Paw duration={2.2} delay={3.4} size="140pt" />
+                <Paw duration={2} delay={3.4} size="140pt" />
               </div>
               <div className="absolute md:flex hidden -rotate-[105deg] justify-center left-[2.5vw] w-full top-40 ">
-                <Ball duration={2.2} delay={3} size="200pt" />
+                <Ball duration={2.4} delay={2.7} size="200pt" />
               </div>
               {/* <div className="absolute md:flex hidden -rotate-45 -right-[4vw] -top-12 ">
                 <Paw duration={4.5} delay={1.4} size="170pt" />
               </div> */}
               <div className="absolute md:flex hidden -rotate-45 top-40 justify-center left-[32vw] w-full mx-auto">
-                <Bone duration={2.4} delay={4.1} size="140pt" />
+                <Bone duration={2.2} delay={4.1} size="140pt" />
               </div>
               {/* <div className="absolute md:flex hidden rotate-12 md:-bottom-1 bottom-12 right-0">
                 <Bone duration={4.5} delay={1.7} size="170pt" />
