@@ -11,6 +11,7 @@ import Gallery from "./components/gallery/Gallery";
 import { useEffect, useState } from "react";
 import fetchImages from "./services/fetchImages";
 import Head from "next/head";
+import ContactSection from "./components/contact/ContactSection";
 
 export default function Home() {
   const [results, setResults] = useState<any>({ resources: [] });
@@ -45,6 +46,7 @@ export default function Home() {
           <Models />
           <Events comp={true} />
           <Gallery results={results} />
+          <ContactSection />
           <Footer />
         </motion.div>
       </AnimatePresence>

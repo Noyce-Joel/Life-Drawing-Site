@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Line from "../line/Line";
 import { copy } from "../../../../public/copy/copy";
-import Dogs3 from "../loading/Dogs3";
+import Dogs6 from "../loading/Dogs6";
 export default function Models() {
   return (
     <article className="flex flex-col pt-12 border-b border-gray-500  pb-12 md:pt-32  md:pb-44 relative justify-end items-end font-extrabold  ">
@@ -10,8 +10,8 @@ export default function Models() {
         MODELS
         <Line duration={1} color="white" title={false} />
       </div>
-      <div className="absolute md:flex hidden justify-start left-0 w-2/12 bg-[#092a0f] -top-[9.5rem]">
-        <Dogs3 duration={7} delay={0.5} size="180pt" />
+      <div className="absolute md:flex hidden justify-start -left-14 w-2/12 bg-[#092a0f] -top-[6rem]">
+        <Dogs6 duration={5.5} delay={0.5} size="170pt" />
       </div>
       <div className="flex flex-col justify-center items-center relative">
         <p className="md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text">

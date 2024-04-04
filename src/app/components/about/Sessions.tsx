@@ -7,16 +7,16 @@ import Paw from "../loading/Paw";
 import Dogs from "../loading/Dogs";
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-12 border-b border-gray-500 pb-12 md:pb-24 md:pt-32 relative justify-end items-end font-extrabold  ">
-      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[8vw] md:text-[59px] mb-6 text-[#f4b923] z-40">
+    <article className="flex flex-col pt-12 border-b border-gray-500 pb-12 md:pb-24 md:pt-32 relative items-end ">
+      <div className="flex w-3/4 md:w-4/5 flex-col  text-[8vw] md:text-[59px] mb-6 text-[#f4b923] ">
         SESSIONS
         <Line duration={1} color="white" title={false} />
       </div>
-      <div className="absolute md:flex hidden justify-start left-0 w-2/12 bg-[#092a0f] -top-[9.5rem]">
+      <div className="absolute md:flex hidden left-0 w-2/12 bg-[#092a0f] -top-[9.5rem]">
         <Dogs duration={7} delay={0.5} size="290pt" />
       </div>
 
-      <div className="flex flex-col justify-center items-center relative white">
+      <div className="flex flex-col justify-center items-center">
         <p className=" md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text">
           {copy.sessions_unleash}
         </p>
@@ -30,7 +30,7 @@ export default function Sessions() {
             className="rounded-[10px] pb-12 md:pb-0 flex"
           />
 
-          <div className="flex flex-col gap-12 justify-center items-center md:items-start md:pt-12">
+          <div className="flex flex-col gap-12 md:pt-12">
             <p className="  flex  md:w-auto md:pl-12 lg-white-text md-white-text sm-white-text">
               {copy.sessions_white_text}
             </p>

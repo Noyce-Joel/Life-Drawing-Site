@@ -5,7 +5,7 @@ import { StateContext, StateContextType } from "../../context/State";
 import Line from "../line/Line";
 import EventsList from "./EventsList";
 import { copy } from "../../../../public/copy/copy";
-import Dog4 from "../loading/Dogs4";
+import Dogs3 from "../loading/Dogs3";
 import Dogs5 from "../loading/Dogs5";
 declare global {
   interface Window {
@@ -39,8 +39,8 @@ export default function Events({ comp }: { comp: boolean }) {
           `flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-24 font-bold text-[8vw] md:text-[59px] text-[#f4b923]`
         )}
       >
-        <div className="absolute md:flex hidden justify-center left-0 right-0 mx-auto w-2/12 bg-[#092a0f] -top-[11.5rem]">
-          <Dogs5 duration={10} delay={0.5} size="290pt" />
+        <div className="absolute md:flex hidden justify-center left-0 right-0 mx-auto w-3/12 bg-[#092a0f] -top-[11rem]">
+          <Dogs5 duration={15} delay={0.5} size="220pt" />
         </div>
         Events
         <Line duration={1} color="white" title={false} />
@@ -62,19 +62,13 @@ export default function Events({ comp }: { comp: boolean }) {
           <EventsList events={cityEvents} city={city} />
         </div>
       ))}
-      <div className="flex flex-col justify-center relative  items-center pt-12 md:pt-24">
+      <div className="flex flex-col justify-center relative  items-center pt-12 md:pt-44">
         <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text text-[#f4b923] py-12">
           Let&#39;s sketch, share, and wag our way to a gallery of heartwarming
           masterpieces!
         </p>
       </div>
-      <div className="flex flex-col justify-center relative -mb-40 items-center pt-24 md:pt-40">
-        <div className=" flex relative justify-end -right-96 md:-right-44 w-full items-center  h-full -z-20 bottom-9  ">
-          <div className="absolute -z-0">
-            <Dog4 duration={5.5} delay={0.5} size="700pt" />
-          </div>
-        </div>
-      </div>
+      
     </>
   );
 }

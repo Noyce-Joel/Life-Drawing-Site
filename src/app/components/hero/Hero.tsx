@@ -1,20 +1,14 @@
 import React from "react";
 import Title from "./Title";
-import Dogs from "../loading/Dogs";
+import Stickman from "../loading/Stickman";
 export default function Hero() {
   return (
-    <div className="border-b bg-[#] border-gray-500 pb-7 md:pb-24 pt-24 lg:pb-28 -z-50">
-      
+    <div className="border-b border-gray-500 pb-7 md:pb-24 pt-24 z-10">
       <Title />
-     
-      <div className="text-left pt-7 md:pt-24 bg-[#092a0f] overflow-hidden z-40 relative h-full items-center justify-center flex flex-col gap-7 tracking-wider text-pretty ">
-        <div className="flex h-full items-center justify-end w-4/5  ">
-        
-          <h2 className="text-[40px] md:text-[55px] font-bold text-left ">
-            Welcome to Dog Life Drawing
-          </h2>
-        </div>
-      </div>
+      
+      <h2 className="pt-7 md:pt-24 flex h-full justify-end w-full lg:px-44 px-24 text-[40px] md:text-[50px] lg:text-[55px]">
+        Welcome to Dog Life Drawing
+      </h2>
     </div>
   );
 }

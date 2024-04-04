@@ -4,7 +4,7 @@ import React from "react";
 import { CldImage } from "next-cloudinary";
 import { motion } from "framer-motion";
 import Line from "../line/Line";
-
+import Dogs3 from "../loading/Dogs3";
 export default function Gallery({ results }: { results: any }) {
   const columns = (colIdx: number) => {
     return results.resources.filter((_: any, idx: number) => {
@@ -32,12 +32,12 @@ export default function Gallery({ results }: { results: any }) {
   };
   return (
     <>
-      <div className="flex w-full pl-12 lg:pl-72 relative flex-col pt-24 font-bold text-[8vw] md:text-[75px]  border-t bg-[#092a0f] border-gray-500 mt-44 text-[#f4b923]">
+      <div className="flex w-full pl-12 lg:pl-72 relative flex-col md:pt-24 pt-12  font-bold text-[8vw] md:text-[75px]  border-t bg-[#092a0f] border-gray-500 mt-44 text-[#f4b923]">
         Gallery
         <Line duration={1} color="white" title={false} />
       </div>
 
-      <div className="flex h-fit w-full justify-center gap-2 md:gap-7 mt-12 px-2 md:px-32 pb-24 overflow-y-scroll -z-40">
+      <div className="flex h-fit w-full justify-center gap-2 md:gap-7 mt-12 px-2 md:px-32 overflow-y-scroll -z-40 border-b border-gray-500 md:pb-24 pb-12">
         {[columns(0), columns(1), columns(2)].map((col, idx) => (
           <motion.div
             variants={container}
@@ -68,15 +68,11 @@ export default function Gallery({ results }: { results: any }) {
                 </div>
               )
             )}
-           
           </motion.div>
-          
         ))}
-        
       </div>
-     
-        
 
+      
     </>
   );
 }
