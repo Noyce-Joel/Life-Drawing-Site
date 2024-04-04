@@ -23,15 +23,15 @@ export default function Title() {
             <div className="w-full flex relative ">
               <Loading inView={true} />
               <div
-                className="text-[5vw] md:flex hidden items-center w-1/2 text-[#f4b923] mix-blend-mode: screen;"
+                className="text-[5vw] md:flex hidden items-center w-1/2 text-[#f4b923]"
               >
                 <TitleText
                   title={["WHERE ART MEETS", "CANINE CHARM"]}
                   col="flex-col"
                 />
               </div>
-              <div className="absolute md:flex hidden -rotate-[15deg] right-[10rem] bottom-48 ">
-                <Paw duration={0.2} delay={1.2} size="140pt" />
+              <div className="absolute md:flex hidden -rotate-[15deg] right-[9rem] bottom-48 ">
+                <Paw duration={0.2} delay={1.2} size="120pt" />
               </div>
             </div>
           </div>

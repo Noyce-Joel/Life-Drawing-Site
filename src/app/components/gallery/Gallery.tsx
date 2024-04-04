@@ -37,7 +37,7 @@ export default function Gallery({ results }: { results: any }) {
         <Line duration={1} color="white" title={false} />
       </div>
 
-      <div className="flex h-fit w-full justify-center gap-2 md:gap-7 mt-12 px-2 md:px-56 overflow-y-scroll -z-40">
+      <div className="flex h-fit w-full justify-center gap-2 md:gap-7 mt-12 px-2 md:px-32 pb-24 overflow-y-scroll -z-40">
         {[columns(0), columns(1), columns(2)].map((col, idx) => (
           <motion.div
             variants={container}
@@ -75,12 +75,7 @@ export default function Gallery({ results }: { results: any }) {
         
       </div>
      
-        <div className="flex flex-col justify-center border-t border-gray-500 relative md:pb-20  items-center md:pt-24 mt-12">
-          <p className="text-centerflex w-4/5 md:w-1/2 sm-text md-text lg-text py-12">
-            Let&#39;s sketch, share, and wag our way to a gallery of
-            heartwarming masterpieces!
-          </p>
-        </div>
+        
 
     </>
   );

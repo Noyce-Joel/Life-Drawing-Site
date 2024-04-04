@@ -8,7 +8,7 @@ export default function page() {
   return (
     <>
     <div className="absolute z-20">
-    <Nav />
+    <Nav text='text-gray-900' hoveredHue='#1F2937' hue='#1F2937' />
     </div>
     <div className="relative w-full h-screen overflow-y-auto">
       <Contact  />

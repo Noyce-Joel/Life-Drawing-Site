@@ -35,10 +35,10 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 0.5 }}
           className="relative h-screen w-full overflow-y-scroll overflow-x-hidden"
         >
-          <Nav />
+          <Nav text='hover:text-[#f4b923]' hoveredHue='#f4b923' hue='white'/>
           <Hero />
           <Sessions />
           <Why />

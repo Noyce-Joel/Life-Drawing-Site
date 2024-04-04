@@ -31,7 +31,7 @@ const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-dig
   return (
     <motion.div
       key={id}
-      className={` border-[2px] rounded-[10px] w-[80vw] md:w-96 origin-top md:hover:rounded-[60px] hover:scale-[102%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+      className={` border-[2px] rounded-[10px] w-[80vw] bg-[#092a0f] md:w-96 origin-top md:hover:rounded-[60px] hover:scale-[102%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">
         <Image

@@ -46,9 +46,12 @@ export default function Events({ comp }: { comp: boolean }) {
         <Line duration={1} color="white" title={false} />
       </div>
 
-      <div className="text-left pt-7 md:pt-24 relative z-10 items-center justify-center flex flex-col gap-7 tracking-wider text-pretty font-bold ">
-        <div className="flex items-start justify-start w-4/5 md:w-3/5 ">
-          <h2 className="sm-text md-text pt-6 lg-text text-left text-[#f4b923]">
+      <div className="text-left pt-12 relative z-10 items-center justify-center flex flex-col tracking-wider text-pretty font-bold ">
+        <div className="flex flex-col items-start justify-start w-4/5 md:w-3/5 ">
+          <p className=" flex-col font-bold session-text-show-two  sm-text md-text lg-text ">
+            {copy.events_join}
+          </p>
+          <h2 className="sm-text md-text pl-12 lg:pt-20 pt-12 lg-text text-left text-[#f4b923]">
             {copy.events_cities}
           </h2>
         </div>
@@ -59,15 +62,16 @@ export default function Events({ comp }: { comp: boolean }) {
           <EventsList events={cityEvents} city={city} />
         </div>
       ))}
-
-      <div className="flex flex-col justify-center relative -mb-40 items-center md:pt-24">
-        <p className=" flex-col font-bold session-text-show-two w-4/5 md:w-3/5 sm-text md-text lg-text pt-12 md:pb-56 lg:pb-44 ">
-          {copy.events_join}
+      <div className="flex flex-col justify-center relative  items-center pt-12 md:pt-24">
+        <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text text-[#f4b923] py-12">
+          Let&#39;s sketch, share, and wag our way to a gallery of heartwarming
+          masterpieces!
         </p>
-        <div className=" md:flex relative hidden justify-end -right-44 w-full items-center  h-full -z-20 bottom-12  ">
+      </div>
+      <div className="flex flex-col justify-center relative -mb-40 items-center pt-24 md:pt-40">
+        <div className=" flex relative justify-end -right-96 md:-right-44 w-full items-center  h-full -z-20 bottom-9  ">
           <div className="absolute -z-0">
-            <Dog4 duration={5.5} delay={0.5} size="900pt" />
-            
+            <Dog4 duration={5.5} delay={0.5} size="700pt" />
           </div>
         </div>
       </div>

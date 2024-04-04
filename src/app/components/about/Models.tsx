@@ -2,17 +2,17 @@ import Image from "next/image";
 import React from "react";
 import Line from "../line/Line";
 import { copy } from "../../../../public/copy/copy";
-import Dogs3 from '../loading/Dogs3'
+import Dogs3 from "../loading/Dogs3";
 export default function Models() {
   return (
     <article className="flex flex-col pt-12 border-b border-gray-500  pb-12 md:pt-32  md:pb-44 relative justify-end items-end font-extrabold  ">
       <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[8vw] md:text-[59px] text-[#f4b923]">
         MODELS
-        <Line duration={1} color='white' title={false} />
+        <Line duration={1} color="white" title={false} />
       </div>
       <div className="absolute md:flex hidden justify-start left-0 w-2/12 bg-[#092a0f] -top-[9.5rem]">
-              <Dogs3 duration={7} delay={0.5} size="180pt" />
-              </div>
+        <Dogs3 duration={7} delay={0.5} size="180pt" />
+      </div>
       <div className="flex flex-col justify-center items-center relative">
         <p className="md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text">
           {copy.models_usp}

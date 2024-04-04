@@ -20,12 +20,12 @@ export default function EventsList({
       <article className="flex flex-col pt-12 justify-center items-center h-auto font-extrabold text-[90px] ">
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="flex w-3/4 md:w-3/5 hover:text-[#e9c46a] relative flex-col font-semibold text-[5vmin] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
+          className="flex w-3/4 md:w-3/5 hover:text-[#f4b923] relative flex-col font-semibold text-[5vmin] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
         >
           {city}
         </div>
         <div className="w-full flex relative ">
-          <div className="w-full border-t border-white" />
+          <div className="w-full border-t border-gray-500" />
         </div>
       </article>
 
@@ -33,7 +33,7 @@ export default function EventsList({
         className={classNames(
           isOpen
             ? "h-[41rem] w-full"
-            : "h-[2rem] w-[10rem] lg:w-[60rem] flex ",
+            : "h-[2rem] w-[10rem] lg:w-[40vw] flex ",
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-500 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >

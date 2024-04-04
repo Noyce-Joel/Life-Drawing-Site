@@ -27,13 +27,6 @@ function MyForm() {
     }));
   };
 
-  const handleFileUpload = (e: any) => {
-    const { files } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      attachment: files[0],
-    }));
-  };
   const container = {
     whileInView: {
       transition: {
@@ -88,7 +81,6 @@ function MyForm() {
           className="flex flex-col"
         >
           <div className="flex  flex-col w-full text-[4vw] pb-12">
-            {/* <TitleText col='flex' title={['Get ', 'in', ' touch']} /> */}
             Get in touch
           </div>
 
@@ -290,14 +282,6 @@ function MyForm() {
               className="w-full -z-40 origin-right border-b border-[1.2px]"
             ></motion.div>
           </div>
-          {/* <motion.div className="z-20 flex flex-col cursor-pointer ">
-            <label>Attach a file</label>
-            <input
-              type="file"
-              className="hover:cursor-pointer flex"
-              onChange={handleFileUpload}
-            />
-          </motion.div> */}
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -308,18 +292,7 @@ function MyForm() {
             Submit
           </motion.button>
         </form>
-        <div className="flex absolute justify-end items-end w-full bottom-5 right-5 lg:p-6 pt-12 z-40 gap-4">
-          <SocialIcon
-            style={{ width: "50px", height: "50px" }}
-            url="https://www.instagram.com/dog.lifedrawing/"
-            className="hover:scale-110 duration-200"
-          />
-          <SocialIcon
-            style={{ width: "50px", height: "50px" }}
-            url="https://www.facebook.com/dogdrawing/?locale=en_GB"
-            className="hover:scale-110 duration-200"
-          />
-        </div>
+        
       </section>
     </motion.div>
   );

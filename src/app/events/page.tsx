@@ -23,13 +23,13 @@ export default function page() {
     animate: { y: 0, x: 0, rotate: 0, transition: { duration: 0.7 } },
   };
   return (
-    <div className=" h-screen relative overflow-y-auto">
-      <Nav />
+    <div className=" h-screen relative overflow-y-auto overflow-x-hidden">
+      <Nav text='hover:text-[#f4b923]' hoveredHue='#f4b923' hue='white'/>
       <motion.section
         variants={container}
         initial="initial"
         animate="animate"
-        className="  pt-40 z-10  flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[9vmin]  flex-col "
+        className="  pt-40 z-10 mb-12 flex overflow-hidden font-extrabold relative justify-start lg:justify-center items-center lg:items-end text-[9vmin]  flex-col "
       >
         <motion.figure
           initial={{ scale: 0.9, opacity: 0, y: 1500 }}
@@ -54,17 +54,11 @@ export default function page() {
             className=" object-cover w-4/6  hidden md:flex rounded-bl-[100px] rounded-tr-[100px] rounded-[20px]"
           />
         </motion.figure>
-        <Image
-          src="/dog3.png"
-          height={150}
-          width={150}
-          alt="brush-strokes"
-          className="hidden md:flex invert pl-12 z-50 absolute -bottom-[14px] right-16  "
-        />
+       
         {title.map((word, idx) => (
           <motion.h1
             key={idx}
-            className="space-y-0 lg:h-[105px] flex w-4/5 overflow-hidden z-20 justify-start items-start "
+            className="space-y-0 lg:h-[105px] flex w-4/5 overflow-hidden z-20 justify-start items-start text-[#f4b923] "
           >
             <motion.span variants={item} key="anim" className="block ">
               {word}
