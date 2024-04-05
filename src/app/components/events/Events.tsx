@@ -66,16 +66,17 @@ export default function Events({ comp }: { comp: boolean }) {
         </div>
       ))}
       <div className="flex flex-col relative gap-12 items-center pt-12 md:pt-32">
+      <div className="flex gap-12 ">
+        
+        <Paw duration={1} delay={0.2} size='80pt' />
+        
+        <Ball duration={1} delay={0.2} size='65pt' />
+      </div>
         <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text text-[#f4b923] ">
           Let&#39;s sketch, share, and wag our way to a gallery of heartwarming
           masterpieces!
         </p>
-        <div className="flex gap-12 -mb-12">
         
-          <Paw duration={1} delay={0.2} size='100pt' />
-          
-          <Ball duration={1} delay={0.2} size='85pt' />
-        </div>
        
         
       </div>

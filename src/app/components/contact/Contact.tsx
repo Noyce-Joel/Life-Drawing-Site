@@ -30,7 +30,7 @@ function MyForm() {
   const container = {
     whileInView: {
       transition: {
-        staggerChildren: 2,
+        staggerChildren: 1,
       },
     },
   };

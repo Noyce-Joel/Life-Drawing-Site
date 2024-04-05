@@ -14,7 +14,7 @@ export default function page() {
     animate: {
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 1.8,
+        delayChildren: 1.4,
       },
     },
   };
@@ -56,7 +56,7 @@ export default function page() {
           />
         </motion.figure> */}
        <div className="absolute flex justify-center  right-0 md:right-[16vw] mx-auto w-6/12 bg-[#092a0f] rotate-[15deg] -bottom-[17rem] md:-bottom-[20rem]">
-          <Dogs2 duration={5} delay={1.8} size="400pt" />
+          <Dogs2 duration={5} delay={1.2} size="400pt" />
         </div>
         {title.map((word, idx) => (
           <motion.h1
@@ -69,7 +69,7 @@ export default function page() {
           </motion.h1>
         ))}
 
-        <Line duration={2.2} color='white' title={true} />
+        <Line duration={1.2} color='white' title={true} />
       </motion.section>
 
       <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1, delay: 3}}} className="pb-44">
