@@ -5,7 +5,7 @@ export default function Footer() {
   const [hover, setHover] = useState<boolean>(false);
   const [hoverTwo, setHoverTwo] = useState<boolean>(false);
   return (
-    <div className="flex relative flex-col -z-0">
+    <div className="flex relative flex-col">
       <footer className="relative flex  md:px-24 py-7 bg-[#0d2110] px-12 justify-between border-t h-[410px] mt-auto overflow-y-hidden ">
         <div className=" flex flex-col gap-7 absolute ">
           <b className="md:text-[27px]  text-[#f4b923]">Connect</b>
