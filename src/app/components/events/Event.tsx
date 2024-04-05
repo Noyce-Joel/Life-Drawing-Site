@@ -43,7 +43,7 @@ const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-dig
         />
       </div>
       <div className="relative p-12 pt-6 ">
-        <h2 className="text-xl border-b pb-2 font-extrabold">{name}</h2>
+        <h2 className="md:text-[25px] text-[20px] border-b pb-2 text-[#f4b923] font-extrabold">{name}</h2>
         <p className="text-lg mt-2">{eventDate}</p>
         <p className="text-lg mt-2">
            {startTime} - {endTime}

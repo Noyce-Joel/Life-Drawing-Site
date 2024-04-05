@@ -32,7 +32,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1750 2259 c-52 -17 -100 -33 -106 -37 -102 -64 -170 -120 -198 -164
@@ -44,7 +44,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M603 2192 c-111 -58 -160 -92 -216 -150 -69 -73 -85 -107 -93 -202
@@ -57,7 +57,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M2015 2176 c-46 -20 -53 -35 -55 -121 -3 -104 -2 -105 14 -105 13 0
@@ -75,7 +75,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M720 2081 c0 -7 7 -26 16 -44 11 -20 16 -52 15 -91 -3 -103 8 -144
@@ -87,7 +87,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1156 2018 c27 -48 159 -228 165 -228 15 0 11 8 -33 70 -24 32 -61
@@ -97,7 +97,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1576 1931 c-9 -13 -4 -81 6 -81 4 0 8 5 8 10 0 6 11 10 25 10 14 0
@@ -108,7 +108,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M877 1853 c-5 -59 -2 -72 10 -60 11 12 16 117 5 117 -5 0 -12 -26
@@ -118,7 +118,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M436 1853 c7 -42 14 -56 14 -30 0 10 8 17 18 17 14 0 15 2 2 10 -20
@@ -128,7 +128,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1337 1792 c-80 -80 -103 -125 -88 -165 15 -38 153 -163 195 -177 43
@@ -153,7 +153,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1590 1820 c0 -14 38 -32 45 -21 3 6 -3 15 -14 20 -24 14 -31 14 -31
@@ -163,7 +163,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M450 1792 c0 -5 17 -14 39 -20 47 -15 51 -15 51 -2 0 6 -9 10 -19 10
@@ -173,7 +173,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1410 1791 c0 -5 19 -34 42 -65 30 -40 48 -56 65 -56 13 0 23 5 23
@@ -183,7 +183,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M143 1573 c4 -20 19 -50 35 -67 15 -17 41 -48 56 -70 55 -74 152 -95
@@ -195,7 +195,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M751 1581 c-6 -11 -20 -23 -32 -26 -14 -5 -18 -10 -11 -17 6 -6 16
@@ -205,7 +205,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M2037 1574 c-3 -4 18 -38 46 -78 67 -91 97 -142 97 -167 0 -10 5 -19
@@ -215,7 +215,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1847 1525 c-27 -12 -44 -26 -39 -29 11 -7 111 35 112 47 0 12 -22 7
@@ -225,7 +225,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M2620 1526 c0 -2 13 -20 30 -41 33 -41 50 -91 50 -147 0 -41 8 -68
@@ -235,7 +235,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M610 1411 c0 -6 9 -16 20 -24 26 -18 50 -109 50 -190 0 -50 6 -73 30
@@ -260,7 +260,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1619 1220 c0 -3 -2 -14 -3 -25 -5 -42 -20 -71 -53 -108 -19 -22 -32
@@ -270,7 +270,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M2200 1067 c0 -17 69 -139 92 -164 l30 -31 -53 -7 c-47 -6 -60 -3
@@ -288,7 +288,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M2803 950 c-24 -22 -43 -48 -43 -57 0 -11 17 1 47 32 46 46 49 47 78
@@ -298,7 +298,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M2677 808 c-2 -18 -12 -67 -20 -108 -22 -105 -57 -294 -57 -308 0
@@ -308,7 +308,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1607 700 c-30 -78 -31 -80 -18 -80 5 0 14 15 21 33 14 36 40 98 47
@@ -318,7 +318,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M1787 433 c-4 -3 16 -15 45 -25 61 -21 58 -21 58 -9 0 4 -19 16 -43
@@ -328,7 +328,7 @@ export default function Loading({
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
             pathLength: 1,
-            transition: { duration: duration / 2, delay: delay, type: "spring" },
+            transition: { duration: duration / 2, delay: delay },
           }}
           viewport={{once: true}}
           d="M2383 250 c-6 -27 -7 -50 -2 -50 12 0 16 10 24 58 10 60 -10 53 -22

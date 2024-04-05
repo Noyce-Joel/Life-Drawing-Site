@@ -33,11 +33,11 @@ export default function EventsList({
         className={classNames(
           isOpen
             ? "h-[41rem] w-full"
-            : "h-[2rem] w-[10rem] lg:w-[40vw] flex ",
+            : "h-[6rem] w-[10rem] lg:w-[40vw] flex ",
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-500 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >
-        <div className="absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 md:items-end py-24 px-10">
+        <div className="absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 md:items-end py-12 px-10">
           {events.map((event, index) => {
             const id = event.id;
             const name = event.name.text;

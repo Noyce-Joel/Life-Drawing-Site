@@ -111,14 +111,14 @@ export default function Loading({
         />
        <motion.path
             initial={{ pathLength: 0, stroke: "white" }}
-            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay, type: 'spring'} }}
+            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay} }}
             viewport={{once: true}}
           d="M1 1645 c-1 -34 2 -41 19 -42 18 -2 19 0 6 25 -7 15 -16 34 -19 42
    -3 8 -6 -3 -6 -25z"
         />
         <motion.path
             initial={{ pathLength: 0, stroke: "white" }}
-            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay, type: 'spring'} }}
+            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay} }}
             viewport={{once: true}}
           d="M2345 1244 c-22 -11 -43 -14 -75 -9 -56 9 -305 10 -595 3 -174 -4
    -254 -11 -385 -33 -190 -32 -201 -35 -330 -115 -98 -61 -190 -147 -260 -246
@@ -138,7 +138,7 @@ export default function Loading({
         />
         <motion.path
             initial={{ pathLength: 0, stroke: "white" }}
-            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay, type: 'spring'} }}
+            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay} }}
             viewport={{once: true}}
           d="M2385 1001 c-5 -10 -45 -24 -98 -35 -32 -8 -62 -64 -52 -97 4 -11 31
    -47 61 -82 30 -34 54 -65 54 -68 0 -20 -29 -28 -58 -18 -17 6 -41 9 -54 7 -21
@@ -160,7 +160,7 @@ export default function Loading({
         />
        <motion.path
             initial={{ pathLength: 0, stroke: "white" }}
-            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay, type: 'spring'} }}
+            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay} }}
             viewport={{once: true}}
           d="M2744 977 c1 -25 12 -43 41 -73 22 -21 50 -52 63 -69 17 -22 15 -18
    -4 15 -15 25 -40 57 -56 72 -15 14 -28 34 -28 45 0 10 -4 24 -9 31 -5 8 -7 0
@@ -169,7 +169,7 @@ export default function Loading({
         
         <motion.path
             initial={{ pathLength: 0, stroke: "white" }}
-            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay, type: 'spring'} }}
+            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay} }}
             viewport={{once: true}}
           d="M1180 905 c0 -4 40 -47 90 -96 69 -69 92 -98 101 -131 13 -48 6 -155
    -10 -171 -6 -6 -11 -37 -11 -69 0 -49 4 -63 24 -83 25 -24 32 -26 179 -45 48
@@ -195,7 +195,7 @@ export default function Loading({
        
         <motion.path
             initial={{ pathLength: 0, stroke: "white" }}
-            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay, type: 'spring'} }}
+            whileInView={{ pathLength: 1, transition: {duration: duration, delay: delay} }}
             viewport={{once: true}}
           d="M1227 37 c-9 -23 -1 -37 21 -37 11 0 13 3 6 8 -7 4 -13 16 -16 27 -3
    19 -4 19 -11 2z"

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import React from "react";
 import Dogs2 from "../loading/Dogs2";
 import Line from "../line/Line";
@@ -12,7 +12,7 @@ export default function Sessions() {
         <Line duration={1} color="white" title={false} />
       </div>
       <div className="absolute md:flex hidden justify-end right-0 w-2/12 bg-[#092a0f] -top-[7rem] z-40 ">
-        <Dogs2 duration={7} delay={0.5} size="150pt" />
+        <Dogs2 duration={3} delay={0.5} size="150pt" />
       </div>
       <div className="flex relative md:w-4/5 pt-12 ">
         <div className=" md:justify-start md:items-start justify-center items-center flex flex-col ">
@@ -25,15 +25,10 @@ export default function Sessions() {
             </p>
           </div>
           <div className="flex flex-col w-4/5 justify-start items-start md:justify-start relative md:items-start md:pt-4  md:-ml-24 pb-12 lg:pb-0 ">
-            {/* <div className="flex w-1/2 h-[500px] absolute -right-44  bg-gray-900/40 rounded-[20px] -z-40" /> */}
-            <Image
-              src="/dog2.svg"
-              height={570}
-              width={570}
-              alt="hero-image"
-              className="rounded-[10px] invert reverse md:flex hidden absolute -top-56 -z-40 md:-right-60 "
-            />
-            
+           
+            <div className="rounded-[10px] md:flex hidden absolute -top-8 -z-40 md:-right-60 ">
+              <Dogs7 duration={5} delay={0.5} size='360pt' />
+            </div>
             <p className="sm-white-text md-white-text lg-white-text  md:w-full lg:w-3/4 w-full">
               {copy.why_white_text}
             </p>

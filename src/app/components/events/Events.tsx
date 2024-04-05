@@ -40,7 +40,7 @@ export default function Events({ comp }: { comp: boolean }) {
         )}
       >
         <div className="absolute md:flex hidden justify-center left-0 right-0 mx-auto w-3/12 bg-[#092a0f] -top-[11rem]">
-          <Dogs5 duration={15} delay={0.5} size="220pt" />
+          <Dogs5 duration={5} delay={0.5} size="220pt" />
         </div>
         Events
         <Line duration={1} color="white" title={false} />

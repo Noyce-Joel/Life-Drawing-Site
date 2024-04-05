@@ -13,7 +13,7 @@ export default function Sessions() {
         <Line duration={1} color="white" title={false} />
       </div>
       <div className="absolute md:flex hidden left-0 w-2/12 bg-[#092a0f] -top-[9.5rem]">
-        <Dogs duration={7} delay={0.5} size="290pt" />
+        <Dogs duration={3.2} delay={0.5} size="290pt" />
       </div>
 
       <div className="flex flex-col justify-center items-center">

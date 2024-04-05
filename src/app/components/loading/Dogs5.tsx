@@ -33,9 +33,8 @@ export default function Loading({
           whileInView={{
             pathLength: 1,
             transition: {
-              duration: duration /2,
+              duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -48,9 +47,8 @@ export default function Loading({
           whileInView={{
             pathLength: 1,
             transition: {
-              duration: duration /2,
+              duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -65,9 +63,8 @@ export default function Loading({
           whileInView={{
             pathLength: 1,
             transition: {
-              duration: duration /2,
+              duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -84,7 +81,6 @@ export default function Loading({
             transition: {
               duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -97,9 +93,8 @@ export default function Loading({
           whileInView={{
             pathLength: 1,
             transition: {
-              duration: duration /2,
+              duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -113,7 +108,6 @@ export default function Loading({
             transition: {
               duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -126,9 +120,8 @@ export default function Loading({
           whileInView={{
             pathLength: 1,
             transition: {
-              duration: duration /2,
+              duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -143,7 +136,6 @@ export default function Loading({
             transition: {
               duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -156,7 +148,6 @@ export default function Loading({
             transition: {
               duration: duration / 2,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -170,7 +161,6 @@ export default function Loading({
             transition: {
               duration: duration,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -214,7 +204,6 @@ export default function Loading({
             transition: {
               duration: duration,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -229,7 +218,6 @@ export default function Loading({
             transition: {
               duration: duration,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
@@ -243,7 +231,6 @@ export default function Loading({
             transition: {
               duration: duration,
               delay: delay,
-              type: "spring",
             },
           }}
           viewport={{ once: true }}
