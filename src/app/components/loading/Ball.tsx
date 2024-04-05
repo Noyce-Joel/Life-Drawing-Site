@@ -7,8 +7,8 @@ export default function Ball({duration, delay, size}: {delay: number, size: stri
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
-      width="170"
-      height="170"
+      width={size}
+      height={size}
       viewBox="0 0 900.000000 920.000000"
       preserveAspectRatio="xMidYMid meet"
       strokeWidth={180}

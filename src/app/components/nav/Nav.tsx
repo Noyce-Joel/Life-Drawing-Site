@@ -104,7 +104,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   );
 };
 
-export default function Nav({text, hue, hoveredHue}: {text: string, hue: string, hoveredHue: string}) {
+export default function Nav() {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [hover, setHover] = useState<boolean>(false);
   const [hoverTwo, setHoverTwo] = useState<boolean>(false);
@@ -194,7 +194,7 @@ export default function Nav({text, hue, hoveredHue}: {text: string, hue: string,
             {pages.map((page, index) => (
               <li
                 key={index}
-                className={`md:flex hidden items-center justify-center hover:scale-105 ${text} z-40 duration-200 hover:cursor-pointer text-[22px]`}
+                className={`md:flex hidden items-center hover:text-[#f4b923] justify-center hover:scale-105 z-40 duration-200 hover:cursor-pointer text-[22px]`}
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>
@@ -205,7 +205,7 @@ export default function Nav({text, hue, hoveredHue}: {text: string, hue: string,
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hover ? hoveredHue : hue}
+                fgColor={hover ? '#f4b923' : '#FFFFFF'}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
               />
@@ -214,7 +214,7 @@ export default function Nav({text, hue, hoveredHue}: {text: string, hue: string,
                 url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hoverTwo ? hoveredHue : hue}
+                fgColor={hoverTwo ? '#f4b923' : '#FFFFFF'}
                 onMouseOver={() => setHoverTwo(true)}
                 onMouseOut={() => setHoverTwo(false)}
               />

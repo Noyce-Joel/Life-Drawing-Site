@@ -30,7 +30,7 @@ function MyForm() {
   const container = {
     whileInView: {
       transition: {
-        staggerChildren: 1,
+        staggerChildren: 2,
       },
     },
   };
@@ -72,7 +72,7 @@ function MyForm() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", mass: 2, friction: 80, damping: 20 }}
-        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex text-gray-900  overflow-hidden origin-top-left bg-[#ffffffed]  lg:justify-start justify-center lg:rounded-br-[250px]"
+        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex   overflow-hidden origin-top-left border-r border-b bg-[#0d2110] lg:justify-start justify-center lg:rounded-br-[250px]"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -80,7 +80,7 @@ function MyForm() {
           transition={{ duration: 0.5, delay: 1 }}
           className="flex flex-col"
         >
-          <div className="flex  flex-col w-full text-[4vw] pb-12">
+          <div className="flex flex-col w-full text-[4vw] pb-12 text-[#f4b923]">
             Get in touch
           </div>
 
@@ -104,7 +104,7 @@ function MyForm() {
           <div className="absolute bottom-5 lg:left-0 right-0 md:flex hidden">
             <Image
               src="/Logo.png"
-              className=""
+              className="invert"
               height={205}
               width={205}
               alt="logo"
@@ -125,7 +125,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7 }}
                 htmlFor="form-name"
-                className="block  font-bold mb-2 text-[22px] md:text-[22px] "
+                className="block text-[#f4b923] font-bold mb-2 text-[22px] md:text-[22px] "
               >
                 Name
               </motion.label>
@@ -137,7 +137,8 @@ function MyForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2  text-white md:text-[27px] focus:outline-none focus:border-yellow-500 focus:text-yellow-500 bg-transparent "
+              className="w-full px-3 py-2  
+              md:text-[27px] focus:outline-none bg-transparent "
             />
             <motion.div
               initial={{ scale: 0 }}
@@ -161,7 +162,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 htmlFor="form-email"
-                className="block text-white font-bold mb-2 text-[22px] md:text-[22px]"
+                className="block text-[#f4b923] font-bold mb-2 text-[22px] md:text-[22px]"
               >
                 Email
               </motion.label>
@@ -197,7 +198,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
                 htmlFor="form-email"
-                className="block text-white font-bold mb-2 text-[22px] md:text-[22px]"
+                className="block text-[#f4b923] font-bold mb-2 text-[22px] md:text-[22px]"
               >
                 Subject
               </motion.label>
@@ -254,7 +255,7 @@ function MyForm() {
                 animate={{ y: 0, rotate: 0 }}
                 transition={{ duration: 0.7, delay: 0.4 }}
                 htmlFor="form-message"
-                className="block text-white font-bold mb-2 text-[22px] md:text-[22px]"
+                className="block text-[#f4b923] font-bold mb-2 text-[22px] md:text-[22px]"
               >
                 Message
               </motion.label>
@@ -287,7 +288,7 @@ function MyForm() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
             type="submit"
-            className=" bg-gray-500 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className=" border hover:bg-yellow-500 hover:text-gray-900 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Submit
           </motion.button>

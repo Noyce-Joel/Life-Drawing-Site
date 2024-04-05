@@ -7,6 +7,9 @@ import EventsList from "./EventsList";
 import { copy } from "../../../../public/copy/copy";
 import Dogs3 from "../loading/Dogs3";
 import Dogs5 from "../loading/Dogs5";
+import Bone from "../loading/Bone";
+import Ball from "../loading/Ball";
+import Paw from "../loading/Paw";
 declare global {
   interface Window {
     EBWidgets: any;
@@ -62,11 +65,19 @@ export default function Events({ comp }: { comp: boolean }) {
           <EventsList events={cityEvents} city={city} />
         </div>
       ))}
-      <div className="flex flex-col justify-center relative  items-center pt-12 md:pt-44">
-        <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text text-[#f4b923] py-12">
+      <div className="flex flex-col relative gap-12 items-center pt-12 md:pt-32">
+        <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text text-[#f4b923] ">
           Let&#39;s sketch, share, and wag our way to a gallery of heartwarming
           masterpieces!
         </p>
+        <div className="flex gap-12 -mb-12">
+        
+          <Paw duration={1} delay={0.2} size='100pt' />
+          
+          <Ball duration={1} delay={0.2} size='85pt' />
+        </div>
+       
+        
       </div>
       
     </>

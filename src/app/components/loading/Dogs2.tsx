@@ -18,7 +18,7 @@ export default function Loading({
       height={size}
       viewBox="0 0 300.000000 247.000000"
       preserveAspectRatio="xMidYMid meet"
-      strokeWidth={20}
+      strokeWidth={15}
     >
       <metadata>
         Created by potrace 1.10, written by Peter Selinger 2001-2011
