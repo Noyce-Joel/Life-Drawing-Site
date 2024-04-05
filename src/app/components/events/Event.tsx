@@ -31,7 +31,7 @@ const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-dig
   return (
     <motion.div
       key={id}
-      className={` border-[2px] rounded-[10px] w-[80vw] bg-[#092a0f] md:w-96 origin-top md:hover:rounded-[60px] hover:scale-[102%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+      className={` border-[2px] rounded-[10px]  bg-[#092a0f] w-96 origin-top md:hover:rounded-[60px] hover:scale-[102%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
       <div className="h-[250px] overflow-hidden">
         <Image
@@ -44,13 +44,13 @@ const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-dig
       </div>
       <div className="relative p-12 pt-6 ">
         <h2 className="md:text-[25px] text-[20px] border-b pb-2 text-[#f4b923] font-extrabold">{name}</h2>
-        <p className="text-lg mt-2">{eventDate}</p>
-        <p className="text-lg mt-2">
+        <p className="text-2xl mt-2">{eventDate}</p>
+        <p className="text-2xl mt-2">
            {startTime} - {endTime}
         </p>
        
         <div className="mt-2 flex  justify-between w-full">
-          <p className="text-sm mt-4">
+          <p className="text-xl mt-4">
             <span className="">Capacity:</span> {capacity}
           </p>
           <Buy eventId={id} />

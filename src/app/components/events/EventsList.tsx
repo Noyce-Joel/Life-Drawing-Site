@@ -33,7 +33,7 @@ export default function EventsList({
         className={classNames(
           isOpen
             ? "h-[41rem] w-full"
-            : "h-[6rem] w-[10rem] lg:w-[40vw] flex ",
+            : "h-[6rem] w-[35rem]  lg:w-[40vw] flex ",
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-500 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >
@@ -65,10 +65,11 @@ export default function EventsList({
         <div
           className={classNames(
             isOpen ? " opacity-100" : "opacity-0",
-            `flex md:hidden absolute bottom-4 gap-12 mx-auto w-full justify-center items-center transition-all delay-100 duration-1000`
+            `flex md:hidden absolute bottom-4 gap-8 mx-auto w-full justify-center items-center transition-all delay-100 duration-1000`
           )}
         >
           <ArrowLeftIcon className="h-6 w-6" />
+          Scroll
           <ArrowRightIcon className="h-6 w-6" />
         </div>
       </section>

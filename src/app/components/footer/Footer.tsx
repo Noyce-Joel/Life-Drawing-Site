@@ -34,8 +34,8 @@ export default function Footer() {
           </b>
         </div>
 
-        <div className="flex md:flex-row flex-col justify-between bottom-10 w-full text-[20px]">
-          <div className="flex flex-col justify-end pt-32 text-[2.5vh]">
+        <div className="flex md:flex-row flex-col justify-between bottom-10 w-full ">
+          <div className="flex flex-col justify-end pt-32 text-[20px] ">
             <b>Bloc Studios</b>
             <span>Hicks Street,</span>
             <span>Neepsend,</span>

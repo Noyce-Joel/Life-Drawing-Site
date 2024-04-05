@@ -104,16 +104,7 @@ export default function Loading({
 25 5 25 10 0 6 -10 10 -23 10 -14 0 -24 6 -24 15 0 19 16 19 38 -1 25 -23 45
 -8 23 17 -17 19 -68 26 -78 10z"
         />
-        <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration / 2, delay: delay },
-          }}
-          viewport={{once: true}}
-          d="M877 1853 c-5 -59 -2 -72 10 -60 11 12 16 117 5 117 -5 0 -12 -26
--15 -57z"
-        />
+       
         <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
@@ -149,36 +140,9 @@ export default function Loading({
 21 -36 -13 -18 -14 -18 -39 5 -14 14 -26 34 -26 46 0 23 75 116 144 177 25 22
 35 37 26 38 -9 0 -50 -35 -93 -78z"
         />
-        <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration / 2, delay: delay },
-          }}
-          viewport={{once: true}}
-          d="M1590 1820 c0 -14 38 -32 45 -21 3 6 -3 15 -14 20 -24 14 -31 14 -31
-1z"
-        />
-       <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration / 2, delay: delay },
-          }}
-          viewport={{once: true}}
-          d="M450 1792 c0 -5 17 -14 39 -20 47 -15 51 -15 51 -2 0 6 -9 10 -19 10
--11 0 -23 5 -26 10 -7 12 -45 13 -45 2z"
-        />
-       <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration / 2, delay: delay },
-          }}
-          viewport={{once: true}}
-          d="M1410 1791 c0 -5 19 -34 42 -65 30 -40 48 -56 65 -56 13 0 23 5 23
-10 0 6 -8 10 -19 10 -17 0 -91 82 -91 102 0 4 -4 8 -10 8 -5 0 -10 -4 -10 -9z"
-        />
+        
+      
+       
         <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
@@ -201,16 +165,7 @@ export default function Loading({
           d="M751 1581 c-6 -11 -20 -23 -32 -26 -14 -5 -18 -10 -11 -17 6 -6 16
 -5 29 3 27 16 45 47 33 54 -5 3 -14 -3 -19 -14z"
         />
-        <motion.path
-          initial={{ pathLength: 0, stroke: "white" }}
-          whileInView={{
-            pathLength: 1,
-            transition: { duration: duration / 2, delay: delay },
-          }}
-          viewport={{once: true}}
-          d="M2037 1574 c-3 -4 18 -38 46 -78 67 -91 97 -142 97 -167 0 -10 5 -19
-10 -19 29 0 -5 75 -83 184 -63 89 -62 88 -70 80z"
-        />
+       
         <motion.path
           initial={{ pathLength: 0, stroke: "white" }}
           whileInView={{
