@@ -33,7 +33,7 @@ export default function EventsList({
         className={classNames(
           isOpen
             ? "h-[41rem] w-full"
-            : "h-[6rem] w-[35rem]  lg:w-[40vw] flex ",
+            : "h-[6rem] w-[38rem]  lg:w-[40vw] flex ",
           "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-500 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >
