@@ -24,7 +24,7 @@ export default function Loading({
         <g
           transform="translate(0.000000,272.000000) scale(0.100000,-0.100000)"
           fill="none"
-          stroke="#FFFFFF"
+          stroke="#000000"
         >
           <motion.path
             initial={{ pathLength: 0, stroke: "white" }}

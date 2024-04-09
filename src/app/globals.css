@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 body {
-  background-color: #092a0f;
+  
   overflow: hidden;
   letter-spacing: 1.5px;
   scroll-behavior: smooth;
-  color: white;
-  
+  color: #000000;
+  background-color: #EDEAE6;
 
   display: flex;
   
@@ -29,7 +29,7 @@ body {
 
   .sm-white-text {
     font-size: 22.5px;
-    color: #f4b923
+ 
   }
 }
 
@@ -44,14 +44,14 @@ body {
 
   .md-white-text {
     font-size: 38px;
-    color: #f4b923
+
   }
 }
 
 @media screen and (min-width: 1540px) and (max-width: 2000px) {
   .lg-white-text {
     font-size: 47px;
-    color: #f4b923;
+
    
   }
 
@@ -75,7 +75,7 @@ body {
 
   .session-text-show {
     display: flex;
-    color: white;
+
   }
 }
 
@@ -91,6 +91,6 @@ body {
 
   .border-top {
     border-top: 1px solid rgb(17, 24, 39);
-    color: white;
+
   }
 }

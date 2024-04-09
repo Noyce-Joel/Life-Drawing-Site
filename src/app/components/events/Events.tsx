@@ -5,11 +5,10 @@ import { StateContext, StateContextType } from "../../context/State";
 import Line from "../line/Line";
 import EventsList from "./EventsList";
 import { copy } from "../../../../public/copy/copy";
-import Dogs3 from "../loading/Dogs3";
 import Dogs5 from "../loading/Dogs5";
-import Bone from "../loading/Bone";
 import Ball from "../loading/Ball";
 import Paw from "../loading/Paw";
+import Image from "next/image";
 declare global {
   interface Window {
     EBWidgets: any;
@@ -39,22 +38,27 @@ export default function Events({ comp }: { comp: boolean }) {
       <div
         className={classNames(
           comp ? "flex" : "hidden",
-          `flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-24 font-bold text-[8vw] md:text-[59px] text-[#f4b923]`
+          `flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-12 font-bold text-[8vw] md:text-[59px] bg-[#EDEAE6]`
         )}
       >
-        <div className="absolute md:flex hidden justify-center left-0 right-0 mx-auto w-3/12 bg-[#092a0f] -top-[11rem]">
-          <Dogs5 duration={5} delay={0.5} size="220pt" />
-        </div>
         Events
-        <Line duration={1} color="white" title={false} />
+        <Line duration={1} color="#000000" title={false} />
       </div>
 
-      <div className="text-left pt-12 relative z-10 items-center justify-center flex flex-col tracking-wider text-pretty font-bold ">
+      <div className="text-left pt-12 relative z-10 items-center justify-center flex flex-col tracking-wider text-pretty font-bold bg-[#EDEAE6]  ">
+        <Image
+          src="/4.png"
+          alt="dog illustration"
+          height={300}
+          width={300}
+          className="absolute right-10 md:flex hidden -bottom-24 w-72 pt-12 "
+        />
         <div className="flex flex-col items-start justify-start w-4/5 md:w-3/5 ">
           <p className=" flex-col font-bold session-text-show-two  sm-text md-text lg-text ">
             {copy.events_join}
           </p>
-          <h2 className="sm-text md-text pl-12 lg:pt-20 pt-12 lg-text text-left text-[#f4b923]">
+
+          <h2 className="sm-text md-text pl-12 lg:pt-20 pt-12 lg-text text-left ">
             {copy.events_cities}
           </h2>
         </div>
@@ -65,22 +69,13 @@ export default function Events({ comp }: { comp: boolean }) {
           <EventsList events={cityEvents} city={city} />
         </div>
       ))}
-      <div className="flex flex-col relative gap-12 items-center pt-12 md:pt-32">
-      <div className="flex gap-12 ">
-        
-        <Paw duration={1} delay={0.2} size='80pt' />
-        
-        <Ball duration={1} delay={0.2} size='65pt' />
-      </div>
-        <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text text-[#f4b923] ">
+      <div className="flex flex-col relative gap-12 items-center pt-12 md:pt-32 bg-[#EDEAE6]  ">
+       
+        <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text  ">
           Let&#39;s sketch, share, and wag our way to a gallery of heartwarming
           masterpieces!
         </p>
-        
-       
-        
       </div>
-      
     </>
   );
 }

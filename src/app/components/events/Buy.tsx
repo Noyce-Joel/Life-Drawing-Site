@@ -27,7 +27,7 @@ export const Buy = ({ eventId }: { eventId: number }) => {
   return (
     <button
       id={`button_id_${eventId}`}
-      className="border hover:bg-[#f4b923] text-2xl hover:text-gray-900 text-[#f4b923] font-bold py-2 px-4 rounded"
+      className="border hover:bg-[#edeae6] text-2xl  hover:text-[#DA7835] font-bold py-2 px-4 rounded"
     >
       Book
     </button>

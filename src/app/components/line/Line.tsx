@@ -20,7 +20,8 @@ export default function Line({duration, title, color}: {duration: number, title:
       repeat: 0,
       ease: "anticipate",
     }}
-    className={`w-full -mt-2 origin-right border-b border-${color}-500  ${title ? 'border-[2px] bottom-0' : 'border-[1.2px] bottom-0 md:bottom-0'}`}
+    style={{borderColor: `${color}`}}
+    className={`w-full -mt-2 origin-right border-b  ${title ? 'border-[2px] bottom-0' : 'border-[1.2px] bottom-0 md:bottom-0'}`}
   ></motion.div>
 </>
   )

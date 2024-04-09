@@ -57,7 +57,7 @@ const address = {
 
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="flex md:hidden relative text-gray-900 flex-col gap-12 w-full h-full p-4">
+    <div className="flex md:hidden relative bg-[#edeae6] text-[#DA7835] flex-col gap-12 w-full h-full p-4">
       <button
         onClick={() => handleClick()}
         className="absolute top-0 right-0 p-12"
@@ -104,7 +104,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   );
 };
 
-export default function Nav() {
+export default function Nav({color, hoverColor, socials, socialsHover}: {color: string, hoverColor: string, socials: string, socialsHover: string}) {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [hover, setHover] = useState<boolean>(false);
   const [hoverTwo, setHoverTwo] = useState<boolean>(false);
@@ -193,8 +193,9 @@ export default function Nav() {
           <ul className=" flex   rounded-md md:items-center md:justify-start gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
               <li
+              
                 key={index}
-                className={`md:flex hidden items-center hover:text-[#f4b923] justify-center hover:scale-105 z-40 duration-200 hover:cursor-pointer text-[22px]`}
+                className={`md:flex hidden items-center ${color} ${hoverColor} justify-center hover:scale-105 z-40 duration-200 hover:cursor-pointer text-[22px]`}
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>
@@ -205,7 +206,7 @@ export default function Nav() {
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hover ? '#f4b923' : '#FFFFFF'}
+                fgColor={hover ? socialsHover : socials}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
               />
@@ -214,7 +215,7 @@ export default function Nav() {
                 url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hoverTwo ? '#f4b923' : '#FFFFFF'}
+                fgColor={hoverTwo ? socialsHover : socials}
                 onMouseOver={() => setHoverTwo(true)}
                 onMouseOut={() => setHoverTwo(false)}
               />

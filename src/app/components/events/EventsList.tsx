@@ -17,10 +17,10 @@ export default function EventsList({
 
   return (
     <>
-      <article className="flex flex-col pt-12 justify-center items-center h-auto font-extrabold text-[90px] ">
+      <article className="flex flex-col pt-12 justify-center items-center h-auto font-extrabold text-[90px] bg-[#EDEAE6] ">
         <div
           onClick={() => setIsOpen(!isOpen)}
-          className="flex w-3/4 md:w-3/5 hover:text-[#f4b923] relative flex-col font-semibold text-[5vmin] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
+          className="flex w-3/4 md:w-3/5 hover:text-[#DA7835] relative flex-col font-semibold text-[5vmin] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
         >
           {city}
         </div>
@@ -34,10 +34,10 @@ export default function EventsList({
           isOpen
             ? "h-[41rem] w-full"
             : "h-[6rem] w-[38rem]  lg:w-[40vw] flex ",
-          "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-500 border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
+          "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-500 bg-[#EDEAE6] border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >
-        <div className="absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 md:items-end py-12 px-10">
+        <div className="absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 md:items-end py-12 px-10 ">
           {events.map((event, index) => {
             const id = event.id;
             const name = event.name.text;
@@ -65,7 +65,7 @@ export default function EventsList({
         <div
           className={classNames(
             isOpen ? " opacity-100" : "opacity-0",
-            `flex md:hidden absolute bottom-4 gap-8 mx-auto w-full justify-center items-center transition-all delay-100 duration-1000`
+            `flex md:hidden absolute bottom-4 gap-8 mx-auto w-full justify-center items-center transition-all delay-100 duration-1000 `
           )}
         >
           <ArrowLeftIcon className="h-6 w-6" />

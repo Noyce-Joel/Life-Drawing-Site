@@ -5,13 +5,13 @@ import { copy } from "../../../../public/copy/copy";
 import Dogs6 from "../loading/Dogs6";
 export default function Models() {
   return (
-    <article className="flex flex-col pt-12 border-b border-gray-500  pb-12 md:pt-32  md:pb-44 relative justify-end items-end font-extrabold  ">
-      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[8vw] md:text-[59px] text-[#f4b923]">
+    <article className="flex flex-col pt-12 border-b border-gray-500 bg-[#FA6B60] text-[#000000] pb-12 md:pt-32  md:pb-44 relative justify-end items-end font-extrabold  ">
+      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[8vw] md:text-[59px] ">
         MODELS
-        <Line duration={1} color="white" title={false} />
+        <Line duration={1} color="black" title={false} />
       </div>
-      <div className="absolute md:flex hidden justify-start -left-14 w-2/12 bg-[#092a0f] -top-[6rem]">
-        <Dogs6 duration={5.5} delay={0.5} size="170pt" />
+      <div className="absolute md:flex hidden left-0 w-3/12 top-20">
+        <Image src='/3.png' alt='dog illustration' height={300} width={300}/>
       </div>
       <div className="flex flex-col justify-center items-center relative">
         <p className="md:w-3/5 w-5/6 pt-12 lg-text md-text sm-text">

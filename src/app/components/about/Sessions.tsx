@@ -1,19 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import Line from "../line/Line";
-import { CldImage } from "next-cloudinary";
+
 import { copy } from "../../../../public/copy/copy";
-import Paw from "../loading/Paw";
-import Dogs from "../loading/Dogs";
+
+
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-12 border-b border-gray-500 pb-12 md:pb-24 md:pt-32 relative items-end ">
-      <div className="flex w-3/4 md:w-4/5 flex-col  text-[8vw] md:text-[59px] mb-6 text-[#f4b923] ">
+    <article className="flex flex-col pt-12 bg-[#edeae6]   pb-12 md:pb-24 md:pt-32 relative items-end ">
+      <div className="flex w-3/4 md:w-4/5 flex-col  text-[8vw]  md:text-[59px] mb-6  ">
         SESSIONS
-        <Line duration={1} color="white" title={false} />
+        <Line duration={1} color="#DA7835" title={false} />
       </div>
-      <div className="absolute md:flex hidden left-0 w-2/12 bg-[#092a0f] -top-[9.5rem]">
-        <Dogs duration={3.2} delay={0.5} size="290pt" />
+      <div className="absolute md:flex hidden left-0 w-3/12 top-10">
+        <Image src='/1.png' alt='dog illustration' height={350} width={350} className=""/>
       </div>
 
       <div className="flex flex-col justify-center items-center">
@@ -31,7 +31,7 @@ export default function Sessions() {
           />
 
           <div className="flex flex-col gap-12 md:pt-12">
-            <p className="  flex  md:w-auto md:pl-12 lg-white-text md-white-text sm-white-text">
+            <p className="  flex  md:w-auto md:pl-12 lg-white-text md-white-text  sm-white-text">
               {copy.sessions_white_text}
             </p>
             <p className="md:pl-12 w-full lg:w-4/5 lg-text md-text sm-text md:pt-12 md:pb-32">
