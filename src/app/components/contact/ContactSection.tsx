@@ -6,7 +6,7 @@ import Line from "../line/Line";
 import Image from "next/image";
 export default function ContactSection() {
   return (
-    <div className="flex flex-col w-full h-full justify-center  relative  md:py-24 py-12 md:px-12 px-12 lg:px-52 bg-[#DA7835] ">
+    <div className="flex flex-col w-full h-full justify-center  relative  md:py-24 py-12 md:px-12 px-12 lg:px-52 bg-[#DA7835] text-white ">
       <div className=" lg:w-2/4">
         <div className="flex flex-col md:flex-row gap-4 text-[10vw] whitespace-nowrap justify-center items-center md:justify-start left-0 w-full md:text-[5vw]  pb-8 md:pb-0">
           {" "}
@@ -34,7 +34,7 @@ export default function ContactSection() {
           alt="dog illustration"
           height={500}
           width={500}
-         
+         className=""
         />
       </div>
     </div>

@@ -6,7 +6,7 @@ import Dogs6 from "../loading/Dogs6";
 export default function Models() {
   return (
     <article className="flex flex-col pt-12 border-b border-gray-500 bg-[#FA6B60] text-[#000000] pb-12 md:pt-32  md:pb-44 relative justify-end items-end font-extrabold  ">
-      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[8vw] md:text-[59px] ">
+      <div className="flex w-3/4 md:w-4/5 relative flex-col font-bold text-[8vw] md:text-[59px] text-[#64D3FA] ">
         MODELS
         <Line duration={1} color="black" title={false} />
       </div>
@@ -20,7 +20,7 @@ export default function Models() {
 
         <div className="flex flex-col md:flex-row w-5/6 justify-start items-center md:items-start pt-16 lg:ml-7 ">
           <div className="flex flex-col gap-12 justify-center items-center md:items-end ">
-            <p className="flex items-end md:w-auto lg:pr-12 lg-white-text md-white-text lg:pt-12 sm-white-text z-20">
+            <p className="flex items-end md:w-auto lg:pr-12 lg-white-text md-white-text lg:pt-12 sm-white-text z-20 text-[#64D3FA]">
               {copy.models_white_text}
             </p>
             <p className="md:pr-12 lg:w-4/5 lg-text md-text sm-text md:pt-12 ">

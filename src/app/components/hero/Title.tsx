@@ -3,6 +3,7 @@ import Line from "../line/Line";
 import Loading from "../loading/Loading";
 import Paw from "../loading/Paw";
 import TitleText from "../TitleText";
+import Image from "next/image";
 
 export default function Title() {
   const title = ["DOG", "LIFE", "DRAWING"];
@@ -11,7 +12,8 @@ export default function Title() {
       <div className="flex flex-col w-full h-full">
         <div className=" w-full h-full -mb-32 -mt-32 md:-mt-24 md:-mb-16 flex ">
           <div className="w-full flex relative ">
-            <Loading inView={true} />
+            {/* <Loading inView={true} /> */}
+            <Image src='/Logo.png' alt='business logo' height={500} width={500} className="w-auto flex p-24 h-full"/>
             <div className="text-[5vw] md:flex hidden items-center w-1/2 text-[#FFFFFF]">
               <TitleText
                 title={["WHERE ART MEETS", "CANINE CHARM"]}

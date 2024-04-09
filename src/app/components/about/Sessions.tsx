@@ -8,7 +8,7 @@ import { copy } from "../../../../public/copy/copy";
 export default function Sessions() {
   return (
     <article className="flex flex-col pt-12 bg-[#edeae6]   pb-12 md:pb-24 md:pt-32 relative items-end ">
-      <div className="flex w-3/4 md:w-4/5 flex-col  text-[8vw]  md:text-[59px] mb-6  ">
+      <div className="flex w-3/4 md:w-4/5 flex-col  text-[8vw]  md:text-[59px] mb-6 text-[#DA7835] ">
         SESSIONS
         <Line duration={1} color="#DA7835" title={false} />
       </div>
@@ -31,7 +31,7 @@ export default function Sessions() {
           />
 
           <div className="flex flex-col gap-12 md:pt-12">
-            <p className="  flex  md:w-auto md:pl-12 lg-white-text md-white-text  sm-white-text">
+            <p className="  flex  md:w-auto md:pl-12 lg-white-text md-white-text  sm-white-text text-[#DA7835]">
               {copy.sessions_white_text}
             </p>
             <p className="md:pl-12 w-full lg:w-4/5 lg-text md-text sm-text md:pt-12 md:pb-32">

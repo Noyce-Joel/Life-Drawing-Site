@@ -38,7 +38,7 @@ export default function Events({ comp }: { comp: boolean }) {
       <div
         className={classNames(
           comp ? "flex" : "hidden",
-          `flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-12 font-bold text-[8vw] md:text-[59px] bg-[#EDEAE6]`
+          `flex w-full pl-12 lg:pl-72 relative flex-col pt-12 md:pt-12 font-bold text-[8vw] md:text-[59px] bg-[#EDEAE6] text-[#DA7835]`
         )}
       >
         Events
@@ -71,7 +71,7 @@ export default function Events({ comp }: { comp: boolean }) {
       ))}
       <div className="flex flex-col relative gap-12 items-center pt-12 md:pt-32 bg-[#EDEAE6]  ">
        
-        <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text  ">
+        <p className="text-center flex w-4/5 md:w-1/2 sm-text md-text lg-text text-[#DA7835] ">
           Let&#39;s sketch, share, and wag our way to a gallery of heartwarming
           masterpieces!
         </p>
