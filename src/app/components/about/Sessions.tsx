@@ -7,12 +7,9 @@ import { copy } from "../../../../public/copy/copy";
 
 export default function Sessions() {
   return (
-    <article className="flex flex-col pt-12 bg-[#edeae6]   pb-12 md:pb-24 md:pt-32 relative items-end ">
-      <div className="flex w-3/4 md:w-4/5 flex-col  text-[8vw]  md:text-[59px] mb-6 text-[#DA7835] ">
-        SESSIONS
-        <Line duration={1} color="#DA7835" title={false} />
-      </div>
-      <div className="absolute md:flex hidden left-0 w-3/12 top-10">
+    <article className="flex flex-col pt-12 bg-[#edeae6]   pb-12  relative items-end ">
+      
+      <div className="absolute md:flex hidden right-0 w-3/12 top-10">
         <Image src='/1.png' alt='dog illustration' height={350} width={350} className=""/>
       </div>
 
