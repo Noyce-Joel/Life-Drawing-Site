@@ -29,14 +29,14 @@ export default function Title({title, tileColor, slogan, image}: {title: string[
         className="  relative ">
           <motion.div
             initial={{ x: 0, y: 0, opacity: 0 }}
-            animate={{opacity: 1, transition: {duration: 0.2, delay: 0.2} }}
+            animate={{opacity: 1, transition: {duration: 0.2, delay: 0.5} }}
             whileInView={{ x: -20, y: -20, transition: {type: 'spring', duration: 1, delay: 0.4, damping: 18, stiffness: 80, friction: 40, mass: 1.2 } }}
             style={{backgroundColor: `${tileColor}`, }}
             className="flex w-full h-full absolute  top-0 left-0 -z-10 rounded-[20px]"
           />
           <motion.div
             initial={{ x: 0, y: 0, opacity: 0 }}
-            animate={{opacity: 1, transition: {duration: 0.2, delay: 0.2} }}
+            animate={{opacity: 1, transition: {duration: 0.2, delay: 0.5} }}
             whileInView={{ x: 20, y: 20, transition: {type: 'spring', duration: 1, delay: 0.4, damping: 18, stiffness: 80, friction: 40, mass: 1.2 } }}
             className="w-full h-full flex"
           >
