@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 
 export default function Title({title, tileColor, slogan, image}: {title: string[], tileColor: string, slogan: string, image: string}) {
-  const [loaded, setLoaded] = useState(false)
+  
   return (
     <Suspense fallback={<div>Loading...</div>}>
     <div className="flex mt-20 ">
@@ -25,7 +25,7 @@ export default function Title({title, tileColor, slogan, image}: {title: string[
       </div>
       <div className="flex w-1/2 md:w-1/3 lg:w-1/4 ">
         <motion.div 
-        animate={{opacity: loaded ? 1 : 0}}
+        
         className="  relative ">
           <motion.div
             initial={{ x: 0, y: 0 }}
@@ -43,7 +43,7 @@ export default function Title({title, tileColor, slogan, image}: {title: string[
               alt="dog illustration"
               height={750}
               width={750}
-              onLoad={() => setLoaded(true)}
+             
               className="rounded-[20px] "
             />
           </motion.div>
