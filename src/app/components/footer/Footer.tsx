@@ -1,6 +1,6 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons";
-
+import Paw from "../loading/Paw";
 export default function Footer() {
   return (
     <footer className="relative flex w-full md:px-24 py-7 bg-[#EDEAE6] px-12 justify-between  border-t border-[#DA7835] h-[410px] mt-auto ">
@@ -25,7 +25,14 @@ export default function Footer() {
       </div>
 
       <div className="flex absolute bottom-10  ">
-        All rights reserved Liah Edwardes © 2024 - site by Joel Noyce
+        All rights reserved Liah Edwardes © 2024
+      </div>
+      <div className="flex absolute items-center bottom-5 right-24">
+     
+      <Paw size='50pt' duration={2} delay={0.2}/>
+      <div className="pt-2">
+      - site by Joel Noyce
+      </div>
       </div>
     </footer>
   );

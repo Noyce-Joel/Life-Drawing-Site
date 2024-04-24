@@ -19,7 +19,7 @@ export default function EventsList({
   useEffect(() =>{
     if(events.length < 3) setPlusThree(true)
   }, [setPlusThree, events])
-const plus = plusThree ? 'justify-center' : 'justify-start'
+const plus = plusThree ? 'lg:justify-center justify-start px-12 md:px-24' : 'px-12 md:px-24 justify-start'
 const colours = ['#DA7835', '#FFD04D', '#334D42', '#F7C2BC'  ];
 const loadedEvents = events.map(event => {
   const randomColor = colours[Math.floor(Math.random() * colours.length)];
@@ -32,7 +32,7 @@ const loadedEvents = events.map(event => {
           onClick={() => {setIsOpen(!isOpen), setHover(false)}}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
-          className="flex w-3/4 md:w-full justify-center items-center text-[#DA7835] relative flex-col font-semibold text-[3.44vw] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
+          className="flex w-3/4 md:w-full justify-center items-center text-[#DA7835] relative flex-col font-semibold text-[20px] md:text-[3.4vw] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
         >
           {city}
         </div>

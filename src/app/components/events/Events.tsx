@@ -58,7 +58,7 @@ export default function Events({ comp }: { comp: boolean }) {
           alt="dog illustration"
           height={280}
           width={280}
-          className="h-auto w-[12vw]"
+          className="h-auto w-[24vw] md:w-[12vw]"
         />
 
         <div className="flex flex-col items-center pt-12 justify-start w-4/5 md:w-3/5 gap-12">

@@ -19,7 +19,7 @@ export default function Loading({
         height={size}
         viewBox="0 0 292.000000 272.000000"
         preserveAspectRatio="xMidYMid meet"
-        strokeWidth={72}
+        strokeWidth={44}
       >
         <g
           transform="translate(0.000000,272.000000) scale(0.100000,-0.100000)"
@@ -27,7 +27,7 @@ export default function Loading({
           stroke="#000000"
         >
           <motion.path
-            initial={{ pathLength: 0, stroke: "white" }}
+            initial={{ pathLength: 0, stroke: "black" }}
             whileInView={{
               pathLength: 1,
               transition: {
@@ -42,7 +42,7 @@ export default function Loading({
 -55 6 -60 4 -105 -30z m158z"
           />
           <motion.path
-            initial={{ pathLength: 0, stroke: "white" }}
+            initial={{ pathLength: 0, stroke: "black" }}
             whileInView={{
               pathLength: 1,
               transition: {
@@ -58,7 +58,7 @@ export default function Loading({
 -32 c34 -22 53z"
           />
           <motion.path
-            initial={{ pathLength: 0, stroke: "white" }}
+            initial={{ pathLength: 0, stroke: "black" }}
             whileInView={{
               pathLength: 1,
               transition: {
@@ -74,7 +74,7 @@ export default function Loading({
 -6z m141 -47 c72 -36 150 -117 190z"
           />
           <motion.path
-            initial={{ pathLength: 0, stroke: "white" }}
+            initial={{ pathLength: 0, stroke: "black" }}
             whileInView={{
               pathLength: 1,
               transition: {
