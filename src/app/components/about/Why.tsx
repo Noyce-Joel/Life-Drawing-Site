@@ -31,7 +31,7 @@ export default function Why() {
         <div className="md:flex hidden  md:w-auto relative mt-20">
           <div className="bg-[#F7C2BC] flex w-full h-full rounded-[20px] absolute -top-10 -right-10  " />
           <Image
-            src="/Dog-model2.jpg"
+            src="/Dog-Model2Low.jpeg"
             height={480}
             width={480}
             alt="hero-image"
