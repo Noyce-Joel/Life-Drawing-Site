@@ -31,7 +31,7 @@ const eventDate = startDate.toLocaleDateString();
 const startTime = startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   return (
-    <div className="flex group relative w-[27rem] h-full">
+    <div className="flex group relative w-full h-full">
        <div style={{backgroundColor: `${tileColor}`}} className="flex w-[20rem] md:w-[27rem] h-full absolute md:group-hover:rounded-[60px] hover:group-scale-[102%] transition-all duration-700 ease-in-out -bottom-8 -left-8  -z-50 rounded-[20px]" />
     <motion.div
       key={id}

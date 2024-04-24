@@ -58,16 +58,16 @@ export default function Gallery({ results }: { results: any }) {
             )
           )}
         </motion.div>
-        {/* <div
+        <div
           className={
             
-            `flex absolute md:bottom-4 bottom-14 gap-8  w-full justify-center items-center transition-all  `
+            `flex absolute md:bottom-40 bottom-40 gap-8  w-full justify-center items-center transition-all  `
           }
         >
-          <ArrowLeftIcon className="h-6 w-6" />
+          <ArrowLeftIcon className="h-4 w-4" />
           Scroll
-          <ArrowRightIcon className="h-6 w-6" />
-        </div> */}
+          <ArrowRightIcon className="h-4 w-4" />
+        </div>
         <div className="md:flex hidden absolute inset-y-0 left-0 md:w-14 w-8 bg-gradient-to-r from-[#EDEAE6] via-[#EDEAE6] to-transparent"></div>
         <div className="md:flex hidden absolute inset-y-0 right-0 md:w-14 w-8 bg-gradient-to-l from-[#EDEAE6] via-[#EDEAE6] to-transparent"></div>
       </motion.div>

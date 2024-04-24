@@ -15,7 +15,7 @@ export default function Line({duration, title, color}: {duration: number, title:
     }}
     transition= {{
       duration: duration,
-      delay: 0.9,
+      delay: 0.7,
       type: "tween",
       repeat: 0,
       ease: "anticipate",
