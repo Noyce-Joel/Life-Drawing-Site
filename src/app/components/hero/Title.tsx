@@ -43,7 +43,7 @@ export default function Title({title, tileColor, slogan, image}: {title: string[
               alt="dog illustration"
               height={750}
               width={750}
-             
+             priority={true}
               className="rounded-[20px] "
             />
           </motion.div>
