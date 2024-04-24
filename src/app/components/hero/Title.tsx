@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 import Image from "next/image";
 import Line from "../line/Line";
@@ -6,15 +6,23 @@ import { motion } from "framer-motion";
 
 
 export default function Title({title, tileColor, slogan, image}: {title: string[], tileColor: string, slogan: string, image: string}) {
+  const [mobile, setMobile] = useState(false);
+  useEffect(() => {
+    const isMobile = global.window.innerWidth < 768;
+    if(isMobile) {
+      setMobile(true);
+    }
+  }, [])
   
+  const tileDistance = mobile ? 12: 20;
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <div className="flex w-[20vw] h-auto absolute top-4 left-0">
+      <div className="flex  h-auto absolute top-4 left-0 right-0 justify-center md:justify-start mx-auto">
         <Image src='/Logo.png' alt='logo' height={150} width={150}/>
       </div>
-    <div className="flex mt-20 ">
-      <div className="flex w-2/3 h-full flex-col  text-center  gap-10 ">
-        <div className=" text-[6vw] flex text-left items-center mx-auto flex-col pt-12 text-[#DA7835]">
+    <div className="flex mt-20">
+      <div className="flex w-full md:w-3/5 h-full flex-col  text-center  gap-10 ">
+        <div className=" text-[6vw] flex text-left items-start mx-auto flex-col pt-12 text-[#DA7835]">
           <span>{title[0]}</span>
           <span>{title[1]} {title[2]}</span>
         </div>
@@ -26,21 +34,21 @@ export default function Title({title, tileColor, slogan, image}: {title: string[
           {slogan}
         </p>
       </div>
-      <div className="flex w-1/2 md:w-1/3 lg:w-1/4 ">
+      <div className="flex w-1/2 md:w-1/3 lg:w-1/4">
         <motion.div 
         
         className="  relative ">
           <motion.div
             initial={{ x: 0, y: 0, opacity: 0 }}
             animate={{opacity: 1, transition: {duration: 0.2, delay: 0.5} }}
-            whileInView={{ x: -20, y: -20, transition: {type: 'spring', duration: 1, delay: 1, damping: 18, stiffness: 80, friction: 40, mass: 1.2 } }}
+            whileInView={{ x: tileDistance, y: -tileDistance, transition: {type: 'spring', duration: 1, delay: 1, damping: 18, stiffness: 80, friction: 40, mass: 1.2 } }}
             style={{backgroundColor: `${tileColor}`, }}
             className="flex w-full h-full absolute  top-0 left-0 -z-10 rounded-[20px]"
           />
           <motion.div
             initial={{ x: 0, y: 0, opacity: 0 }}
             animate={{opacity: 1, transition: {duration: 0.2, delay: 0.5} }}
-            whileInView={{ x: 20, y: 20, transition: {type: 'spring', duration: 1, delay: 1, damping: 18, stiffness: 80, friction: 40, mass: 1.2 } }}
+            whileInView={{ x: -tileDistance, y: tileDistance, transition: {type: 'spring', duration: 1, delay: 1, damping: 18, stiffness: 80, friction: 40, mass: 1.2 } }}
             className="w-full h-full flex"
           >
             <Image

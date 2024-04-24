@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Notification from "./Notification";
 
-
 function MyForm() {
   const [sent, setSent] = useState<boolean>(false);
   const [emailStatus, setEmailStatus] = useState<string>("");
@@ -64,67 +63,104 @@ function MyForm() {
   };
 
   return (
-    <motion.div className="flex gap-12 flex-col lg:flex-row w-full  lg:h-screen justify-center items-center bg-[#EDEAE6] ">
+    <motion.div className="flex relative  w-full   h-full  ">
       {sent ? <Notification status={emailStatus} /> : null}
-      <motion.section
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ type: "spring", mass: 2, friction: 80, damping: 20 }}
-        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex   overflow-hidden origin-top-left border-r border-b border-black  bg-[#DA7835] lg:justify-start justify-center lg:rounded-br-[250px]"
-      >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 1 }}
-          className="flex flex-col"
-        >
-          <div className="flex flex-col w-full pb-12 ">
-            Get in touch
-          </div>
-
-          <div className=" contact-text sm-contact-text md-contact-text lg-contact-text gap-4  flex items-start flex-col w-full ">
-            For collaborations please include:
-            <ul className=" ">
-              <li>Preferred date/time,</li>
-              <li>Number of people</li>
-              <li>City and venue</li>
-            </ul>
-          </div>
-
-          <div className="contact-text sm-contact-text md-contact-text lg-contact-text gap-4 pt-4 flex items-start flex-col ">
-            Our dogs are:
-            <ul className=" w-full">
-              <li>Happy around people and dogs</li>
-              <li>Relaxed in busy environments</li>
-              <li>Happy to chill in a pub setting</li>
-            </ul>
-          </div>
-          {/* <div className="absolute top-5 lg:left-0 right-0 md:flex hidden">
-            <Image
-              src="/Logo.png"
-              
-              height={205}
-              width={205}
-              alt="logo"
-              className="invert"
-            />
-          </div> */}
-        </motion.div>
-      </motion.section>
-
-      <section className="lg:w-1/2 w-full h-full relative bg-[#EDEAE6] lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
+      <div className="flex w-2/5 h-full items-center justify-center">
+        <div className="flex flex-col">
+          <p></p>
+        </div>
+      </div>
+      <section className=" absolute top-[14rem] right-0 p-4 w-full pt-12 md:pt-0 lg:w-3/5 md:px-24 pb-12 mx-auto  flex h-fit">
+        
         <form
           onSubmit={(e) => handleSend(e)}
-          className="w-full h-full flex flex-col justify-center items-start pb-12 md:pr-12 "
+          className="w-full h-full flex flex-col border text-white  border-gray-500 p-12 rounded-[20px] relative items-start pb-12 md:pr-12 "
         >
-          <div className="mb-4 w-full group relative">
-            <div className="h-9 overflow-hidden">
+          {" "}
+          <motion.div
+            initial={{ x: 500, y: 1000 }}
+            animate={{
+              x: 20,
+              y: -20,
+
+              transition: {
+                type: "spring",
+                duration: 1,
+                delay: 0.8,
+                damping: 22,
+                stiffness: 80,
+                friction: 40,
+                mass: 1.6,
+              },
+            }}
+            viewport={{}}
+            className="bg-[#DA7835]  flex w-full rounded-[20px] h-full absolute -z-30 top-0 left-0 "
+          />
+          <motion.div
+            initial={{ x: 500, y: 1000 }}
+           
+            animate={{
+              x: 40,
+              y: -40,
+
+              transition: {
+                type: "spring",
+                duration: 1,
+                delay: 0.6,
+                damping: 22,
+                stiffness: 80,
+                friction: 40,
+                mass: 1.6,
+              },
+            }}
+            className=" bg-[#F7C2BC] flex w-full rounded-[20px] h-full absolute -z-40 top-0 left-0 "
+          />
+          <motion.div
+            initial={{ x: 500, y: 1000 }}
+           
+            animate={{
+              x: 60,
+              y: -60,
+
+              transition: {
+                type: "spring",
+                duration: 1,
+                delay: 0.4,
+                damping: 22,
+                stiffness: 80,
+                friction: 40,
+                mass: 1.6,
+              },
+            }}
+            className="bg-[#FFD04D]  flex w-full rounded-[20px] h-full absolute -z-50 top-0 left-0 "
+          />
+          <motion.div
+            initial={{ x: 500, y: 1000 }}
+           
+            animate={{
+              x: 80,
+              y: -80,
+
+              transition: {
+                type: "spring",
+                duration: 1,
+                delay: 0.2,
+                damping: 22,
+                stiffness: 80,
+                friction: 40,
+                mass: 1.6,
+              },
+            }}
+            className="bg-[#334D42]  flex w-full rounded-[20px] h-full absolute -z-[60] top-0 left-0 "
+          />
+          <div className="mb-4 w-full group relative ">
+            <div className="h-6 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.7, delay: 1.4 }}
                 htmlFor="form-name"
-                className="block  font-bold mb-2 text-[22px] md:text-[22px] "
+                className="block flexfont-bold  "
               >
                 Name
               </motion.label>
@@ -137,7 +173,7 @@ function MyForm() {
               onChange={handleChange}
               required
               className="w-full px-3 py-2  
-              md:text-[27px] focus:outline-none bg-transparent "
+              focus:outline-none bg-transparent "
             />
             <motion.div
               initial={{ scale: 0 }}
@@ -145,23 +181,23 @@ function MyForm() {
                 scale: 1,
                 transition: {
                   duration: 1.4,
-                  delay: 0.1,
+                  delay: 1.5,
                   type: "tween",
 
                   ease: "anticipate",
                 },
               }}
-              className="w-full border-black -z-40 origin-right border-b border-[1.2px]"
+              className="w-full  -z-40 origin-right border-b border-[1.2px]"
             ></motion.div>
           </div>
           <div className="mb-4 w-full relative ">
-            <div className="h-9 overflow-hidden">
+            <div className="h-6 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
+                transition={{ duration: 0.7, delay: 1.6 }}
                 htmlFor="form-email"
-                className="block  font-bold mb-2 text-[22px] md:text-[22px]"
+                className="block  font-bold "
               >
                 Email
               </motion.label>
@@ -173,7 +209,7 @@ function MyForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2  text-white md:text-[27px] focus:outline-none  bg-transparent"
+              className="w-full px-3 py-2   focus:outline-none  bg-transparent"
             />
             <motion.div
               initial={{ scale: 0 }}
@@ -181,23 +217,23 @@ function MyForm() {
                 scale: 1,
                 transition: {
                   duration: 1.4,
-                  delay: 0.3,
+                  delay: 1.7,
                   type: "tween",
 
                   ease: "anticipate",
                 },
               }}
-              className="w-full border-black -z-40 origin-right  border-b border-[1.2px]"
+              className="w-full  -z-40 origin-right  border-b border-[1.2px]"
             ></motion.div>
           </div>
-          <div className="mb-4 w-full relative ">
-            <div className="h-9 overflow-hidden">
+          <div className="mb-4 mt-4 w-full relative ">
+            <div className="h-6 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
+                transition={{ duration: 0.7, delay: 1.8 }}
                 htmlFor="form-email"
-                className="block font-bold mb-2 text-[22px] md:text-[22px]"
+                className="block font-bold "
               >
                 Subject
               </motion.label>
@@ -205,8 +241,8 @@ function MyForm() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 1 }}
-              className=" pt-10 pb-7 flex md:flex-row flex-col gap-4"
+              transition={{ duration: 1, delay: 1.9 }}
+              className=" pt-4 pb-7 flex md:flex-row flex-col gap-4"
             >
               <label className="flex gap-2">
                 <input
@@ -246,15 +282,14 @@ function MyForm() {
               </label>
             </motion.div>
           </div>
-
           <div className="mb-4 w-full">
-            <div className="h-9 overflow-hidden">
+            <div className="h-6 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
-                transition={{ duration: 0.7, delay: 0.4 }}
+                transition={{ duration: 0.7, delay: 2 }}
                 htmlFor="form-message"
-                className="block font-bold mb-2 text-[22px] md:text-[22px]"
+                className="block font-bold "
               >
                 Message
               </motion.label>
@@ -265,34 +300,33 @@ function MyForm() {
               value={formData.body}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 text-white md:text-[27px] focus:outline-none focus:border-yellow-500 focus:text-yellow-500 bg-transparent"
+              className="w-full px-3 py-2 focus:outline-none focus:border-yellow-500 focus:text-yellow-500 bg-transparent"
             />
             <motion.div
               initial={{ scale: 0 }}
               whileInView={{
                 scale: 1,
                 transition: {
-                  duration: 1.4,
-                  delay: 0.5,
+                  duration: 1.7,
+                  delay: 1.9,
                   type: "tween",
 
                   ease: "anticipate",
                 },
               }}
-              className="w-full -z-40 origin-right border-b border-black border-[1.2px]"
+              className="w-full -z-40 origin-right border-b  border-[1.2px]"
             ></motion.div>
           </div>
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.5 }}
+            transition={{ duration: 1, delay: 1.8 }}
             type="submit"
             className=" border border-black hover:bg-[#FA6B60]  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Submit
           </motion.button>
         </form>
-        
       </section>
     </motion.div>
   );

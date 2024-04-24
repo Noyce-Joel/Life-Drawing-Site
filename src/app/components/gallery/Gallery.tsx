@@ -29,7 +29,7 @@ export default function Gallery({ results }: { results: any }) {
   
   return (
     <>
-      <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1}}} className="relative z-50 flex h-full  w-full ">
+      <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1}}} className="relative z-20 flex h-full  w-full ">
         <motion.div
           variants={container}
           whileInView="whileInView"

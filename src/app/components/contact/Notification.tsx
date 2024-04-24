@@ -24,16 +24,16 @@ export default function Notification({ status }: { status: string }) {
     <>
       {open ? (
         <motion.div
-          initial={{ y: 400 }}
-          animate={{ y: 0 }}
-          className="fixed top-10 w-fit z-50 rounded-md bg-green-50 p-4"
+          initial={{ x: 400 }}
+          animate={{ x: 0, transition: { duration: 0.2 } }}
+          className="fixed bottom-10 right-0 left-0 mx-auto bg-[#334D42]  w-fit z-50 rounded-md  p-4"
         >
           <div className="flex gap-3 z-50">
-            <div className="flex justify-evenly">
+            <div className="flex justify-evenly items-center">
               <div className="flex-shrink-0">
                 {success ? (
                   <CheckCircleIcon
-                    className="h-5 w-5 text-green-400"
+                    className="h-10 w-10 text-green-400"
                     aria-hidden="true"
                   />
                 ) : (
@@ -45,18 +45,18 @@ export default function Notification({ status }: { status: string }) {
               </div>
               <div className="ml-3">
                 {status ? (
-                  <p className="text-sm font-medium text-green-800 ">
+                  <p className="text-sm font-medium text-white ">
                     {alertMessage}
                   </p>
                 ) : null}
               </div>
             </div>
-            <div className="ml-auto pl-3">
-              <div className="-mx-1.5 -my-1.5">
+            <div className="ml-auto pl-3 flex items-center">
+              <div className="">
                 <button
                   onClick={() => setOpen(false)}
                   type="button"
-                  className="inline-flex rounded-md bg-green-50 p-1.5 text-green-500 hover:bg-green-100 focus:outline-none  focus:ring-offset-2 focus:ring-offset-green-50"
+                  className="inline-flex rounded-full  p-1.5 text-green-500 hover:bg-green-100 focus:outline-none  focus:ring-offset-2 focus:ring-offset-green-50"
                 >
                   <XMarkIcon className="h-5 w-5" aria-hidden="true" />
                 </button>

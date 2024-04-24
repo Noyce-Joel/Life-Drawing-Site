@@ -160,7 +160,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
               }}
               className="flex absolute justify-between w-full items-center -bottom-4 right-2"
             >
-              <div className="pl-14 pt-5">
+              <div className="pl-14 ">
                 <SocialIcon
                   style={{ width: "50px", height: "50px" }}
                   url="https://www.instagram.com/dog.lifedrawing/"
@@ -200,7 +200,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
                 <Link href={page.href}>{page.name}</Link>
               </li>
             ))}
-            <div className="flex z-40 gap-2 pt-7 md:pt-0">
+            <div className="flex z-40 gap-2 pt-2 md:pt-0">
               <SocialIcon
                 style={{ width: "40px", height: "40px" }}
                 url="https://www.instagram.com/dog.lifedrawing/"

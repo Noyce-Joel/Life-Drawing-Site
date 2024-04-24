@@ -19,7 +19,7 @@ export default function Models() {
         </p>
         </div>
       
-      <div className="absolute w-[12vw] -bottom-40 right-40 md:flex hidden z-40">
+      <div className="absolute w-[12vw] -bottom-40 right-40 md:flex hidden -z-40">
         <Image src="/5.png" alt="dog illustration" height={280} width={280} className="bg-[#EDEAE6]"/>
         
       </div>
