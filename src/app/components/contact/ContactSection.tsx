@@ -80,9 +80,7 @@ export default function ContactSection() {
       <div className="absolute  bottom-0  left-0 md:left-20  -z-0 w-[14vw] flex">
         <Image src="/1.png" alt="dog illustration" height={380} width={380} />
       </div>
-      <div className="absolute hidden md:flex bottom-0  md:right-20  -z-0 w-[14vw] ">
-        <Image src="/3.png" alt="dog illustration" height={380} width={380} />
-      </div>
+     
     </div>
   );
 }
