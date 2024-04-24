@@ -32,9 +32,9 @@ export default function page() {
     >
       <Nav
         color="text-[#000000]"
-        hoverColor="text-[#000000]"
+        hoverColor="text-[#DA7835]"
         socials="#000000"
-        socialsHover="#000000"
+        socialsHover="#DA7835"
       />
      <Title slogan='Come along and have some fun' image='/drawingLow.jpg' title={['OUR', 'EVENTS']} tileColor='#334D42'/>
 

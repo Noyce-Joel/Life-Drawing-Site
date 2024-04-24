@@ -188,7 +188,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
         )}
       </AnimatePresence>
 
-      <nav className="flex-col md:flex-row px-4 z-40 pt-2">
+      <nav className="flex-col md:flex-row px-4 z-40 pt-8">
         <div className="z-40">
           <ul className=" flex   rounded-md md:items-start md:justify-center gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (

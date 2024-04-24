@@ -9,6 +9,9 @@ export default function Title({title, tileColor, slogan, image}: {title: string[
   
   return (
     <Suspense fallback={<div>Loading...</div>}>
+      <div className="flex w-[20vw] h-auto absolute top-4 left-0">
+        <Image src='/Logo.png' alt='logo' height={150} width={150}/>
+      </div>
     <div className="flex mt-20 ">
       <div className="flex w-2/3 h-full flex-col  text-center  gap-10 ">
         <div className=" text-[6vw] flex text-left items-center mx-auto flex-col pt-12 text-[#DA7835]">
