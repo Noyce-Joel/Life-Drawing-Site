@@ -1,5 +1,4 @@
 import React from "react";
-import Paw from "../loading/Paw";
 import Link from "next/link";
 import Image from "next/image";
 export default function ContactSection() {

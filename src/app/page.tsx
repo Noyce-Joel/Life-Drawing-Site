@@ -44,7 +44,7 @@ export default function Home() {
             socials="#000000"
             socialsHover="#DA7835"
           />
-          <Title image='/dog.jpg' tileColor="#DA7835" title={["DOG", "LIFE", "DRAWING"]} slogan='Where art meets canine charm' />
+          <Title image='/Dog.jpg' tileColor="#DA7835" title={["DOG", "LIFE", "DRAWING"]} slogan='Where art meets canine charm' />
           <Events comp={true} />
           <Why />
           <Models />
