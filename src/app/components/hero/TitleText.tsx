@@ -19,17 +19,15 @@ const column = col;
   };
   return (
     <motion.section
-      variants={container}
-      initial="initial"
-      animate="animate"
-      className={` z-10   ${col} pr-24 font-semibold overflow-hidden text-[4vw]`}
+     
+      className={` z-10   ${col} font-semibold overflow-hidden text-[4vw]`}
     >
       {title.map((word, idx) => (
         <motion.h1
           key={idx}
           className='flex  gap-12 w-full overflow-hidden z-20'
         >
-          <motion.span variants={item} key="anim" className="block ">
+          <motion.span  key="anim" className="block ">
             {word}
           </motion.span>
         </motion.h1>

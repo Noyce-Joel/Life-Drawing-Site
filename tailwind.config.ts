@@ -10,8 +10,8 @@ const config: Config = {
   plugins: [],
   theme: {
     screens: {
-      'sm': '640px',
-      'md': '900px', // Change this to your desired width
+      'sm': '500px',
+      'md': '600px', // Change this to your desired width
       'lg': '1200px',
       'xl': '1440px',
       '2xl': '1536px',

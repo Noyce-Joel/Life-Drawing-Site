@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Fraunces } from "next/font/google";
+import { Indie_Flower } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
 
-const inter = Fraunces({
+const inter = Indie_Flower({
   subsets: ["latin"],
   weight: ["400"],
 });
@@ -11,14 +11,14 @@ const inter = Fraunces({
 export const metadata: Metadata = {
   title: "Dog Life Drawing",
   description:
-    "Our dog life drawing sessions blend the joy of artistic expression with the undeniable charm of our favourite furry friends. Whether you're an experienced artist or a complete novice, our sessions cater to all skill levels. You'll be guided by talented instructors who are not only passionate about art but also share a deep love for dogs.",
+    "Our dog life drawing sessions blend the joy of artistic expression with the undeniable charm of our favourite furry friends. Whether you're an experienced artist or a complete novice, our sessions cater to all skill levels. ",
   keywords:
-    "anomaly, dogs, drawing, art, life drawing, sheffield, nottingham, york, leeds, life",
+    "anomaly, dogs, drawing, art, life drawing, sheffield, nottingham, york, leeds, life, events, Leeds, workshop, ",
   icons: "/siteLogo.png",
   openGraph: {
     title: "Dog Life Drawing",
     description:
-      "Our dog life drawing sessions blend the joy of artistic expression with the undeniable charm of our favourite furry friends. Whether you're an experienced artist or a complete novice, our sessions cater to all skill levels. You'll be guided by talented instructors who are not only passionate about art but also share a deep love for dogs.",
+      "Our dog life drawing sessions blend the joy of artistic expression with the undeniable charm of our favourite furry friends. Whether you're an experienced artist or a complete novice, our sessions cater to all skill levels. ",
     url: "https://doglifedrawing.com",
   },
 };

@@ -5,7 +5,7 @@ import {
 } from "@heroicons/react/20/solid";
 import { motion } from "framer-motion";
 
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 
 export default function Notification({ status }: { status: string }) {
   const [open, setOpen] = useState<boolean>(true);

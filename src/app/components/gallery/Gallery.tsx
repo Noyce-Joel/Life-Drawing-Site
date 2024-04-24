@@ -3,14 +3,10 @@
 import React from "react";
 import { CldImage } from "next-cloudinary";
 import { motion } from "framer-motion";
-import Line from "../line/Line";
-import Dogs3 from "../loading/Dogs3";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
+
 export default function Gallery({ results }: { results: any }) {
-  const columns = (colIdx: number) => {
-    return results.resources.filter((_: any, idx: number) => {
-      return idx % 3 === colIdx;
-    });
-  };
+  const [selectedImage, setSelectedImage] = React.useState<number | null>(null);
   const container = {
     whileInView: {
       transition: {
@@ -26,53 +22,55 @@ export default function Gallery({ results }: { results: any }) {
     whileInView: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.4,
       },
     },
   };
+  
   return (
     <>
-      <div className="flex w-full pl-12 lg:pl-72 relative flex-col md:pt-24 pt-12  font-bold text-[8vw] md:text-[75px]  border-t border-gray-500 mt-44 bg-[#64D3FA] ">
-        Gallery
-        <Line duration={1} color="#000000" title={false} />
-      </div>
-
-      <div className="flex h-fit w-full justify-center gap-2 md:gap-7 pt-12 px-2 md:px-32 overflow-y-scroll -z-40 border-b border-gray-500 md:pb-24 pb-12 bg-[#64D3FA] ">
-        {[columns(0), columns(1), columns(2)].map((col, idx) => (
-          <motion.div
-            variants={container}
-            whileInView="whileInView"
-            initial="initial"
-            key={idx}
-            className="flex flex-col gap-2 md:gap-10"
-          >
-            {col.map(
-              (
-                result: { public_id: any },
-                idx: React.Key | null | undefined
-              ) => (
-                <div key={idx} className={"flex w-auto h-auto rounded-[25px] "}>
-                  <motion.div
-                    variants={item}
-                    whileInView="whileInView"
-                    initial="initial"
-                  >
-                    <CldImage
-                      src={result.public_id}
-                      alt="img"
-                      height={700}
-                      width={700}
-                      className="rounded-[20px] w-full h-full "
-                    />
-                  </motion.div>
-                </div>
-              )
-            )}
-          </motion.div>
-        ))}
-      </div>
-
-      
+      <motion.div initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1}}} className="relative z-50 flex h-full  w-full ">
+        <motion.div
+          variants={container}
+          whileInView="whileInView"
+          initial="initial"
+          className="flex flex-row md:gap-6 overflow-x-scroll items-center md:px-12  w-full h-full"
+        >
+          {results.resources.map(
+            (result: { public_id: any }, idx: React.Key | null | undefined) => (
+              <motion.div
+                key={idx}
+                variants={item}
+                whileInView="whileInView"
+                initial="initial"
+                
+                className={`flex-none md:p-0 p-4 transition-all duration-500 ease-in-out  hover:cursor-pointer hover:scale-105 ${selectedImage === idx ? ' md:h-[80vh] h-[70vh] w-auto z-50 ' : 'h-[50vh] w-auto'}`}
+                onClick={() => setSelectedImage(selectedImage === idx ? null : idx as number)}
+              >
+                <CldImage
+                  src={result.public_id}
+                  alt="img"
+                  height={700}
+                  width={700}
+                  className="rounded-[20px] relative h-full w-auto flex hover-scale-105 transition-transform duration-500 ease-in-out"
+                />
+              </motion.div>
+            )
+          )}
+        </motion.div>
+        {/* <div
+          className={
+            
+            `flex absolute md:bottom-4 bottom-14 gap-8  w-full justify-center items-center transition-all  `
+          }
+        >
+          <ArrowLeftIcon className="h-6 w-6" />
+          Scroll
+          <ArrowRightIcon className="h-6 w-6" />
+        </div> */}
+        <div className="md:flex hidden absolute inset-y-0 left-0 md:w-14 w-8 bg-gradient-to-r from-[#EDEAE6] via-[#EDEAE6] to-transparent"></div>
+        <div className="md:flex hidden absolute inset-y-0 right-0 md:w-14 w-8 bg-gradient-to-l from-[#EDEAE6] via-[#EDEAE6] to-transparent"></div>
+      </motion.div>
     </>
   );
 }

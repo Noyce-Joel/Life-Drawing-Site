@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Event from "./Event";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 function classNames(...classes: any) {
@@ -14,31 +14,43 @@ export default function EventsList({
 
 
   const [isOpen, setIsOpen] = useState(false);
-
+  const [hover, setHover] = useState(false);
+  const [plusThree, setPlusThree] = useState(false);
+  useEffect(() =>{
+    if(events.length < 3) setPlusThree(true)
+  }, [setPlusThree, events])
+const plus = plusThree ? 'justify-center' : 'justify-start'
+const colours = ['#DA7835', '#FFD04D', '#334D42', '#F7C2BC'  ];
+const loadedEvents = events.map(event => {
+  const randomColor = colours[Math.floor(Math.random() * colours.length)];
+  return { ...event, color: randomColor };
+});
   return (
     <>
-      <article className="flex flex-col pt-12 justify-center items-center h-auto font-extrabold text-[90px] bg-[#EDEAE6] ">
+      <article className="flex flex-col  justify-center items-center h-full  text-[90px] bg-[#EDEAE6] ">
         <div
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex w-3/4 md:w-3/5 text-[#DA7835] relative flex-col font-semibold text-[5vmin] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
+          onClick={() => {setIsOpen(!isOpen), setHover(false)}}
+          onMouseOver={() => setHover(true)}
+          onMouseOut={() => setHover(false)}
+          className="flex w-3/4 md:w-full justify-center items-center text-[#DA7835] relative flex-col font-semibold text-[3.44vw] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
         >
           {city}
         </div>
         <div className="w-full flex relative ">
-          <div className="w-full border-t border-gray-500" />
+          <div className="w-full border-t border-gray-300" />
         </div>
       </article>
-
+      <div className="flex w-full ">
       <section
         className={classNames(
           isOpen
-            ? "h-[41rem] w-full"
-            : "h-[6rem] w-[38rem]  lg:w-[40vw] flex ",
-          "overflow-hidden relative transition-all duration-1000 ease-in-out origin-top-left border-gray-500 bg-[#EDEAE6] border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
+            ? "h-[48rem] w-full" : hover ? "h-[5rem] w-[68vw]"
+            : "h-[3rem] w-[38rem]  lg:w-[68vw] flex ",
+          "overflow-hidden relative transition-all duration-700 ease-in-out origin-top-left border-gray-300 bg-[#EDEAE6] border-b-[1.2px] rounded-br-3xl border-r-[1.2px] "
         )}
       >
-        <div className="absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 md:items-end py-12 px-10 ">
-          {events.map((event, index) => {
+        <div className={`absolute top-0 w-full flex overflow-x-auto gap-12 lg:gap-24 ${plus} py-12 px-10`}>
+          {loadedEvents.map((event, index) => {
             const id = event.id;
             const name = event.name.text;
             const start = event.start.local;
@@ -46,7 +58,7 @@ export default function EventsList({
             const description = event.description.text;
             const logo = event.logo.original.url;
             const capacity = event.capacity;
-
+            const randomColor = colours[Math.floor(Math.random() * colours.length)];
             return (
               <div key={index} className="z-10 ">
                 <Event
@@ -57,6 +69,7 @@ export default function EventsList({
                   description={description}
                   capacity={capacity}
                   logo={logo}
+                  tileColor={`${randomColor}`}
                 />
               </div>
             );
@@ -64,8 +77,8 @@ export default function EventsList({
         </div>
         <div
           className={classNames(
-            isOpen ? " opacity-100" : "opacity-0",
-            `flex md:hidden absolute bottom-4 gap-8 mx-auto w-full justify-center items-center transition-all delay-100 duration-1000 `
+            isOpen ? " opacity-100 delay-100 duration-1000" : "opacity-0 ",
+            `flex absolute bottom-4 gap-8  w-full justify-center items-center transition-all  `
           )}
         >
           <ArrowLeftIcon className="h-6 w-6" />
@@ -73,6 +86,7 @@ export default function EventsList({
           <ArrowRightIcon className="h-6 w-6" />
         </div>
       </section>
+      </div>
     </>
   );
 }

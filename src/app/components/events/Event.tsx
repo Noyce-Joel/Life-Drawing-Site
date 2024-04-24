@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Buy } from "./Buy";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -12,6 +12,7 @@ export default function Event({
   description,
   capacity,
   logo,
+  tileColor,
 }: {
   id: number;
   name: string;
@@ -20,6 +21,7 @@ export default function Event({
   description: string;
   capacity: number;
   logo: string;
+  tileColor: string;
 }) {
   const startDate = new Date(start);
 const endDate = new Date(end);
@@ -29,10 +31,13 @@ const eventDate = startDate.toLocaleDateString();
 const startTime = startDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   return (
+    <div className="flex group relative w-[27rem] h-full">
+       <div style={{backgroundColor: `${tileColor}`}} className="flex w-[27rem] h-full absolute md:group-hover:rounded-[60px] hover:group-scale-[102%] transition-all duration-700 ease-in-out -bottom-10 -left-10  -z-50 rounded-[20px]" />
     <motion.div
       key={id}
-      className={` bg-[#DA7835] border-[2px] rounded-[10px]   w-96 origin-top md:hover:rounded-[60px] hover:scale-[102%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
+      className={`  border-[2px] bg-[#EDEAE6] border-gray-500 rounded-[10px]   w-[27rem] origin-top md:hover:rounded-[60px] hover:scale-[102%] transition-all duration-700 ease-in-out overflow-hidden hover:cursor-pointer`}
     >
+      
       <div className="h-[250px] overflow-hidden">
         <Image
           className="object-cover object-top h-full w-full "
@@ -43,7 +48,7 @@ const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-dig
         />
       </div>
       <div className="relative p-12 pt-6 ">
-        <h2 className="md:text-[25px] text-[20px] border-b pb-2 font-extrabold">{name}</h2>
+        <h2 className="md:text-[25px] text-[20px] border-b border-gray-500 pb-2 font-extrabold">{name}</h2>
         <p className="text-2xl mt-2">{eventDate}</p>
         <p className="text-2xl mt-2">
            {startTime} - {endTime}
@@ -57,5 +62,6 @@ const endTime = endDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-dig
         </div>
       </div>
     </motion.div>
+    </div>
   );
 }

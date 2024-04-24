@@ -14,7 +14,7 @@ body {
   
 }
 
-@media screen and (min-width: 0px) and (max-width: 750px) {
+@media screen and (min-width: 0px) and (max-width: 600px) {
   .sm-heading {
     font-size: 25px;
   }
@@ -33,9 +33,9 @@ body {
   }
 }
 
-@media screen and (min-width: 750px) and (max-width: 1540px) {
+@media screen and (min-width: 600px) and (max-width: 1540px) {
   .md-text {
-    font-size: 32px;
+    font-size: 2vw;
   }
 
   .md-contact-text {
@@ -43,24 +43,24 @@ body {
   }
 
   .md-white-text {
-    font-size: 38px;
+    font-size: 3vw;
 
   }
 }
 
 @media screen and (min-width: 1540px) and (max-width: 2000px) {
   .lg-white-text {
-    font-size: 47px;
+    font-size: 43px;
 
    
   }
 
   .lg-contact-text {
-    font-size: 25px;
+    font-size: 4vh;
   }
 
   .lg-text {
-    font-size: 34px;
+    font-size: 2vw;
   }
 }
 

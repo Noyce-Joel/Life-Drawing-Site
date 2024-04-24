@@ -2,11 +2,9 @@
 
 import { sendMail } from "../../services/mail";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import React, { useState } from "react";
-import { SocialIcon } from "react-social-icons";
 import Notification from "./Notification";
-import TitleText from "../TitleText";
+
 
 function MyForm() {
   const [sent, setSent] = useState<boolean>(false);
@@ -66,13 +64,13 @@ function MyForm() {
   };
 
   return (
-    <motion.div className="flex gap-12 flex-col lg:flex-row w-full  lg:h-screen justify-center items-center bg-[#64D3FA] ">
+    <motion.div className="flex gap-12 flex-col lg:flex-row w-full  lg:h-screen justify-center items-center bg-[#EDEAE6] ">
       {sent ? <Notification status={emailStatus} /> : null}
       <motion.section
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "spring", mass: 2, friction: 80, damping: 20 }}
-        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex   overflow-hidden origin-top-left border-r border-b border-black  bg-[#FA6B60] lg:justify-start justify-center lg:rounded-br-[250px]"
+        className="pt-36 md:pt-24 px-12 lg:w-1/2 lg:pb-0 md:pb-44 pb-24 relative w-full h-full flex   overflow-hidden origin-top-left border-r border-b border-black  bg-[#DA7835] lg:justify-start justify-center lg:rounded-br-[250px]"
       >
         <motion.div
           initial={{ opacity: 0 }}
@@ -80,7 +78,7 @@ function MyForm() {
           transition={{ duration: 0.5, delay: 1 }}
           className="flex flex-col"
         >
-          <div className="flex flex-col w-full text-[4vw] pb-12 ">
+          <div className="flex flex-col w-full pb-12 ">
             Get in touch
           </div>
 
@@ -101,19 +99,20 @@ function MyForm() {
               <li>Happy to chill in a pub setting</li>
             </ul>
           </div>
-          <div className="absolute bottom-5 lg:left-0 right-0 md:flex hidden">
+          {/* <div className="absolute top-5 lg:left-0 right-0 md:flex hidden">
             <Image
               src="/Logo.png"
               
               height={205}
               width={205}
               alt="logo"
+              className="invert"
             />
-          </div>
+          </div> */}
         </motion.div>
       </motion.section>
 
-      <section className="lg:w-1/2 w-full h-full relative bg-[#64D3FA] lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
+      <section className="lg:w-1/2 w-full h-full relative bg-[#EDEAE6] lg:pt-0 p-12 lg:py-0 lg:rounded-tl-[250px]">
         <form
           onSubmit={(e) => handleSend(e)}
           className="w-full h-full flex flex-col justify-center items-start pb-12 md:pr-12 "

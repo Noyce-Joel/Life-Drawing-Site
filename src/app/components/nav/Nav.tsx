@@ -115,7 +115,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
     <>
       <div
         
-        className="md:hidden fixed z-40 top-0 right-0 p-12 "
+        className="md:hidden fixed z-40 top-10 right-10 "
       >
         <Bars3Icon className="w-10 h-10 backdrop-blur-sm rounded-full hover:cursor-pointer" onClick={() => handleClick()}/>
       </div>
@@ -188,14 +188,14 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
         )}
       </AnimatePresence>
 
-      <nav className="flex-col md:flex-row px-4 z-40 py-4 absolute">
+      <nav className="flex-col md:flex-row px-4 z-40 pt-2">
         <div className="z-40">
-          <ul className=" flex   rounded-md md:items-center md:justify-start gap-7 px-4 py-1 border-[#0000005f] ">
+          <ul className=" flex   rounded-md md:items-start md:justify-center gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
               <li
               
                 key={index}
-                className={`md:flex hidden items-center ${color} ${hoverColor} justify-center hover:scale-105 z-40 duration-200 hover:cursor-pointer text-[22px]`}
+                className={`md:flex hidden items-center ${color} hover:${hoverColor} justify-center hover:scale-105 z-40 duration-200 hover:cursor-pointer text-[22px] pt-1`}
               >
                 <Link href={page.href}>{page.name}</Link>
               </li>
@@ -206,7 +206,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
                 url="https://www.instagram.com/dog.lifedrawing/"
                 className="hover:scale-110 duration-200"
                 bgColor="transparent"
-                fgColor={hover ? socialsHover : socials}
+                fgColor={hover ? `${socialsHover}` : `${socials}`}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
               />
