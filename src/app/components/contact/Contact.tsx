@@ -63,22 +63,36 @@ function MyForm() {
   };
 
   return (
-    <motion.div className="flex relative  w-full   h-full  ">
+    <motion.div className="flex relative  w-full   h-full placeholder:  ">
       {sent ? <Notification status={emailStatus} /> : null}
-      <div className="flex w-2/5 h-full items-center justify-center">
-        <div className="flex flex-col">
-          <p></p>
+      <div className="lg:flex hidden relative  w-2/5 h-full items-center justify-center">
+        <div className="flex absolute gap-12 top-[16rem] flex-col sm-text- md-text lg-text">
+          <div className="flex flex-col gap-4">
+            <p>For collaborations please include: </p>
+            <ul>
+              <li> - Preferred date/time</li>
+              <li> - Number of people </li>
+              <li> - City and venue</li>
+            </ul>
+          </div>
+          <div className="flex flex-col gap-4">
+            <p>For modelling your dog should be: </p>
+            <ul>
+              <li> - Happy around people and dogs</li>
+              <li> - Relaxed in busy environment</li>
+              <li> - Happy to chill in a pub setting</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <section className=" absolute top-[14rem] right-0 p-4 w-full pt-12 md:pt-0 lg:w-3/5 md:px-24 pb-12 mx-auto  flex h-fit">
-        
+      <section className=" absolute top-[16rem] right-0 p-4 w-full md:pt-0 lg:w-3/5 md:px-24 mx-auto  flex">
         <form
           onSubmit={(e) => handleSend(e)}
-          className="w-full h-full flex flex-col border text-white  border-gray-500 p-12 rounded-[20px] relative items-start pb-12 md:pr-12 "
+          className="w-full h-full flex flex-col border text-white text-[1.4vw] border-gray-500 p-12 rounded-[20px] relative items-start pb-12 md:pr-12 "
         >
           {" "}
           <motion.div
-            initial={{ x: 500, y: 1000 }}
+            initial={{ x: 0, y: 0 }}
             animate={{
               x: 20,
               y: -20,
@@ -97,8 +111,7 @@ function MyForm() {
             className="bg-[#DA7835]  flex w-full rounded-[20px] h-full absolute -z-30 top-0 left-0 "
           />
           <motion.div
-            initial={{ x: 500, y: 1000 }}
-           
+            initial={{ x: 500, y: 400 }}
             animate={{
               x: 40,
               y: -40,
@@ -106,18 +119,17 @@ function MyForm() {
               transition: {
                 type: "spring",
                 duration: 1,
-                delay: 0.6,
-                damping: 22,
+                delay: 0.45,
+                damping: 18,
                 stiffness: 80,
                 friction: 40,
                 mass: 1.6,
               },
             }}
-            className=" bg-[#F7C2BC] flex w-full rounded-[20px] h-full absolute -z-40 top-0 left-0 "
+            className=" bg-[#334D42] flex w-full rounded-[20px] h-full absolute -z-40 top-0 left-0 "
           />
           <motion.div
-            initial={{ x: 500, y: 1000 }}
-           
+            initial={{ x: 1000, y: 0 }}
             animate={{
               x: 60,
               y: -60,
@@ -125,7 +137,7 @@ function MyForm() {
               transition: {
                 type: "spring",
                 duration: 1,
-                delay: 0.4,
+                delay: 0.3,
                 damping: 22,
                 stiffness: 80,
                 friction: 40,
@@ -135,8 +147,7 @@ function MyForm() {
             className="bg-[#FFD04D]  flex w-full rounded-[20px] h-full absolute -z-50 top-0 left-0 "
           />
           <motion.div
-            initial={{ x: 500, y: 1000 }}
-           
+            initial={{ x: 700, y: -1000 }}
             animate={{
               x: 80,
               y: -80,
@@ -144,17 +155,17 @@ function MyForm() {
               transition: {
                 type: "spring",
                 duration: 1,
-                delay: 0.2,
+                delay: 0.15,
                 damping: 22,
                 stiffness: 80,
                 friction: 40,
                 mass: 1.6,
               },
             }}
-            className="bg-[#334D42]  flex w-full rounded-[20px] h-full absolute -z-[60] top-0 left-0 "
+            className="bg-[#F7C2BC]  flex w-full rounded-[20px] h-full absolute -z-[60] top-0 left-0 "
           />
           <div className="mb-4 w-full group relative ">
-            <div className="h-6 overflow-hidden">
+            <div className="h-8 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
@@ -191,7 +202,7 @@ function MyForm() {
             ></motion.div>
           </div>
           <div className="mb-4 w-full relative ">
-            <div className="h-6 overflow-hidden">
+            <div className="h-8 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
@@ -227,7 +238,7 @@ function MyForm() {
             ></motion.div>
           </div>
           <div className="mb-4 mt-4 w-full relative ">
-            <div className="h-6 overflow-hidden">
+            <div className="h-8 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}
@@ -283,7 +294,7 @@ function MyForm() {
             </motion.div>
           </div>
           <div className="mb-4 w-full">
-            <div className="h-6 overflow-hidden">
+            <div className="h-8 overflow-hidden">
               <motion.label
                 initial={{ y: 200, rotate: 25 }}
                 animate={{ y: 0, rotate: 0 }}

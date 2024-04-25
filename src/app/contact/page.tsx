@@ -22,12 +22,12 @@ export default function page() {
           className="relative h-[100vh] w-full  overflow-y-scroll"
         >
           <div className="absolute mx-auto w-full">
-    <Nav
-        color="text-[#000000]"
-        hoverColor="text-[#000000]"
-        socials="#000000"
-        socialsHover="#000000"
-      />
+          <Nav
+            color="text-[#000000]"
+            hoverColor="text-[#DA7835]"
+            socials="#000000"
+            socialsHover="#DA7835"
+          />
       </div>
     
    

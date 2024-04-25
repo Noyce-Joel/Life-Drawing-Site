@@ -12,14 +12,14 @@ export default function ContactSection() {
         <motion.div
          
           animate={{
-            x: hovered ? 30 : 30,
-            y: hovered ? -30 : -30,
-
+            x: hovered ? 30 : 0,
+            y: hovered ? -30 : 0,
+            scale: hovered ? 1 : 0.9,
             transition: {
               type: "spring",
               duration: 1,
               delay: 0.1,
-              damping: 38,
+              damping: 18,
               stiffness: 80,
               friction: 80,
               mass: 1.6,
@@ -32,14 +32,15 @@ export default function ContactSection() {
          
          
           animate={{
-            x: hovered ? 60 : 30,
-            y: hovered ? -60 : -30,
+            x: hovered ? 60 : 0,
+            y: hovered ? -60 : 0,
+            scale: hovered ? 1 : 0.9,
 
             transition: {
               type: "spring",
               duration: 1,
               delay: 0.2,
-              damping: 38,
+              damping: 18,
               stiffness: 80,
               friction: 80,
               mass: 1.6,
@@ -51,14 +52,15 @@ export default function ContactSection() {
         
          
           animate={{
-            x: hovered ? 90 : 30,
-            y: hovered ? -90 : -30,
+            x: hovered ? 90 : 0,
+            y: hovered ? -90 : 0,
+            scale: hovered ? 1 : 0.9,
 
             transition: {
               type: "spring",
               duration: 1,
               delay: 0.3,
-              damping: 38,
+              damping: 18,
               stiffness: 80,
               friction: 80,
               mass: 1.6,
@@ -67,7 +69,7 @@ export default function ContactSection() {
           className="bg-[#FFD04D]  flex w-full rounded-[20px] h-full absolute -z-50 top-0 left-0 "
         />
         <motion.div className="w-full h-full gap-12 flex flex-col">
-          <div className="flex text-[4vw] md:text-[3vw]">GET IN TOUCH</div>
+          <div className="flex text-[4vw] mx-auto md:text-[3vw]">GET IN TOUCH</div>
 
           <p className="sm-text md-text lg-text w-full  ">
             We would love to hear from you. Please feel free to reach out to us

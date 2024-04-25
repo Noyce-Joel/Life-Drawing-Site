@@ -57,7 +57,7 @@ const address = {
 
 const DropDown = ({ handleClick }: { handleClick: () => void }) => {
   return (
-    <div className="flex md:hidden relative bg-[#edeae6] text-[#DA7835] flex-col gap-12 w-full h-full p-4">
+    <div className="flex md:hidden relative bg-[#DA7835] text-[#edeae6] flex-col gap-12 w-full h-full p-4">
       <button
         onClick={() => handleClick()}
         className="absolute top-0 right-0 p-12"
@@ -166,14 +166,14 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
                   url="https://www.instagram.com/dog.lifedrawing/"
                   className="hover:scale-110 duration-200"
                   bgColor="transparent"
-                  fgColor={"black"}
+                  fgColor={"#edeae6"}
                 />
                 <SocialIcon
                   style={{ width: "50px", height: "50px" }}
                   url="https://www.facebook.com/dogdrawing/?locale=en_GB"
                   className="hover:scale-110 duration-200"
                   bgColor="transparent"
-                  fgColor={"black"}
+                  fgColor={"#edeae6"}
                 />
               </div>
 
