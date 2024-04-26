@@ -11,7 +11,6 @@ export default function Why() {
           width={280}
           className="ml-28  h-auto w-[24vw] md:w-[12vw]"
         />
-
       <div className="flex w-full h-full md:flex-row items-center justify-center md:ml-32 flex-col gap-16  ">
         <p className="flex justify-start w-4/5 h-full md:w-2/3 lg-white-text md-white-text  sm-white-text pb-12 text-[#DA7835]">
           {copy.why_white_text}

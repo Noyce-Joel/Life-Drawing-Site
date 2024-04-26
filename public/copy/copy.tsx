@@ -30,4 +30,5 @@ export const copy = {
   events_join:
     "Join Dog Life Drawing, where every stroke of your pencil is a celebration of the beautiful bond between humans and their furry friends ",
   events_cities: "Click on a city to see where we're holding events",
+  contact_section: 'We would love to hear from you. Please feel free to reach out to us about anything from modelling, collaborating, or just to say hi'
 };

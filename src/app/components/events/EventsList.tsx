@@ -14,7 +14,7 @@ export default function EventsList({
   const [isOpen, setIsOpen] = useState(false);
   const [hover, setHover] = useState(false);
   const [plusThree, setPlusThree] = useState(false);
-  
+
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
     if (events.length < 3 && !isMobile) setPlusThree(true);

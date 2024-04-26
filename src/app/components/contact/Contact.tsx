@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Notification from "./Notification";
 
+
+
 function MyForm() {
   const [sent, setSent] = useState<boolean>(false);
   const [emailStatus, setEmailStatus] = useState<string>("");

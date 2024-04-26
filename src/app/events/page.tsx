@@ -3,7 +3,6 @@
 import React from "react";
 import Events from "../components/events/Events";
 import Footer from "../components/footer/Footer";
-
 import { motion } from "framer-motion";
 import Line from "../components/line/Line";
 import Nav from "../components/nav/Nav";
