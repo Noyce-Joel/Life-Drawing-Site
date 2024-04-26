@@ -65,7 +65,7 @@ function MyForm() {
   };
 
   return (
-    <motion.div className="flex relative  w-full   h-full placeholder:  ">
+    <div className="flex relative  w-full   h-full placeholder:  ">
       {sent ? <Notification status={emailStatus} /> : null}
       <div className="lg:flex hidden relative  w-2/5 h-full items-center justify-center">
         <div className="flex absolute gap-12 top-[16rem] flex-col sm-text- md-text lg-text">
@@ -341,7 +341,7 @@ function MyForm() {
           </motion.button>
         </form>
       </section>
-    </motion.div>
+    </div>
   );
 }
 

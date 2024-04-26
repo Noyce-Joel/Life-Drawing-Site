@@ -54,7 +54,7 @@ export default function Gallery({ results }: { results: any }) {
                 initial="initial"
                 className={`flex-none md:p-0 p-4 transition-all duration-500 ease-in-out z-50 hover:cursor-pointer hover:scale-105 ${
                   selectedImage === idx
-                    ? " md:h-[90vh] h-[70vh] w-auto z-50 "
+                    ? " md:h-[80vh] h-[70vh] w-auto z-50 "
                     : "h-[27rem] w-auto"
                 }`}
                 onClick={() =>

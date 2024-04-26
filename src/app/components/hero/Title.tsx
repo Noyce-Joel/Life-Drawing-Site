@@ -5,6 +5,7 @@ import Line from "../line/Line";
 import { motion } from "framer-motion";
 
 
+
 export default function Title({title, tileColor, slogan, image}: {title: string[], tileColor: string, slogan: string, image: string}) {
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function Title({title, tileColor, slogan, image}: {title: string[
         <motion.div 
         
         className="  relative ">
+         
           <motion.div
             initial={{ x: 0, y: 0, opacity: 0 }}
             animate={{opacity: 1, transition: {duration: 0.2, delay: 0.5} }}

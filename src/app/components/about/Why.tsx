@@ -3,7 +3,7 @@ import { copy } from "../../../../public/copy/copy";
 import Image from "next/image";
 export default function Why() {
   return (
-    <article className="flex flex-col relative pt-20 pb-14  ">
+    <section className="flex flex-col relative pt-20 pb-14  ">
      <Image
           src="/4.png"
           alt="dog illustration"
@@ -66,6 +66,6 @@ export default function Why() {
         className=" bg-[#EDEAE6] w-[24vw] md:w-[10vw] pt-24 flex mx-auto  z-40"
       />
       
-    </article>
+    </section>
   );
 }
