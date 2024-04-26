@@ -33,7 +33,7 @@ export default function Gallery({ results }: { results: any }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
-        className="relative z-20 flex h-full  w-full "
+        className="relative z-20 flex h-[60rem]  w-full "
       >
         <motion.div
           variants={container}
@@ -43,7 +43,7 @@ export default function Gallery({ results }: { results: any }) {
             setScrolled(true)
           }, 4000)
             }}
-          className="flex flex-row md:gap-6 overflow-x-scroll items-center md:px-12  w-full h-full"
+          className="flex flex-row md:gap-6 overflow-x-scroll scrollbar-hide items-center md:px-12  w-full h-full"
         >
           {results.resources.map(
             (result: { public_id: any }, idx: React.Key | null | undefined) => (
@@ -54,7 +54,7 @@ export default function Gallery({ results }: { results: any }) {
                 initial="initial"
                 className={`flex-none md:p-0 p-4 transition-all duration-500 ease-in-out z-50 hover:cursor-pointer hover:scale-105 ${
                   selectedImage === idx
-                    ? " md:h-[40rem] h-[70vh] w-auto z-50 "
+                    ? " md:h-[90vh] h-[70vh] w-auto z-50 "
                     : "h-[27rem] w-auto"
                 }`}
                 onClick={() =>

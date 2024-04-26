@@ -3,8 +3,8 @@ import { SocialIcon } from "react-social-icons";
 import Paw from "../loading/Paw";
 export default function Footer() {
   return (
-    <footer className="relative flex w-full md:px-24 py-7 bg-[#EDEAE6] px-12 justify-between  border-t border-[#DA7835] h-[410px] mt-auto ">
-      <div className=" flex flex-col gap-7 absolute ">
+    <footer className="relative flex w-full md:px-24 py-7 bg-[#EDEAE6]  justify-between  border-t border-[#DA7835] h-[410px] mt-auto ">
+      <div className=" flex flex-col gap-7 absolute px-8  ">
         <b className="md:text-[27px] text-[#DA7835] ">Connect</b>{" "}
         <div className="flex z-0 gap-2">
           <SocialIcon
@@ -24,10 +24,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex absolute bottom-10  ">
+      <div className="flex absolute text-center bottom-4 px-4 md:bottom-10  ">
         All rights reserved Liah Edwardes © 2024
       </div>
-      <div className="flex absolute items-center bottom-5 right-24">
+      <div className="md:flex hidden absolute items-center bottom-5 right-24">
      
       <Paw size='50pt' duration={2} delay={0.2}/>
       <div className="pt-2">

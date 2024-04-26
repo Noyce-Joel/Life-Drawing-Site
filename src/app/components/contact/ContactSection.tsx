@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const [hovered, setHovered] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+  }, [setIsMobile])
+
   return (
     <div className="w-full flex relative justify-center  pb-52 md:px-32  ">
-      <div  onMouseOver={() => setHovered(true)} onMouseOut={() => setHovered(false) } className="flex w-full md:w-[54vw] lg:w-1/2 flex-col lg:m-8 p-12 text-[#EDEAE6] items-start rounded-[20px] relative ">
+      <div   className="flex w-4/5 md:w-[54vw] lg:w-1/2 flex-col lg:m-8 p-12 text-[#EDEAE6] items-start rounded-[20px] relative ">
         <div className="bg-[#334D42]  flex w-full rounded-[20px] h-full absolute -z-20 top-0 left-0 " />
         <motion.div
          
           animate={{
-            x: hovered ? 30 : 0,
-            y: hovered ? -30 : 0,
-            scale: hovered ? 1 : 0.9,
+            x: hovered || isMobile ? 30 : 15,
+            y: hovered || isMobile ? -30 : -15,
+            
             transition: {
               type: "spring",
               duration: 1,
@@ -32,9 +39,9 @@ export default function ContactSection() {
          
          
           animate={{
-            x: hovered ? 60 : 0,
-            y: hovered ? -60 : 0,
-            scale: hovered ? 1 : 0.9,
+            x: hovered || isMobile ? 60 : 30,
+            y: hovered || isMobile ? -60 : -30,
+            
 
             transition: {
               type: "spring",
@@ -49,12 +56,12 @@ export default function ContactSection() {
           className=" bg-[#F7C2BC] flex w-full rounded-[20px] h-full absolute -z-40 top-0 left-0 "
         />
         <motion.div
-        
+          
          
           animate={{
-            x: hovered ? 90 : 0,
-            y: hovered ? -90 : 0,
-            scale: hovered ? 1 : 0.9,
+            x: hovered || isMobile ? 90 : 45,
+            y: hovered || isMobile ? -90 : -45,
+            
 
             transition: {
               type: "spring",
@@ -69,14 +76,14 @@ export default function ContactSection() {
           className="bg-[#FFD04D]  flex w-full rounded-[20px] h-full absolute -z-50 top-0 left-0 "
         />
         <motion.div className="w-full h-full gap-12 flex flex-col">
-          <div className="flex text-[4vw] mx-auto md:text-[3vw]">GET IN TOUCH</div>
+          <div className="flex text-[6vw] mx-auto md:text-[3vw]">GET IN TOUCH</div>
 
           <p className="sm-text md-text lg-text w-full  ">
             We would love to hear from you. Please feel free to reach out to us
             about anything from modelling, collaborating, or just to say hi.
           </p>
 
-          <button className="border hover:bg-[#EDEAE6] hover:text-[#DA7835] text-[2.4vw] py-2 px-4 rounded">
+          <button onMouseOver={() => setHovered(true)} onMouseOut={() => setHovered(false) }  className="border hover:bg-[#EDEAE6] hover:text-[#DA7835] transition-all duration-500 text-[2.4vw] py-2 px-4 rounded">
             <Link href="/contact">Contact</Link>
           </button>
         </motion.div>
