@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Notification from "./Notification";
 
-
-
 function MyForm() {
   const [sent, setSent] = useState<boolean>(false);
   const [emailStatus, setEmailStatus] = useState<string>("");
@@ -102,69 +100,69 @@ function MyForm() {
               transition: {
                 type: "spring",
                 duration: 1,
-                delay: 0.8,
-                damping: 22,
+                delay: 1,
+                damping: 16,
                 stiffness: 80,
-                friction: 40,
-                mass: 1.6,
+                friction: 80,
+                mass: 1.4,
               },
             }}
             viewport={{}}
-            className="bg-[#DA7835]  flex w-full rounded-[20px] h-full absolute -z-30 top-0 left-0 "
+            className=" bg-[#334D42] flex w-full rounded-[20px] h-full absolute -z-30 top-0 left-0 "
           />
           <motion.div
-            initial={{ x: 500, y: 400 }}
+            initial={{ x: 0, y: 0, rotateZ: 45 }}
             animate={{
               x: 40,
               y: -40,
-
+              rotateZ: 0,
               transition: {
                 type: "spring",
                 duration: 1,
-                delay: 0.45,
-                damping: 18,
+                delay: 1,
+                damping: 16,
                 stiffness: 80,
-                friction: 40,
-                mass: 1.6,
+                friction: 80,
+                mass: 1.4,
               },
             }}
-            className=" bg-[#334D42] flex w-full rounded-[20px] h-full absolute -z-40 top-0 left-0 "
+            className=" bg-[#FFD04D] flex w-full rounded-[20px] h-full absolute -z-40 top-0 left-0 "
           />
           <motion.div
-            initial={{ x: 1000, y: 0 }}
+            initial={{ x: 0, y: 0, rotateZ: 67.5 }}
             animate={{
               x: 60,
               y: -60,
-
+              rotateZ: 0,
               transition: {
                 type: "spring",
                 duration: 1,
-                delay: 0.3,
-                damping: 22,
+                delay: 1,
+                damping: 16,
                 stiffness: 80,
-                friction: 40,
-                mass: 1.6,
+                friction: 80,
+                mass: 1.4,
               },
             }}
-            className="bg-[#FFD04D]  flex w-full rounded-[20px] h-full absolute -z-50 top-0 left-0 "
+            className="bg-[#F7C2BC]  flex w-full rounded-[20px] h-full absolute -z-50 top-0 left-0 "
           />
           <motion.div
-            initial={{ x: 700, y: -1000 }}
+            initial={{ x: 0, y: 0, rotateZ: 90 }}
             animate={{
               x: 80,
               y: -80,
-
+              rotateZ: 0,
               transition: {
                 type: "spring",
                 duration: 1,
-                delay: 0.15,
-                damping: 22,
+                delay: 1,
+                damping: 16,
                 stiffness: 80,
-                friction: 40,
-                mass: 1.6,
+                friction: 80,
+                mass: 1.4,
               },
             }}
-            className="bg-[#F7C2BC]  flex w-full rounded-[20px] h-full absolute -z-[60] top-0 left-0 "
+            className=" bg-[#DA7835] flex w-full rounded-[20px] h-full absolute -z-[60] top-0 left-0 "
           />
           <div className="mb-4 w-full group relative ">
             <div className="h-8 overflow-hidden">

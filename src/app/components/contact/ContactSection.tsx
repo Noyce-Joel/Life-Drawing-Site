@@ -10,6 +10,7 @@ export interface TileProps {
   hovered: boolean;
   isMobile: boolean;
   z: number;
+  rotateZ?: number;
 }
 
 export function Tile({
@@ -19,13 +20,14 @@ export function Tile({
   finish,
   color,
   z,
+  rotateZ
 }: TileProps) {
   return (
     <motion.div
       animate={{
         x: hovered || isMobile ? finish : start,
         y: hovered || isMobile ? -finish : -start,
-
+        rotateZ: hovered || isMobile ? rotateZ : 0,
         transition: {
           type: "spring",
           duration: 1,
@@ -62,6 +64,7 @@ export default function ContactSection() {
           hovered={hovered}
           isMobile={isMobile}
           z={-40}
+          rotateZ={22.5}
         />
         <Tile
           color="#F7C2BC"
@@ -70,6 +73,7 @@ export default function ContactSection() {
           hovered={hovered}
           isMobile={isMobile}
           z={-50}
+          rotateZ={45}
         />
         <Tile
           color="#DA7835"
@@ -78,6 +82,7 @@ export default function ContactSection() {
           hovered={hovered}
           isMobile={isMobile}
           z={-60}
+          rotateZ={67.5}
         />
 
         <motion.div className="w-full h-full gap-12 flex flex-col">
