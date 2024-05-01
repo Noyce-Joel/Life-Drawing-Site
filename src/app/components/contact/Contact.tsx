@@ -1,5 +1,4 @@
 "use client";
-
 import { sendMail } from "../../services/mail";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
