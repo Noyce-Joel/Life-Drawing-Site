@@ -75,16 +75,17 @@ export default function ContactSection() {
           z={-50}
           rotateZ={45}
         />
-        <Tile
-          color="#DA7835"
-          start={45}
-          finish={75}
-          hovered={hovered}
-          isMobile={isMobile}
-          z={-60}
-          rotateZ={67.5}
-        />
-
+        <div className="md:flex hidden">
+          <Tile
+            color="#DA7835"
+            start={45}
+            finish={75}
+            hovered={hovered}
+            isMobile={isMobile}
+            z={-60}
+            rotateZ={67.5}
+          />
+        </div>
         <motion.div className="w-full h-full gap-12 flex flex-col">
           <div className="flex text-[6vw] mx-auto md:text-[3vw]">
             GET IN TOUCH

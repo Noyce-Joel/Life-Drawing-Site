@@ -87,19 +87,7 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
           </div>
         ))}
       </motion.div>
-      <motion.div
-        variants={container}
-        initial="initial"
-        whileInView="whileInView"
-        exit="exit"
-        className="flex flex-col pt-14 text-[2vh]"
-      >
-        <motion.b variants={address}>Bloc Studios</motion.b>
-        <motion.span variants={address}>Hicks Street,</motion.span>
-        <motion.span variants={address}>Neepsend,</motion.span>
-        <motion.span variants={address}>Sheffield</motion.span>
-        <motion.span variants={address}>S3 8BL</motion.span>
-      </motion.div>
+      
     </div>
   );
 };
@@ -150,7 +138,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
               initial={{ opacity: 0 }}
               animate={{
                 opacity: 1,
-                transition: { duration: 0.5, delay: 1.9 },
+                transition: { duration: 0.5, delay: 1.4 },
               }}
               exit={{
                 opacity: 0,

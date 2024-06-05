@@ -33,7 +33,7 @@ export default function Gallery({ results }: { results: any }) {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 1 } }}
-        className="relative z-20 flex h-[60rem] -mt-16  w-full "
+        className="relative z-20 flex h-[60rem] -mt-32 md:-mt-16  w-full "
       >
         <motion.div
           variants={container}
@@ -77,7 +77,7 @@ export default function Gallery({ results }: { results: any }) {
         
           <motion.div
           animate={{opacity: scrolled ? 0 : 1, transition: {duration: 1}  }}
-            className={`flex absolute top-[10rem] gap-8  w-full justify-center items-center transition-all duration-1000 ease-in-out `}
+            className={`flex absolute top-[14rem] gap-8  w-full justify-center items-center transition-all duration-1000 ease-in-out `}
           >
             <ArrowLeftIcon className="h-4 w-4" />
             Scroll

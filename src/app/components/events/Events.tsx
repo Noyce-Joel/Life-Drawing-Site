@@ -67,25 +67,28 @@ export default function Events({ comp }: { comp: boolean }) {
               <p className={`md:w-4/5 sm-text md-text lg-text`}>
                 {copy.events_join}
               </p>
-              <p className="flex lg-white-text md-white-text  sm-white-text text-[#DA7835]">
-                {copy.sessions_white_text}
+              <p className=" md:w-4/5 sm-text md-text lg-text text-left pb-24">
+                {copy.events_cities}
               </p>
             </>
           )}
-          <p className="md:w-4/5 lg-text md-text sm-text">
-            {copy.sessions_our_dogs}
-          </p>
-          <p className=" md:w-4/5 sm-text md-text lg-text text-left pb-24">
-            {copy.events_cities}
-          </p>
         </div>
       </div>
-
       {Object.entries(eventsByCity).map(([city, cityEvents]: any) => (
         <div key={city}>
           <EventsList events={cityEvents} city={city} />
         </div>
       ))}
+      <div className="text-left md:mt-14 mt-8 relative z-0 items-center justify-center flex flex-col tracking-wider text-pretty  bg-[#EDEAE6]  ">
+        <div className="flex flex-col items-center pt-12 justify-start w-4/5 md:w-3/5 gap-12">
+          <p className="flex lg-white-text md-white-text  sm-white-text text-[#DA7835]">
+            {copy.sessions_white_text}
+          </p>
+          <p className="md:w-4/5 lg-text md-text sm-text">
+            {copy.sessions_our_dogs}
+          </p>
+        </div>
+      </div>
     </>
   );
 }

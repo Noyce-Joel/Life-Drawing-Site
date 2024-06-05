@@ -38,7 +38,7 @@ export default function EventsList({
           }}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
-          className="flex w-3/4 md:w-full justify-center items-center text-[#DA7835] relative flex-col font-semibold text-[20px] md:text-[3.4vw] md:pt-12 hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
+          className="flex w-3/4 md:w-full justify-center items-center text-[#DA7835] relative flex-col font-semibold text-[28px] md:text-[3.4vw]  hover:cursor-pointer hover:scale-[104%] transition-all duration-200"
         >
           {city}
         </div>

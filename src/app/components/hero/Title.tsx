@@ -29,17 +29,17 @@ export default function Title({
       <div className="flex  h-auto absolute top-4 left-0 right-0 justify-center md:justify-start mx-auto">
         <Image src="/Logo.png" alt="logo" height={150} width={150} />
       </div>
-      <div className="flex mt-14 gap-4 px-4 md:px-0 ">
-        <div className="flex w-1/2 h-full flex-col  text-center  gap-8  ">
-          <div className="text-[8vmin] md:text-[5.4vw] flex text-left items-start mx-auto md:mx-28 lg:mx-52 flex-col pt-12 text-[#DA7835]">
-            <div className="whitespace-nowrap h-[12vw] md:h-[7vw]">
+      <div className="flex mt-14 gap-4 px-4 md:px-0 w-full justify-center md:w-auto md:justify-start">
+        <div className="flex md:w-1/2 h-full flex-col  text-center  gap-8  ">
+          <div className="text-[12vmin] md:text-[5.4vw] flex text-left items-start mx-auto md:mx-28 lg:mx-52 flex-col pt-12 text-[#DA7835]">
+            <div className="whitespace-nowrap h-[14vw] md:h-[7vw]">
               <span>{title[0]}</span>
               <span> {title[1]}</span>
             </div>
             <span className=""> {title[2]}</span>
           </div>
 
-          <div className="flex -z-40">
+          <div className="flex md:w-full w-1/4 mx-auto md:mx-0 -z-40">
             <Line duration={2} color="gray" title={false} />
           </div>
           <p className="flex flex-col whitespace-nowrap text-left mx-auto md:mx-28 lg:mx-52 justify-center gap-4 text-[4.4vw] md:text-[2.4vw] italic ">
@@ -51,8 +51,8 @@ export default function Title({
             </span>
           </p>
         </div>
-        <div className="w-full md:pr-4 ">
-          <motion.div className="relative h-fit">
+        <div className="w-full lg:pr-56 md:flex hidden">
+          <motion.div className="relative lg:w-full h-fit">
             <motion.div
               initial={{ x: 0, y: 0, opacity: 0 }}
               animate={{
@@ -72,7 +72,7 @@ export default function Title({
                   mass: 1.2,
                 },
               }}
-              className="lg:w-1/2 h-full  flex"
+              className="w-full h-full  flex"
             >
             <div className="flex w-full md:h-[25rem] lg:h-[35rem] gap-2">
                 <Image
@@ -81,16 +81,9 @@ export default function Title({
                   height={750}
                   width={750}
                   priority={true}
-                  className="rounded-[20px] w-full lg:hover:w-full transition-all duration-700 ease-in-out  lg:w-1/2  object-cover "
+                  className="rounded-[20px] md:flex hidden w-full h-full mt-5 md:mt-0 object-cover "
                 />
-                {/* <Image
-                  src="/HERO.jpg"
-                  alt="dog illustration"
-                  height={750}
-                  width={750}
-                  priority={true}
-                  className="rounded-[20px] object-cover -z-20"
-                /> */}
+                
               
               
                 
@@ -100,17 +93,10 @@ export default function Title({
                   height={750}
                   width={750}
                   priority={true}
-                  className="lg:flex hidden rounded-[20px] hover:w-full transition-all duration-700 ease-in-out  w-1/2  object-cover "
+                  className="md:flex hidden rounded-[20px] w-full  object-cover "
                 />
                 
-                  <Image
-                    src="/Dog-Model2Low.jpeg"
-                    alt="dog illustration"
-                    height={550}
-                    width={550}
-                    priority={true}
-                    className="lg:flex hidden rounded-[20px] hover:w-full transition-all duration-700 ease-in-out w-1/2 object-cover z-10"
-                  />
+                  
                 </div>
               
             </motion.div>
