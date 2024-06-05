@@ -62,10 +62,10 @@ function MyForm() {
   };
 
   return (
-    <div className="flex relative  w-full h-fit placeholder:  ">
+    <div className="flex relative ">
       {sent ? <Notification status={emailStatus} /> : null}
-      <div className="md:flex hidden relative  w-2/5 h-full items-center justify-center">
-        <div className="flex gap-12 mt-32 flex-col sm-text- md-text lg-text">
+      <div className="md:flex hidden relative  w-2/5 items-center justify-center">
+        <div className="flex gap-12 mt-32 flex-col text-[20px] md:text-[1.92vw]">
           <div className="flex flex-col gap-4">
             <p>For collaborations please include: </p>
             <ul>
@@ -84,13 +84,13 @@ function MyForm() {
           </div>
         </div>
       </div>
-      <section className="h-full p-6 w-full pt-12 md:w-3/5 mx-auto flex">
+      <section className="  w-full pt-24 px-8 md:w-3/5 mx-auto flex">
         <form
           onSubmit={(e) => handleSend(e)}
-          className="w-full h-auto md:h-[40rem] flex flex-col border overflow-hidden overflow-y-scroll text-white md:text-[1.4vw] bg-[#334D42] border-gray-500 md:p-5 p-4 lg:p-12 rounded-[20px] relative items-start  "
+          className="w-full h-full md:h-full flex flex-col border overflow-hidden overflow-y-scroll text-white md:text-[1.4vw] bg-[#334D42] border-gray-500 md:p-5 p-4 lg:p-12 rounded-[20px] relative items-start  "
         >
           {" "}
-          <div className="mb-4 w-full group relative ">
+          <div className="mb-4 w-full h-full group relative ">
             <div className="h-fit overflow-hidden">
               <motion.label
                 initial={{ y: 280, rotate: 25 }}
@@ -129,7 +129,7 @@ function MyForm() {
               className="w-full  -z-40 origin-right border-b border-[0.8px]"
             ></motion.div>
           </div>
-          <div className="mb-4 w-full relative ">
+          <div className="mb-4 w-full h-full relative ">
             <div className="h-fit overflow-hidden">
               <motion.label
                 initial={{ y: 280, rotate: 25 }}
@@ -166,7 +166,7 @@ function MyForm() {
               className="w-full  -z-40 origin-right  border-b border-[0.8px]"
             ></motion.div>
           </div>
-          <div className="mb-4 mt-4 w-full relative ">
+          <div className="mb-4 mt-4 h-full w-full relative ">
             <div className="h-fit overflow-hidden">
               <motion.label
                 initial={{ y: 280, rotate: 25 }}
@@ -222,7 +222,7 @@ function MyForm() {
               </label>
             </motion.div>
           </div>
-          <div className=" w-full pb-0 md:pb-2">
+          <div className=" w-full h-full pb-0 md:pb-12">
             <div className="h-fit overflow-hidden">
               <motion.label
                 initial={{ y: 280, rotate: 25 }}
@@ -263,7 +263,7 @@ function MyForm() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
             type="submit"
-            className=" border mt-12 md:mt-12 border-black hover:bg-[#FA6B60]  font-bold  px-4 rounded focus:outline-none focus:shadow-outline"
+            className=" border mt-12 md:mt-4 border-black hover:bg-[#FA6B60]  font-bold  px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Submit
           </motion.button>
