@@ -26,7 +26,7 @@ export default function Notification({ status }: { status: string }) {
         <motion.div
           initial={{ x: 400 }}
           animate={{ x: 0, transition: { duration: 0.2 } }}
-          className="fixed bottom-10 right-0 left-0 mx-auto bg-[#334D42]  w-fit z-50 rounded-md  p-4"
+          className="fixed bottom-4  left-4  bg-[#334D42]  w-fit z-50 rounded-md  p-4"
         >
           <div className="flex gap-3 z-50">
             <div className="flex justify-evenly items-center">

@@ -19,7 +19,7 @@ export default function Loading({
         height={size}
         viewBox="0 0 292.000000 272.000000"
         preserveAspectRatio="xMidYMid meet"
-        strokeWidth={44}
+        strokeWidth={54}
       >
         <g
           transform="translate(0.000000,272.000000) scale(0.100000,-0.100000)"

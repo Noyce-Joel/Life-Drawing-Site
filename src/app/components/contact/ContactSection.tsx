@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import {copy} from "../../../../public/copy/copy";
+import { copy } from "../../../../public/copy/copy";
 export interface TileProps {
   color: string;
   start: number;
@@ -20,13 +20,13 @@ export function Tile({
   finish,
   color,
   z,
-  rotateZ
+  rotateZ,
 }: TileProps) {
   return (
     <motion.div
       animate={{
-        x: hovered || isMobile ? finish : start,
-        y: hovered || isMobile ? -finish : -start,
+        x: hovered ? finish : start,
+        y: hovered ? -finish : -start,
         rotateZ: hovered || isMobile ? rotateZ : 0,
         transition: {
           type: "spring",
@@ -53,7 +53,7 @@ export default function ContactSection() {
   }, [setIsMobile]);
 
   return (
-    <div className="w-full flex relative justify-center  pb-52 md:px-32  ">
+    <div className="w-full flex relative justify-center -mt-12 pb-52 md:px-32  ">
       <div className="flex w-4/5 md:w-[54vw] lg:w-1/2 flex-col lg:m-8 p-12 text-[#EDEAE6] items-start rounded-[20px] relative ">
         <div className="bg-[#334D42]  flex w-full rounded-[20px] h-full absolute -z-20 top-0 left-0 " />
 
@@ -93,14 +93,15 @@ export default function ContactSection() {
           <p className="sm-text md-text lg-text w-full  ">
             {copy.contact_section}
           </p>
-
-          <button
-            onMouseOver={() => setHovered(true)}
-            onMouseOut={() => setHovered(false)}
-            className="border hover:bg-[#EDEAE6] hover:text-[#DA7835] transition-all duration-500 text-[2.4vw] py-2 px-4 rounded"
-          >
-            <Link href="/contact">Contact</Link>
-          </button>
+          <Link href="/contact" className="mx-auto">
+            <button
+              onMouseOver={() => setHovered(true)}
+              onMouseOut={() => setHovered(false)}
+              className="border hover:bg-[#EDEAE6] hover:text-[#DA7835] transition-all duration-500 text-[2.4vw] py-2 px-4 rounded"
+            >
+              Contact
+            </button>
+          </Link>
         </motion.div>
       </div>
       <div className="absolute  bottom-0  left-0 md:left-20  -z-0 w-[24vw] md:w-[14vw] flex">

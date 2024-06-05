@@ -22,7 +22,7 @@ export default function Line({duration, title, color}: {duration: number, title:
     }}
     viewport={{once: true}}
     style={{borderColor: `${color}`}}
-    className={`w-full origin-right border-b  ${title ? 'border-[2px] bottom-0' : 'border-[1.2px] bottom-0 md:bottom-0'}`}
+    className={`w-full origin-right opacity-75 border-b  ${title ? 'border-[0.8px] bottom-0' : 'border-[0.8px] bottom-0 md:bottom-0'}`}
   ></motion.div>
 </>
   )

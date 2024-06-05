@@ -16,7 +16,7 @@ export default function Models() {
           {copy.models_split_text}
         </p>
       </article>
-      <div className="absolute w-[12vw] -bottom-40 right-40 md:flex hidden -z-40">
+      <div className="absolute w-[12vw] -bottom-4 right-24 md:flex hidden -z-40">
         <Image
           src="/5.png"
           alt="dog illustration"
