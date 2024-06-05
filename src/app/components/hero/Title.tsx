@@ -10,11 +10,13 @@ export default function Title({
   tileColor,
   slogan,
   image,
+  image2
 }: {
   title: string[];
   tileColor: string;
   slogan: string;
   image: string;
+  image2: string
 }) {
   const [mobile, setMobile] = useState(false);
   useEffect(() => {
@@ -67,7 +69,7 @@ export default function Title({
                 />
 
                 <Image
-                  src="/HERO.jpg"
+                  src={image2}
                   alt="dog illustration"
                   height={750}
                   width={750}

@@ -35,7 +35,7 @@ export default function page() {
         socials="#000000"
         socialsHover="#DA7835"
       />
-     <Title slogan='Come along and have some fun' image='/drawingLow.jpg' title={['OUR', 'EVENTS']} tileColor='#334D42'/>
+     <Title slogan='Come along and have some fun' image='/drawingLow.jpg' image2='/Dog-Model2Low.jpeg' title={['OUR', '', 'EVENTS']} tileColor='#334D42'/>
 
       <motion.div
         initial={{ opacity: 0 }}

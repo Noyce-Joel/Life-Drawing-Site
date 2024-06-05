@@ -12,7 +12,7 @@ export default function Why() {
           className="ml-28  h-auto w-[24vw] md:w-[12vw]"
         />
       <div className="flex w-full h-full md:flex-row items-center justify-center md:ml-32 flex-col gap-16  ">
-        <p className="flex justify-start w-4/5 h-full md:w-2/3 lg-white-text md-white-text  sm-white-text pb-12 text-[#DA7835]">
+        <p className="flex justify-start w-4/5 h-full md:w-2/3 text-[22.5px] md:text-[2.6vw] pb-12 text-[#DA7835]">
           {copy.why_white_text}
         </p>
         <div className=" flex md:w-full w-[90vw] h-full  relative">
@@ -37,7 +37,7 @@ export default function Why() {
             className="rounded-[10px] z-10 flex w-full"
           />
         </div>
-        <div className="flex flex-col gap-12 pt-12 md:pt-24 sm-text md-text lg-text w-4/5 md:w-3/5 mx-auto justify-center items-center md:justify-start md:items-start ">
+        <div className="flex flex-col gap-12 pt-12 md:pt-24 text-[20px] md:text-[1.92vw] w-4/5 md:w-3/5 mx-auto justify-center items-center md:justify-start md:items-start ">
           <div className="flex md:w-4/5 flex-col gap-4">
             <b className="font-semibold  whitespace-nowrap  text-[#DA7835]">
               Creativity Unleashed

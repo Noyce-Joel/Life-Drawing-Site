@@ -54,7 +54,7 @@ export default function ContactSection() {
 
   return (
     <div className="w-full flex relative justify-center md:-mt-12 -mt-24 pb-52 md:px-32  ">
-      <div className="flex w-4/5 md:w-[54vw] lg:w-1/2 flex-col lg:m-8 p-12 text-[#EDEAE6] items-start rounded-[20px] relative ">
+      <div className="flex w-4/5 md:w-[45rem] flex-col lg:m-8 p-12 text-[#EDEAE6] items-start rounded-[20px] relative ">
         <div className="bg-[#334D42]  flex w-full rounded-[20px] h-full absolute -z-20 top-0 left-0 " />
 
         <Tile
@@ -91,7 +91,7 @@ export default function ContactSection() {
             GET IN TOUCH
           </div>
 
-          <p className=" w-full text-[4vw] md:text-[2.2] lg:text-[2vw] ">
+          <p className=" w-full text-[20px] md:text-[1.92vw] lg:text-[2vw] ">
             {copy.contact_section}
           </p>
           <Link href="/contact" className="mx-auto">
