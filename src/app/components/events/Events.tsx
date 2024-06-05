@@ -52,7 +52,7 @@ export default function Events({ comp }: { comp: boolean }) {
       </div>
       </div> */}
 
-      <div className="text-left mt-14 relative z-10 items-center justify-center flex flex-col tracking-wider text-pretty  bg-[#EDEAE6]  ">
+      <div className="text-left mt-14 relative z-0 items-center justify-center flex flex-col tracking-wider text-pretty  bg-[#EDEAE6]  ">
         <Image
           src="/1.png"
           alt="dog illustration"
