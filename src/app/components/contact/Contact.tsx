@@ -84,7 +84,7 @@ function MyForm() {
           </div>
         </div>
       </div>
-      <section className=" pt-12 pb-12 w-full px-8 md:w-3/5 mx-auto flex">
+      <section className=" pt-12 pb-8 md:pb-12 w-full px-4 md:w-3/5 mx-auto flex">
         <form
           onSubmit={(e) => handleSend(e)}
           className="w-full h-full md:h-full flex flex-col border overflow-hidden overflow-y-scroll text-white md:text-[1.4vw] bg-[#334D42] border-gray-500 md:p-5 p-4 lg:p-12 rounded-[20px] relative items-start  "
