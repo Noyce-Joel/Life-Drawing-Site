@@ -13,6 +13,7 @@ export default function Footer() {
             className="hover:scale-110 duration-200"
             bgColor="transparent"
             fgColor={"#000000"}
+            target='_blank'
           />
           <SocialIcon
             style={{ width: "50px", height: "50px" }}
@@ -20,6 +21,7 @@ export default function Footer() {
             className="hover:scale-110 duration-200"
             bgColor="transparent"
             fgColor={"#000000"}
+            target='_blank'
           />
         </div>
       </div>
