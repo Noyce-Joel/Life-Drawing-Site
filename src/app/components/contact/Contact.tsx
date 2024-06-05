@@ -65,7 +65,7 @@ function MyForm() {
     <div className="flex relative ">
       {sent ? <Notification status={emailStatus} /> : null}
       <div className="md:flex hidden relative  w-2/5 items-center justify-center">
-        <div className="flex gap-12 mt-32 flex-col text-[20px] md:text-[1.92vw]">
+        <div className="flex gap-12 flex-col text-[20px] md:text-[1.92vw]">
           <div className="flex flex-col gap-4">
             <p>For collaborations please include: </p>
             <ul>
@@ -84,7 +84,7 @@ function MyForm() {
           </div>
         </div>
       </div>
-      <section className="  w-full pt-24 px-8 md:w-3/5 mx-auto flex">
+      <section className=" pt-12 pb-12 w-full px-8 md:w-3/5 mx-auto flex">
         <form
           onSubmit={(e) => handleSend(e)}
           className="w-full h-full md:h-full flex flex-col border overflow-hidden overflow-y-scroll text-white md:text-[1.4vw] bg-[#334D42] border-gray-500 md:p-5 p-4 lg:p-12 rounded-[20px] relative items-start  "

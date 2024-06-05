@@ -29,9 +29,9 @@ export default function page() {
           socials="#000000"
           socialsHover="#DA7835"
         />
-        <div className="h-full">
+        
         <Contact />
-        </div>
+        
         <Footer />
       </motion.div>
     </AnimatePresence>
