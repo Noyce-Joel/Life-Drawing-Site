@@ -62,10 +62,10 @@ function MyForm() {
   };
 
   return (
-    <div className="flex relative  w-full   h-full placeholder:  ">
+    <div className="flex relative  w-full h-fit placeholder:  ">
       {sent ? <Notification status={emailStatus} /> : null}
-      <div className="lg:flex hidden relative  w-2/5 h-full items-center justify-center">
-        <div className="flex absolute gap-12 top-[16rem] flex-col sm-text- md-text lg-text">
+      <div className="md:flex hidden relative  w-2/5 h-full items-center justify-center">
+        <div className="flex gap-12 mt-32 flex-col sm-text- md-text lg-text">
           <div className="flex flex-col gap-4">
             <p>For collaborations please include: </p>
             <ul>
@@ -84,10 +84,10 @@ function MyForm() {
           </div>
         </div>
       </div>
-      <section className="h-full p-6 w-full pt-36 lg:w-3/5 mx-auto flex">
+      <section className="h-full p-6 w-full pt-12 md:w-3/5 mx-auto flex">
         <form
           onSubmit={(e) => handleSend(e)}
-          className="w-full h-full flex flex-col border overflow-hidden overflow-y-scroll text-white md:text-[1.4vw] bg-[#334D42] border-gray-500 md:p-12 p-4 rounded-[20px] relative items-start pb-12 md:pr-12 "
+          className="w-full h-auto md:h-[40rem] flex flex-col border overflow-hidden overflow-y-scroll text-white md:text-[1.4vw] bg-[#334D42] border-gray-500 md:p-5 p-4 lg:p-12 rounded-[20px] relative items-start  "
         >
           {" "}
           <div className="mb-4 w-full group relative ">
@@ -182,7 +182,7 @@ function MyForm() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 0.7 }}
-              className=" pt-4 pb-7 flex md:flex-row flex-col gap-4"
+              className=" pt-4 pb-2 flex md:flex-row flex-col gap-4"
             >
               <label className="flex gap-2">
                 <input
@@ -222,7 +222,7 @@ function MyForm() {
               </label>
             </motion.div>
           </div>
-          <div className="mb-4 w-full h-full pb-12">
+          <div className=" w-full pb-0 md:pb-2">
             <div className="h-fit overflow-hidden">
               <motion.label
                 initial={{ y: 280, rotate: 25 }}
@@ -240,7 +240,7 @@ function MyForm() {
               value={formData.body}
               onChange={handleChange}
               required
-              className="w-full h-full px-3 py-2 focus:outline-none focus:border-yellow-500 focus:text-yellow-500 bg-transparent"
+              className="w-full h-full px-3 focus:outline-none focus:border-yellow-500 focus:text-yellow-500 bg-transparent"
             />
             <motion.div
               initial={{ scale: 0 }}
@@ -255,7 +255,7 @@ function MyForm() {
                 },
               }}
               viewport={{once: true}}
-              className="w-full -z-40 origin-right border-b  border-[0.8px]"
+              className="w-full -z-40 origin-right border-t  border-[0.8px]"
             ></motion.div>
           </div>
           <motion.button
@@ -263,7 +263,7 @@ function MyForm() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
             type="submit"
-            className=" border  border-black hover:bg-[#FA6B60]  font-bold  px-4 rounded focus:outline-none focus:shadow-outline"
+            className=" border mt-12 md:mt-12 border-black hover:bg-[#FA6B60]  font-bold  px-4 rounded focus:outline-none focus:shadow-outline"
           >
             Submit
           </motion.button>

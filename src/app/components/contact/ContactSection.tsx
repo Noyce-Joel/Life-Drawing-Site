@@ -53,7 +53,7 @@ export default function ContactSection() {
   }, [setIsMobile]);
 
   return (
-    <div className="w-full flex relative justify-center -mt-12 pb-52 md:px-32  ">
+    <div className="w-full flex relative justify-center md:-mt-12 -mt-24 pb-52 md:px-32  ">
       <div className="flex w-4/5 md:w-[54vw] lg:w-1/2 flex-col lg:m-8 p-12 text-[#EDEAE6] items-start rounded-[20px] relative ">
         <div className="bg-[#334D42]  flex w-full rounded-[20px] h-full absolute -z-20 top-0 left-0 " />
 
@@ -87,11 +87,11 @@ export default function ContactSection() {
           />
         </div>
         <motion.div className="w-full h-full gap-12 flex flex-col">
-          <div className="flex text-[6vw] mx-auto md:text-[3vw]">
+          <div className="flex text-[6vw] mx-auto md:text-[4vw]">
             GET IN TOUCH
           </div>
 
-          <p className="sm-text md-text lg-text w-full  ">
+          <p className=" w-full text-[4vw] md:text-[2.2] lg:text-[2vw] ">
             {copy.contact_section}
           </p>
           <Link href="/contact" className="mx-auto">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Line from "../line/Line";
 import { motion } from "framer-motion";
 import Paw from "../loading/Paw";
+import Link from "next/link";
 export default function Title({
   title,
   tileColor,
@@ -27,7 +28,9 @@ export default function Title({
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="flex  h-auto absolute top-4 left-0 right-0 justify-center md:justify-start mx-auto">
-        <Image src="/Logo.png" alt="logo" height={150} width={150} />
+        <Link href="/">
+          <Image src="/Logo.png" alt="logo" height={150} width={150} />
+        </Link>
       </div>
       <div className="flex mt-14 gap-4 px-4 md:px-0 w-full justify-center md:w-auto md:justify-start">
         <div className="flex md:w-1/2 h-full flex-col  text-center  gap-8  ">
@@ -74,7 +77,7 @@ export default function Title({
               }}
               className="w-full h-full  flex"
             >
-            <div className="flex w-full md:h-[25rem] lg:h-[35rem] gap-2">
+              <div className="flex w-full md:h-[25rem] lg:h-[35rem] gap-2">
                 <Image
                   src={image}
                   alt="dog illustration"
@@ -83,10 +86,7 @@ export default function Title({
                   priority={true}
                   className="rounded-[20px] md:flex hidden w-full h-full mt-5 md:mt-0 object-cover "
                 />
-                
-              
-              
-                
+
                 <Image
                   src="/HERO.jpg"
                   alt="dog illustration"
@@ -95,10 +95,7 @@ export default function Title({
                   priority={true}
                   className="md:flex hidden rounded-[20px] w-full  object-cover "
                 />
-                
-                  
-                </div>
-              
+              </div>
             </motion.div>
           </motion.div>
         </div>
