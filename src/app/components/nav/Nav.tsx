@@ -9,7 +9,6 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-
 const pages = [
   { name: "Home", href: "/" },
   { name: "Events", href: "/events", icon: CalendarIcon },
@@ -76,23 +75,27 @@ const DropDown = ({ handleClick }: { handleClick: () => void }) => {
             key={index}
             className=" -m-4 w-screen flex flex-col overflow-hidden"
           >
-            <motion.div
-              variants={item}
-              className="text-[5vh] font-bold -mb-2 "
-            >
-              <Link href={page.href}>
-              {page.name}
-              </Link>
+            <motion.div variants={item} className="text-[5vh] font-bold -mb-2 ">
+              <Link href={page.href}>{page.name}</Link>
             </motion.div>
           </div>
         ))}
       </motion.div>
-      
     </div>
   );
 };
 
-export default function Nav({color, hoverColor, socials, socialsHover}: {color: string, hoverColor: string, socials: string, socialsHover: string}) {
+export default function Nav({
+  color,
+  hoverColor,
+  socials,
+  socialsHover,
+}: {
+  color: string;
+  hoverColor: string;
+  socials: string;
+  socialsHover: string;
+}) {
   const [mobileMenu, setMobileMenu] = useState<boolean>(false);
   const [hover, setHover] = useState<boolean>(false);
   const [hoverTwo, setHoverTwo] = useState<boolean>(false);
@@ -101,11 +104,11 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
   };
   return (
     <>
-      <div
-        
-        className="md:hidden fixed z-40 top-10 right-10 "
-      >
-        <Bars3Icon className="w-10 h-10 backdrop-blur-sm rounded-full hover:cursor-pointer" onClick={() => handleClick()}/>
+      <div className="md:hidden fixed z-40 top-10 right-10 ">
+        <Bars3Icon
+          className="w-10 h-10 backdrop-blur-sm rounded-full hover:cursor-pointer"
+          onClick={() => handleClick()}
+        />
       </div>
       <AnimatePresence>
         {mobileMenu && (
@@ -155,7 +158,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
                   className="hover:scale-110 duration-200"
                   bgColor="transparent"
                   fgColor={"#edeae6"}
-                  target='_blank'
+                  target="_blank"
                 />
                 <SocialIcon
                   style={{ width: "50px", height: "50px" }}
@@ -163,7 +166,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
                   className="hover:scale-110 duration-200"
                   bgColor="transparent"
                   fgColor={"#edeae6"}
-                  target='_blank'
+                  target="_blank"
                 />
               </div>
 
@@ -183,7 +186,6 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
           <ul className=" flex   rounded-md md:items-start md:justify-center gap-7 px-4 py-1 border-[#0000005f] ">
             {pages.map((page, index) => (
               <li
-              
                 key={index}
                 className={`md:flex hidden items-center ${color} hover:${hoverColor} justify-center hover:scale-105 z-40 duration-200 hover:cursor-pointer text-[22px] pt-1`}
               >
@@ -199,6 +201,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
                 fgColor={hover ? `${socialsHover}` : `${socials}`}
                 onMouseOver={() => setHover(true)}
                 onMouseOut={() => setHover(false)}
+                target="_blank"
               />
               <SocialIcon
                 style={{ width: "40px", height: "40px" }}
@@ -208,6 +211,7 @@ export default function Nav({color, hoverColor, socials, socialsHover}: {color: 
                 fgColor={hoverTwo ? socialsHover : socials}
                 onMouseOver={() => setHoverTwo(true)}
                 onMouseOut={() => setHoverTwo(false)}
+                target="_blank"
               />
             </div>
           </ul>
