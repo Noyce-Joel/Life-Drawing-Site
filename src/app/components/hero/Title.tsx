@@ -32,7 +32,7 @@ export default function Title({
           <Image src="/Logo.png" alt="logo" height={150} width={150} />
         </Link>
       </div>
-      <div className="flex mt-14 gap-4 px-4 md:px-0 w-full justify-center md:w-auto md:justify-start">
+      <div className="flex mt-14 px-4 md:px-0 w-full justify-center md:w-auto md:justify-start">
         <div className="flex md:w-1/2 h-full flex-col  text-center  gap-8  ">
           <div className="text-[12vmin] md:text-[5.4vw] flex text-left items-start mx-auto md:mx-28 lg:mx-52 flex-col pt-12 text-[#DA7835]">
             <div className="whitespace-nowrap h-[14vw] md:h-[7vw]">
@@ -56,27 +56,7 @@ export default function Title({
         </div>
         <div className="w-full lg:pr-56 md:flex hidden">
           <motion.div className="relative lg:w-full h-fit">
-            <motion.div
-              initial={{ x: 0, y: 0, opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: { duration: 0.2, delay: 0.5 },
-              }}
-              whileInView={{
-                x: tileDistance,
-                y: tileDistance,
-                transition: {
-                  type: "spring",
-                  duration: 1,
-                  delay: 1,
-                  damping: 18,
-                  stiffness: 80,
-                  friction: 40,
-                  mass: 1.2,
-                },
-              }}
-              className="w-full h-full  flex"
-            >
+            <div className="w-full h-full  flex">
               <div className="flex w-full md:h-[25rem] lg:h-[35rem] gap-2">
                 <Image
                   src={image}
@@ -96,7 +76,7 @@ export default function Title({
                   className="md:flex hidden rounded-[20px] w-full  object-cover "
                 />
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
