@@ -24,7 +24,6 @@ export default function Title({
     }
   }, []);
 
-  const tileDistance = mobile ? 0 : 0;
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="flex  h-auto absolute top-4 left-0 right-0 justify-center md:justify-start mx-auto">
