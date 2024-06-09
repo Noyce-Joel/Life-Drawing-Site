@@ -10,15 +10,17 @@ export default function Title({
   tileColor,
   slogan,
   image,
-  image2
+  image2,
 }: {
   title: string[];
   tileColor: string;
   slogan: string;
   image: string;
-  image2: string
+  image2: string;
 }) {
   const [mobile, setMobile] = useState(false);
+  const [loaded1, setLoaded1] = useState(false);
+  const [loaded2, setLoaded2] = useState(false);
   useEffect(() => {
     const isMobile = global.window.innerWidth < 768;
     if (isMobile) {
@@ -65,7 +67,11 @@ export default function Title({
                   height={750}
                   width={750}
                   priority={true}
-                  className="rounded-[20px] md:flex hidden w-full h-full mt-5 md:mt-0 object-cover "
+                  className="rounded-[20px] md:flex hidden w-full h-full mt-5 md:mt-0 object-cover transition-all duration-300 "
+                  style={{
+                    opacity: loaded1 ? "100%" : "0%",
+                  }}
+                  onLoad={() => setLoaded1(true)}
                 />
 
                 <Image
@@ -74,7 +80,11 @@ export default function Title({
                   height={750}
                   width={750}
                   priority={true}
-                  className="md:flex hidden rounded-[20px] w-full  object-cover "
+                  className="md:flex hidden rounded-[20px] w-full  object-cover transition-all duration-300"
+                  style={{
+                    opacity: loaded2 ? "100%" : "0%",
+                  }}
+                  onLoad={() => setLoaded2(true)}
                 />
               </div>
             </div>
