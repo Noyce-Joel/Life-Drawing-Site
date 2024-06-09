@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Our dog life drawing sessions blend the joy of artistic expression with the undeniable charm of our favourite furry friends. Whether you're an experienced artist or a complete novice, our sessions cater to all skill levels. ",
   keywords:
     "anomaly, dogs, drawing, art, life drawing, sheffield, nottingham, york, leeds, life, events, Leeds, workshop, ",
-  icons: "/siteLogo.ico",
+  icons: "/Logo.png",
   openGraph: {
     title: "Dog Life Drawing",
     description:

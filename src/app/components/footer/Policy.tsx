@@ -1,3 +1,4 @@
+import { XMarkIcon } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 const container = {
@@ -28,10 +29,16 @@ const item = {
     transition: { duration: 0.7, ease: "easeInOut" },
   },
 };
-const Sp = () => {
+const Sp = ({ closeModal }: { closeModal: (e: any) => void }) => {
   return (
     <>
-      <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-8">
+      <div className="max-w-4xl mx-auto p-6 bg-white shadow-md  relative rounded-lg mt-8">
+        <button
+          onClick={closeModal}
+          className="absolute sm:top-4 sm:right-4 top-2 right-2"
+        >
+          <XMarkIcon className="w-4 h-6 " />
+        </button>
         <h1 className="text-3xl font-bold mb-4 text-center text-gray-900">
           Dog Life Drawing Safety Policy
         </h1>
@@ -109,9 +116,15 @@ const Sp = () => {
   );
 };
 
-const Dpp = () => {
+const Dpp = ({ closeModal }: { closeModal: (e: any) => void }) => {
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-8">
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md relative rounded-lg mt-8">
+      <button
+        onClick={closeModal}
+        className="absolute sm:top-4 sm:right-4 top-2 right-2"
+      >
+        <XMarkIcon className="w-4 h-6 " />
+      </button>
       <h2 className="text-3xl font-bold mb-4 text-center text-gray-900">
         Data Protection Policy
       </h2>
@@ -249,9 +262,8 @@ export function SafteyPolicy() {
                   y: 0,
                   opacity: 1,
                   transition: {
-                    duration: 0.5,
                     type: "spring",
-                    friction: 90,
+                    friction: 50,
                     damping: 25,
                   },
                 }}
@@ -260,16 +272,15 @@ export function SafteyPolicy() {
                   opacity: 0,
 
                   transition: {
-                    duration: 1,
                     type: "spring",
-                    friction: 90,
+                    friction: 50,
                     damping: 20,
                   },
                 }}
                 onClick={(e) => e.stopPropagation()}
-                className="overflow-y-scroll flex z-50 my-12 sm:mx-12"
+                className="overflow-y-scroll flex z-50 my-12 mx-4 sm:mx-12"
               >
-                <Sp />
+                <Sp closeModal={(e:any) => closeModal(e)} />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -325,7 +336,7 @@ export function SafteyPolicy() {
                 onClick={(e) => e.stopPropagation()}
                 className="overflow-y-scroll flex z-50 my-12 mx-4 sm:mx-20"
               >
-                <Dpp />
+                <Dpp closeModal={(e: any) => closeModal(e)} />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0 }}
