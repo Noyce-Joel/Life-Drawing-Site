@@ -28,10 +28,10 @@ export default function Footer() {
       </div>
 
       <div className="flex absolute text-left bottom-4 px-8 md:bottom-10 flex-col  ">
-        <div>All rights reserved Liah Edwardes © 2024</div>
-        <div>
+        <div className="z-50">
           <SafteyPolicy />
         </div>
+        <div>All rights reserved Liah Edwardes © 2024</div>
       </div>
       <div className="lg:flex hidden absolute items-center bottom-5 right-24">
         <Paw size="50pt" duration={2} delay={0.2} />
