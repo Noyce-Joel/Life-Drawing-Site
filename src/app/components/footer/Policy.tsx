@@ -94,7 +94,7 @@ const Sp = () => {
               We welcome feedback from our participants to help us continuously
               improve our safety measures and event experience. If you have any
               concerns or suggestions regarding safety at our Dog Life Drawing
-              events, please don't hesitate to contact us.
+              events, please don&apos;t hesitate to contact us.
             </p>
           </li>
         </ol>
@@ -109,144 +109,6 @@ const Sp = () => {
   );
 };
 
-export function SafteyPolicy() {
-  const [safetyPolicyVisible, setSafteyPolicyVisible] = useState(false);
-  const [dataProtectionPolicyVisible, setDataProtectionPolicyVisible] =
-    useState(false);
-  const closeModal = (e: any) => {
-    e.stopPropagation();
-    setSafteyPolicyVisible(false);
-    setDataProtectionPolicyVisible(false)
-
-  };
-  return (
-    <>
-      <div className=" flex flex-col">
-        <button onClick={() => setSafteyPolicyVisible(true)}>
-          <h1 className='text-gray-900/50 flex' >Safety Policy</h1>
-        </button>
-        <button onClick={() => setDataProtectionPolicyVisible(true)}>
-          <h1 className='text-gray-900/50 flex'>Data Protection Policy</h1>
-        </button>
-      </div>
-      <AnimatePresence mode="wait">
-        {safetyPolicyVisible && (
-          <motion.div
-            variants={container}
-            initial="initial"
-            whileInView="whileInView"
-            exit="exit"
-          >
-            <div className="h-full fixed top-0 left-0 w-full flex items-start justify-center overflow-y-scroll">
-              <motion.div
-                initial={{ y: 500, opacity: 0 }}
-                animate={{
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                    duration: 0.5,
-                    type: "spring",
-                    friction: 90,
-                    damping: 25,
-                  },
-                }}
-                exit={{
-                  y: 500,
-                  opacity: 0,
-
-                  transition: {
-                    duration: 1,
-                    type: "spring",
-                    friction: 90,
-                    damping: 20,
-                  },
-                }}
-                onClick={(e) => e.stopPropagation()}
-                className="overflow-y-scroll flex z-50 my-12 sm:mx-12"
-              >
-                <Sp />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  transition: {
-                    duration: 0.7,
-                  },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: {
-                    duration: 0.7,
-                  },
-                }}
-                onClick={closeModal}
-                className="fixed flex w-full h-full z-40 top-0 left-0 bg-gray-900/50"
-              />
-            </div>
-          </motion.div>
-        )}
-         {dataProtectionPolicyVisible && (
-          <motion.div
-            variants={container}
-            initial="initial"
-            whileInView="whileInView"
-            exit="exit"
-          >
-            <div className="h-full fixed top-0 left-0 w-full flex items-start justify-center overflow-y-scroll">
-              <motion.div
-                initial={{ y: 500, opacity: 0 }}
-                animate={{
-                  y: 0,
-                  opacity: 1,
-                  transition: {
-                    duration: 0.5,
-                    type: "spring",
-                    friction: 90,
-                    damping: 25,
-                  },
-                }}
-                exit={{
-                  y: 500,
-                  opacity: 0,
-
-                  transition: {
-                    duration: 1,
-                    type: "spring",
-                    friction: 90,
-                    damping: 20,
-                  },
-                }}
-                onClick={(e) => e.stopPropagation()}
-                className="overflow-y-scroll flex z-50 my-12 mx-4 sm:mx-20"
-              >
-                <Dpp />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{
-                  opacity: 1,
-                  transition: {
-                    duration: 0.7,
-                  },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: {
-                    duration: 0.7,
-                  },
-                }}
-                onClick={closeModal}
-                className="fixed flex w-full h-full z-40 top-0 left-0 bg-gray-900/50"
-              />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
-}
-
 const Dpp = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg mt-8">
@@ -256,7 +118,7 @@ const Dpp = () => {
       <p className="text-lg text-gray-700 mb-6">
         <strong>Effective Date:</strong> 16/05/2024
       </p>
-     
+
       <p className="text-gray-700 mb-4">
         At Dog Life Drawing, we are committed to protecting the privacy and
         security of your personal information. This Data Protection Policy
@@ -352,3 +214,140 @@ const Dpp = () => {
     </div>
   );
 };
+
+export function SafteyPolicy() {
+  const [safetyPolicyVisible, setSafteyPolicyVisible] = useState(false);
+  const [dataProtectionPolicyVisible, setDataProtectionPolicyVisible] =
+    useState(false);
+  const closeModal = (e: any) => {
+    e.stopPropagation();
+    setSafteyPolicyVisible(false);
+    setDataProtectionPolicyVisible(false);
+  };
+  return (
+    <>
+      <div className=" flex flex-col">
+        <button onClick={() => setSafteyPolicyVisible(true)}>
+          <h1 className="text-gray-900/50 flex">Safety Policy</h1>
+        </button>
+        <button onClick={() => setDataProtectionPolicyVisible(true)}>
+          <h1 className="text-gray-900/50 flex">Data Protection Policy</h1>
+        </button>
+      </div>
+      <AnimatePresence mode="wait">
+        {safetyPolicyVisible && (
+          <motion.div
+            variants={container}
+            initial="initial"
+            whileInView="whileInView"
+            exit="exit"
+          >
+            <div className="h-full fixed top-0 left-0 w-full flex items-start justify-center overflow-y-scroll">
+              <motion.div
+                initial={{ y: 500, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    type: "spring",
+                    friction: 90,
+                    damping: 25,
+                  },
+                }}
+                exit={{
+                  y: 500,
+                  opacity: 0,
+
+                  transition: {
+                    duration: 1,
+                    type: "spring",
+                    friction: 90,
+                    damping: 20,
+                  },
+                }}
+                onClick={(e) => e.stopPropagation()}
+                className="overflow-y-scroll flex z-50 my-12 sm:mx-12"
+              >
+                <Sp />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.7,
+                  },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.7,
+                  },
+                }}
+                onClick={closeModal}
+                className="fixed flex w-full h-full z-40 top-0 left-0 bg-gray-900/50"
+              />
+            </div>
+          </motion.div>
+        )}
+        {dataProtectionPolicyVisible && (
+          <motion.div
+            variants={container}
+            initial="initial"
+            whileInView="whileInView"
+            exit="exit"
+          >
+            <div className="h-full fixed top-0 left-0 w-full flex items-start justify-center overflow-y-scroll">
+              <motion.div
+                initial={{ y: 500, opacity: 0 }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                    type: "spring",
+                    friction: 90,
+                    damping: 25,
+                  },
+                }}
+                exit={{
+                  y: 500,
+                  opacity: 0,
+
+                  transition: {
+                    duration: 1,
+                    type: "spring",
+                    friction: 90,
+                    damping: 20,
+                  },
+                }}
+                onClick={(e) => e.stopPropagation()}
+                className="overflow-y-scroll flex z-50 my-12 mx-4 sm:mx-20"
+              >
+                <Dpp />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.7,
+                  },
+                }}
+                exit={{
+                  opacity: 0,
+                  transition: {
+                    duration: 0.7,
+                  },
+                }}
+                onClick={closeModal}
+                className="fixed flex w-full h-full z-40 top-0 left-0 bg-gray-900/50"
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
