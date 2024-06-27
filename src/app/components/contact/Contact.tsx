@@ -40,7 +40,7 @@ function MyForm() {
 
     try {
       await sendMail({
-        to: "hello@doglifedrawing.com",
+        to: "doglifedrawing@gmail.com",
         email: formData.email,
         name: formData.email,
         subject: formData.subject,
