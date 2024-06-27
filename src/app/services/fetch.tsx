@@ -5,7 +5,7 @@ import axios from "axios";
 export default function getAllEvents() {
 
   const baseUrl =
-    "https://www.doglifedrawing.com" || process.env.NEXT_PUBLIC_VERCEL_URL;
+    "https://doglifedrawing.com" || process.env.NEXT_PUBLIC_VERCEL_URL;
   return axios
     .get(`${baseUrl}/api/events`)
     .then((response) => response.data)
