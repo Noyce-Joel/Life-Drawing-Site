@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react";
 const inter = Fraunces({
   subsets: ["latin"],
   weight: ["400"],
@@ -32,6 +32,7 @@ export default function RootLayout({
     <>
       <html lang="en">
         <body className={inter.className}>
+          <Analytics />
           <StateProvider>{children}</StateProvider>
         </body>
       </html>
