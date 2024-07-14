@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Indie_Flower } from "next/font/google";
+import { Fraunces } from "next/font/google";
 import { StateProvider } from "./context/State";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-const inter = Indie_Flower({
+const inter = Fraunces({
   subsets: ["latin"],
   weight: ["400"],
 });
