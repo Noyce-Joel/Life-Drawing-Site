@@ -5,7 +5,7 @@ import axios from "axios";
 export default function getAllEvents() {
 
   const baseUrl =
-    "https://doglifedrawing.com";
+    "https://www.doglifedrawing.com";
   return axios
     .get(`${baseUrl}/api/events`)
     .then((response) => response.data)

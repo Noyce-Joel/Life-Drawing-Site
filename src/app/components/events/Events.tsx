@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { StateContext, StateContextType } from "../../context/State";
 import EventsList from "./EventsList";
 import { copy } from "../../../../public/copy/copy";
@@ -29,6 +29,7 @@ function groupBy(list: any[], keyGetter: (item: any) => string) {
 export default function Events({ comp }: { comp: boolean }) {
   const { events } = useContext<StateContextType>(StateContext);
   const eventsByCity = groupBy(events, (event) => {
+
     if (event.venue.address.city.toLowerCase() === "burley") {
       return "Leeds";
     }
@@ -37,6 +38,10 @@ export default function Events({ comp }: { comp: boolean }) {
     }
     return event.venue.address.city;
   });
+
+  useEffect(() => {
+    console.log('events', events)
+  }, [])
 
   return (
     <>
@@ -64,12 +69,8 @@ export default function Events({ comp }: { comp: boolean }) {
         <div className="flex flex-col items-center pt-12 text-[20px] md:text-[1.92vw] justify-start w-4/5 md:w-3/5 gap-12">
           {comp && (
             <>
-              <p className={`md:w-4/5 `}>
-                {copy.events_join}
-              </p>
-              <p className=" md:w-4/5  pb-24">
-                {copy.events_cities}
-              </p>
+              <p className={`md:w-4/5 `}>{copy.events_join}</p>
+              <p className=" md:w-4/5  pb-24">{copy.events_cities}</p>
             </>
           )}
         </div>

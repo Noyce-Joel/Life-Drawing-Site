@@ -38,7 +38,7 @@ export async function sendMail({
       to,
       subject,
       
-      html: email + " - " + body,
+      html: email +  body,
       attachments: [],
     });
   } catch (err) {}
