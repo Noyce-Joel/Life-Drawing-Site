@@ -3,7 +3,7 @@
 import axios from "axios";
 
 export default async function getAllEvents() {
-
+//
   const baseUrl =
     "https://www.doglifedrawing.com";
   return axios
