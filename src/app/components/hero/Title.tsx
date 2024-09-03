@@ -35,7 +35,7 @@ export default function Title({
           <Image src="/Logo.png" alt="logo" height={150} width={150} />
         </Link>
       </div>
-      <div className="flex mt-14 px-4 md:px-0 w-full justify-center md:w-auto md:justify-start">
+      <header className="flex mt-14 px-4 md:px-0 w-full justify-center md:w-auto md:justify-start">
         <div className="flex md:w-1/2 h-full flex-col justify-center items-center  text-center  gap-8  ">
         <h1 className="text-[12vmin] md:text-[5.4vw] flex text-center  mx-auto md:mx-28 lg:mx-52 flex-col pt-12 text-[#DA7835]">
             {title[0]} {title[1]} {title[2]}
@@ -86,7 +86,7 @@ export default function Title({
             </div>
           </motion.div>
         </div>
-      </div>
+      </header>
     </Suspense>
   );
 }
