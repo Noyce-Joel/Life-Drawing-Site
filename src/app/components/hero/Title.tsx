@@ -36,26 +36,22 @@ export default function Title({
         </Link>
       </div>
       <div className="flex mt-14 px-4 md:px-0 w-full justify-center md:w-auto md:justify-start">
-        <div className="flex md:w-1/2 h-full flex-col  text-center  gap-8  ">
-          <div className="text-[12vmin] md:text-[5.4vw] flex text-left items-start mx-auto md:mx-28 lg:mx-52 flex-col pt-12 text-[#DA7835]">
-            <div className="whitespace-nowrap h-[14vw] md:h-[7vw]">
-              <span>{title[0]}</span>
-              <span> {title[1]}</span>
-            </div>
-            <span className=""> {title[2]}</span>
-          </div>
+        <div className="flex md:w-1/2 h-full flex-col justify-center items-center  text-center  gap-8  ">
+        <h1 className="text-[12vmin] md:text-[5.4vw] flex text-center  mx-auto md:mx-28 lg:mx-52 flex-col pt-12 text-[#DA7835]">
+            {title[0]} {title[1]} {title[2]}
+          </h1>
 
           <div className="flex md:w-full w-1/4 mx-auto md:mx-0 -z-40">
             <Line duration={2} color="gray" title={false} />
           </div>
-          <p className="flex flex-col whitespace-nowrap text-left mx-auto md:mx-28 lg:mx-52 justify-center gap-4 text-[4.4vw] md:text-[2.4vw] italic ">
+          <h2 className="flex flex-col whitespace-nowrap text-left mx-auto md:mx-28 lg:mx-52 justify-center gap-4 text-[4.4vw] md:text-[2.4vw] italic ">
             <span className="lg:h-[2.4vw] md:h-[1.8vw] h-[2vw]">
               Where Art Meets
             </span>
             <span className="flex gap-4 lg:h-[2.4vw] md:h-[1.8vw] h-[2vw]">
               Canine Charm{" "}
             </span>
-          </p>
+          </h2>
         </div>
         <div className="w-full lg:pr-56 md:flex hidden">
           <motion.div className="relative lg:w-full h-fit">
