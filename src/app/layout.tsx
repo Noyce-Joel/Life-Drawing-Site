@@ -46,7 +46,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <GoogleTagManager gtmId="GTM-16703303348" />
+        <GoogleTagManager gtmId="AW-16703303348" />
 
         <body className={inter.className}>
           <Analytics />
