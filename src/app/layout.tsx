@@ -4,7 +4,7 @@ import { StateProvider } from "./context/State";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 const inter = Fraunces({
   subsets: ["latin"],
   weight: ["400"],
@@ -46,11 +46,8 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <Head>
+        <GoogleTagManager gtmId="GTM-16703303348" />
 
-          <GoogleTagManager gtmId="16703303348" />
-          
-        </Head>
         <body className={inter.className}>
           <Analytics />
           <StateProvider>{children}</StateProvider>
