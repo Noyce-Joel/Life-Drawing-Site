@@ -4,7 +4,8 @@ import { StateProvider } from "./context/State";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 const inter = Fraunces({
   subsets: ["latin"],
   weight: ["400"],
@@ -47,8 +48,20 @@ export default function RootLayout({
     <>
       <html lang="en">
         <Head>
-          {/* Paste the Google Analytics tag inside the Head */}
-          <GoogleAnalytics gaId="AW-16703303348" />
+          <>
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=AW-16703303348"
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16703303348');
+        `}
+            </Script>
+          </>
         </Head>
         <body className={inter.className}>
           <Analytics />
