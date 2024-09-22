@@ -1,9 +1,11 @@
+'use client'
+
 import React, { Suspense, useEffect, useState } from "react";
 
 import Image from "next/image";
 import Line from "../line/Line";
 import { motion } from "framer-motion";
-import Paw from "../loading/Paw";
+
 import Link from "next/link";
 export default function Title({
   title,

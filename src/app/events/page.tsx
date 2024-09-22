@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import React from "react";
 import Events from "../components/events/Events";
@@ -8,7 +8,10 @@ import Line from "../components/line/Line";
 import Nav from "../components/nav/Nav";
 import Title from "../components/hero/Title";
 import { copy } from "../../../public/copy/copy";
-
+import { Metadata } from "next";
+// export const metadata: Metadata = {
+//   title: "Events",
+// };
 export default function page() {
   const jsonLd = {
     "@context": "https://schema.org",

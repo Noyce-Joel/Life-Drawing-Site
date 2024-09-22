@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 export const Buy = ({ eventId }: { eventId: number }) => {
   useEffect(() => {

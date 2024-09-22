@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { StateContext, StateContextType } from "../../context/State";
 import EventsList from "./EventsList";
 import { copy } from "../../../../public/copy/copy";
