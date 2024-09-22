@@ -16,13 +16,13 @@ import { copy } from "../../public/copy/copy";
 
 export default function Home() {
   const [results, setResults] = useState<any>({ resources: [] });
-  // const jsonLd = {
-  //   "@context": "https://schema.org",
-  //   "@type": "Event",
-  //   name: "Dog Life Drawing",
-  //   image: "/images/faviconLogo.png",
-  //   description: `${copy.sessions_unleash + copy.sessions_our_dogs}`,
-  // };
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Dog Life Drawing",
+    image: "/images/faviconLogo.png",
+    description: `${copy.sessions_unleash + copy.sessions_our_dogs}`,
+  };
   useEffect(() => {
     const fetch = async () => {
       const res = await fetchImages();
@@ -43,10 +43,10 @@ export default function Home() {
           href="/images/faviconLogo.png"
         />
       </Head>
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      /> */}
+      />
       <Suspense fallback={<div>Loading...</div>}>
         <AnimatePresence mode="wait">
           <motion.div

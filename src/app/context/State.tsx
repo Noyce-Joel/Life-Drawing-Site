@@ -46,14 +46,17 @@ export const StateProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     getAllEvents()
       .then((data) => {
+        console.log(data);
         const now = new Date();
         const events = data.events.filter((event: Event) => {
           const eventStartDate = new Date(event.start.local);
           return event.name.text.toLowerCase().includes("dog") && eventStartDate > now;
         });
         setEvents(events);
+        
       })
       .catch((err) => console.error(err));
+      
   }, []);
   return (
     <StateContext.Provider value={{ events, setEvents }}>

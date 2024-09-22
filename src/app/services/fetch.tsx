@@ -3,15 +3,13 @@
 import axios from "axios";
 
 export default async function getAllEvents() {
-//
-  const baseUrl =
-    "https://www.doglifedrawing.com";
   return axios
-    .get(`${baseUrl}/api/events`)
+    .get(`/api/events`) // Relative URL
     .then((response) => response.data)
     .catch((error) => {
       console.error(error);
       throw error;
-    })
+    });
 }
+
 

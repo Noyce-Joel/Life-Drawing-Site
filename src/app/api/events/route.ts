@@ -9,9 +9,9 @@ type ResponseData = {
 const key = process.env.EVENTBRITE_PRIVATE_TOKEN;
 
 export async function GET(req: NextRequest, res: NextResponse<ResponseData>) {
-  const organisation_id = 152657899054;
+  const organisation_id = "152657899054";
 
-  const eventsUrl = `https://www.eventbriteapi.com/v3/organizations/${organisation_id}/events/?expand=venue&continuation=eyJwYWdlIjogNn0`;
+  const eventsUrl = `https://www.eventbriteapi.com/v3/organizations/${organisation_id}/events/?expand=venue&continuation="eyJwYWdlIjogN30"`;
 
   const headerParameters = {
     Authorization: `Bearer ${key}`,
