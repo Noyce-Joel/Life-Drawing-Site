@@ -31,6 +31,7 @@ export default function EventsList({
     const randomColor = colours[Math.floor(Math.random() * colours.length)];
     return { ...event, color: randomColor };
   });
+  console.log('events', loadedEvents);
   return (
     <>
       <article className="flex flex-col  justify-center items-center h-full  text-[90px] bg-[#EDEAE6] ">
@@ -70,6 +71,7 @@ export default function EventsList({
               const description = event.description.text;
               const logo = event.logo.original.url;
               const capacity = event.capacity;
+
               const randomColor =
                 colours[Math.floor(Math.random() * colours.length)];
               return (
@@ -83,6 +85,8 @@ export default function EventsList({
                     capacity={capacity}
                     logo={logo}
                     tileColor={`${randomColor}`}
+                    location={city}
+                    event={event}
                   />
                 </div>
               );

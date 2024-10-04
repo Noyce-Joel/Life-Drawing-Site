@@ -9,14 +9,12 @@ const inter = Fraunces({
   weight: ["400"],
 });
 
-
-
 export const metadata: Metadata = {
   title: { default: "Dog Life Drawing", template: "%s - Dog Life Drawing" },
   description:
     "Our dog life drawing sessions blend the joy of artistic expression with the undeniable charm of our favourite furry friends. Whether you're an experienced artist or a complete novice, our sessions cater to all skill levels. ",
-  icons:"/favicon.ico",
-    twitter: {
+  icons: "/favicon.ico",
+  twitter: {
     card: "summary_large_image",
     site: "@doglifedrawing",
   },
@@ -34,13 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <html lang="en">
-        <body className={inter.className}>
-          <Analytics />
-          <StateProvider>{children}</StateProvider>
-        </body>
-      </html>
-    </>
+    <html lang="en">
+      <body className={inter.className}>
+        <Analytics />
+        <StateProvider>{children}</StateProvider>
+      </body>
+    </html>
   );
 }
