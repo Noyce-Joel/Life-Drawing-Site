@@ -2,6 +2,6 @@
 module.exports = {
     siteUrl: 'https://www.doglifedrawing.com',
     generateRobotsTxt: true, 
-    changefreq: 'monthly',
+    changefreq: 'weekly',
     priority: 1,
   }
