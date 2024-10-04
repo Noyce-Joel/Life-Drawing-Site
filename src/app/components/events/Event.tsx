@@ -47,26 +47,26 @@ export default function Event({
         }
       : {
           "@type": "Place",
-          "name": location,
+          "name": location, // Venue name or address
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": event.venue.address.address_1,
-            "addressLocality": event.venue.address.city,
-            "postalCode": event.venue.address.postal_code,
-            "addressCountry": event.venue.address.country,
+            "streetAddress": event.venue?.address?.address_1 || "Street not provided",
+            "addressLocality": event.venue?.address?.city || "City not provided",
+            "postalCode": event.venue?.address?.postal_code || "Postal code not provided",
+            "addressCountry": event.venue?.address?.country || "Country not provided",
           },
         },
     "offers": {
       "@type": "Offer",
       "url": event.url,
-      "price": event.price || "0", // Replace with actual price or default to 0 for free events
-      "priceCurrency": event.currency || "GBP", // Replace with actual currency
-      "availability": event.capacity > 0 ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
+      "price": event.price || "0", // Replace with actual price or set default
+      "priceCurrency": event.currency || "GBP",
+      "availability": capacity > 0 ? "https://schema.org/InStock" : "https://schema.org/SoldOut",
     },
     "organizer": {
       "@type": "Organization",
-      "name": event.organizer_id, // Replace with the organizer's actual name
-      "url": event.url, // Replace with the organizer's actual URL if available
+      "name": event.organizer_id, // Replace with the actual name of the organizer
+      "url": event.url, // Replace with organizer URL if available
     },
     "image": logo, // Include the logo URL
   };
@@ -86,7 +86,6 @@ export default function Event({
 
   return (
     <div className="flex group relative w-full h-full">
-      {/* Inject the JSON-LD schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
