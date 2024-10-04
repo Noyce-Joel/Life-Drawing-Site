@@ -13,6 +13,7 @@ import ContactSection from "./components/contact/ContactSection";
 import Title from "./components/hero/Title";
 import Image from "next/image";
 import { copy } from "../../public/copy/copy";
+import React from "react";
 
 export default function Home() {
   const [results, setResults] = useState<any>({ resources: [] });
