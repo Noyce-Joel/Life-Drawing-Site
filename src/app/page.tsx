@@ -19,7 +19,7 @@ export default function Home() {
   const [results, setResults] = useState<any>({ resources: [] });
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Event",
+    "@type": "Organization",
     name: "Dog Life Drawing",
     image: "/images/faviconLogo.png",
     description: `${copy.sessions_unleash + copy.sessions_our_dogs}`,
